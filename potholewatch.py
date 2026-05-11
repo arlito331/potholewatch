@@ -1,127 +1,3 @@
-
-Claude finished the response
-You said: hi
-hi
-
-8:28 AM
-Claude responded: Hi Ariel!
-Hi Ariel! What are we building today?
-
-Screenshot 2026-05-11 at 8.28.24 AM.png
-8:28 AM
-Claude responded: Looks like your PotholeWatch Scan GitHub Action is failing — runs #2 and #3 are both red ❌, while #1 (manually triggered) succeeded ✅.
-Looks like your PotholeWatch Scan GitHub Action is failing — runs #2 and #3 are both red ❌, while #1 (manually triggered) succeeded ✅.
-
-What's the workflow doing? Share the .yml and any error logs from the failed runs and I'll help you debug it.
-
-Screenshot 2026-05-11 at 8.29.26 AM.png
-8:29 AM
-Claude responded: Lol — the error is hilarious and also very clear:
-Lol — the error is hilarious and also very clear:
-
-Claude responded: I don't see a recent conversation about 
-a pothole monitoring app in my memory.
-Your potholewatch.py is calling the Claude API and injecting that response directly into a Python string — but the response contains an unterminated string literal because it has no closing quote or the text breaks the string syntax.
-
-The fix: You need to sanitize/escape Claude's response before using it in Python. Share the potholewatch.py code and I'll patch it directly.
-
-
-Powerfix / Claude finished the response You said: hi hi 9:56 PM Claude responded: Hi Ariel! Hi Ariel! How can I help you today? Working on more PowerPatch materials, or something else? You said: Doing great. Doing great. Can you add what I was talking about regarding the pothole app to monitor in
-
-pasted
-
-8:31 AM
-Claude responded: Got the full context.
-Got the full context. The error in the failed runs is clear:
-
-Claude responded: I don't see a recent conversation...
-SyntaxError: unterminated string literal (line 16)
-The search_incidents() function is getting Claude's response and trying to parse it as JSON — but Claude returned a conversational message instead of JSON, and that text broke the Python string parser.
-
-The fix is two things:
-
-Better prompt — force JSON-only response more strictly
-Safer parsing — handle non-JSON responses gracefully so the script doesn't crash
-Here's the patched search_incidents() function:
-
-python
-def search_incidents(query):
-    prompt = (
-        "Search for recent news (last 7 days) about road accidents in Panama: " + query + "\n\n"
-        "You MUST return ONLY valid JSON. No explanations, no preamble, no markdown.\n"
-        "If you find nothing, return: {\"incidents\": []}\n"
-        "Format:\n"
-        "{\"incidents\": [{\"title\": \"\", \"url\": \"\", \"date\": \"\", \"location\": \"\", "
-        "\"description\": \"\", \"probability\": \"HIGH\", \"probability_reason\": \"\"}]}"
-    )
-
-    response = requests.post(
-        "https://api.anthropic.com/v1/messages",
-        headers={
-            "x-api-key": ANTHROPIC_API_KEY,
-            "anthropic-version": "2023-06-01",
-            "Content-Type": "application/json"
-        },
-        json={
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 3000,
-            "tools": [{"type": "web_search_20250305", "name": "web_search"}],
-            "messages": [{"role": "user", "content": prompt}]
-        }
-    )
-
-    data = response.json()
-    text = ""
-    for block in data.get("content", []):
-        if block.get("type") == "text":
-            text += block.get("text", "")
-
-    try:
-        # Find JSON boundaries robustly
-        start = text.find("{")
-        end = text.rfind("}") + 1
-        if start == -1 or end == 0:
-            print("  No JSON found in response. Raw: " + text[:300])
-            return []
-        clean = text[start:end]
-        return json.loads(clean).get("incidents", [])
-    except Exception as e:
-        print("  Parse error: " + str(e))
-        print("  Raw: " + text[:500])
-        return []
-Key changes:
-
-Removed anthropic-beta: tools-2024-04-04 header (outdated, may cause weird responses)
-Stronger JSON-only instruction with fallback {"incidents": []}
-Parser now finds {...} boundaries instead of relying on clean text
-Want me to generate the full updated potholewatch.py file ready to paste into GitHub?
-
-You said: ok
-ok
-
-8:34 AM
-Claude responded: Download that and replace it in GitHub:
-
-Viewed a file, created a file, read a file
-Viewed a file, created a file, read a file
-Download that and replace it in GitHub:
-
-Go to your potholewatch repo → click potholewatch.py → pencil icon
-Select all → delete → paste the new content → Commit changes
-Actions → PotholeWatch Scan → Run workflow
-The two key fixes: removed the outdated anthropic-beta header that was causing Claude to return conversational text instead of JSON, and added robust JSON boundary detection so even if there's any stray text, it won't crash.
-
-
-Potholewatch
-PY 
-
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-Potholewatch · PY
-Copy
-
 import os
 import json
 import base64
@@ -131,13 +7,13 @@ from email.mime.text import MIMEText
 from datetime import datetime
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
- 
+
 ALERT_RECIPIENTS = ["joel@powerfixinc.com", "1@powerfixinc.com"]
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 GMAIL_CLIENT_ID = os.environ["GMAIL_CLIENT_ID"]
 GMAIL_CLIENT_SECRET = os.environ["GMAIL_CLIENT_SECRET"]
 GMAIL_REFRESH_TOKEN = os.environ["GMAIL_REFRESH_TOKEN"]
- 
+
 TERRITORIES = [
     {
         "name": "Panama",
@@ -150,7 +26,7 @@ TERRITORIES = [
         ]
     },
 ]
- 
+
 def get_gmail_service():
     creds = Credentials(
         token=None,
@@ -161,7 +37,7 @@ def get_gmail_service():
         scopes=["https://www.googleapis.com/auth/gmail.send"]
     )
     return build("gmail", "v1", credentials=creds)
- 
+
 def search_incidents(query):
     prompt = (
         "Search for recent news (last 7 days) about road accidents in Panama: " + query + "\n\n"
@@ -171,7 +47,7 @@ def search_incidents(query):
         "{\"incidents\": [{\"title\": \"\", \"url\": \"\", \"date\": \"\", \"location\": \"\", "
         "\"description\": \"\", \"probability\": \"HIGH\", \"probability_reason\": \"\"}]}"
     )
- 
+
     response = requests.post(
         "https://api.anthropic.com/v1/messages",
         headers={
@@ -186,13 +62,13 @@ def search_incidents(query):
             "messages": [{"role": "user", "content": prompt}]
         }
     )
- 
+
     data = response.json()
     text = ""
     for block in data.get("content", []):
         if block.get("type") == "text":
             text += block.get("text", "")
- 
+
     try:
         # Robustly find JSON boundaries — ignore any preamble or trailing text
         start = text.find("{")
@@ -206,7 +82,7 @@ def search_incidents(query):
         print("  Parse error: " + str(e))
         print("  Raw: " + text[:500])
         return []
- 
+
 def build_email_html(incidents, territory):
     rows = ""
     for inc in incidents:
@@ -235,7 +111,7 @@ def build_email_html(incidents, territory):
         '<p style="font-size:10px;color:#9ca3af;margin-top:16px;">PotholeWatch — PowerFix Inc. | Auto-scan every 30 min</p>'
         '</div></div>'
     )
- 
+
 def send_alert(incidents, territory):
     service = get_gmail_service()
     msg = MIMEMultipart("alternative")
@@ -246,7 +122,7 @@ def send_alert(incidents, territory):
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
     service.users().messages().send(userId="me", body={"raw": raw}).execute()
     print("Email sent! " + str(len(incidents)) + " incidents.")
- 
+
 def main():
     print("PotholeWatch started — " + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"))
     for territory in TERRITORIES:
@@ -259,7 +135,7 @@ def main():
             for inc in incidents:
                 print("    [" + inc.get("probability", "?") + "] " + inc.get("title", "")[:70])
             all_incidents.extend(incidents)
- 
+
         # Deduplicate by URL
         seen = set()
         unique = []
@@ -268,15 +144,14 @@ def main():
             if url not in seen:
                 seen.add(url)
                 unique.append(inc)
- 
+
         print("\nTotal unique incidents: " + str(len(unique)))
         if unique:
             send_alert(unique, territory["name"])
         else:
             print("No incidents found at all.")
- 
+
     print("\nScan complete.")
- 
+
 if __name__ == "__main__":
     main()
- 
