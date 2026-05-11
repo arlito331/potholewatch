@@ -988,6 +988,74 @@ This time we'll see exactly what it finds in the logs!
 
 Potholewatch
 PY 
+You said: done
+done
+
+11:47 PM
+Claude responded: Go to Actions → PotholeWatch Scan → Run workflow and trigger a new run.
+Go to Actions → PotholeWatch Scan → Run workflow and trigger a new run. Then click into the scan logs — this time we'll see every incident it finds printed out with its probability score!
+
+Screenshot 2026-05-10 at 11.48.26 PM.png
+11:48 PM
+Claude responded: It's still running the old queries — the new script didn't get saved properly to GitHub.
+It's still running the old queries — the new script didn't get saved properly to GitHub. I can see it's missing the new first query "camion articulado accidente via Centenario Pedro Miguel mayo 2026" and still showing the old ones.
+
+Go to GitHub → your repo → click on potholewatch.py → click the pencil icon to edit → check if line 18 says:
+
+"camion articulado accidente via Centenario Pedro Miguel mayo 2026",
+If not, the old version is still there. Delete everything and paste the new file content again, then commit.
+
+You said: no, but thats the wrong way to go about it, it needs to be more automatic, every accident cross referenced to mop, attt, and instagram and x.
+no, but thats the wrong way to go about it, it needs to be more automatic, every accident cross referenced to mop, attt, and instagram and x. See?
+
+11:49 PM
+Claude responded: Yes!
+Yes! Exactly — you're right. The current approach is too basic. What PotholeWatch should really do is:
+
+For every accident found:
+
+Cross-reference MOP — check if that road segment has active Tapa Hueco works, complaints, or maintenance contracts
+Cross-reference ATTT — check transit authority records/reports for that location
+Cross-reference Instagram & X — find citizen posts, videos, complaints about that exact road
+Then score — based on ALL that evidence combined, not just the news article alone
+So the flow becomes:
+
+News article found
+    ↓
+Extract location
+    ↓
+Search MOP for that location → evidence?
+Search ATTT for that location → reports?
+Search Instagram/X for that location → citizen complaints?
+    ↓
+Score based on ALL sources combined
+    ↓
+Build rich alert email with everything
+This is a much more powerful system — PTW-001 would have scored HIGH immediately because MOP + La Prensa + Instagram all confirmed Vía Centenario was deteriorated.
+
+Want me to rebuild the script with this multi-source cross-referencing approach? It'll take a few minutes but it'll be the real deal. 🔥
+
+You said: even if it unlikely, first we need to open the full filter, dont you think?
+even if it unlikely, first we need to open the full filter, dont you think? THen we start twiching it
+
+11:50 PM
+Claude responded: 100% right.
+100% right. First let's open the floodgates — catch everything, send the email, confirm the pipeline works end to end. Then we tune the scoring.
+
+Let me update the script to:
+
+Score everything as MEDIUM (no filtering, everything triggers)
+Send the email for any incident found
+
+Ran a command, read a file
+Ran a command, read a file
+Done. This version sends everything — no filter, no threshold. Any accident found in Panama = email goes out.
+
+Download and update it in GitHub the same way as before, then trigger a new run. Once we confirm the email lands, then we start adding the MOP + ATTT + Instagram cross-referencing layer. 🔥
+
+
+Potholewatch
+PY 
 
 
 
@@ -1008,7 +1076,6 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
  
 ALERT_RECIPIENTS = ["joel@powerfixinc.com", "1@powerfixinc.com"]
-THRESHOLD = "MEDIUM"
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 GMAIL_CLIENT_ID = os.environ["GMAIL_CLIENT_ID"]
 GMAIL_CLIENT_SECRET = os.environ["GMAIL_CLIENT_SECRET"]
@@ -1018,11 +1085,11 @@ TERRITORIES = [
     {
         "name": "Panama",
         "queries": [
-            "camion articulado accidente via Centenario Pedro Miguel mayo 2026",
-            "accidente via Centenario Panama mayo 2026",
-            "accidente carretera Panama bache hueco 2026",
-            "accidente via Interamericana Panama 2026",
-            "accidente Corredor Norte Sur Panama 2026",
+            "accidente carretera Panama 2026",
+            "accidente via Panama mayo 2026",
+            "camion accidente Panama 2026",
+            "choque Panama carretera mayo 2026",
+            "accidente via Centenario Panama",
         ]
     },
 ]
@@ -1040,16 +1107,11 @@ def get_gmail_service():
  
 def search_incidents(query):
     prompt = (
-        "Search for recent news (last 7 days) about: " + query + "\n\n"
-        "Find road accidents or incidents. Be INCLUSIVE. Include any accident where road conditions "
-        "COULD potentially be a factor, even if not explicitly stated. Heavy vehicles losing control, "
-        "accidents on known deteriorated roads, accidents at curves or bridges = score MEDIUM or HIGH.\n\n"
-        "Known context: Via Centenario near Rio Pedro Miguel in Panama has documented pothole and slab "
-        "deterioration (MOP Tapa Hueco program). Any accident there = HIGH probability.\n\n"
-        "Return ONLY a JSON object, no other text:\n"
-        "{\"incidents\": [{\"title\": \"\", \"url\": \"\", \"date\": \"\", \"location\": \"\", \"description\": \"\", "
-        "\"road_condition_evidence\": \"\", \"probability\": \"HIGH/MEDIUM/LOW\", \"probability_reason\": \"\"}]}\n\n"
-        "Scoring: HIGH = known bad road + accident, MEDIUM = unexplained loss of control, LOW = clearly unrelated (DUI, weather only)"
+        "Search for recent news (last 7 days) about road accidents in Panama: " + query + "\n\n"
+        "Return ALL road accidents you find, no filtering. Include every incident.\n"
+        "For each one, assign probability HIGH/MEDIUM/LOW based on whether road conditions could be a factor.\n\n"
+        "Return ONLY this JSON, no other text:\n"
+        "{\"incidents\": [{\"title\": \"\", \"url\": \"\", \"date\": \"\", \"location\": \"\", \"description\": \"\", \"probability\": \"HIGH\", \"probability_reason\": \"\"}]}"
     )
  
     response = requests.post(
@@ -1062,7 +1124,7 @@ def search_incidents(query):
         },
         json={
             "model": "claude-sonnet-4-20250514",
-            "max_tokens": 2000,
+            "max_tokens": 3000,
             "tools": [{"type": "web_search_20250305", "name": "web_search"}],
             "messages": [{"role": "user", "content": prompt}]
         }
@@ -1079,69 +1141,63 @@ def search_incidents(query):
         return json.loads(clean).get("incidents", [])
     except Exception as e:
         print("  Parse error: " + str(e))
-        print("  Raw: " + text[:300])
+        print("  Raw: " + text[:500])
         return []
- 
-def should_alert(incident):
-    prob = incident.get("probability", "LOW")
-    if THRESHOLD == "MEDIUM":
-        return prob in ["MEDIUM", "HIGH"]
-    return prob == "HIGH"
  
 def build_email_html(incidents, territory):
     rows = ""
     for inc in incidents:
-        prob = inc.get("probability", "LOW")
-        color = "#B91C1C" if prob == "HIGH" else "#D97706"
+        prob = inc.get("probability", "MEDIUM")
+        color = "#B91C1C" if prob == "HIGH" else "#D97706" if prob == "MEDIUM" else "#6B7280"
         rows += (
-            '<div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-bottom:16px;">'
-            '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">'
-            '<strong style="font-size:14px;">' + inc.get("title","") + '</strong>'
-            '<span style="background:' + color + ';color:white;padding:2px 10px;border-radius:20px;font-size:12px;">' + prob + '</span>'
+            '<div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-bottom:12px;">'
+            '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">'
+            '<strong style="font-size:13px;">' + inc.get("title","") + '</strong>'
+            '<span style="background:' + color + ';color:white;padding:2px 8px;border-radius:12px;font-size:11px;">' + prob + '</span>'
             '</div>'
-            '<p style="margin:4px 0;font-size:13px;color:#6b7280;">📍 ' + inc.get("location","") + ' | 📅 ' + inc.get("date","") + '</p>'
-            '<p style="margin:8px 0;font-size:13px;">' + inc.get("description","") + '</p>'
-            + ('<p style="margin:8px 0;font-size:13px;color:#7c3aed;"><strong>Road evidence:</strong> ' + inc.get("road_condition_evidence","") + '</p>' if inc.get("road_condition_evidence") else "") +
-            '<p style="margin:8px 0;font-size:12px;color:#6b7280;"><em>' + inc.get("probability_reason","") + '</em></p>'
-            '<a href="' + inc.get("url","") + '" style="font-size:12px;color:#2563eb;">Read article</a>'
+            '<p style="margin:3px 0;font-size:12px;color:#6b7280;">📍 ' + inc.get("location","") + ' | 📅 ' + inc.get("date","") + '</p>'
+            '<p style="margin:6px 0;font-size:12px;">' + inc.get("description","") + '</p>'
+            '<p style="margin:4px 0;font-size:11px;color:#6b7280;"><em>' + inc.get("probability_reason","") + '</em></p>'
+            '<a href="' + inc.get("url","") + '" style="font-size:11px;color:#2563eb;">Read article →</a>'
             '</div>'
         )
     return (
         '<div style="font-family:Arial,sans-serif;max-width:640px;margin:0 auto;">'
-        '<div style="background:#B91C1C;padding:16px 20px;border-radius:8px 8px 0 0;">'
-        '<h1 style="color:white;margin:0;font-size:18px;">POTHOLEWATCH ALERT — ' + territory + '</h1>'
+        '<div style="background:#B91C1C;padding:14px 18px;border-radius:8px 8px 0 0;">'
+        '<h1 style="color:white;margin:0;font-size:16px;">🚨 POTHOLEWATCH — ' + territory + ' | ' + str(len(incidents)) + ' incident(s)</h1>'
         '</div>'
-        '<div style="background:#f9fafb;padding:20px;border-radius:0 0 8px 8px;border:1px solid #e5e7eb;">'
-        '<p style="font-size:13px;color:#6b7280;margin-top:0;">Scan: ' + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC") + ' | Threshold: ' + THRESHOLD + '+</p>'
+        '<div style="background:#f9fafb;padding:18px;border-radius:0 0 8px 8px;border:1px solid #e5e7eb;">'
+        '<p style="font-size:12px;color:#6b7280;margin-top:0;">Scan: ' + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC") + ' | ALL incidents (no filter)</p>'
         + rows +
-        '<p style="font-size:11px;color:#9ca3af;">PotholeWatch — PowerFix Inc. Auto-scan every 30 min.</p>'
+        '<p style="font-size:10px;color:#9ca3af;margin-top:16px;">PotholeWatch — PowerFix Inc. | Auto-scan every 30 min</p>'
         '</div></div>'
     )
  
 def send_alert(incidents, territory):
     service = get_gmail_service()
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = "PotholeWatch Alert | " + territory + " | " + str(len(incidents)) + " incident(s)"
+    msg["Subject"] = "PotholeWatch | " + territory + " | " + str(len(incidents)) + " incident(s) | " + datetime.utcnow().strftime("%Y-%m-%d %H:%M")
     msg["From"] = "ashourilevy@gmail.com"
     msg["To"] = ", ".join(ALERT_RECIPIENTS)
     msg.attach(MIMEText(build_email_html(incidents, territory), "html"))
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
     service.users().messages().send(userId="me", body={"raw": raw}).execute()
-    print("Alert sent for " + territory + " — " + str(len(incidents)) + " incident(s)")
+    print("Email sent! " + str(len(incidents)) + " incidents.")
  
 def main():
-    print("PotholeWatch scan started — " + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"))
+    print("PotholeWatch started — " + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"))
     for territory in TERRITORIES:
         print("\nScanning: " + territory["name"])
         all_incidents = []
         for query in territory["queries"]:
             print("  Query: " + query)
             incidents = search_incidents(query)
-            print("  Found " + str(len(incidents)) + " result(s)")
+            print("  Found: " + str(len(incidents)))
             for inc in incidents:
-                print("    [" + inc.get("probability","?") + "] " + inc.get("title","")[:80])
-                if should_alert(inc):
-                    all_incidents.append(inc)
+                print("    [" + inc.get("probability","?") + "] " + inc.get("title","")[:70])
+            all_incidents.extend(incidents)
+ 
+        # Deduplicate by URL
         seen = set()
         unique = []
         for inc in all_incidents:
@@ -1149,11 +1205,13 @@ def main():
             if url not in seen:
                 seen.add(url)
                 unique.append(inc)
+ 
+        print("\nTotal unique incidents: " + str(len(unique)))
         if unique:
-            print("  Sending alert for " + str(len(unique)) + " incident(s)...")
             send_alert(unique, territory["name"])
         else:
-            print("  No incidents above threshold.")
+            print("No incidents found at all.")
+ 
     print("\nScan complete.")
  
 if __name__ == "__main__":
