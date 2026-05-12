@@ -1,0 +1,31 @@
+name: PotholeWatch Phase 2 Scanner
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'   # Every 2 hours
+  workflow_dispatch:          # Manual trigger from GitHub UI
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run PotholeWatch scan
+        env:
+          ANTHROPIC_API_KEY:         ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_REFRESH_TOKEN:       ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          GMAIL_CLIENT_ID:           ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET:       ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GOOGLE_STREETVIEW_API_KEY: ${{ secrets.GOOGLE_STREETVIEW_API_KEY }}
+          INCIDENT_COUNTER:          ${{ vars.INCIDENT_COUNTER || '1' }}
+        run: python potholewatch.py
