@@ -24,11 +24,11 @@ jobs:
 
       - name: Run PotholeWatch Phase 3
         env:
-          ANTHROPIC_API_KEY:      ${{ secrets.ANTHROPIC_API_KEY }}
-          GMAIL_REFRESH_TOKEN:    ${{ secrets.GMAIL_REFRESH_TOKEN }}
-          GMAIL_CLIENT_ID:        ${{ secrets.GMAIL_CLIENT_ID }}
-          GMAIL_CLIENT_SECRET:    ${{ secrets.GMAIL_CLIENT_SECRET }}
-          GOOGLE_MAPS_API_KEY:    ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          ANTHROPIC_API_KEY:         ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_REFRESH_TOKEN:       ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          GMAIL_CLIENT_ID:           ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET:       ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GOOGLE_MAPS_API_KEY:       ${{ secrets.GOOGLE_MAPS_API_KEY }}
           GOOGLE_STREETVIEW_API_KEY: ${{ secrets.GOOGLE_STREETVIEW_API_KEY }}
         run: python potholewatch.py
 
@@ -36,6 +36,7 @@ jobs:
         run: |
           git config --global user.name "PotholeWatch Bot"
           git config --global user.email "bot@powerfixinc.com"
+          git pull --rebase origin main || true
           git add incidents.json || true
           git diff --staged --quiet || git commit -m "scan: update incidents.json $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push || true
