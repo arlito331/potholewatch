@@ -369,7 +369,7 @@ const PROB_ORDER = ['LOW','MEDIUM','HIGH','CRITICAL'];
 
 async function loadData() {
   try {
-    const r = await fetch('./incidents.json?t=' + Date.now());
+    const r = await fetch('../incidents.json?t=' + Date.now());
     if (!r.ok) throw new Error('No data');
     const data = await r.json();
     allIncidents = data.incidents || [];
