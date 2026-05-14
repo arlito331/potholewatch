@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PotholeWatch — Panama Road Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --dark: #111111;
+    --panel: #161616;
+    --border: #222222;
+    --border2: #2a2a2a;
+    --text: #E8E8E8;
+    --muted: #666;
+    --dim: #333;
+    --red: #E24B4A;
+    --orange: #E07842;
+    --yellow: #D4A017;
+    --green: #4CAF50;
+    --blue: #3B82F6;
+    --critical: #E24B4A;
+    --high: #E07842;
+    --medium: #D4A017;
+    --mono: 'Space Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 56px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 13px; font-weight: 700;
+    letter-spacing: .08em; color: var(--text);
+  }
+  .logo-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--red);
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .badge {
+    font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+    padding: 2px 7px; border-radius: 2px;
+    background: var(--red); color: #fff; font-weight: 700;
+  }
+  .header-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+  .scan-time { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+  .refresh-btn {
+    font-size: 11px; font-family: var(--mono);
+    padding: 5px 12px; border: 1px solid var(--border2);
+    background: transparent; color: var(--muted);
+    border-radius: 3px; cursor: pointer; letter-spacing: .05em;
+  }
+  .refresh-btn:hover { border-color: var(--red); color: var(--red); }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: flex; gap: 1px;
+    background: var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat {
+    flex: 1; padding: 14px 20px;
+    background: var(--dark);
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .stat-num {
+    font-family: var(--mono); font-size: 24px; font-weight: 700;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .stat.critical .stat-num { color: var(--critical); }
+  .stat.high .stat-num { color: var(--high); }
+  .stat.medium .stat-num { color: var(--medium); }
+  .stat.confirmed .stat-num { color: var(--green); }
+
+  /* ── FILTERS ── */
+  .filters {
+    padding: 12px 24px;
+    display: flex; gap: 8px; align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--dark);
+    flex-wrap: wrap;
+  }
+  .filter-label { font-size: 11px; color: var(--muted); font-family: var(--mono); margin-right: 4px; }
+  .filter-btn {
+    font-size: 11px; font-family: var(--mono); letter-spacing: .05em;
+    padding: 4px 12px; border-radius: 2px; cursor: pointer;
+    border: 1px solid var(--border2); background: transparent; color: var(--muted);
+    transition: all .15s;
+  }
+  .filter-btn.active { background: var(--red); border-color: var(--red); color: #fff; }
+  .filter-btn:hover:not(.active) { border-color: var(--dim); color: var(--text); }
+
+  /* ── MAIN LAYOUT ── */
+  .main { display: flex; height: calc(100vh - 56px - 53px - 49px); }
+  .incident-list {
+    width: 420px; flex-shrink: 0;
+    overflow-y: auto; border-right: 1px solid var(--border);
+    background: var(--dark);
+  }
+  .incident-list::-webkit-scrollbar { width: 4px; }
+  .incident-list::-webkit-scrollbar-track { background: var(--dark); }
+  .incident-list::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+  .map-panel { flex: 1; background: var(--black); position: relative; }
+
+  /* ── INCIDENT CARDS ── */
+  .incident-card {
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background .1s;
+    position: relative;
+  }
+  .incident-card:hover { background: var(--panel); }
+  .incident-card.active { background: var(--panel); }
+  .incident-card.active::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+    background: var(--red);
+  }
+  .card-header { padding: 14px 16px 10px; display: flex; gap: 10px; align-items: flex-start; }
+  .prob-tag {
+    font-family: var(--mono); font-size: 9px; font-weight: 700;
+    letter-spacing: .1em; padding: 3px 7px; border-radius: 2px;
+    white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+  }
+  .prob-tag.CRITICAL { background: rgba(226,75,74,.15); color: var(--critical); border: 1px solid rgba(226,75,74,.3); }
+  .prob-tag.HIGH { background: rgba(224,120,66,.15); color: var(--high); border: 1px solid rgba(224,120,66,.3); }
+  .prob-tag.MEDIUM { background: rgba(212,160,23,.15); color: var(--medium); border: 1px solid rgba(212,160,23,.3); }
+  .card-info { flex: 1; min-width: 0; }
+  .card-ptw { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 3px; }
+  .card-loc { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card-source { font-size: 11px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card-conf {
+    font-family: var(--mono); font-size: 11px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .card-conf.CRITICAL { color: var(--critical); }
+  .card-conf.HIGH { color: var(--high); }
+  .card-conf.MEDIUM { color: var(--medium); }
+
+  .card-meta { padding: 0 16px 12px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .src-pill {
+    font-size: 10px; font-family: var(--mono);
+    padding: 2px 7px; border-radius: 2px;
+    border: 1px solid var(--border2); color: var(--muted);
+  }
+  .src-pill.on { border-color: var(--green); color: var(--green); background: rgba(76,175,80,.08); }
+
+  /* ── DETAIL PANEL (right side) ── */
+  .detail-panel {
+    flex: 1; overflow-y: auto;
+    padding: 24px;
+    display: none;
+    background: var(--black);
+  }
+  .detail-panel.visible { display: block; }
+  .detail-panel::-webkit-scrollbar { width: 4px; }
+  .detail-panel::-webkit-scrollbar-thumb { background: var(--border2); }
+
+  .detail-header { margin-bottom: 20px; }
+  .detail-ptw { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .detail-prob {
+    display: inline-block;
+    font-family: var(--mono); font-size: 11px; font-weight: 700;
+    letter-spacing: .1em; padding: 4px 12px; border-radius: 2px;
+    margin-bottom: 10px;
+  }
+  .detail-prob.CRITICAL { background: rgba(226,75,74,.15); color: var(--critical); border: 1px solid rgba(226,75,74,.3); }
+  .detail-prob.HIGH { background: rgba(224,120,66,.15); color: var(--high); border: 1px solid rgba(224,120,66,.3); }
+  .detail-prob.MEDIUM { background: rgba(212,160,23,.15); color: var(--medium); border: 1px solid rgba(212,160,23,.3); }
+  .detail-loc { font-size: 20px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
+  .detail-conf-bar { height: 3px; background: var(--border2); border-radius: 2px; margin-bottom: 20px; }
+  .detail-conf-fill { height: 100%; border-radius: 2px; background: var(--red); }
+
+  /* Street View photo */
+  .sv-photo { width: 100%; border-radius: 4px; display: block; margin-bottom: 8px; border: 1px solid var(--border2); }
+  .sv-caption { font-size: 11px; color: var(--muted); margin-bottom: 16px; font-family: var(--mono); }
+  .sv-badge {
+    display: inline-block; font-size: 10px; font-family: var(--mono);
+    padding: 3px 9px; border-radius: 2px; margin-bottom: 10px;
+    letter-spacing: .05em;
+  }
+  .sv-badge.confirmed { background: rgba(76,175,80,.12); color: var(--green); border: 1px solid rgba(76,175,80,.3); }
+  .sv-badge.pending { background: var(--border); color: var(--muted); border: 1px solid var(--border2); }
+  .sv-analysis {
+    padding: 12px 14px; background: var(--panel);
+    border: 1px solid var(--border2); border-radius: 4px;
+    font-size: 12px; color: var(--muted); line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .sv-analysis strong { color: var(--text); }
+
+  /* News article block */
+  .news-block {
+    padding: 14px; background: var(--panel);
+    border: 1px solid var(--border2); border-radius: 4px;
+    border-left: 3px solid var(--blue);
+    margin-bottom: 16px;
+  }
+  .news-headline { font-size: 13px; font-weight: 500; margin-bottom: 6px; line-height: 1.4; }
+  .news-headline a { color: var(--text); text-decoration: none; }
+  .news-headline a:hover { color: var(--blue); }
+  .news-meta { font-size: 11px; color: var(--muted); margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .news-source { font-family: var(--mono); font-size: 10px; padding: 2px 7px; background: var(--border); border-radius: 2px; color: var(--text); }
+  .news-quote { font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.5; padding-top: 8px; border-top: 1px solid var(--border); }
+  .news-mop { font-size: 11px; color: var(--blue); margin-top: 6px; }
+
+  /* Sources */
+  .sources-grid { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .source-item {
+    flex: 1; min-width: 80px;
+    padding: 10px 12px; border-radius: 4px;
+    border: 1px solid var(--border2); background: var(--panel);
+    text-align: center;
+  }
+  .source-item.on { border-color: rgba(76,175,80,.4); background: rgba(76,175,80,.05); }
+  .source-icon { font-size: 16px; margin-bottom: 4px; }
+  .source-name { font-size: 9px; font-family: var(--mono); letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+  .source-item.on .source-name { color: var(--green); }
+
+  /* Action */
+  .action-block {
+    padding: 12px 14px; background: rgba(76,175,80,.06);
+    border: 1px solid rgba(76,175,80,.2); border-radius: 4px;
+    font-size: 12px; color: var(--green); line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  /* Links */
+  .detail-links { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .detail-link {
+    font-size: 11px; font-family: var(--mono);
+    padding: 6px 12px; border-radius: 3px;
+    border: 1px solid var(--border2); color: var(--muted);
+    text-decoration: none; letter-spacing: .04em;
+    transition: all .15s;
+  }
+  .detail-link:hover { border-color: var(--blue); color: var(--blue); }
+
+  /* Section labels */
+  .section-label {
+    font-family: var(--mono); font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 8px; margin-top: 16px;
+  }
+
+  /* Empty / loading states */
+  .empty {
+    padding: 48px 24px; text-align: center;
+    color: var(--muted); font-size: 13px;
+  }
+  .empty-icon { font-size: 32px; margin-bottom: 12px; opacity: .4; }
+  .loading { display: flex; align-items: center; justify-content: center; height: 200px; }
+  .spinner {
+    width: 20px; height: 20px;
+    border: 2px solid var(--border2);
+    border-top-color: var(--red);
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .map-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--muted); gap: 12px;
+    background: radial-gradient(ellipse at center, #111 0%, #0a0a0a 100%);
+  }
+  .map-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: .3;
+  }
+  .no-incident-msg {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--muted); gap: 8px; text-align: center;
+    padding: 40px;
+  }
+  .no-incident-msg .big { font-size: 32px; opacity: .2; }
+  .no-incident-msg p { font-size: 12px; font-family: var(--mono); }
+
+  @media (max-width: 768px) {
+    .main { flex-direction: column; height: auto; }
+    .incident-list { width: 100%; height: 50vh; border-right: none; border-bottom: 1px solid var(--border); }
+    .map-panel { height: 50vh; }
+    .stats-bar { flex-wrap: wrap; }
+    .stat { min-width: 50%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-dot"></div>
+    POTHOLEWATCH
+  </div>
+  <div class="badge">PHASE 3</div>
+  <div class="header-right">
+    <span class="scan-time" id="scan-time">Loading...</span>
+    <button class="refresh-btn" onclick="loadData()">↺ REFRESH</button>
+  </div>
+</header>
+
+<div class="stats-bar" id="stats-bar">
+  <div class="stat critical"><div class="stat-num" id="s-critical">—</div><div class="stat-label">Critical</div></div>
+  <div class="stat high"><div class="stat-num" id="s-high">—</div><div class="stat-label">High</div></div>
+  <div class="stat medium"><div class="stat-num" id="s-medium">—</div><div class="stat-label">Medium</div></div>
+  <div class="stat confirmed"><div class="stat-num" id="s-confirmed">—</div><div class="stat-label">Confirmed</div></div>
+  <div class="stat"><div class="stat-num" id="s-total">—</div><div class="stat-label">Total</div></div>
+</div>
+
+<div class="filters">
+  <span class="filter-label">FILTER:</span>
+  <button class="filter-btn active" onclick="setFilter('ALL', this)">ALL</button>
+  <button class="filter-btn" onclick="setFilter('CRITICAL', this)">CRITICAL</button>
+  <button class="filter-btn" onclick="setFilter('HIGH', this)">HIGH</button>
+  <button class="filter-btn" onclick="setFilter('MEDIUM', this)">MEDIUM</button>
+  <button class="filter-btn" onclick="setFilter('confirmed', this)">POTHOLE CONFIRMED</button>
+</div>
+
+<div class="main">
+  <div class="incident-list" id="incident-list">
+    <div class="loading"><div class="spinner"></div></div>
+  </div>
+  <div class="map-panel" id="map-panel">
+    <div class="map-grid"></div>
+    <div class="no-incident-msg">
+      <div class="big">🕳️</div>
+      <p>SELECT AN INCIDENT</p>
+      <p style="opacity:.5">to view details + street view</p>
+    </div>
+  </div>
+</div>
+
+<script>
+let allIncidents = [];
+let activeFilter = 'ALL';
+let activeId = null;
+
+const PROB_ORDER = ['LOW','MEDIUM','HIGH','CRITICAL'];
+
+async function loadData() {
+  try {
+    const r = await fetch('./incidents.json?t=' + Date.now());
+    if (!r.ok) throw new Error('No data');
+    const data = await r.json();
+    allIncidents = data.incidents || [];
+
+    // Update scan time
+    if (data.scan_time) {
+      const dt = new Date(data.scan_time);
+      document.getElementById('scan-time').textContent =
+        'Last scan: ' + dt.toLocaleDateString('es-PA', {month:'short',day:'numeric'}) +
+        ' ' + dt.toLocaleTimeString('es-PA', {hour:'2-digit',minute:'2-digit'}) + ' UTC';
+    }
+
+    updateStats();
+    renderList();
+  } catch(e) {
+    document.getElementById('incident-list').innerHTML =
+      '<div class="empty"><div class="empty-icon">📡</div>No incident data yet.<br>Run a scan first.</div>';
+  }
+}
+
+function updateStats() {
+  const inc = allIncidents;
+  document.getElementById('s-critical').textContent = inc.filter(i=>i.probability==='CRITICAL').length;
+  document.getElementById('s-high').textContent = inc.filter(i=>i.probability==='HIGH').length;
+  document.getElementById('s-medium').textContent = inc.filter(i=>i.probability==='MEDIUM').length;
+  document.getElementById('s-confirmed').textContent = inc.filter(i=>i.pothole_confirmed).length;
+  document.getElementById('s-total').textContent = inc.length;
+}
+
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderList();
+}
+
+function filteredIncidents() {
+  if (activeFilter === 'ALL') return allIncidents;
+  if (activeFilter === 'confirmed') return allIncidents.filter(i => i.pothole_confirmed);
+  return allIncidents.filter(i => i.probability === activeFilter);
+}
+
+function srcLabel(key) {
+  return {news:'📰 News', google_waze:'📡 Waze', street_view:'📸 StreetView', trafico_panama:'🚦 Tráfico', x_twitter:'𝕏 X'}[key] || key;
+}
+
+function renderList() {
+  const items = filteredIncidents();
+  const list = document.getElementById('incident-list');
+  if (!items.length) {
+    list.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div>No incidents match this filter.</div>';
+    return;
+  }
+  list.innerHTML = items.map(inc => `
+<div class="incident-card ${inc.ptw_id === activeId ? 'active' : ''}" onclick="selectIncident('${inc.ptw_id}')">
+  <div class="card-header">
+    <span class="prob-tag ${inc.probability}">${inc.probability}</span>
+    <div class="card-info">
+      <div class="card-ptw">${inc.ptw_id} · ${inc.territory || ''}</div>
+      <div class="card-loc">${inc.location || 'Unknown location'}</div>
+      <div class="card-source">${inc.source_name || ''} ${inc.date ? '· ' + inc.date : ''}</div>
+    </div>
+    <div class="card-conf ${inc.probability}">${inc.confidence}%</div>
+  </div>
+  <div class="card-meta">
+    ${(inc.sources_confirmed||[]).map(s => `<span class="src-pill on">${srcLabel(s)}</span>`).join('')}
+    ${inc.pothole_confirmed ? '<span class="src-pill on">🕳️ Confirmed</span>' : ''}
+  </div>
+</div>`).join('');
+}
+
+function selectIncident(id) {
+  activeId = id;
+  const inc = allIncidents.find(i => i.ptw_id === id);
+  if (!inc) return;
+
+  // Update list active state
+  document.querySelectorAll('.incident-card').forEach(el => {
+    el.classList.toggle('active', el.onclick.toString().includes(id));
+  });
+
+  // Build detail panel
+  const panel = document.getElementById('map-panel');
+  const lat = inc.lat || 8.9936;
+  const lng = inc.lng || -79.5197;
+  const mapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
+  const svUrl = `https://www.google.com/maps/@${lat},${lng},3a,75y,0h,85t/data=!3m1!1e3`;
+  const wazeUrl = `https://waze.com/?ll=${lat},${lng}&navigate=yes`;
+
+  const srcDefs = [
+    {key:'news', icon:'📰', label:'News'},
+    {key:'google_waze', icon:'📡', label:'Waze'},
+    {key:'street_view', icon:'📸', label:'StreetView'},
+    {key:'trafico_panama', icon:'🚦', label:'Tráfico'},
+    {key:'x_twitter', icon:'𝕏', label:'X/Twitter'},
+  ];
+
+  const confirmed = inc.sources_confirmed || [];
+
+  panel.innerHTML = `
+<div class="detail-panel visible">
+  <div class="detail-header">
+    <div class="detail-ptw">${inc.ptw_id} · ${inc.territory || 'Panama'} · ${inc.geocode_method || ''}</div>
+    <div class="detail-prob ${inc.probability}">${inc.probability}</div>
+    <div class="detail-loc">${inc.location || 'Unknown location'}</div>
+    <div class="detail-conf-bar"><div class="detail-conf-fill" style="width:${inc.confidence||0}%"></div></div>
+  </div>
+
+  ${inc.sv_image_b64 ? `
+  <div class="section-label">STREET VIEW — POTHOLE PHOTO</div>
+  <span class="sv-badge ${inc.pothole_confirmed ? 'confirmed' : 'pending'}">
+    ${inc.pothole_confirmed ? '✓ POTHOLE VISUALLY CONFIRMED' : '📸 Road surface captured'}
+  </span>
+  <img class="sv-photo" src="data:image/jpeg;base64,${inc.sv_image_b64}" alt="Street View ${inc.location}"/>
+  ${inc.sv_description ? `
+  <div class="sv-analysis">
+    <strong>AI Vision:</strong> ${inc.sv_description}
+    ${inc.diameter_m ? `<br><strong>Diameter:</strong> ${inc.diameter_m}m` : ''}
+    ${inc.depth_cm ? ` · <strong>Depth:</strong> ${inc.depth_cm}cm` : ''}
+    ${inc.severity ? ` · <strong>Severity:</strong> ${inc.severity.toUpperCase()}` : ''}
+    ${inc.accident_risk ? ` · <strong>Risk:</strong> ${inc.accident_risk.toUpperCase()}` : ''}
+    ${inc.visual_confidence ? ` · <strong>Visual confidence:</strong> ${inc.visual_confidence}%` : ''}
+  </div>` : ''}` : ''}
+
+  <div class="section-label">NEWS ANCHOR</div>
+  <div class="news-block">
+    <div class="news-headline">
+      ${inc.url ? `<a href="${inc.url}" target="_blank">${inc.headline || 'No headline'}</a>` : (inc.headline || 'No headline')}
+    </div>
+    <div class="news-meta">
+      <span class="news-source">${inc.source_name || 'Unknown'}</span>
+      ${inc.date ? `<span>${inc.date}</span>` : ''}
+      ${inc.url ? `<a href="${inc.url}" target="_blank" style="color:var(--blue);font-size:11px;margin-left:auto">Ver artículo →</a>` : ''}
+    </div>
+    ${inc.quote ? `<div class="news-quote">"${inc.quote}"</div>` : ''}
+    ${inc.mop_attt ? `<div class="news-mop">🏛️ MOP/ATTT: ${inc.mop_attt}</div>` : ''}
+  </div>
+
+  <div class="section-label">CROSS-REFERENCE SOURCES (${confirmed.length}/5)</div>
+  <div class="sources-grid">
+    ${srcDefs.map(s => `
+    <div class="source-item ${confirmed.includes(s.key) ? 'on' : ''}">
+      <div class="source-icon">${s.icon}</div>
+      <div class="source-name">${s.label}</div>
+    </div>`).join('')}
+  </div>
+
+  <div class="section-label">RECOMMENDED ACTION</div>
+  <div class="action-block">${inc.recommended_action || '—'}</div>
+
+  <div class="section-label">LOCATION</div>
+  <div class="detail-links">
+    <a href="${mapsUrl}" target="_blank" class="detail-link">📍 Google Maps</a>
+    <a href="${svUrl}" target="_blank" class="detail-link">📸 Street View</a>
+    <a href="${wazeUrl}" target="_blank" class="detail-link">📡 Waze</a>
+    ${inc.url ? `<a href="${inc.url}" target="_blank" class="detail-link">📰 Article</a>` : ''}
+  </div>
+  <div style="font-size:11px;color:var(--muted);font-family:var(--mono)">${lat?.toFixed(5)}, ${lng?.toFixed(5)}</div>
+</div>`;
+}
+
+// Auto-load on start
+loadData();
+
+// Auto-refresh every 8 hours
+setInterval(loadData, 8 * 60 * 60 * 1000);
+</script>
+</body>
+</html>
