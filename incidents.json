@@ -123,5 +123,6 @@
       "visual_confidence": null,
       "sv_image_b64": null
     }
-  ]
+  ],
+  "counter": 0
 }
