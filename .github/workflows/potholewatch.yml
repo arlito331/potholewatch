@@ -1,42 +1,38 @@
-name: PotholeWatch Phase 3
+name: PotholeWatch v3
 
 on:
   schedule:
-    - cron: '0 */8 * * *'
+    - cron: '0 */8 * * *'    # every 8 hours
   workflow_dispatch:
+
+permissions:
+  contents: write             # needed to commit incidents.json back
 
 jobs:
   scan:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
-      - name: Run PotholeWatch Phase 3
+      - name: Run scan
         env:
-          ANTHROPIC_API_KEY:         ${{ secrets.ANTHROPIC_API_KEY }}
-          GMAIL_REFRESH_TOKEN:       ${{ secrets.GMAIL_REFRESH_TOKEN }}
-          GMAIL_CLIENT_ID:           ${{ secrets.GMAIL_CLIENT_ID }}
-          GMAIL_CLIENT_SECRET:       ${{ secrets.GMAIL_CLIENT_SECRET }}
-          GOOGLE_MAPS_API_KEY:       ${{ secrets.GOOGLE_MAPS_API_KEY }}
-          GOOGLE_STREETVIEW_API_KEY: ${{ secrets.GOOGLE_STREETVIEW_API_KEY }}
-        run: python potholewatch.py
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_MAPS_API_KEY:  ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          GMAIL_CLIENT_ID:      ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET:  ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN:  ${{ secrets.GMAIL_REFRESH_TOKEN }}
+        run: python potholewatch_v3.py
 
-      - name: Commit incidents.json
+      - name: Commit inventory updates
         run: |
-          git config --global user.name "PotholeWatch Bot"
-          git config --global user.email "bot@powerfixinc.com"
-          git pull --rebase origin main || true
+          git config user.name  "potholewatch-bot"
+          git config user.email "bot@potholewatch.local"
           git add incidents.json || true
-          git diff --staged --quiet || git commit -m "scan: update incidents.json $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git diff --cached --quiet || git commit -m "PotholeWatch inventory update [skip ci]"
           git push || true
