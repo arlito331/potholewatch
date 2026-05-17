@@ -9,155 +9,165 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.2}}
-.irow{padding:11px 16px;border-bottom:1px solid #1a1a1a;border-left:3px solid transparent;cursor:pointer;transition:background 0.12s;}
+.irow{padding:12px 16px;border-bottom:1px solid #1a1a1a;border-left:3px solid transparent;cursor:pointer;transition:background 0.12s;}
 .irow:hover{background:#1f1f1f;}
 .irow.sel{background:#232323;border-left-color:#D94F2B;}
-#ptw-map{width:100%;height:260px;}
+#ptw-map{width:100%;height:220px;}
+@media(min-width:600px){#ptw-map{height:300px;}}
 .leaflet-container{background:#0a1628;}
 .leaflet-control-attribution{display:none;}
 .leaflet-popup-content-wrapper{background:#1A1A1A;border:1px solid #333;border-radius:6px;color:#fff;box-shadow:none;}
 .leaflet-popup-tip{background:#1A1A1A;}
 .leaflet-popup-content{margin:10px 14px;font-size:12px;line-height:1.5;}
+.header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #262626;background:#1A1A1A;}
+.header-text{flex:1;min-width:0;}
+.header-eyebrow{font-size:9px;letter-spacing:3px;color:#D94F2B;font-weight:700;margin-bottom:3px;}
+.header-title{font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.header-sub{font-size:10px;color:#555;margin-top:2px;}
+.scan-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:9px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
+.scan-info{font-size:9px;color:#444;line-height:1.6;margin-top:4px;text-align:right;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;}
+.stat-box{padding:10px 12px;border-right:1px solid #262626;}
+.stat-box:last-child{border-right:none;}
+.stat-label{font-size:8px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
+.stat-val{font-size:22px;font-weight:700;}
+@media(min-width:400px){.stat-val{font-size:26px;}}
+.section-label{padding:9px 16px 5px;font-size:8px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;}
+.footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;margin-top:auto;}
+.footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<div style="display:flex;align-items:center;gap:14px;padding:13px 18px;border-bottom:1px solid #262626;background:#1A1A1A;">
-  <canvas id="radar" width="84" height="84" style="border-radius:50%;flex-shrink:0;"></canvas>
-  <div style="flex:1;">
-    <div style="font-size:10px;letter-spacing:4px;color:#D94F2B;font-weight:700;margin-bottom:3px;">POTHOLEWATCH · LIVE INTELLIGENCE</div>
-    <div style="font-size:18px;font-weight:700;">Road Incident Monitor</div>
-    <div style="font-size:11px;color:#555;margin-top:2px;">Panama territory · 8-hour scan cadence</div>
+<div class="header">
+  <canvas id="radar" width="72" height="72" style="border-radius:50%;flex-shrink:0;"></canvas>
+  <div class="header-text">
+    <div class="header-eyebrow">POTHOLEWATCH · LIVE</div>
+    <div class="header-title">Road Incident Monitor</div>
+    <div class="header-sub">Panama · 8-hour scan cadence</div>
   </div>
-  <div style="text-align:right;flex-shrink:0;">
-    <div style="display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:10px;font-weight:700;color:#D94F2B;letter-spacing:1px;margin-bottom:5px;">
+  <div style="flex-shrink:0;text-align:right;">
+    <div class="scan-badge">
       <div id="scan-dot" style="width:6px;height:6px;border-radius:50%;background:#D94F2B;animation:pulse 1.2s infinite;"></div>
       <span id="scan-status">LOADING</span>
     </div>
-    <div id="scan-time" style="font-size:10px;color:#444;line-height:1.7;">Fetching data...</div>
+    <div id="scan-time" class="scan-info">Fetching...</div>
   </div>
 </div>
 
-<!-- STATS -->
-<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;">
-  <div style="padding:12px 16px;border-right:1px solid #262626;">
-    <div style="font-size:9px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Total</div>
-    <div id="stat-total" style="font-size:26px;font-weight:700;">—</div>
+<div class="stats-grid">
+  <div class="stat-box">
+    <div class="stat-label">Total</div>
+    <div id="stat-total" class="stat-val">—</div>
   </div>
-  <div style="padding:12px 16px;border-right:1px solid #262626;">
-    <div style="font-size:9px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Critical</div>
-    <div id="stat-critical" style="font-size:26px;font-weight:700;color:#FF3B3B;">—</div>
+  <div class="stat-box">
+    <div class="stat-label">Critical</div>
+    <div id="stat-critical" class="stat-val" style="color:#FF3B3B;">—</div>
   </div>
-  <div style="padding:12px 16px;border-right:1px solid #262626;">
-    <div style="font-size:9px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">High</div>
-    <div id="stat-high" style="font-size:26px;font-weight:700;color:#D94F2B;">—</div>
+  <div class="stat-box">
+    <div class="stat-label">High</div>
+    <div id="stat-high" class="stat-val" style="color:#D94F2B;">—</div>
   </div>
-  <div style="padding:12px 16px;">
-    <div style="font-size:9px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Medium</div>
-    <div id="stat-medium" style="font-size:26px;font-weight:700;color:#F0A030;">—</div>
+  <div class="stat-box">
+    <div class="stat-label">Medium</div>
+    <div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div>
   </div>
 </div>
 
-<!-- MAP -->
-<div style="border-bottom:1px solid #262626;">
-  <div style="padding:10px 18px 6px;font-size:9px;color:#444;letter-spacing:2px;text-transform:uppercase;">Incident map — click pins for details</div>
-  <div id="ptw-map"></div>
-</div>
+<div class="section-label">Incident map — tap pins for details</div>
+<div id="ptw-map"></div>
 
-<!-- INCIDENT LIST -->
-<div style="flex:1;">
-  <div id="list-header" style="padding:8px 16px;font-size:9px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;">Loading incidents...</div>
-  <div id="incident-list"></div>
-</div>
+<div id="list-header" class="section-label" style="padding-top:9px;">Loading incidents...</div>
+<div id="incident-list" style="flex:1;"></div>
 
-<!-- FOOTER -->
-<div style="padding:8px 18px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;">
-  <div style="font-size:9px;color:#2a2a2a;letter-spacing:2px;">POWERFIX · REPAIR. REINVENTED.</div>
-  <div style="font-size:9px;color:#2a2a2a;">PotholeWatch v3.0.7</div>
+<div class="footer">
+  <span class="footer-text">POWERFIX · REPAIR. REINVENTED.</span>
+  <span class="footer-text">PTW v3.0.7</span>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const SCORE_COLOR = {CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030',LOW:'#888'};
-const RAW_URL = 'https://raw.githubusercontent.com/arlito331/potholewatch/main/incidents.json';
+const SCORE_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030',LOW:'#888'};
+const RAW_URL='https://raw.githubusercontent.com/arlito331/potholewatch/main/incidents.json';
 
-let incidents = [];
-let selected = null;
-let ptmap = null;
-let markers = {};
+let incidents=[],selected=null,ptmap=null,markers={};
 
-function scoreColor(s){ return SCORE_COLOR[s] || '#888'; }
+function sc(s){return SCORE_COLOR[s]||'#888';}
 
-function formatTime(iso){
+function fmt(iso){
   if(!iso) return '';
   try{
-    const d = new Date(iso);
+    const d=new Date(iso);
     return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})+
-      ' · '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:true})+' UTC';
-  }catch(e){ return String(iso).slice(0,16).replace('T',' '); }
+      ' · '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:true});
+  }catch(e){return String(iso).slice(0,16).replace('T',' ');}
 }
 
-function buildIncidents(data){
-  const raw = data.incidents || {};
-  const list = [];
+function buildList(data){
+  const raw=data.incidents||{};
+  const list=[];
   if(Array.isArray(raw)){
-    raw.forEach((r,i)=>{ if(r && (r.lat||r.coords)) list.push({...r, _key:String(i)}); });
+    raw.forEach((r,i)=>{
+      if(!r) return;
+      const lat=r.lat||(r.coords&&r.coords.lat);
+      const lng=r.lng||(r.coords&&r.coords.lng);
+      if(lat&&lng) list.push({...r,lat,lng,_key:String(i)});
+    });
   } else {
     Object.entries(raw).forEach(([k,r])=>{
       if(!r) return;
-      const lat = r.lat || (r.coords && r.coords.lat);
-      const lng = r.lng || (r.coords && r.coords.lng);
-      if(lat && lng) list.push({...r, lat, lng, _key:k});
+      const lat=r.lat||(r.coords&&r.coords.lat);
+      const lng=r.lng||(r.coords&&r.coords.lng);
+      if(lat&&lng) list.push({...r,lat,lng,_key:k});
     });
   }
   list.sort((a,b)=>new Date(b.first_seen||b.scan_time||0)-new Date(a.first_seen||a.scan_time||0));
   return list;
 }
 
-function makeIcon(score, active){
-  const color = scoreColor(score);
-  const r = active ? 10 : 7;
-  const ring = active ? `<circle cx="18" cy="18" r="15" fill="none" stroke="${color}" stroke-width="1.5" opacity="0.4"/>` : '';
+function makeIcon(score,active){
+  const color=sc(score);
+  const r=active?10:7;
+  const ring=active?`<circle cx="18" cy="18" r="15" fill="none" stroke="${color}" stroke-width="1.5" opacity="0.4"/>`:'';
   return L.divIcon({
     html:`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">${ring}<circle cx="18" cy="18" r="${r}" fill="${color}"/><text x="18" y="22" text-anchor="middle" fill="#fff" font-size="8" font-weight="700" font-family="monospace">${(score||'?')[0]}</text></svg>`,
-    className:'', iconSize:[36,36], iconAnchor:[18,18]
+    className:'',iconSize:[36,36],iconAnchor:[18,18]
   });
 }
 
 function renderStats(){
-  document.getElementById('stat-total').textContent = incidents.length;
-  document.getElementById('stat-critical').textContent = incidents.filter(i=>(i.score||i.probability)==='CRITICAL').length;
-  document.getElementById('stat-high').textContent = incidents.filter(i=>(i.score||i.probability)==='HIGH').length;
-  document.getElementById('stat-medium').textContent = incidents.filter(i=>(i.score||i.probability)==='MEDIUM').length;
-  document.getElementById('list-header').textContent = incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
+  document.getElementById('stat-total').textContent=incidents.length;
+  document.getElementById('stat-critical').textContent=incidents.filter(i=>(i.score||i.probability)==='CRITICAL').length;
+  document.getElementById('stat-high').textContent=incidents.filter(i=>(i.score||i.probability)==='HIGH').length;
+  document.getElementById('stat-medium').textContent=incidents.filter(i=>(i.score||i.probability)==='MEDIUM').length;
+  document.getElementById('list-header').textContent=incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
 }
 
 function renderList(){
-  const el = document.getElementById('incident-list');
+  const el=document.getElementById('incident-list');
   if(!incidents.length){
     el.innerHTML='<div style="padding:20px 16px;font-size:12px;color:#555;text-align:center;">No incidents found</div>';
     return;
   }
-  el.innerHTML = incidents.map(inc=>{
-    const score = inc.score||inc.probability||'MEDIUM';
-    const color = scoreColor(score);
-    const id = inc.case_id||inc.ptw_id||'PTW-???';
-    const title = (inc.title||inc.headline||inc.location||'Incident');
-    const loc = inc.location_text||inc.location||'Panama';
-    const date = inc.date||'';
-    const src = inc.source||inc.source_name||'';
-    const hits = inc.social_hits||inc.source_count||0;
-    const isSel = selected && selected._key===inc._key;
+  el.innerHTML=incidents.map(inc=>{
+    const score=inc.score||inc.probability||'MEDIUM';
+    const color=sc(score);
+    const id=inc.case_id||inc.ptw_id||'PTW-???';
+    const title=inc.title||inc.headline||inc.location||'Incident';
+    const loc=inc.location_text||inc.location||'Panama';
+    const date=inc.date||'';
+    const src=inc.source||inc.source_name||'';
+    const hits=inc.social_hits||inc.source_count||0;
+    const isSel=selected&&selected._key===inc._key;
     return `<div class="irow ${isSel?'sel':''}" onclick="selectInc('${inc._key}')">
-      <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px;">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
         <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:${color};border:1px solid ${color};border-radius:3px;padding:1px 6px;">${score}</span>
         <span style="font-size:9px;color:#444;letter-spacing:1px;">${id}</span>
         <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
       </div>
-      <div style="font-size:12px;font-weight:500;line-height:1.4;margin-bottom:3px;color:#fff;">${title.length>80?title.slice(0,80)+'…':title}</div>
+      <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;color:#fff;">${title.length>80?title.slice(0,80)+'…':title}</div>
       <div style="font-size:10px;color:#555;margin-bottom:5px;">${loc}</div>
-      <div style="display:flex;gap:12px;">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
         ${hits?`<span style="font-size:9px;color:${color};">● ${hits} source${hits!==1?'s':''}</span>`:''}
         ${src?`<span style="font-size:9px;color:#444;">${src}</span>`:''}
       </div>
@@ -166,76 +176,73 @@ function renderList(){
 }
 
 function selectInc(key){
-  selected = incidents.find(i=>i._key===String(key));
+  selected=incidents.find(i=>i._key===String(key));
   if(!selected) return;
   renderList();
   Object.entries(markers).forEach(([k,m])=>{
-    const inc = incidents.find(i=>i._key===k);
-    if(inc) m.setIcon(makeIcon(inc.score||inc.probability, k===String(key)));
+    const inc=incidents.find(i=>i._key===k);
+    if(inc) m.setIcon(makeIcon(inc.score||inc.probability,k===String(key)));
   });
-  if(markers[key] && ptmap){
-    ptmap.setView([selected.lat, selected.lng], 13, {animate:true, duration:0.5});
+  if(markers[key]&&ptmap){
+    ptmap.setView([selected.lat,selected.lng],13,{animate:true,duration:0.5});
     markers[key].openPopup();
   }
 }
-window.selectInc = selectInc;
+window.selectInc=selectInc;
 
 function initMap(){
-  ptmap = L.map('ptw-map',{zoomControl:false,attributionControl:false}).setView([8.997,-79.62],11);
+  ptmap=L.map('ptw-map',{zoomControl:false,attributionControl:false}).setView([8.997,-79.62],11);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd'}).addTo(ptmap);
   L.control.zoom({position:'bottomright'}).addTo(ptmap);
-
   incidents.forEach(inc=>{
     if(!inc.lat||!inc.lng) return;
-    const score = inc.score||inc.probability||'MEDIUM';
-    const id = inc.case_id||inc.ptw_id||'?';
-    const title = inc.title||inc.headline||inc.location||'Incident';
-    const color = scoreColor(score);
-    const m = L.marker([inc.lat,inc.lng],{icon:makeIcon(score,false)})
+    const score=inc.score||inc.probability||'MEDIUM';
+    const id=inc.case_id||inc.ptw_id||'?';
+    const title=inc.title||inc.headline||inc.location||'Incident';
+    const color=sc(score);
+    const m=L.marker([inc.lat,inc.lng],{icon:makeIcon(score,false)})
       .addTo(ptmap)
-      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${score} · ${id}</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${title.slice(0,60)}${title.length>60?'…':''}</div><div style="font-size:10px;color:#777;">${inc.location_text||inc.location||''}</div>`,{maxWidth:240});
+      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${score} · ${id}</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${title.slice(0,60)}${title.length>60?'…':''}</div><div style="font-size:10px;color:#777;">${inc.location_text||inc.location||''}</div>`,{maxWidth:220});
     m.on('click',()=>selectInc(inc._key));
-    markers[inc._key] = m;
+    markers[inc._key]=m;
   });
-
   if(incidents.length>0) selectInc(incidents[0]._key);
 }
 
 function drawRadar(){
-  const canvas = document.getElementById('radar');
-  const ctx = canvas.getContext('2d');
-  const sz=84,cx2=sz/2,cy2=sz/2,rad=sz/2-3;
+  const c=document.getElementById('radar');
+  const ctx=c.getContext('2d');
+  const sz=72,cx=sz/2,cy=sz/2,rad=sz/2-3;
   let angle=0;
   const blips=[{a:0.9,d:0.52},{a:2.3,d:0.68},{a:4.2,d:0.40},{a:5.1,d:0.58}];
   function draw(){
     ctx.clearRect(0,0,sz,sz);
-    ctx.beginPath();ctx.arc(cx2,cy2,rad,0,Math.PI*2);ctx.fillStyle='#0f0f0f';ctx.fill();
+    ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.fillStyle='#0f0f0f';ctx.fill();
     ctx.strokeStyle='#D94F2B';ctx.lineWidth=1.5;ctx.stroke();
     [0.3,0.6,1].forEach(f=>{
-      ctx.beginPath();ctx.arc(cx2,cy2,rad*f,0,Math.PI*2);
+      ctx.beginPath();ctx.arc(cx,cy,rad*f,0,Math.PI*2);
       ctx.strokeStyle='rgba(217,79,43,0.12)';ctx.lineWidth=0.5;ctx.stroke();
     });
     ctx.strokeStyle='rgba(217,79,43,0.1)';ctx.lineWidth=0.5;
-    ctx.beginPath();ctx.moveTo(cx2,cy2-rad);ctx.lineTo(cx2,cy2+rad);
-    ctx.moveTo(cx2-rad,cy2);ctx.lineTo(cx2+rad,cy2);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(cx,cy-rad);ctx.lineTo(cx,cy+rad);ctx.moveTo(cx-rad,cy);ctx.lineTo(cx+rad,cy);ctx.stroke();
     for(let i=0;i<55;i++){
       const a=angle-Math.PI*0.65+(i/55)*Math.PI*0.65;
-      ctx.beginPath();ctx.moveTo(cx2,cy2);ctx.arc(cx2,cy2,rad-1,a,a+0.065);ctx.closePath();
-      ctx.fillStyle=`rgba(217,79,43,${(i/55)*0.30})`;ctx.fill();
+      ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad-1,a,a+0.065);ctx.closePath();
+      ctx.fillStyle=`rgba(217,79,43,${(i/55)*0.28})`;ctx.fill();
     }
-    ctx.beginPath();ctx.moveTo(cx2,cy2);
-    ctx.lineTo(cx2+Math.cos(angle)*(rad-1),cy2+Math.sin(angle)*(rad-1));
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(angle)*(rad-1),cy+Math.sin(angle)*(rad-1));
     ctx.strokeStyle='#D94F2B';ctx.lineWidth=1.5;ctx.stroke();
     blips.forEach(b=>{
       const diff=((angle-b.a)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);
       if(diff<Math.PI*0.7){
         const al=1-diff/(Math.PI*0.7);
-        const bx=cx2+Math.cos(b.a)*rad*b.d,by=cy2+Math.sin(b.a)*rad*b.d;
+        const bx=cx+Math.cos(b.a)*rad*b.d,by=cy+Math.sin(b.a)*rad*b.d;
         ctx.beginPath();ctx.arc(bx,by,3,0,Math.PI*2);ctx.fillStyle=`rgba(255,80,80,${al})`;ctx.fill();
         if(al>0.4){ctx.beginPath();ctx.arc(bx,by,6,0,Math.PI*2);ctx.strokeStyle=`rgba(255,80,80,${(al-0.4)*0.6})`;ctx.lineWidth=0.8;ctx.stroke();}
       }
     });
-    ctx.beginPath();ctx.arc(cx2,cy2,2.5,0,Math.PI*2);ctx.fillStyle='#D94F2B';ctx.fill();
+    ctx.beginPath();ctx.arc(cx,cy,2.5,0,Math.PI*2);ctx.fillStyle='#D94F2B';ctx.fill();
     angle+=0.02;requestAnimationFrame(draw);
   }
   draw();
@@ -243,24 +250,23 @@ function drawRadar(){
 
 async function loadData(){
   try{
-    const res = await fetch(RAW_URL+'?t='+Date.now());
+    const res=await fetch(RAW_URL+'?t='+Date.now());
     if(!res.ok) throw new Error('HTTP '+res.status);
-    const data = await res.json();
-    incidents = buildIncidents(data);
-    const scanTime = data.scan_time || '';
-    document.getElementById('scan-status').textContent = 'LIVE';
-    document.getElementById('scan-time').innerHTML =
-      (scanTime ? 'Last scan: '+formatTime(scanTime)+'<br/>' : '')+
+    const data=await res.json();
+    incidents=buildList(data);
+    const scanTime=data.scan_time||'';
+    document.getElementById('scan-status').textContent='LIVE';
+    document.getElementById('scan-time').innerHTML=
+      (scanTime?'Last: '+fmt(scanTime)+'<br/>':'')+
       incidents.length+' incident'+(incidents.length!==1?'s':'')+' loaded';
     renderStats();
     renderList();
     initMap();
-  } catch(e){
-    document.getElementById('scan-status').textContent = 'OFFLINE';
-    document.getElementById('scan-dot').style.background = '#888';
-    document.getElementById('scan-dot').style.animation = 'none';
-    document.getElementById('scan-time').textContent = 'Could not fetch live data';
-    document.getElementById('list-header').textContent = 'Data unavailable — check back soon';
+  }catch(e){
+    document.getElementById('scan-status').textContent='OFFLINE';
+    document.getElementById('scan-dot').style.cssText='width:6px;height:6px;border-radius:50%;background:#888;';
+    document.getElementById('scan-time').textContent='Could not fetch live data';
+    document.getElementById('list-header').textContent='Data unavailable — check back soon';
     console.error('PotholeWatch fetch error:',e);
   }
 }
