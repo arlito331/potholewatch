@@ -158,15 +158,15 @@ function renderList(){
     const src=inc.source||inc.source_name||'';
     const hits=inc.social_hits||inc.source_count||0;
     const isSel=selected&&selected._key===inc._key;
-    return `<div class="irow ${isSel?'sel':''}" onclick="selectInc('${inc._key}')">
-      <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+    return `<div class="irow ${isSel?'sel':''}" data-key="${inc._key}">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;pointer-events:none;">
         <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:${color};border:1px solid ${color};border-radius:3px;padding:1px 6px;">${score}</span>
         <span style="font-size:9px;color:#444;letter-spacing:1px;">${id}</span>
         <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
       </div>
-      <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;color:#fff;">${title.length>80?title.slice(0,80)+'…':title}</div>
-      <div style="font-size:10px;color:#555;margin-bottom:5px;">${loc}</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;color:#fff;pointer-events:none;">${title.length>80?title.slice(0,80)+'…':title}</div>
+      <div style="font-size:10px;color:#555;margin-bottom:5px;pointer-events:none;">${loc}</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:none;">
         ${hits?`<span style="font-size:9px;color:${color};">● ${hits} source${hits!==1?'s':''}</span>`:''}
         ${src?`<span style="font-size:9px;color:#444;">${src}</span>`:''}
       </div>
@@ -272,6 +272,12 @@ async function loadData(){
 
 drawRadar();
 loadData();
+
+// Event delegation — one listener on the container, survives re-renders
+document.getElementById('incident-list').addEventListener('click',function(e){
+  const row=e.target.closest('.irow');
+  if(row&&row.dataset.key) selectInc(row.dataset.key);
+});
 </script>
 </body>
 </html>
