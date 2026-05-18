@@ -106,20 +106,19 @@ function fmt(iso){
 function buildList(data){
   const raw=data.incidents||{};
   const list=[];
+  function clean(r,key){
+    if(!r) return;
+    const lat=r.lat||(r.coords&&r.coords.lat);
+    const lng=r.lng||(r.coords&&r.coords.lng);
+    if(!lat||!lng) return;
+    // strip heavy fields that bloat the DOM
+    const {sv_image_b64,image_b64,screenshot,...rest}=r;
+    list.push({...rest,lat,lng,_key:key});
+  }
   if(Array.isArray(raw)){
-    raw.forEach((r,i)=>{
-      if(!r) return;
-      const lat=r.lat||(r.coords&&r.coords.lat);
-      const lng=r.lng||(r.coords&&r.coords.lng);
-      if(lat&&lng) list.push({...r,lat,lng,_key:String(i)});
-    });
+    raw.forEach((r,i)=>clean(r,String(i)));
   } else {
-    Object.entries(raw).forEach(([k,r])=>{
-      if(!r) return;
-      const lat=r.lat||(r.coords&&r.coords.lat);
-      const lng=r.lng||(r.coords&&r.coords.lng);
-      if(lat&&lng) list.push({...r,lat,lng,_key:k});
-    });
+    Object.entries(raw).forEach(([k,r])=>clean(r,k));
   }
   list.sort((a,b)=>new Date(b.first_seen||b.scan_time||0)-new Date(a.first_seen||a.scan_time||0));
   return list;
