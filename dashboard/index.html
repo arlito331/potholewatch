@@ -7,53 +7,47 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;}
+body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,sans-serif;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.2}}
-.irow{padding:12px 16px;border-bottom:1px solid #1a1a1a;border-left:3px solid transparent;cursor:pointer;transition:background 0.12s;}
-.irow:hover{background:#1f1f1f;}
-.irow.sel{background:#232323;border-left-color:#D94F2B;}
-#ptw-map{width:100%;height:220px;}
-@media(min-width:600px){#ptw-map{height:300px;}}
-.leaflet-container{background:#0a1628;}
-.leaflet-control-attribution{display:none;}
-.leaflet-popup-content-wrapper{background:#1A1A1A;border:1px solid #333;border-radius:6px;color:#fff;box-shadow:none;}
-.leaflet-popup-tip{background:#1A1A1A;}
-.leaflet-popup-content{margin:10px 14px;font-size:12px;line-height:1.5;}
+
 .header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #262626;background:#1A1A1A;}
 .header-text{flex:1;min-width:0;}
 .header-eyebrow{font-size:9px;letter-spacing:3px;color:#D94F2B;font-weight:700;margin-bottom:3px;}
-.header-title{font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.header-title{font-size:16px;font-weight:700;}
 .header-sub{font-size:10px;color:#555;margin-top:2px;}
 .scan-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:9px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
 .scan-info{font-size:9px;color:#444;line-height:1.6;margin-top:4px;text-align:right;}
+
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;}
 .stat-box{padding:10px 12px;border-right:1px solid #262626;}
 .stat-box:last-child{border-right:none;}
 .stat-label{font-size:8px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
 .stat-val{font-size:22px;font-weight:700;}
-@media(min-width:400px){.stat-val{font-size:26px;}}
-.section-label{padding:9px 16px 5px;font-size:8px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;}
-.footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;margin-top:auto;}
-.footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
 
-/* Detail drawer */
-#drawer{position:fixed;bottom:0;left:0;right:0;max-height:80vh;background:#141414;border-top:2px solid #D94F2B;border-radius:16px 16px 0 0;transform:translateY(100%);transition:transform 0.3s cubic-bezier(0.32,0.72,0,1);z-index:1000;display:flex;flex-direction:column;overflow:hidden;pointer-events:none;}
-#drawer.open{transform:translateY(0);pointer-events:all;}
-#drawer-handle{width:36px;height:4px;background:#333;border-radius:2px;margin:12px auto 8px;flex-shrink:0;cursor:pointer;}
-#drawer-scroll{overflow-y:auto;flex:1;padding:0 16px 24px;}
-#drawer-close{position:absolute;top:12px;right:16px;background:none;border:none;color:#555;font-size:20px;cursor:pointer;line-height:1;padding:4px;}
-.drawer-score{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;}
-.drawer-badge{font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:4px;border:1px solid;}
-.drawer-id{font-size:10px;color:#444;letter-spacing:2px;}
-.drawer-title{font-size:17px;font-weight:700;line-height:1.4;margin-bottom:8px;color:#fff;}
-.drawer-meta{font-size:11px;color:#555;margin-bottom:16px;line-height:1.8;}
-.drawer-meta span{color:#888;}
-.drawer-section{font-size:8px;letter-spacing:2px;color:#444;text-transform:uppercase;margin:16px 0 8px;border-top:1px solid #1e1e1e;padding-top:12px;}
-.drawer-action{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:6px;padding:12px;font-size:12px;color:#aaa;line-height:1.6;}
-.drawer-img{width:100%;border-radius:6px;margin-top:8px;object-fit:cover;max-height:200px;}
-.drawer-link{display:inline-block;margin-top:12px;font-size:11px;color:#D94F2B;text-decoration:none;border-bottom:1px solid rgba(217,79,43,0.3);padding-bottom:1px;}
-#drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;display:none;}
-#drawer-overlay.open{display:block;}
+.section-label{padding:9px 16px 5px;font-size:8px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;}
+
+#ptw-map{width:100%;height:220px;}
+.leaflet-container{background:#0a1628;}
+.leaflet-control-attribution{display:none;}
+.leaflet-popup-content-wrapper{background:#1A1A1A;border:1px solid #333;border-radius:6px;color:#fff;box-shadow:none;}
+.leaflet-popup-tip{background:#1A1A1A;}
+.leaflet-popup-content{margin:10px 14px;font-size:12px;line-height:1.5;}
+
+.irow{border-bottom:1px solid #1a1a1a;border-left:3px solid transparent;cursor:pointer;}
+.irow-summary{padding:12px 16px;}
+.irow.sel{border-left-color:#D94F2B;}
+.irow.sel .irow-summary{background:#1e1e1e;}
+.irow-detail{display:none;padding:0 16px 16px;background:#161616;border-top:1px solid #222;}
+.irow.sel .irow-detail{display:block;}
+.detail-title{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:10px;padding-top:14px;}
+.detail-meta{font-size:11px;color:#666;line-height:2;margin-bottom:12px;}
+.detail-meta b{color:#999;}
+.detail-block{background:#1a1a1a;border:1px solid #252525;border-radius:6px;padding:11px 13px;font-size:12px;color:#aaa;line-height:1.6;margin-bottom:10px;}
+.detail-label{font-size:8px;letter-spacing:2px;color:#444;text-transform:uppercase;margin:14px 0 6px;}
+.detail-link{display:inline-block;font-size:11px;color:#D94F2B;text-decoration:none;border-bottom:1px solid rgba(217,79,43,0.3);}
+
+.footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;}
+.footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
 </style>
 </head>
 <body>
@@ -75,43 +69,21 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 </div>
 
 <div class="stats-grid">
-  <div class="stat-box">
-    <div class="stat-label">Total</div>
-    <div id="stat-total" class="stat-val">—</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-label">Critical</div>
-    <div id="stat-critical" class="stat-val" style="color:#FF3B3B;">—</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-label">High</div>
-    <div id="stat-high" class="stat-val" style="color:#D94F2B;">—</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-label">Medium</div>
-    <div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div>
-  </div>
+  <div class="stat-box"><div class="stat-label">Total</div><div id="stat-total" class="stat-val">—</div></div>
+  <div class="stat-box"><div class="stat-label">Critical</div><div id="stat-critical" class="stat-val" style="color:#FF3B3B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">High</div><div id="stat-high" class="stat-val" style="color:#D94F2B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">Medium</div><div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div></div>
 </div>
 
 <div class="section-label">Incident map — tap pins for details</div>
 <div id="ptw-map"></div>
 
 <div id="list-header" class="section-label" style="padding-top:9px;">Loading incidents...</div>
-<div id="incident-list" style="flex:1;"></div>
-
-<!-- Detail drawer -->
-<div id="drawer-overlay"></div>
-<div id="drawer">
-  <div id="drawer-handle"></div>
-  <button id="drawer-close">&#215;</button>
-  <div id="drawer-scroll">
-    <div id="drawer-content"></div>
-  </div>
-</div>
+<div id="incident-list"></div>
 
 <div class="footer">
   <span class="footer-text">POWERFIX · REPAIR. REINVENTED.</span>
-  <span class="footer-text">PTW v3.0.9</span>
+  <span class="footer-text">PTW v4.0.0</span>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -119,36 +91,28 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 const SCORE_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030',LOW:'#888'};
 const RAW_URL='https://cdn.jsdelivr.net/gh/arlito331/potholewatch@main/incidents.json';
 
-let incidents=[],selected=null,ptmap=null,markers={};
+let incidents=[], selected=null, ptmap=null, markers={};
 
 function sc(s){return SCORE_COLOR[s]||'#888';}
 
 function fmt(iso){
   if(!iso) return '';
-  try{
-    const d=new Date(iso);
-    return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})+
-      ' · '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:true});
-  }catch(e){return String(iso).slice(0,16).replace('T',' ');}
+  try{ return new Date(iso).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
+  catch(e){ return String(iso).slice(0,10); }
 }
 
 function buildList(data){
-  const raw=data.incidents||{};
+  const raw=data.incidents||[];
+  const arr=Array.isArray(raw)?raw:Object.values(raw);
   const list=[];
-  function clean(r,key){
+  arr.forEach((r,i)=>{
     if(!r) return;
     const lat=r.lat||(r.coords&&r.coords.lat);
     const lng=r.lng||(r.coords&&r.coords.lng);
     if(!lat||!lng) return;
-    // strip heavy fields that bloat the DOM
     const {sv_image_b64,image_b64,screenshot,...rest}=r;
-    list.push({...rest,lat,lng,_key:key});
-  }
-  if(Array.isArray(raw)){
-    raw.forEach((r,i)=>clean(r,String(i)));
-  } else {
-    Object.entries(raw).forEach(([k,r])=>clean(r,k));
-  }
+    list.push({...rest,lat,lng,_key:String(r.ptw_id||r.case_id||i)});
+  });
   list.sort((a,b)=>new Date(b.first_seen||b.scan_time||0)-new Date(a.first_seen||a.scan_time||0));
   return list;
 }
@@ -165,10 +129,12 @@ function makeIcon(score,active){
 
 function renderStats(){
   document.getElementById('stat-total').textContent=incidents.length;
-  document.getElementById('stat-critical').textContent=incidents.filter(i=>(i.score||i.probability)==='CRITICAL').length;
-  document.getElementById('stat-high').textContent=incidents.filter(i=>(i.score||i.probability)==='HIGH').length;
-  document.getElementById('stat-medium').textContent=incidents.filter(i=>(i.score||i.probability)==='MEDIUM').length;
-  document.getElementById('list-header').textContent=incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
+  ['CRITICAL','HIGH','MEDIUM'].forEach(s=>{
+    document.getElementById('stat-'+s.toLowerCase()).textContent=
+      incidents.filter(i=>(i.score||i.probability)===s).length;
+  });
+  document.getElementById('list-header').textContent=
+    incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
 }
 
 function renderList(){
@@ -180,103 +146,58 @@ function renderList(){
   el.innerHTML=incidents.map(inc=>{
     const score=inc.score||inc.probability||'MEDIUM';
     const color=sc(score);
-    const id=inc.case_id||inc.ptw_id||'PTW-???';
-    const title=inc.title||inc.headline||inc.location||'Incident';
+    const id=inc.ptw_id||inc.case_id||'PTW-???';
+    const title=inc.headline||inc.title||inc.location||'Incident';
     const loc=inc.location_text||inc.location||'Panama';
-    const date=inc.date||'';
-    const src=inc.source||inc.source_name||'';
-    const hits=inc.social_hits||inc.source_count||0;
+    const date=inc.date||fmt(inc.scan_time)||'';
+    const src=inc.source_name||inc.source||'';
+    const hits=inc.source_count||inc.social_hits||0;
     const isSel=selected&&selected._key===inc._key;
-    return `<div class="irow ${isSel?'sel':''}" data-key="${inc._key}">
-      <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;pointer-events:none;">
-        <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:${color};border:1px solid ${color};border-radius:3px;padding:1px 6px;">${score}</span>
-        <span style="font-size:9px;color:#444;letter-spacing:1px;">${id}</span>
-        <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
+    const action=inc.recommended_action||'';
+    const quote=inc.quote||'';
+    const svDesc=inc.sv_description||'';
+    const url=inc.url||inc.source_url||'';
+    const conf=inc.confidence||null;
+
+    let detail=`<div class="detail-title">${title}</div><div class="detail-meta">`;
+    if(loc) detail+=`<b>📍</b> ${loc}<br/>`;
+    if(date) detail+=`<b>📅</b> ${date}<br/>`;
+    if(src) detail+=`<b>📡</b> ${src}${hits?' · '+hits+' source'+(hits!==1?'s':''):''}<br/>`;
+    if(conf) detail+=`<b>🎯</b> ${conf}% confidence<br/>`;
+    detail+='</div>';
+    if(quote) detail+=`<div class="detail-label">Key Quote</div><div class="detail-block">"${quote}"</div>`;
+    if(svDesc) detail+=`<div class="detail-label">Street View</div><div class="detail-block">${svDesc}</div>`;
+    if(action) detail+=`<div class="detail-label">Recommended Action</div><div class="detail-block">${action}</div>`;
+    if(url) detail+=`<div class="detail-label">Source</div><a class="detail-link" href="${url}" target="_blank">Open report →</a>`;
+
+    return `<div class="irow${isSel?' sel':''}" data-key="${inc._key}">
+      <div class="irow-summary">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+          <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:${color};border:1px solid ${color};border-radius:3px;padding:1px 6px;">${score}</span>
+          <span style="font-size:9px;color:#444;letter-spacing:1px;">${id}</span>
+          <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
+        </div>
+        <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;">${title.length>80?title.slice(0,80)+'…':title}</div>
+        <div style="font-size:10px;color:#555;">${loc}</div>
       </div>
-      <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;color:#fff;pointer-events:none;">${title.length>80?title.slice(0,80)+'…':title}</div>
-      <div style="font-size:10px;color:#555;margin-bottom:5px;pointer-events:none;">${loc}</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:none;">
-        ${hits?`<span style="font-size:9px;color:${color};">● ${hits} source${hits!==1?'s':''}</span>`:''}
-        ${src?`<span style="font-size:9px;color:#444;">${src}</span>`:''}
-      </div>
+      <div class="irow-detail">${detail}</div>
     </div>`;
   }).join('');
 }
 
-function closeDrawer(){
-  document.getElementById('drawer').classList.remove('open');
-  document.getElementById('drawer-overlay').classList.remove('open');
-}
-
-function openDrawer(inc){
-  const score=inc.score||inc.probability||'MEDIUM';
-  const color=sc(score);
-  const id=inc.case_id||inc.ptw_id||'PTW-???';
-  const title=inc.title||inc.headline||inc.location||'Incident';
-  const loc=inc.location_text||inc.location||'Panama';
-  const date=inc.date||inc.scan_time||'';
-  const src=inc.source||inc.source_name||'';
-  const url=inc.url||inc.source_url||'';
-  const action=inc.recommended_action||'';
-  const quote=inc.quote||inc.summary||'';
-  const confidence=inc.confidence||inc.visual_confidence||null;
-  const svDesc=inc.sv_description||'';
-  const hits=inc.social_hits||inc.source_count||0;
-
-  let html=`
-    <div class="drawer-score">
-      <span class="drawer-badge" style="color:${color};border-color:${color};">${score}</span>
-      <span class="drawer-id">${id}</span>
-      ${confidence?`<span style="font-size:9px;color:#444;">· ${confidence}% confidence</span>`:''}
-    </div>
-    <div class="drawer-title">${title}</div>
-    <div class="drawer-meta">
-      ${loc?`<span>📍</span> ${loc}<br/>`:''}
-      ${date?`<span>📅</span> ${date}<br/>`:''}
-      ${src?`<span>📡</span> ${src}${hits?' · '+hits+' source'+(hits!==1?'s':''):''}<br/>`:''}
-    </div>`;
-
-  if(quote){
-    html+=`<div class="drawer-section">Key Quote</div>
-    <div class="drawer-action">"${quote}"</div>`;
-  }
-
-  if(svDesc){
-    html+=`<div class="drawer-section">Street View Analysis</div>
-    <div class="drawer-action">${svDesc}</div>`;
-  }
-
-  if(action){
-    html+=`<div class="drawer-section">Recommended Action</div>
-    <div class="drawer-action">${action}</div>`;
-  }
-
-  if(url){
-    html+=`<div class="drawer-section">Source</div>
-    <a class="drawer-link" href="${url}" target="_blank" rel="noopener">Open original report →</a>`;
-  }
-
-  document.getElementById('drawer-content').innerHTML=html;
-  document.getElementById('drawer').classList.add('open');
-  document.getElementById('drawer-overlay').classList.add('open');
-}
-
 function selectInc(key){
-  selected=incidents.find(i=>i._key===String(key));
-  if(!selected) return;
+  const toggling=selected&&selected._key===key;
+  selected=toggling?null:incidents.find(i=>i._key===key);
   renderList();
   Object.entries(markers).forEach(([k,m])=>{
     const inc=incidents.find(i=>i._key===k);
-    if(inc) m.setIcon(makeIcon(inc.score||inc.probability,k===String(key)));
+    if(inc) m.setIcon(makeIcon(inc.score||inc.probability,!toggling&&k===key));
   });
-  if(markers[key]&&ptmap){
+  if(!toggling&&selected&&markers[key]&&ptmap){
     ptmap.setView([selected.lat,selected.lng],13,{animate:true,duration:0.5});
     markers[key].openPopup();
   }
-  // Also load full incident data (with image) on demand
-  openDrawer(selected);
 }
-window.selectInc=selectInc;
 
 function initMap(){
   ptmap=L.map('ptw-map',{zoomControl:false,attributionControl:false}).setView([8.997,-79.62],11);
@@ -285,8 +206,8 @@ function initMap(){
   incidents.forEach(inc=>{
     if(!inc.lat||!inc.lng) return;
     const score=inc.score||inc.probability||'MEDIUM';
-    const id=inc.case_id||inc.ptw_id||'?';
-    const title=inc.title||inc.headline||inc.location||'Incident';
+    const id=inc.ptw_id||inc.case_id||'?';
+    const title=inc.headline||inc.title||inc.location||'Incident';
     const color=sc(score);
     const m=L.marker([inc.lat,inc.lng],{icon:makeIcon(score,false)})
       .addTo(ptmap)
@@ -294,7 +215,6 @@ function initMap(){
     m.on('click',()=>selectInc(inc._key));
     markers[inc._key]=m;
   });
-  if(incidents.length>0) selectInc(incidents[0]._key);
 }
 
 function drawRadar(){
@@ -362,15 +282,9 @@ async function loadData(){
 drawRadar();
 loadData();
 
-// Close drawer
-document.getElementById('drawer-close').addEventListener('click',closeDrawer);
-document.getElementById('drawer-overlay').addEventListener('click',closeDrawer);
-document.getElementById('drawer-handle').addEventListener('click',closeDrawer);
-
-// Event delegation — one listener on the container, survives re-renders
 document.getElementById('incident-list').addEventListener('click',function(e){
-  const row=e.target.closest('.irow');
-  if(row&&row.dataset.key) selectInc(row.dataset.key);
+  const row=e.target.closest('[data-key]');
+  if(row) selectInc(row.dataset.key);
 });
 </script>
 </body>
