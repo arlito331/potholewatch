@@ -91,7 +91,7 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 const SCORE_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030',LOW:'#888'};
 const RAW_URL='https://cdn.jsdelivr.net/gh/arlito331/potholewatch@main/incidents.json';
 
-let incidents=[], selected=null, ptmap=null, markers={};
+let incidents=[], selected=null, ptmap=null, markers={}, imgCache={};
 
 function sc(s){return SCORE_COLOR[s]||'#888';}
 
@@ -111,7 +111,10 @@ function buildList(data){
     const lng=r.lng||(r.coords&&r.coords.lng);
     if(!lat||!lng) return;
     const {sv_image_b64,image_b64,screenshot,...rest}=r;
-    list.push({...rest,lat,lng,_key:String(r.ptw_id||r.case_id||i)});
+    const key=String(r.ptw_id||r.case_id||i);
+    if(sv_image_b64) imgCache[key]=sv_image_b64;
+    if(image_b64) imgCache[key]=imgCache[key]||image_b64;
+    list.push({...rest,lat,lng,_key:key});
   });
   list.sort((a,b)=>new Date(b.first_seen||b.scan_time||0)-new Date(a.first_seen||a.scan_time||0));
   return list;
@@ -169,6 +172,8 @@ function renderList(){
     if(svDesc) detail+=`<div class="detail-label">Street View</div><div class="detail-block">${svDesc}</div>`;
     if(action) detail+=`<div class="detail-label">Recommended Action</div><div class="detail-block">${action}</div>`;
     if(url) detail+=`<div class="detail-label">Source</div><a class="detail-link" href="${url}" target="_blank">Open report →</a>`;
+    const img=imgCache[inc._key];
+    if(img) detail+=`<div class="detail-label">Street View Photo</div><img src="data:image/jpeg;base64,${img}" style="width:100%;border-radius:6px;margin-top:4px;max-height:220px;object-fit:cover;" alt="Street View"/>`;
 
     return `<div class="irow${isSel?' sel':''}" data-key="${inc._key}">
       <div class="irow-summary">
