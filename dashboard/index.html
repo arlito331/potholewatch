@@ -1,1 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PotholeWatch — Panama Road Intelligence</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,sans-serif;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.2}}
 
+.header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #262626;background:#1A1A1A;}
+.header-text{flex:1;min-width:0;}
+.header-eyebrow{font-size:9px;letter-spacing:3px;color:#D94F2B;font-weight:700;margin-bottom:3px;}
+.header-title{font-size:16px;font-weight:700;}
+.header-sub{font-size:10px;color:#555;margin-top:2px;}
+.scan-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:9px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
+.scan-info{font-size:9px;color:#444;line-height:1.6;margin-top:4px;text-align:right;}
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;}
+.stat-box{padding:10px 12px;border-right:1px solid #262626;}
+.stat-box:last-child{border-right:none;}
+.stat-label{font-size:8px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
+.stat-val{font-size:22px;font-weight:700;}
+
+.section-label{padding:9px 16px 5px;font-size:8px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;}
+
+#ptw-map{width:100%;height:220px;}
+.leaflet-container{background:#0a1628;}
+.leaflet-control-attribution{display:none;}
+.leaflet-popup-content-wrapper{background:#1A1A1A;border:1px solid #333;border-radius:6px;color:#fff;box-shadow:none;}
+.leaflet-popup-tip{background:#1A1A1A;}
+.leaflet-popup-content{margin:10px 14px;font-size:12px;line-height:1.5;}
+
+.irow{border-bottom:1px solid #1a1a1a;border-left:3px solid transparent;cursor:pointer;}
+.irow-summary{padding:12px 16px;}
+.irow.sel{border-left-color:#D94F2B;}
+.irow.sel .irow-summary{background:#1e1e1e;}
+.irow-detail{display:none;padding:0 16px 16px;background:#161616;border-top:1px solid #222;}
+.irow.sel .irow-detail{display:block;}
+.detail-title{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:10px;padding-top:14px;}
+.detail-meta{font-size:11px;color:#666;line-height:2;margin-bottom:12px;}
+.detail-meta b{color:#999;}
+.detail-block{background:#1a1a1a;border:1px solid #252525;border-radius:6px;padding:11px 13px;font-size:12px;color:#aaa;line-height:1.6;margin-bottom:10px;}
+.detail-label{font-size:8px;letter-spacing:2px;color:#444;text-transform:uppercase;margin:14px 0 6px;}
+.detail-link{display:inline-block;font-size:11px;color:#D94F2B;text-decoration:none;border-bottom:1px solid rgba(217,79,43,0.3);}
+.evidence-section{margin-top:14px;padding-top:12px;border-top:1px solid #252525;}
+.evidence-label{font-size:8px;letter-spacing:2px;color:#D94F2B;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+.evidence-item{font-size:12px;color:#888;line-height:1.5;margin-bottom:6px;padding-left:10px;border-left:2px solid #2a2a2a;}
+.evidence-item a{color:#D94F2B;text-decoration:none;}
+.img-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px;}
+.img-grid img{width:100%;border-radius:4px;object-fit:cover;max-height:140px;}
+.img-grid img.single{grid-column:1/-1;max-height:200px;}
+
+.footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;}
+.footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <canvas id="radar" width="72" height="72" style="border-radius:50%;flex-shrink:0;"></canvas>
+  <div class="header-text">
+    <div class="header-eyebrow">POTHOLEWATCH · LIVE</div>
+    <div class="header-title">Road Incident Monitor</div>
+    <div class="header-sub">Panama · 8-hour scan cadence</div>
+  </div>
+  <div style="flex-shrink:0;text-align:right;">
+    <div class="scan-badge">
+      <div id="scan-dot" style="width:6px;height:6px;border-radius:50%;background:#D94F2B;animation:pulse 1.2s infinite;"></div>
+      <span id="scan-status">LOADING</span>
+    </div>
+    <div id="scan-time" class="scan-info">Fetching...</div>
+  </div>
+</div>
+
+<div class="stats-grid">
+  <div class="stat-box"><div class="stat-label">Total</div><div id="stat-total" class="stat-val">—</div></div>
+  <div class="stat-box"><div class="stat-label">Critical</div><div id="stat-critical" class="stat-val" style="color:#FF3B3B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">High</div><div id="stat-high" class="stat-val" style="color:#D94F2B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">Medium</div><div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div></div>
+</div>
+
+<div class="section-label">Incident map — tap pins for details</div>
+<div id="ptw-map"></div>
+
+<div id="list-header" class="section-label" style="padding-top:9px;">Loading incidents...</div>
+<div id="incident-list"></div>
+
+<div class="footer">
+  <span class="footer-text">POWERFIX · REPAIR. REINVENTED.</span>
+  <span class="footer-text">PTW v4.1.0</span>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const SCORE_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030',LOW:'#888'};
+
+// GitHub raw API — always fresh, no CDN cache
+const RAW_URL='https://raw.githubusercontent.com/arlito331/potholewatch/main/incidents.json';
+
+let incidents=[], selected=null, ptmap=null, markers={}, imgCache={};
+
+function sc(s){return SCORE_COLOR[s]||'#888';}
+
+function fmt(iso){
+  if(!iso) return '';
+  try{ return new Date(iso).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
+  catch(e){ return String(iso).slice(0,10); }
+}
+
+function fmtTime(iso){
+  if(!iso) return '';
+  try{
+    return new Date(iso).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',timeZoneName:'short'});
+  } catch(e){ return String(iso).slice(0,16); }
+}
+
+function buildList(data){
+  const raw=data.incidents||[];
+  const arr=Array.isArray(raw)?raw:Object.values(raw);
+  const list=[];
+  arr.forEach((r,i)=>{
+    if(!r) return;
+    const lat=r.lat||(r.coords&&r.coords.lat);
+    const lng=r.lng||(r.coords&&r.coords.lng);
+    if(!lat||!lng) return;
+    const {sv_image_b64,image_b64,screenshot,...rest}=r;
+    const key=String(r.ptw_id||r.case_id||i);
+    if(sv_image_b64) imgCache[key]=sv_image_b64;
+    if(image_b64) imgCache[key]=imgCache[key]||image_b64;
+    list.push({...rest,lat,lng,_key:key});
+  });
+  list.sort((a,b)=>new Date(b.first_seen||b.scan_time||0)-new Date(a.first_seen||a.scan_time||0));
+  return list;
+}
+
+function makeIcon(score,active){
+  const color=sc(score);
+  const r=active?10:7;
+  const ring=active?`<circle cx="18" cy="18" r="15" fill="none" stroke="${color}" stroke-width="1.5" opacity="0.4"/>`:'';
+  return L.divIcon({
+    html:`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">${ring}<circle cx="18" cy="18" r="${r}" fill="${color}"/><text x="18" y="22" text-anchor="middle" fill="#fff" font-size="8" font-weight="700" font-family="monospace">${(score||'?')[0]}</text></svg>`,
+    className:'',iconSize:[36,36],iconAnchor:[18,18]
+  });
+}
+
+function renderStats(){
+  document.getElementById('stat-total').textContent=incidents.length;
+  ['CRITICAL','HIGH','MEDIUM'].forEach(s=>{
+    document.getElementById('stat-'+s.toLowerCase()).textContent=
+      incidents.filter(i=>(i.score||i.probability)===s).length;
+  });
+  document.getElementById('list-header').textContent=
+    incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
+}
+
+function buildEvidenceHTML(inc){
+  let html='';
+  const social=inc.social||{};
+  const crossref=inc.crossref||{};
+
+  // Article images
+  const imgs=(inc.article_image_urls||[]).filter(u=>u&&u.startsWith('http'));
+  if(imgs.length){
+    const gridClass=imgs.length===1?'img-grid single':'img-grid';
+    html+=`<div class="${gridClass}" style="margin-bottom:10px;">`;
+    imgs.slice(0,4).forEach((u,i)=>{
+      html+=`<img src="${u}" ${imgs.length===1?'class="single"':''} onerror="this.style.display='none'" alt="Incident photo"/>`;
+    });
+    html+='</div>';
+  }
+
+  // Score reasoning
+  const bullets=(inc.headline_evidence||[]);
+  if(bullets.length){
+    html+=`<div class="evidence-section"><div class="evidence-label">Why we're flagging</div>`;
+    bullets.forEach(b=>{html+=`<div class="evidence-item">${b}</div>`;});
+    html+=`</div>`;
+  }
+
+  // Key quote
+  if(inc.quote){
+    html+=`<div class="detail-label">Witness / Report Quote</div><div class="detail-block">"${inc.quote}"</div>`;
+  }
+
+  // MOP / ATTT
+  const mop=(crossref.mop_evidence||[]);
+  const attt=(crossref.attt_evidence||[]);
+  if(mop.length||attt.length){
+    html+=`<div class="evidence-section"><div class="evidence-label">MOP / ATTT Panama</div>`;
+    [...mop,...attt].slice(0,4).forEach(e=>{
+      const link=e.url?` <a href="${e.url}" target="_blank">→</a>`:'';
+      html+=`<div class="evidence-item"><strong style="color:#bbb;">${e.source||''}:</strong> ${(e.quote||'').slice(0,180)}${link}</div>`;
+    });
+    html+=`</div>`;
+  }
+
+  // Social
+  const xp=(social.x_posts||[]);
+  const fb=(social.facebook_posts||[]);
+  const ig=(social.instagram_posts||[]);
+  const wz=(social.waze_reports||[]);
+  const nc=(social.news_comments||[]);
+  const allSocial=[...xp,...fb,...ig,...wz,...nc];
+  if(allSocial.length){
+    html+=`<div class="evidence-section"><div class="evidence-label">Social / Citizen Reports</div>`;
+    allSocial.slice(0,5).forEach(p=>{
+      const src=p.user||p.source||p.platform||'';
+      const q=(p.quote||'').slice(0,160);
+      const link=p.url?` <a href="${p.url}" target="_blank">→</a>`:'';
+      if(q) html+=`<div class="evidence-item">${src?`<strong style="color:#bbb;">${src}:</strong> `:''}${q}${link}</div>`;
+    });
+    html+=`</div>`;
+  }
+
+  // Prior news history
+  const hist=(crossref.news_history||[]);
+  if(hist.length){
+    html+=`<div class="evidence-section"><div class="evidence-label">Prior Road History</div>`;
+    hist.slice(0,3).forEach(h=>{
+      const link=h.url?`<a href="${h.url}" target="_blank" style="color:#D94F2B;">${h.headline||h.url}</a>`:h.headline||'';
+      html+=`<div class="evidence-item">${h.date?h.date+' — ':''}${link} <span style="color:#444;">${h.source||''}</span></div>`;
+    });
+    html+=`</div>`;
+  }
+
+  // Recommended action
+  if(inc.recommended_action){
+    html+=`<div class="detail-label">Recommended Action</div><div class="detail-block">${inc.recommended_action}</div>`;
+  }
+
+  return html;
+}
+
+function renderList(){
+  const el=document.getElementById('incident-list');
+  if(!incidents.length){
+    el.innerHTML='<div style="padding:20px 16px;font-size:12px;color:#555;text-align:center;">No incidents found</div>';
+    return;
+  }
+  el.innerHTML=incidents.map(inc=>{
+    const score=inc.score||inc.probability||'MEDIUM';
+    const color=sc(score);
+    const id=inc.ptw_id||inc.case_id||'PTW-???';
+    const title=inc.headline||inc.title||inc.location||'Incident';
+    const loc=inc.location_text||inc.location||'Panama';
+    const date=inc.date||fmt(inc.scan_time)||'';
+    const src=inc.source_name||inc.source||'';
+    const hits=inc.source_count||0;
+    const conf=inc.confidence||null;
+    const url=inc.url||inc.source_url||'';
+    const isSel=selected&&selected._key===inc._key;
+
+    let detail=`<div class="detail-title">${title}</div><div class="detail-meta">`;
+    if(loc) detail+=`<b>📍</b> ${loc}<br/>`;
+    if(date) detail+=`<b>📅</b> ${date}<br/>`;
+    if(src&&url) detail+=`<b>📡</b> <a href="${url}" target="_blank" style="color:#D94F2B;">${src}</a>${hits?' · '+hits+' source'+(hits!==1?'s':''):''}<br/>`;
+    else if(src) detail+=`<b>📡</b> ${src}${hits?' · '+hits+' source'+(hits!==1?'s':''):''}<br/>`;
+    if(conf) detail+=`<b>🎯</b> ${conf}% confidence<br/>`;
+    detail+='</div>';
+
+    detail+=buildEvidenceHTML(inc);
+
+    if(url) detail+=`<div style="margin-top:14px;"><a href="${url}" target="_blank" style="display:inline-block;background:#D94F2B;color:#fff;padding:9px 16px;border-radius:4px;font-size:11px;text-decoration:none;font-weight:700;letter-spacing:1px;">READ FULL ARTICLE →</a></div>`;
+
+    const img=imgCache[inc._key];
+    if(img) detail+=`<div class="detail-label">Street View Photo</div><img src="data:image/jpeg;base64,${img}" style="width:100%;border-radius:6px;margin-top:4px;max-height:220px;object-fit:cover;" alt="Street View"/>`;
+
+    const thumb=inc.primary_image_url||(inc.article_image_urls&&inc.article_image_urls[0])||'';
+
+    return `<div class="irow${isSel?' sel':''}" data-key="${inc._key}">
+      <div class="irow-summary" style="display:flex;gap:10px;align-items:flex-start;">
+        ${thumb?`<img src="${thumb}" style="width:52px;height:52px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-top:2px;" onerror="this.style.display='none'" />`:''}
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+            <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:${color};border:1px solid ${color};border-radius:3px;padding:1px 6px;">${score}</span>
+            <span style="font-size:9px;color:#444;letter-spacing:1px;">${id}</span>
+            <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
+          </div>
+          <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;">${title.length>80?title.slice(0,80)+'…':title}</div>
+          <div style="font-size:10px;color:#555;">${loc}</div>
+        </div>
+      </div>
+      <div class="irow-detail">${detail}</div>
+    </div>`;
+  }).join('');
+}
+
+function selectInc(key){
+  const toggling=selected&&selected._key===key;
+  selected=toggling?null:incidents.find(i=>i._key===key);
+  renderList();
+  Object.entries(markers).forEach(([k,m])=>{
+    const inc=incidents.find(i=>i._key===k);
+    if(inc) m.setIcon(makeIcon(inc.score||inc.probability,!toggling&&k===key));
+  });
+  if(!toggling&&selected&&markers[key]&&ptmap){
+    ptmap.setView([selected.lat,selected.lng],13,{animate:true,duration:0.5});
+    markers[key].openPopup();
+  }
+}
+
+function initMap(){
+  ptmap=L.map('ptw-map',{zoomControl:false,attributionControl:false}).setView([8.997,-79.62],11);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd'}).addTo(ptmap);
+  L.control.zoom({position:'bottomright'}).addTo(ptmap);
+  incidents.forEach(inc=>{
+    if(!inc.lat||!inc.lng) return;
+    const score=inc.score||inc.probability||'MEDIUM';
+    const id=inc.ptw_id||inc.case_id||'?';
+    const title=inc.headline||inc.title||inc.location||'Incident';
+    const color=sc(score);
+    const m=L.marker([inc.lat,inc.lng],{icon:makeIcon(score,false)})
+      .addTo(ptmap)
+      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${score} · ${id}</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${title.slice(0,60)}${title.length>60?'…':''}</div><div style="font-size:10px;color:#777;">${inc.location_text||inc.location||''}</div>`,{maxWidth:220});
+    m.on('click',()=>selectInc(inc._key));
+    markers[inc._key]=m;
+  });
+}
+
+function drawRadar(){
+  const c=document.getElementById('radar');
+  const ctx=c.getContext('2d');
+  const sz=72,cx=sz/2,cy=sz/2,rad=sz/2-3;
+  let angle=0;
+  const blips=[{a:0.9,d:0.52},{a:2.3,d:0.68},{a:4.2,d:0.40},{a:5.1,d:0.58}];
+  function draw(){
+    ctx.clearRect(0,0,sz,sz);
+    ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.fillStyle='#0f0f0f';ctx.fill();
+    ctx.strokeStyle='#D94F2B';ctx.lineWidth=1.5;ctx.stroke();
+    [0.3,0.6,1].forEach(f=>{
+      ctx.beginPath();ctx.arc(cx,cy,rad*f,0,Math.PI*2);
+      ctx.strokeStyle='rgba(217,79,43,0.12)';ctx.lineWidth=0.5;ctx.stroke();
+    });
+    ctx.strokeStyle='rgba(217,79,43,0.1)';ctx.lineWidth=0.5;
+    ctx.beginPath();ctx.moveTo(cx,cy-rad);ctx.lineTo(cx,cy+rad);ctx.moveTo(cx-rad,cy);ctx.lineTo(cx+rad,cy);ctx.stroke();
+    for(let i=0;i<55;i++){
+      const a=angle-Math.PI*0.65+(i/55)*Math.PI*0.65;
+      ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad-1,a,a+0.065);ctx.closePath();
+      ctx.fillStyle=`rgba(217,79,43,${(i/55)*0.28})`;ctx.fill();
+    }
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(angle)*(rad-1),cy+Math.sin(angle)*(rad-1));
+    ctx.strokeStyle='#D94F2B';ctx.lineWidth=1.5;ctx.stroke();
+    blips.forEach(b=>{
+      const diff=((angle-b.a)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);
+      if(diff<Math.PI*0.7){
+        const al=1-diff/(Math.PI*0.7);
+        const bx=cx+Math.cos(b.a)*rad*b.d,by=cy+Math.sin(b.a)*rad*b.d;
+        ctx.beginPath();ctx.arc(bx,by,3,0,Math.PI*2);ctx.fillStyle=`rgba(255,80,80,${al})`;ctx.fill();
+        if(al>0.4){ctx.beginPath();ctx.arc(bx,by,6,0,Math.PI*2);ctx.strokeStyle=`rgba(255,80,80,${(al-0.4)*0.6})`;ctx.lineWidth=0.8;ctx.stroke();}
+      }
+    });
+    ctx.beginPath();ctx.arc(cx,cy,2.5,0,Math.PI*2);ctx.fillStyle='#D94F2B';ctx.fill();
+    angle+=0.02;requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+async function loadData(){
+  try{
+    // Cache-bust with timestamp so GitHub raw always returns fresh content
+    const res=await fetch(RAW_URL+'?t='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data=await res.json();
+    incidents=buildList(data);
+    const scanTime=data.scan_time||'';
+    document.getElementById('scan-status').textContent='LIVE';
+    document.getElementById('scan-time').innerHTML=
+      (scanTime?'Last scan: '+fmtTime(scanTime)+'<br/>':'')+
+      incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
+    renderStats();
+    renderList();
+    initMap();
+  }catch(e){
+    document.getElementById('scan-status').textContent='OFFLINE';
+    document.getElementById('scan-dot').style.cssText='width:6px;height:6px;border-radius:50%;background:#888;';
+    document.getElementById('scan-time').textContent='Could not fetch live data';
+    document.getElementById('list-header').textContent='Data unavailable — check back soon';
+    console.error('PotholeWatch fetch error:',e);
+  }
+}
+
+drawRadar();
+loadData();
+
+document.getElementById('incident-list').addEventListener('click',function(e){
+  const row=e.target.closest('[data-key]');
+  if(row) selectInc(row.dataset.key);
+});
+</script>
+</body>
+</html>
