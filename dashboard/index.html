@@ -19,15 +19,15 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 .scan-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:9px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
 .scan-info{font-size:9px;color:#444;line-height:1.6;margin-top:4px;text-align:right;}
 
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;}
-.stat-box{padding:10px 12px;border-right:1px solid #262626;}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid #262626;}
+.stat-box{padding:12px 14px;border-right:1px solid #262626;}
 .stat-box:last-child{border-right:none;}
 .stat-label{font-size:8px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
-.stat-val{font-size:22px;font-weight:700;}
+.stat-val{font-size:24px;font-weight:700;}
 
 .section-label{padding:9px 16px 5px;font-size:8px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;}
 
-#ptw-map{width:100%;height:220px;}
+#ptw-map{width:100%;height:240px;}
 .leaflet-container{background:#0a1628;}
 .leaflet-control-attribution{display:none;}
 .leaflet-popup-content-wrapper{background:#1A1A1A;border:1px solid #333;border-radius:6px;color:#fff;box-shadow:none;}
@@ -40,36 +40,15 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 .irow.sel .irow-summary{background:#1e1e1e;}
 .irow-detail{display:none;padding:0 16px 16px;background:#161616;border-top:1px solid #222;}
 .irow.sel .irow-detail{display:block;}
-.detail-title{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:10px;padding-top:14px;}
-.detail-meta{font-size:11px;color:#666;line-height:2;margin-bottom:12px;}
-.detail-meta b{color:#999;}
+.detail-img{width:100%;border-radius:6px;margin:14px 0 10px;object-fit:cover;max-height:200px;}
 .detail-block{background:#1a1a1a;border:1px solid #252525;border-radius:6px;padding:11px 13px;font-size:12px;color:#aaa;line-height:1.6;margin-bottom:10px;}
-.detail-label{font-size:8px;letter-spacing:2px;color:#444;text-transform:uppercase;margin:14px 0 6px;}
-.detail-link{display:inline-block;font-size:11px;color:#D94F2B;text-decoration:none;border-bottom:1px solid rgba(217,79,43,0.3);}
-.evidence-section{margin-top:14px;padding-top:12px;border-top:1px solid #252525;}
-.evidence-label{font-size:8px;letter-spacing:2px;color:#D94F2B;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
-.evidence-item{font-size:12px;color:#888;line-height:1.5;margin-bottom:6px;padding-left:10px;border-left:2px solid #2a2a2a;}
-.evidence-item a{color:#D94F2B;text-decoration:none;}
-.img-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px;}
-.img-grid img{width:100%;border-radius:4px;object-fit:cover;max-height:140px;}
-.img-grid img.single{grid-column:1/-1;max-height:200px;}
-
-.sv-block{margin-top:14px;padding:12px;background:#141414;border:1px solid #252525;border-radius:6px;}
-.sv-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
-.sv-badge{font-size:8px;letter-spacing:2px;padding:3px 8px;border-radius:3px;font-weight:700;text-transform:uppercase;color:#fff;}
-.sv-img{width:100%;border-radius:4px;display:block;margin-bottom:10px;}
-.sv-rec{background:rgba(217,79,43,0.1);border-left:2px solid #D94F2B;padding:8px;font-size:12px;color:#fff;margin-top:8px;border-radius:0 3px 3px 0;}
-
-.cost-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px;}
-.cost-table td{padding:8px;}
-.cost-row-asphalt td{background:#252525;color:#999;}
-.cost-row-pp td{background:rgba(217,79,43,0.18);color:#fff;font-weight:700;}
-.cost-savings{background:rgba(74,222,128,0.1);border-left:3px solid #4ADE80;padding:10px;border-radius:0 4px 4px 0;}
-.cost-savings-label{font-size:9px;letter-spacing:2px;color:#4ADE80;font-weight:700;text-transform:uppercase;margin-bottom:3px;}
-.cost-savings-val{font-size:15px;color:#fff;font-weight:700;}
-
-.tapaeso-block{background:#000;border:1px solid #252525;border-radius:6px;padding:12px;font-family:'Courier New',monospace;font-size:12px;line-height:1.6;color:#fff;white-space:pre-wrap;margin-bottom:8px;}
-.tapaeso-copy-btn{display:inline-block;font-size:10px;letter-spacing:1px;color:#D94F2B;background:rgba(217,79,43,0.1);border:1px solid #D94F2B;padding:5px 10px;border-radius:3px;cursor:pointer;text-transform:uppercase;font-weight:700;margin-right:6px;font-family:inherit;}
+.detail-label{font-size:8px;letter-spacing:2px;color:#D94F2B;font-weight:700;text-transform:uppercase;margin:14px 0 8px;}
+.kw-chip{display:inline-block;background:#262626;color:#D94F2B;font-size:10px;padding:2px 8px;border-radius:10px;margin:2px;}
+.mention{margin:8px 0;padding-left:10px;border-left:2px solid #2a2a2a;}
+.mention-src{font-size:9px;letter-spacing:1px;color:#D94F2B;text-transform:uppercase;margin-bottom:2px;}
+.mention-quote{font-size:12px;line-height:1.5;color:#999;}
+.mention-quote a{color:#D94F2B;text-decoration:none;}
+.read-btn{display:inline-block;background:#D94F2B;color:#fff;padding:9px 16px;border-radius:4px;font-size:11px;text-decoration:none;font-weight:700;letter-spacing:1px;margin-top:12px;}
 
 .footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;}
 .footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
@@ -81,8 +60,8 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
   <canvas id="radar" width="72" height="72" style="border-radius:50%;flex-shrink:0;"></canvas>
   <div class="header-text">
     <div class="header-eyebrow">POTHOLEWATCH · LIVE</div>
-    <div class="header-title">Road Incident Monitor</div>
-    <div class="header-sub">Panama · 8-hour scan cadence · v4.0</div>
+    <div class="header-title">Citizen Correlation Monitor</div>
+    <div class="header-sub">Panama · accidents where people are talking about the road</div>
   </div>
   <div style="flex-shrink:0;text-align:right;">
     <div class="scan-badge">
@@ -94,311 +73,162 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 </div>
 
 <div class="stats-grid">
-  <div class="stat-box"><div class="stat-label">Total</div><div id="stat-total" class="stat-val">—</div></div>
-  <div class="stat-box"><div class="stat-label">Critical</div><div id="stat-critical" class="stat-val" style="color:#FF3B3B;">—</div></div>
-  <div class="stat-box"><div class="stat-label">High</div><div id="stat-high" class="stat-val" style="color:#D94F2B;">—</div></div>
-  <div class="stat-box"><div class="stat-label">Medium</div><div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div></div>
+  <div class="stat-box"><div class="stat-label">Cases w/ road chatter</div><div id="stat-total" class="stat-val">—</div></div>
+  <div class="stat-box"><div class="stat-label">Total citizen mentions</div><div id="stat-mentions" class="stat-val" style="color:#D94F2B;">—</div></div>
 </div>
 
-<div class="section-label">Incident map — tap pins for details</div>
+<div class="section-label">Case map — tap pins for details</div>
 <div id="ptw-map"></div>
 
-<div id="list-header" class="section-label" style="padding-top:9px;">Loading incidents...</div>
+<div id="list-header" class="section-label" style="padding-top:9px;">Loading cases...</div>
 <div id="incident-list"></div>
 
 <div class="footer">
   <span class="footer-text">POWERFIX · REPAIR. REINVENTED.</span>
-  <span class="footer-text">PTW v4.0.0</span>
+  <span class="footer-text">PTW v5.1.0</span>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const SCORE_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030',LOW:'#888'};
-const SEVERITY_COLOR={critical:'#FF3B3B',severe:'#FF3B3B',moderate:'#D94F2B',minor:'#F0A030',none:'#888',unknown:'#888'};
+const ACCENT='#D94F2B';
 const RAW_URL='https://raw.githubusercontent.com/arlito331/potholewatch/main/incidents.json';
+const SRC_LABEL={news_article:'News article',news_comment:'Reader comment',twitter:'X / Twitter',facebook:'Facebook',instagram:'Instagram',forum:'Forum',mop_gov:'MOP / Gov'};
 
-let incidents=[], selected=null, ptmap=null, markers={};
-
-function sc(s){return SCORE_COLOR[s]||'#888';}
+let cases=[], selected=null, ptmap=null, markers={};
 
 function fmt(iso){
   if(!iso) return '';
   try{ return new Date(iso).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
   catch(e){ return String(iso).slice(0,10); }
 }
-
 function fmtTime(iso){
   if(!iso) return '';
-  try{
-    return new Date(iso).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',timeZoneName:'short'});
-  } catch(e){ return String(iso).slice(0,16); }
+  try{ return new Date(iso).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',timeZoneName:'short'}); }
+  catch(e){ return String(iso).slice(0,16); }
 }
 
 function buildList(data){
   const raw=data.incidents||[];
   const arr=Array.isArray(raw)?raw:Object.values(raw);
   const list=[];
-  arr.forEach((r,i)=>{
-    if(!r) return;
-    const lat=r.lat||(r.coords&&r.coords.lat);
-    const lng=r.lng||(r.coords&&r.coords.lng);
-    if(!lat||!lng) return;
-    const key=String(r.ptw_id||r.case_id||i);
-    list.push({...r,lat,lng,_key:key});
-  });
-  list.sort((a,b)=>new Date(b.first_seen||b.scan_time||0)-new Date(a.first_seen||a.scan_time||0));
+  arr.forEach((r,i)=>{ if(r) list.push({...r,_key:String(r.ptw_id||i)}); });
+  list.sort((a,b)=>(b.mention_count||0)-(a.mention_count||0));
   return list;
 }
 
-function makeIcon(score,active){
-  const color=sc(score);
-  const r=active?10:7;
-  const ring=active?`<circle cx="18" cy="18" r="15" fill="none" stroke="${color}" stroke-width="1.5" opacity="0.4"/>`:'';
+function renderStats(){
+  document.getElementById('stat-total').textContent=cases.length;
+  const total=cases.reduce((s,i)=>s+(i.mention_count||0),0);
+  document.getElementById('stat-mentions').textContent=total;
+  document.getElementById('list-header').textContent=
+    cases.length+' case'+(cases.length!==1?'s':'')+' with road chatter';
+}
+
+function mentionCountSize(n){
+  if(n>=10) return 13;
+  if(n>=5) return 10;
+  return 7;
+}
+function makeIcon(n,active){
+  const r=mentionCountSize(n)+(active?3:0);
+  const ring=active?`<circle cx="18" cy="18" r="15" fill="none" stroke="${ACCENT}" stroke-width="1.5" opacity="0.4"/>`:'';
   return L.divIcon({
-    html:`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">${ring}<circle cx="18" cy="18" r="${r}" fill="${color}"/><text x="18" y="22" text-anchor="middle" fill="#fff" font-size="8" font-weight="700" font-family="monospace">${(score||'?')[0]}</text></svg>`,
+    html:`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">${ring}<circle cx="18" cy="18" r="${r}" fill="${ACCENT}"/><text x="18" y="22" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="monospace">${n}</text></svg>`,
     className:'',iconSize:[36,36],iconAnchor:[18,18]
   });
 }
 
-function renderStats(){
-  document.getElementById('stat-total').textContent=incidents.length;
-  ['CRITICAL','HIGH','MEDIUM'].forEach(s=>{
-    document.getElementById('stat-'+s.toLowerCase()).textContent=
-      incidents.filter(i=>(i.score||i.probability)===s).length;
-  });
-  document.getElementById('list-header').textContent=
-    incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
-}
-
-function buildStreetViewBlock(inc){
-  const sv=inc.street_view;
-  if(!sv||!sv.available) return '';
-  const sevColor=SEVERITY_COLOR[sv.severity]||'#888';
-  const damageBadge=sv.damage_detected
-    ? `<span class="sv-badge" style="background:${sevColor};">${sv.severity||'unknown'} damage</span>`
-    : `<span class="sv-badge" style="background:#666;">no visible damage</span>`;
-  const detailsHtml=(sv.details||[]).length
-    ? '<ul style="font-size:11px;color:#888;margin:6px 0 0 16px;line-height:1.5;">'+
-      sv.details.slice(0,5).map(d=>`<li>${d}</li>`).join('')+'</ul>'
-    : '';
-  const recHtml=sv.powerpatch_recommendation
-    ? `<div class="sv-rec">${sv.powerpatch_recommendation}</div>`
-    : '';
-  return `<div class="sv-block">
-    <div class="sv-header">
-      <span style="font-size:9px;letter-spacing:2px;color:#D94F2B;font-weight:700;text-transform:uppercase;">Street View — AI Analysis</span>
-      ${damageBadge}
-    </div>
-    <img src="${sv.best_image_url||''}" class="sv-img" onerror="this.style.display='none'" />
-    <div style="font-size:12px;color:#fff;line-height:1.5;">${sv.analysis||''}</div>
-    ${detailsHtml}
-    ${recHtml}
-  </div>`;
-}
-
-function buildCostBlock(inc){
-  const cost=inc.cost_comparison;
-  if(!cost) return '';
-  const pp=cost.powerpatch;
-  const asp=cost.hot_asphalt_realistic;
-  const savings=cost.headline_savings;
-  return `<div class="evidence-section">
-    <div class="evidence-label">Cost Comparison — est. ${cost.assumed_area_m2}m² defect</div>
-    <table class="cost-table">
-      <tr class="cost-row-asphalt">
-        <td style="border-radius:3px 0 0 3px;">Hot Asphalt (realistic)</td>
-        <td style="text-align:right;">$${asp.cost.toFixed(2)}</td>
-        <td style="text-align:right;border-radius:0 3px 3px 0;font-size:10px;">~${Math.round(asp.time_minutes/60)}h</td>
-      </tr>
-      <tr><td colspan="3" style="height:3px;padding:0;"></td></tr>
-      <tr class="cost-row-pp">
-        <td style="border-radius:3px 0 0 3px;">PowerPatch</td>
-        <td style="text-align:right;">$${pp.cost.toFixed(2)}</td>
-        <td style="text-align:right;border-radius:0 3px 3px 0;font-size:10px;color:#D94F2B;">${pp.time_minutes} min</td>
-      </tr>
-    </table>
-    <div class="cost-savings">
-      <div class="cost-savings-label">Savings</div>
-      <div class="cost-savings-val">$${savings.toFixed(2)} saved · ${Math.round(cost.time_multiplier)}× faster</div>
-    </div>
-  </div>`;
-}
-
-function buildTapaesoBlock(inc){
-  const t=inc.tapaeso_draft;
-  if(!t) return '';
-  const ig=t.instagram_caption||'';
-  const tt=t.tiktok_caption||'';
-  const tags=(t.hashtags||[]).join(' ');
-  return `<div class="evidence-section">
-    <div class="evidence-label">📱 @TapaEso Post Draft</div>
-    <div class="tapaeso-block" id="tapaeso-${inc._key}">${ig}\n\n${tags}</div>
-    <div style="margin-top:8px;">
-      <button class="tapaeso-copy-btn" data-copy-key="${inc._key}" data-copy-type="ig">Copy IG/FB</button>
-      ${tt?`<button class="tapaeso-copy-btn" data-copy-key="${inc._key}" data-copy-type="tt">Copy TikTok</button>`:''}
-    </div>
-  </div>`;
-}
-
-function buildEvidenceHTML(inc){
+function buildDetail(c){
   let html='';
-  const social=inc.social||{};
-  const crossref=inc.crossref||{};
-
-  const imgs=(inc.article_image_urls||[]).filter(u=>u&&u.startsWith('http'));
-  if(imgs.length){
-    const gridClass=imgs.length===1?'img-grid single':'img-grid';
-    html+=`<div class="${gridClass}" style="margin-bottom:10px;">`;
-    imgs.slice(0,4).forEach(u=>{
-      html+=`<img src="${u}" ${imgs.length===1?'class="single"':''} onerror="this.style.display='none'" alt="Incident photo"/>`;
+  const img=c.primary_image_url||(c.article_image_urls&&c.article_image_urls[0]);
+  if(img) html+=`<img src="${img}" class="detail-img" onerror="this.style.display='none'"/>`;
+  if(c.summary) html+=`<div class="detail-block">${c.summary}</div>`;
+  if(c.chatter_summary){
+    html+=`<div class="detail-label">What people are saying about this road</div>`;
+    html+=`<div style="font-size:12px;color:#999;font-style:italic;line-height:1.6;margin-bottom:10px;">${c.chatter_summary}</div>`;
+  }
+  const kw=c.keywords_matched||[];
+  if(kw.length) html+=`<div style="margin:8px 0;">`+kw.map(k=>`<span class="kw-chip">${k}</span>`).join('')+`</div>`;
+  const mentions=c.mentions||[];
+  if(mentions.length){
+    html+=`<div class="detail-label">Citizen mentions (${mentions.length})</div>`;
+    mentions.forEach(m=>{
+      const label=SRC_LABEL[m.source_type]||m.source_type||'Source';
+      const name=m.source_name?' · '+m.source_name:'';
+      const q=(m.quote||'').replace(/</g,'&lt;');
+      const link=m.url?` <a href="${m.url}" target="_blank">→</a>`:'';
+      html+=`<div class="mention"><div class="mention-src">${label}${name}</div><div class="mention-quote">"${q}"${link}</div></div>`;
     });
-    html+='</div>';
   }
-
-  const bullets=(inc.headline_evidence||[]);
-  if(bullets.length){
-    html+=`<div class="evidence-section"><div class="evidence-label">Why we're flagging</div>`;
-    bullets.forEach(b=>{html+=`<div class="evidence-item">${b}</div>`;});
-    html+=`</div>`;
-  }
-
-  if(inc.quote){
-    html+=`<div class="detail-label">Witness / Report Quote</div><div class="detail-block">"${inc.quote}"</div>`;
-  }
-
-  html+=buildStreetViewBlock(inc);
-  html+=buildCostBlock(inc);
-
-  const mop=(crossref.mop_evidence||[]);
-  const attt=(crossref.attt_evidence||[]);
-  if(mop.length||attt.length){
-    html+=`<div class="evidence-section"><div class="evidence-label">MOP / ATTT Panama</div>`;
-    [...mop,...attt].slice(0,4).forEach(e=>{
-      const link=e.url?` <a href="${e.url}" target="_blank">→</a>`:'';
-      html+=`<div class="evidence-item"><strong style="color:#bbb;">${e.source||''}:</strong> ${(e.quote||'').slice(0,180)}${link}</div>`;
-    });
-    html+=`</div>`;
-  }
-
-  const xp=(social.x_posts||[]);
-  const fb=(social.facebook_posts||[]);
-  const ig=(social.instagram_posts||[]);
-  const wz=(social.waze_reports||[]);
-  const nc=(social.news_comments||[]);
-  const allSocial=[...xp,...fb,...ig,...wz,...nc];
-  if(allSocial.length){
-    html+=`<div class="evidence-section"><div class="evidence-label">Social / Citizen Reports</div>`;
-    allSocial.slice(0,5).forEach(p=>{
-      const src=p.user||p.source||p.platform||'';
-      const q=(p.quote||'').slice(0,160);
-      const link=p.url?` <a href="${p.url}" target="_blank">→</a>`:'';
-      if(q) html+=`<div class="evidence-item">${src?`<strong style="color:#bbb;">${src}:</strong> `:''}${q}${link}</div>`;
-    });
-    html+=`</div>`;
-  }
-
-  const hist=(crossref.news_history||[]);
-  if(hist.length){
-    html+=`<div class="evidence-section"><div class="evidence-label">Prior Road History</div>`;
-    hist.slice(0,3).forEach(h=>{
-      const link=h.url?`<a href="${h.url}" target="_blank" style="color:#D94F2B;">${h.headline||h.url}</a>`:h.headline||'';
-      html+=`<div class="evidence-item">${h.date?h.date+' — ':''}${link} <span style="color:#444;">${h.source||''}</span></div>`;
-    });
-    html+=`</div>`;
-  }
-
-  html+=buildTapaesoBlock(inc);
-
-  if(inc.recommended_action){
-    html+=`<div class="detail-label">Recommended Action</div><div class="detail-block">${inc.recommended_action}</div>`;
-  }
-
+  if(c.url) html+=`<a href="${c.url}" target="_blank" class="read-btn">READ FULL ARTICLE →</a>`;
   return html;
 }
 
 function renderList(){
   const el=document.getElementById('incident-list');
-  if(!incidents.length){
-    el.innerHTML='<div style="padding:20px 16px;font-size:12px;color:#555;text-align:center;">No incidents found</div>';
+  if(!cases.length){
+    el.innerHTML='<div style="padding:24px 16px;font-size:12px;color:#555;text-align:center;">No cases with road chatter yet.<br/>Next scan in progress.</div>';
     return;
   }
-  el.innerHTML=incidents.map(inc=>{
-    const score=inc.score||inc.probability||'MEDIUM';
-    const color=sc(score);
-    const id=inc.ptw_id||inc.case_id||'PTW-???';
-    const title=inc.headline||inc.title||inc.location||'Incident';
-    const loc=inc.location_text||inc.location||'Panama';
-    const date=inc.date||fmt(inc.scan_time)||'';
-    const src=inc.source_name||inc.source||'';
-    const hits=inc.source_count||0;
-    const conf=inc.confidence||null;
-    const url=inc.url||inc.source_url||'';
-    const isSel=selected&&selected._key===inc._key;
-    const svDetected=inc.street_view&&inc.street_view.damage_detected;
+  el.innerHTML=cases.map(c=>{
+    const id=c.ptw_id||'PTW-???';
+    const title=c.headline||c.location||'Incident';
+    const loc=c.location||'Panama';
+    const date=c.date||fmt(c.scan_time)||'';
+    const count=c.mention_count||0;
+    const isSel=selected&&selected._key===c._key;
+    const thumb=c.primary_image_url||(c.article_image_urls&&c.article_image_urls[0])||'';
 
-    let detail=`<div class="detail-title">${title}</div><div class="detail-meta">`;
-    if(loc) detail+=`<b>📍</b> ${loc}<br/>`;
-    if(date) detail+=`<b>📅</b> ${date}<br/>`;
-    if(src&&url) detail+=`<b>📡</b> <a href="${url}" target="_blank" style="color:#D94F2B;">${src}</a>${hits?' · '+hits+' source'+(hits!==1?'s':''):''}<br/>`;
-    else if(src) detail+=`<b>📡</b> ${src}${hits?' · '+hits+' source'+(hits!==1?'s':''):''}<br/>`;
-    if(conf) detail+=`<b>🎯</b> ${conf}% confidence<br/>`;
-    detail+='</div>';
-
-    detail+=buildEvidenceHTML(inc);
-
-    if(url) detail+=`<div style="margin-top:14px;"><a href="${url}" target="_blank" style="display:inline-block;background:#D94F2B;color:#fff;padding:9px 16px;border-radius:4px;font-size:11px;text-decoration:none;font-weight:700;letter-spacing:1px;">READ FULL ARTICLE →</a></div>`;
-
-    const thumb=(inc.street_view&&inc.street_view.best_image_url)||inc.primary_image_url||(inc.article_image_urls&&inc.article_image_urls[0])||'';
-
-    return `<div class="irow${isSel?' sel':''}" data-key="${inc._key}">
+    return `<div class="irow${isSel?' sel':''}" data-key="${c._key}">
       <div class="irow-summary" style="display:flex;gap:10px;align-items:flex-start;">
-        ${thumb?`<img src="${thumb}" style="width:52px;height:52px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-top:2px;" onerror="this.style.display='none'" />`:''}
+        ${thumb?`<img src="${thumb}" style="width:52px;height:52px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-top:2px;" onerror="this.style.display='none'"/>`:''}
         <div style="flex:1;min-width:0;">
           <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;flex-wrap:wrap;">
-            <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:${color};border:1px solid ${color};border-radius:3px;padding:1px 6px;">${score}</span>
-            <span style="font-size:9px;color:#444;letter-spacing:1px;">${id}</span>
-            ${svDetected?'<span style="font-size:9px;font-weight:700;color:#fff;background:#FF3B3B;border-radius:3px;padding:1px 6px;letter-spacing:1px;">SV+</span>':''}
+            <span style="font-size:9px;color:#fff;background:#333;border-radius:3px;padding:1px 6px;letter-spacing:1px;font-weight:700;">${id}</span>
+            <span style="font-size:9px;font-weight:700;color:#fff;background:${ACCENT};border-radius:10px;padding:1px 8px;letter-spacing:1px;">${count} mention${count!==1?'s':''}</span>
             <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
           </div>
           <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;">${title.length>80?title.slice(0,80)+'…':title}</div>
           <div style="font-size:10px;color:#555;">${loc}</div>
         </div>
       </div>
-      <div class="irow-detail">${detail}</div>
+      <div class="irow-detail">${buildDetail(c)}</div>
     </div>`;
   }).join('');
 }
 
 function selectInc(key){
   const toggling=selected&&selected._key===key;
-  selected=toggling?null:incidents.find(i=>i._key===key);
+  selected=toggling?null:cases.find(i=>i._key===key);
   renderList();
   Object.entries(markers).forEach(([k,m])=>{
-    const inc=incidents.find(i=>i._key===k);
-    if(inc) m.setIcon(makeIcon(inc.score||inc.probability,!toggling&&k===key));
+    const c=cases.find(i=>i._key===k);
+    if(c) m.setIcon(makeIcon(c.mention_count||0,!toggling&&k===key));
   });
-  if(!toggling&&selected&&markers[key]&&ptmap){
+  if(!toggling&&selected&&markers[key]&&ptmap&&selected.lat&&selected.lng){
     ptmap.setView([selected.lat,selected.lng],13,{animate:true,duration:0.5});
     markers[key].openPopup();
   }
 }
 
 function initMap(){
-  ptmap=L.map('ptw-map',{zoomControl:false,attributionControl:false}).setView([8.997,-79.62],11);
+  ptmap=L.map('ptw-map',{zoomControl:false,attributionControl:false}).setView([8.75,-80.0],7);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd'}).addTo(ptmap);
   L.control.zoom({position:'bottomright'}).addTo(ptmap);
-  incidents.forEach(inc=>{
-    if(!inc.lat||!inc.lng) return;
-    const score=inc.score||inc.probability||'MEDIUM';
-    const id=inc.ptw_id||inc.case_id||'?';
-    const title=inc.headline||inc.title||inc.location||'Incident';
-    const color=sc(score);
-    const m=L.marker([inc.lat,inc.lng],{icon:makeIcon(score,false)})
+  const pts=[];
+  cases.forEach(c=>{
+    if(!c.lat||!c.lng) return;
+    const count=c.mention_count||0;
+    const m=L.marker([c.lat,c.lng],{icon:makeIcon(count,false)})
       .addTo(ptmap)
-      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${score} · ${id}</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${title.slice(0,60)}${title.length>60?'…':''}</div><div style="font-size:10px;color:#777;">${inc.location_text||inc.location||''}</div>`,{maxWidth:220});
-    m.on('click',()=>selectInc(inc._key));
-    markers[inc._key]=m;
+      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${ACCENT};font-weight:700;margin-bottom:4px;">${c.ptw_id} · ${count} mentions</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${(c.headline||'').slice(0,60)}</div><div style="font-size:10px;color:#777;">${c.location||''}</div>`,{maxWidth:220});
+    m.on('click',()=>selectInc(c._key));
+    markers[c._key]=m;
+    pts.push([c.lat,c.lng]);
   });
+  if(pts.length){
+    try{ ptmap.fitBounds(pts,{padding:[40,40],maxZoom:11}); }catch(e){}
+  }
 }
 
 function drawRadar(){
@@ -445,12 +275,12 @@ async function loadData(){
     const res=await fetch(RAW_URL+'?t='+Date.now(),{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     const data=await res.json();
-    incidents=buildList(data);
+    cases=buildList(data);
     const scanTime=data.scan_time||'';
     document.getElementById('scan-status').textContent='LIVE';
     document.getElementById('scan-time').innerHTML=
       (scanTime?'Last scan: '+fmtTime(scanTime)+'<br/>':'')+
-      incidents.length+' incident'+(incidents.length!==1?'s':'')+' on file';
+      cases.length+' case'+(cases.length!==1?'s':'')+' on file';
     renderStats();
     renderList();
     initMap();
@@ -467,25 +297,6 @@ drawRadar();
 loadData();
 
 document.getElementById('incident-list').addEventListener('click',function(e){
-  // Copy buttons
-  if(e.target.classList.contains('tapaeso-copy-btn')){
-    e.stopPropagation();
-    const key=e.target.dataset.copyKey;
-    const type=e.target.dataset.copyType;
-    const inc=incidents.find(i=>i._key===key);
-    if(!inc||!inc.tapaeso_draft) return;
-    const t=inc.tapaeso_draft;
-    const tags=(t.hashtags||[]).join(' ');
-    const text=type==='tt'
-      ? (t.tiktok_caption||'')+'\n\n'+tags
-      : (t.instagram_caption||'')+'\n\n'+tags;
-    navigator.clipboard.writeText(text).then(()=>{
-      const orig=e.target.textContent;
-      e.target.textContent='COPIED ✓';
-      setTimeout(()=>{e.target.textContent=orig;},1500);
-    });
-    return;
-  }
   const row=e.target.closest('[data-key]');
   if(row) selectInc(row.dataset.key);
 });
