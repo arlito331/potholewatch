@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PotholeWatch — Panama Road Intelligence</title>
+<title>PotholeWatch — The Evidence Engine</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%230D0D0D' stroke='%23D94F2B' stroke-width='2.5'/><circle cx='32' cy='32' r='20' fill='none' stroke='%23D94F2B' stroke-width='1' opacity='0.4'/><circle cx='32' cy='32' r='10' fill='none' stroke='%23D94F2B' stroke-width='1' opacity='0.4'/><line x1='32' y1='4' x2='32' y2='60' stroke='%23D94F2B' stroke-width='0.8' opacity='0.3'/><line x1='4' y1='32' x2='60' y2='32' stroke='%23D94F2B' stroke-width='0.8' opacity='0.3'/><path d='M32 32 L32 4 A28 28 0 0 1 56 24 Z' fill='%23D94F2B' opacity='0.35'/><circle cx='32' cy='32' r='4' fill='%23D94F2B'/><circle cx='44' cy='20' r='2.5' fill='%23FF5050'/><circle cx='20' cy='44' r='2' fill='%23FF5050' opacity='0.8'/></svg>"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
@@ -19,11 +19,11 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 .scan-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:9px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
 .scan-info{font-size:9px;color:#444;line-height:1.6;margin-top:4px;text-align:right;}
 
-.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid #262626;}
-.stat-box{padding:12px 14px;border-right:1px solid #262626;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;}
+.stat-box{padding:10px 12px;border-right:1px solid #262626;}
 .stat-box:last-child{border-right:none;}
 .stat-label{font-size:8px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
-.stat-val{font-size:24px;font-weight:700;}
+.stat-val{font-size:20px;font-weight:700;}
 
 .section-label{padding:9px 16px 5px;font-size:8px;color:#444;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid #262626;}
 
@@ -35,20 +35,34 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 .leaflet-popup-content{margin:10px 14px;font-size:12px;line-height:1.5;}
 
 .irow{border-bottom:1px solid #1a1a1a;border-left:3px solid transparent;cursor:pointer;}
+.irow.critical{border-left-color:#FF3B3B;}
+.irow.high{border-left-color:#D94F2B;}
+.irow.medium{border-left-color:#F0A030;}
 .irow-summary{padding:12px 16px;}
-.irow.sel{border-left-color:#D94F2B;}
 .irow.sel .irow-summary{background:#1e1e1e;}
 .irow-detail{display:none;padding:0 16px 16px;background:#161616;border-top:1px solid #222;}
 .irow.sel .irow-detail{display:block;}
+
 .detail-img{width:100%;border-radius:6px;margin:14px 0 10px;object-fit:cover;max-height:200px;}
 .detail-block{background:#1a1a1a;border:1px solid #252525;border-radius:6px;padding:11px 13px;font-size:12px;color:#aaa;line-height:1.6;margin-bottom:10px;}
 .detail-label{font-size:8px;letter-spacing:2px;color:#D94F2B;font-weight:700;text-transform:uppercase;margin:14px 0 8px;}
 .kw-chip{display:inline-block;background:#262626;color:#D94F2B;font-size:10px;padding:2px 8px;border-radius:10px;margin:2px;}
-.mention{margin:8px 0;padding-left:10px;border-left:2px solid #2a2a2a;}
-.mention-src{font-size:9px;letter-spacing:1px;color:#D94F2B;text-transform:uppercase;margin-bottom:2px;}
-.mention-quote{font-size:12px;line-height:1.5;color:#999;}
-.mention-quote a{color:#D94F2B;text-decoration:none;}
+
+.social-post{margin:8px 0;padding:10px;background:#111;border-radius:4px;border-left:3px solid #D94F2B;}
+.social-post-src{font-size:9px;letter-spacing:1px;color:#D94F2B;text-transform:uppercase;margin-bottom:4px;}
+.social-post-caption{font-size:11px;color:#888;margin-bottom:6px;}
+.social-post-link{display:inline-block;font-size:11px;font-weight:700;color:#D94F2B;text-decoration:none;padding:4px 10px;border:1px solid #D94F2B;border-radius:3px;}
+.social-post-link:hover{background:rgba(217,79,43,0.1);}
+
+.comment{margin:8px 0;padding-left:10px;border-left:2px solid #2a2a2a;}
+.comment-src{font-size:9px;letter-spacing:1px;color:#D94F2B;text-transform:uppercase;margin-bottom:2px;}
+.comment-quote{font-size:12px;line-height:1.5;color:#999;}
+.comment-link{color:#D94F2B;text-decoration:none;font-weight:700;font-size:11px;}
+
+.maps-btn{display:inline-block;font-size:11px;color:#D94F2B;text-decoration:none;padding:4px 10px;border:1px solid rgba(217,79,43,0.4);border-radius:3px;margin:6px 0;}
 .read-btn{display:inline-block;background:#D94F2B;color:#fff;padding:9px 16px;border-radius:4px;font-size:11px;text-decoration:none;font-weight:700;letter-spacing:1px;margin-top:12px;}
+
+.sev-badge{font-size:9px;font-weight:700;letter-spacing:2px;padding:2px 8px;border-radius:3px;text-transform:uppercase;color:#fff;}
 
 .footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;}
 .footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
@@ -59,9 +73,9 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 <div class="header">
   <canvas id="radar" width="72" height="72" style="border-radius:50%;flex-shrink:0;"></canvas>
   <div class="header-text">
-    <div class="header-eyebrow">POTHOLEWATCH · LIVE</div>
-    <div class="header-title">Citizen Correlation Monitor</div>
-    <div class="header-sub">Panama · accidents where people are talking about the road</div>
+    <div class="header-eyebrow">POTHOLEWATCH · THE EVIDENCE ENGINE</div>
+    <div class="header-title">Road Incident Monitor</div>
+    <div class="header-sub">Panama · accident + citizen testimony + geolocation</div>
   </div>
   <div style="flex-shrink:0;text-align:right;">
     <div class="scan-badge">
@@ -73,11 +87,13 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 </div>
 
 <div class="stats-grid">
-  <div class="stat-box"><div class="stat-label">Cases w/ road chatter</div><div id="stat-total" class="stat-val">—</div></div>
-  <div class="stat-box"><div class="stat-label">Total citizen mentions</div><div id="stat-mentions" class="stat-val" style="color:#D94F2B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">Total cases</div><div id="stat-total" class="stat-val">—</div></div>
+  <div class="stat-box"><div class="stat-label">Critical</div><div id="stat-critical" class="stat-val" style="color:#FF3B3B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">High</div><div id="stat-high" class="stat-val" style="color:#D94F2B;">—</div></div>
+  <div class="stat-box"><div class="stat-label">Medium</div><div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div></div>
 </div>
 
-<div class="section-label">Case map — tap pins for details</div>
+<div class="section-label">Case map — pin size = mention count</div>
 <div id="ptw-map"></div>
 
 <div id="list-header" class="section-label" style="padding-top:9px;">Loading cases...</div>
@@ -85,14 +101,15 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 
 <div class="footer">
   <span class="footer-text">POWERFIX · REPAIR. REINVENTED.</span>
-  <span class="footer-text">PTW v5.1.0</span>
+  <span class="footer-text">PTW v5.2.0 · The Evidence Engine</span>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const ACCENT='#D94F2B';
+const SEV_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030'};
+const SEV_CLASS={CRITICAL:'critical',HIGH:'high',MEDIUM:'medium'};
+const PLATFORM_LABEL={facebook:'Facebook',instagram:'Instagram',twitter:'X / Twitter',x:'X / Twitter',news_comment:'News comment'};
 const RAW_URL='https://raw.githubusercontent.com/arlito331/potholewatch/main/incidents.json';
-const SRC_LABEL={news_article:'News article',news_comment:'Reader comment',twitter:'X / Twitter',facebook:'Facebook',instagram:'Instagram',forum:'Forum',mop_gov:'MOP / Gov'};
 
 let cases=[], selected=null, ptmap=null, markers={};
 
@@ -107,35 +124,89 @@ function fmtTime(iso){
   catch(e){ return String(iso).slice(0,16); }
 }
 
+function getSeverity(c){
+  if(c.severity) return c.severity;
+  const n=c.mention_count||0;
+  if(n>=3) return 'CRITICAL';
+  if(n>=2) return 'HIGH';
+  if(n>=1) return 'MEDIUM';
+  return 'MEDIUM';
+}
+
 function buildList(data){
   const raw=data.incidents||[];
   const arr=Array.isArray(raw)?raw:Object.values(raw);
   const list=[];
   arr.forEach((r,i)=>{ if(r) list.push({...r,_key:String(r.ptw_id||i)}); });
-  list.sort((a,b)=>(b.mention_count||0)-(a.mention_count||0));
+  const so={CRITICAL:0,HIGH:1,MEDIUM:2};
+  list.sort((a,b)=>{
+    const sa=so[getSeverity(a)]??3, sb=so[getSeverity(b)]??3;
+    if(sa!==sb) return sa-sb;
+    return (b.mention_count||0)-(a.mention_count||0);
+  });
   return list;
 }
 
 function renderStats(){
   document.getElementById('stat-total').textContent=cases.length;
-  const total=cases.reduce((s,i)=>s+(i.mention_count||0),0);
-  document.getElementById('stat-mentions').textContent=total;
-  document.getElementById('list-header').textContent=
-    cases.length+' case'+(cases.length!==1?'s':'')+' with road chatter';
+  document.getElementById('stat-critical').textContent=cases.filter(c=>getSeverity(c)==='CRITICAL').length;
+  document.getElementById('stat-high').textContent=cases.filter(c=>getSeverity(c)==='HIGH').length;
+  document.getElementById('stat-medium').textContent=cases.filter(c=>getSeverity(c)==='MEDIUM').length;
+  document.getElementById('list-header').textContent=cases.length+' case'+(cases.length!==1?'s':'')+' with road-condition evidence';
 }
 
-function mentionCountSize(n){
-  if(n>=10) return 13;
-  if(n>=5) return 10;
-  return 7;
-}
-function makeIcon(n,active){
-  const r=mentionCountSize(n)+(active?3:0);
-  const ring=active?`<circle cx="18" cy="18" r="15" fill="none" stroke="${ACCENT}" stroke-width="1.5" opacity="0.4"/>`:'';
+function pinSize(n){ return Math.min(7+n*2,18); }
+
+function makeIcon(n,sev,active){
+  const color=SEV_COLOR[sev]||'#D94F2B';
+  const r=pinSize(n)+(active?3:0);
+  const ring=active?`<circle cx="18" cy="18" r="15" fill="none" stroke="${color}" stroke-width="1.5" opacity="0.4"/>`:'';
+  const label=n>9?'9+':String(n);
   return L.divIcon({
-    html:`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">${ring}<circle cx="18" cy="18" r="${r}" fill="${ACCENT}"/><text x="18" y="22" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="monospace">${n}</text></svg>`,
+    html:`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">${ring}<circle cx="18" cy="18" r="${r}" fill="${color}"/><text x="18" y="22" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="monospace">${label}</text></svg>`,
     className:'',iconSize:[36,36],iconAnchor:[18,18]
   });
+}
+
+function buildSocialPosts(c){
+  const posts=c.social_posts||[];
+  if(!posts.length) return '';
+  let html='<div class="detail-label">News outlet social posts — click to read comments</div>';
+  posts.forEach(p=>{
+    const platform=PLATFORM_LABEL[p.platform]||p.platform||'Social';
+    const outlet=p.outlet||'';
+    const src=platform+(outlet?' · '+outlet:'')+(p.post_date?' · '+p.post_date:'');
+    const caption=p.post_caption?(p.post_caption.slice(0,120)+'...'):'';
+    const link=p.post_url?`<a href="${p.post_url}" target="_blank" class="social-post-link">→ Open ${platform} post</a>`:'';
+    html+=`<div class="social-post">
+      <div class="social-post-src">${src}</div>
+      ${caption?`<div class="social-post-caption">${caption}</div>`:''}
+      ${link}
+    </div>`;
+  });
+  return html;
+}
+
+function buildComments(c){
+  const comments=c.keyword_comments||[];
+  if(!comments.length) return '';
+  let html=`<div class="detail-label">Citizen comments with road keywords (${comments.length})</div>`;
+  comments.forEach(m=>{
+    const platform=PLATFORM_LABEL[m.platform]||m.platform||'Source';
+    const src_name=m.source_name||'';
+    const src=platform+(src_name?' · '+src_name:'')+(m.date?' · '+m.date:'');
+    const q=(m.quote||'').replace(/</g,'&lt;');
+    const link_url=m.comment_url||m.post_url||'';
+    const link=link_url?` <a href="${link_url}" target="_blank" class="comment-link">→ ver comentario</a>`:'';
+    const kw=(m.keywords_matched||[]);
+    const chips=kw.map(k=>`<span class="kw-chip">${k}</span>`).join('');
+    html+=`<div class="comment">
+      <div class="comment-src">${src}</div>
+      <div class="comment-quote">"${q}"${link}</div>
+      ${chips?`<div style="margin-top:3px;">${chips}</div>`:''}
+    </div>`;
+  });
+  return html;
 }
 
 function buildDetail(c){
@@ -143,23 +214,24 @@ function buildDetail(c){
   const img=c.primary_image_url||(c.article_image_urls&&c.article_image_urls[0]);
   if(img) html+=`<img src="${img}" class="detail-img" onerror="this.style.display='none'"/>`;
   if(c.summary) html+=`<div class="detail-block">${c.summary}</div>`;
+
+  // Maps link
+  if(c.maps_link||( c.lat&&c.lng)){
+    const ml=c.maps_link||`https://maps.google.com/?q=${c.lat},${c.lng}`;
+    html+=`<a href="${ml}" target="_blank" class="maps-btn">📍 Open in Google Maps →</a>`;
+  }
+
   if(c.chatter_summary){
-    html+=`<div class="detail-label">What people are saying about this road</div>`;
+    html+=`<div class="detail-label">What citizens are saying about this road</div>`;
     html+=`<div style="font-size:12px;color:#999;font-style:italic;line-height:1.6;margin-bottom:10px;">${c.chatter_summary}</div>`;
   }
+
   const kw=c.keywords_matched||[];
   if(kw.length) html+=`<div style="margin:8px 0;">`+kw.map(k=>`<span class="kw-chip">${k}</span>`).join('')+`</div>`;
-  const mentions=c.mentions||[];
-  if(mentions.length){
-    html+=`<div class="detail-label">Citizen mentions (${mentions.length})</div>`;
-    mentions.forEach(m=>{
-      const label=SRC_LABEL[m.source_type]||m.source_type||'Source';
-      const name=m.source_name?' · '+m.source_name:'';
-      const q=(m.quote||'').replace(/</g,'&lt;');
-      const link=m.url?` <a href="${m.url}" target="_blank">→</a>`:'';
-      html+=`<div class="mention"><div class="mention-src">${label}${name}</div><div class="mention-quote">"${q}"${link}</div></div>`;
-    });
-  }
+
+  html+=buildSocialPosts(c);
+  html+=buildComments(c);
+
   if(c.url) html+=`<a href="${c.url}" target="_blank" class="read-btn">READ FULL ARTICLE →</a>`;
   return html;
 }
@@ -167,10 +239,13 @@ function buildDetail(c){
 function renderList(){
   const el=document.getElementById('incident-list');
   if(!cases.length){
-    el.innerHTML='<div style="padding:24px 16px;font-size:12px;color:#555;text-align:center;">No cases with road chatter yet.<br/>Next scan in progress.</div>';
+    el.innerHTML='<div style="padding:24px 16px;font-size:12px;color:#555;text-align:center;">No cases yet — scan in progress.</div>';
     return;
   }
   el.innerHTML=cases.map(c=>{
+    const sev=getSeverity(c);
+    const color=SEV_COLOR[sev]||'#D94F2B';
+    const sevClass=SEV_CLASS[sev]||'medium';
     const id=c.ptw_id||'PTW-???';
     const title=c.headline||c.location||'Incident';
     const loc=c.location||'Panama';
@@ -178,18 +253,23 @@ function renderList(){
     const count=c.mention_count||0;
     const isSel=selected&&selected._key===c._key;
     const thumb=c.primary_image_url||(c.article_image_urls&&c.article_image_urls[0])||'';
+    const hasSocialPosts=(c.social_posts||[]).length>0;
+    const ml=c.maps_link||(c.lat&&c.lng?`https://maps.google.com/?q=${c.lat},${c.lng}`:null);
 
-    return `<div class="irow${isSel?' sel':''}" data-key="${c._key}">
+    return `<div class="irow ${sevClass}${isSel?' sel':''}" data-key="${c._key}">
       <div class="irow-summary" style="display:flex;gap:10px;align-items:flex-start;">
         ${thumb?`<img src="${thumb}" style="width:52px;height:52px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-top:2px;" onerror="this.style.display='none'"/>`:''}
         <div style="flex:1;min-width:0;">
-          <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;flex-wrap:wrap;">
-            <span style="font-size:9px;color:#fff;background:#333;border-radius:3px;padding:1px 6px;letter-spacing:1px;font-weight:700;">${id}</span>
-            <span style="font-size:9px;font-weight:700;color:#fff;background:${ACCENT};border-radius:10px;padding:1px 8px;letter-spacing:1px;">${count} mention${count!==1?'s':''}</span>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;flex-wrap:wrap;">
+            <span class="sev-badge" style="background:${color};">${sev}</span>
+            <span style="font-size:9px;color:#555;letter-spacing:1px;">${id}</span>
+            <span style="font-size:9px;font-weight:700;color:#fff;background:#333;border-radius:10px;padding:1px 8px;">${count} mention${count!==1?'s':''}</span>
+            ${hasSocialPosts?`<span style="font-size:9px;color:#D94F2B;border:1px solid rgba(217,79,43,0.4);border-radius:3px;padding:1px 5px;">📱 social</span>`:''}
             <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
           </div>
           <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;">${title.length>80?title.slice(0,80)+'…':title}</div>
-          <div style="font-size:10px;color:#555;">${loc}</div>
+          <div style="font-size:10px;color:#555;margin-bottom:4px;">${loc}</div>
+          ${ml?`<a href="${ml}" target="_blank" style="font-size:10px;color:#D94F2B;text-decoration:none;" onclick="event.stopPropagation()">📍 Maps</a>`:''}
         </div>
       </div>
       <div class="irow-detail">${buildDetail(c)}</div>
@@ -203,7 +283,7 @@ function selectInc(key){
   renderList();
   Object.entries(markers).forEach(([k,m])=>{
     const c=cases.find(i=>i._key===k);
-    if(c) m.setIcon(makeIcon(c.mention_count||0,!toggling&&k===key));
+    if(c) m.setIcon(makeIcon(c.mention_count||0,getSeverity(c),!toggling&&k===key));
   });
   if(!toggling&&selected&&markers[key]&&ptmap&&selected.lat&&selected.lng){
     ptmap.setView([selected.lat,selected.lng],13,{animate:true,duration:0.5});
@@ -218,10 +298,12 @@ function initMap(){
   const pts=[];
   cases.forEach(c=>{
     if(!c.lat||!c.lng) return;
+    const sev=getSeverity(c);
+    const color=SEV_COLOR[sev]||'#D94F2B';
     const count=c.mention_count||0;
-    const m=L.marker([c.lat,c.lng],{icon:makeIcon(count,false)})
+    const m=L.marker([c.lat,c.lng],{icon:makeIcon(count,sev,false)})
       .addTo(ptmap)
-      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${ACCENT};font-weight:700;margin-bottom:4px;">${c.ptw_id} · ${count} mentions</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${(c.headline||'').slice(0,60)}</div><div style="font-size:10px;color:#777;">${c.location||''}</div>`,{maxWidth:220});
+      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${sev} · ${c.ptw_id} · ${count} mentions</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${(c.headline||'').slice(0,60)}</div><div style="font-size:10px;color:#777;">${c.location||''}</div>${c.maps_link?`<div style="margin-top:6px;"><a href="${c.maps_link}" target="_blank" style="color:#D94F2B;font-size:11px;">📍 Open in Maps →</a></div>`:''}`,{maxWidth:240});
     m.on('click',()=>selectInc(c._key));
     markers[c._key]=m;
     pts.push([c.lat,c.lng]);
@@ -297,6 +379,7 @@ drawRadar();
 loadData();
 
 document.getElementById('incident-list').addEventListener('click',function(e){
+  if(e.target.tagName==='A') return; // don't collapse on link clicks
   const row=e.target.closest('[data-key]');
   if(row) selectInc(row.dataset.key);
 });
