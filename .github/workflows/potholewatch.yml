@@ -1,9 +1,11 @@
 name: PotholeWatch v3 Scan
-
 on:
   schedule:
     - cron: '0 */8 * * *'   # every 8 hours (00:00, 08:00, 16:00 UTC)
   workflow_dispatch:          # allow manual trigger
+
+permissions:
+  contents: write             # <<< REQUIRED so the job can commit incidents.json back
 
 jobs:
   scan:
@@ -26,6 +28,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add incidents.json || true
+          git add incidents.json
           git diff --staged --quiet || git commit -m "update inventory $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push || true
+          git push
