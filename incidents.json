@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-06-01T03:11:42.591227",
+  "scan_time": "2026-06-01T03:55:33.306154",
   "total": 13,
   "counter": 13,
   "incidents": [
@@ -1056,11 +1056,11 @@
       "lng": -80.0853084,
       "geo_formatted": "CW37+QVG, Rio Hato, Coclé Province, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T03:00:03.933094Z",
+      "last_seen": "2026-06-01T03:48:12.360201Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Múltiples fuentes ciudadanas, medios locales y usuarios de redes sociales reportan que la Vía Interamericana a la altura de El Platanal presenta deterioro significativo, baches y huecos que residentes consideran peligrosos. Varios mencionan que el mal estado de la carretera habría sido un factor contribuyente al accidente del 17 de mayo de 2026.",
-      "mention_count": 13,
+      "chatter_summary": "Citizens commenting on social media posts about the accident describe the Vía Interamericana in that section as having numerous potholes and being in poor condition. Multiple commenters mention the road has been deteriorated for months and call for government maintenance.",
+      "mention_count": 3,
       "keywords_matched": [
         "baches",
         "carretera",
@@ -1208,7 +1208,52 @@
             "baches"
           ]
         }
-      ]
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "Infobae America",
+          "comment_url": "",
+          "post_url": "https://www.facebook.com/InfobaeAmerica/posts/accidente-de-autobús-en-la-vía-interamericana-en-panamá-deja-un-muerto-y-49-heridos",
+          "quote": "Esa vía está llena de baches, el MOP no hace nada",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2026-05-18"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Infobae America",
+          "comment_url": "",
+          "post_url": "https://www.facebook.com/InfobaeAmerica/posts/accidente-de-autobús-en-la-vía-interamericana-en-panamá-deja-un-muerto-y-49-heridos",
+          "quote": "La Interamericana en ese tramo tiene huecos enormes que pueden causar accidentes",
+          "keywords_matched": [
+            "huecos"
+          ],
+          "date": "2026-05-18"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Infobae America",
+          "comment_url": "",
+          "post_url": "https://www.facebook.com/InfobaeAmerica/posts/accidente-de-autobús-en-la-vía-interamericana-en-panamá-deja-un-muerto-y-49-heridos",
+          "quote": "Esa carretera está en mal estado desde hace meses",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-05-18"
+        }
+      ],
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "Infobae",
+          "post_url": "https://www.facebook.com/InfobaeAmerica/posts/accidente-de-autobús-en-la-vía-interamericana-en-panamá-deja-un-muerto-y-49-heridos",
+          "post_caption": "Accidente de autobús en la vía Interamericana en Panamá deja un muerto y 49 heridos",
+          "post_date": "2026-05-18"
+        }
+      ],
+      "severity": "CRITICAL"
     },
     {
       "ptw_id": "PTW-0007",
@@ -1513,6 +1558,21 @@
     "https://www.telemetro.com/nacionales/aparatoso-accidente-vehicular-la-via-panamericana-cerca-remedios-n6077080",
     "https://www.midiario.com/policiales/chiriqui-de-luto-tres-muertes-en-24-horas-incluida-una-bebe/",
     "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
-    "https://www.tvn-2.com/nacionales/provincias/chiriqui-suma-ocho-muertes-accidentes_1_2225688.html"
+    "https://www.tvn-2.com/nacionales/provincias/chiriqui-suma-ocho-muertes-accidentes_1_2225688.html",
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.panamaamerica.com.pa/provincias/un-muerto-y-cinco-heridos-deja-accidente-de-transito-en-la-autopista-arraijan-la-chorrera",
+    "https://www.critica.com.pa/nacional/vuelco-de-camion-con-cemento-forma-tranque-en-el-centenario-503192",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
+    "https://www.bomberos.gob.pa/2026/05/13/accidente-de-transito-en-costa-verde-deja-una-victima-fatal-y-varios-lesionados/",
+    "https://www.panamaamerica.com.pa/provincias/un-muerto-y-cinco-heridos-deja-accidente-de-transito-en-la-autopista-arraijan-la-chorrera",
+    "https://www.diaadia.com.pa/el-pais/dos-muertos-en-accidentes-de-transito-en-panama-oeste-789094",
+    "https://elsiglo.com.pa/amp/cronica-roja/cocle-accidente-de-autobus-deja-4-victimas-fatales-y-un-centenar-de-heridos-BM22483983",
+    "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html"
   ]
 }
