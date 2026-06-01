@@ -1,8 +1,286 @@
 {
-  "scan_time": "2026-06-01T02:51:20.989175",
-  "total": 9,
-  "counter": 9,
+  "scan_time": "2026-06-01T03:11:42.591227",
+  "total": 13,
+  "counter": 13,
   "incidents": [
+    {
+      "ptw_id": "PTW-0010",
+      "road_key": "arraijanchorreracostaverde",
+      "headline": "Accidente en Costa Verde deja una turista israelí fallecida y varios heridos",
+      "location": "Autopista Arraiján-La Chorrera, a la altura de Costa Verde, puente vehicular, Panamá Oeste",
+      "date": "2026-05-13",
+      "summary": "Una mujer de nacionalidad israelí identificada como Noa Yitzhak, de 22 años, falleció y otras dos personas resultaron heridas tras un accidente registrado alrededor de las 5:50 a.m. Un microbús que transportaba turistas colisionó violentamente contra la parte trasera de un autobús de la ruta Capira–Panamá conocido como diablo rojo, que se encontraba detenido presuntamente recogiendo pasajeros. La joven falleció instantáneamente debido al fuerte impacto.",
+      "source_name": "Telemetro",
+      "url": "https://www.telemetro.com/nacionales/accidente-costa-verde-deja-una-turista-fallecida-y-dos-heridos-n6079040",
+      "lat": 8.8946246,
+      "lng": -79.7524145,
+      "geo_formatted": "Blvd. Costa Verde, La Chorrera, Provincia de Panamá Oeste, Panama",
+      "first_seen": "2026-06-01T03:00:03.933094Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Public sources and government agencies confirm recurring problems with baches (potholes), huecos (holes), deteriorated sections, and hundimientos (sinkholes/subsidence) along the Autopista Arraiján-La Chorrera, with MOP conducting multiple repair interventions. Historical documentation shows the road has suffered from poor conditions since shortly after its 1981 opening, with conductors reportedly slowing or changing lanes to avoid road defects.",
+      "mention_count": 6,
+      "keywords_matched": [
+        "baches",
+        "deteriorado",
+        "huecos",
+        "hundimiento"
+      ],
+      "best_quote": "el concepto de autopista desapareció por los tranques que se forman debido a que los conductores disminuyen la velocidad para no caer en los huecos o evitan transitar por alguno de los carriles",
+      "best_quote_source": "La Prensa Panamá",
+      "mentions": [
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá",
+          "url": "https://www.prensa.com/politica/baches-marcado-historia-autopista_0_2268523366.html",
+          "quote": "el concepto de autopista desapareció por los tranques que se forman debido a que los conductores disminuyen la velocidad para no caer en los huecos o evitan transitar por alguno de los carriles",
+          "date": "2008-04-13",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá",
+          "url": "https://www.prensa.com/politica/baches-marcado-historia-autopista_0_2268523366.html",
+          "quote": "El tramo derecho hacia Panamá, frente al Carrizal, en Arraiján, está deteriorado y los conductores solo utilizan el carril izquierdo",
+          "date": "2008-04-13",
+          "keywords_matched": [
+            "deteriorado"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "Ministerio de Obras Públicas (MOP) - Panamá",
+          "url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa-2/item/4547-mop-repara-baches-en-la-autopista-arraijan-la-chorrera-y-la-avenida-mariano-rivera",
+          "quote": "La Dirección Regional del Ministerio de Obras Públicas (MOP) en la autopista Arraiján-La Chorrera, llevó a cabo trabajos de reparación de baches en puntos estratégicos",
+          "date": "",
+          "keywords_matched": [
+            "baches"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "Ministerio de Obras Públicas (MOP) - Panamá",
+          "url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa/item/1582-cierre-parcial-en-la-autopista-arraijan-la-chorrera-por-trabajos-de-reparacion-de-la-via-entre-vacamonte-y-bique",
+          "quote": "trabajos de reparación de punto crítico (hundimiento del tercer carril junto al hombro) en dirección hacia la ciudad de Panamá entre los sectores de Vacamonte y Bique",
+          "date": "",
+          "keywords_matched": [
+            "hundimiento",
+            "deteriorado"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "Ministerio de Obras Públicas (MOP) - Panamá",
+          "url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa/item/1582-cierre-parcial-en-la-autopista-arraijan-la-chorrera-por-trabajos-de-reparacion-de-la-via-entre-vacamonte-y-bique",
+          "quote": "se realizan trabajos de excavación para retirar material deteriorado, colocación de capa base nueva",
+          "date": "",
+          "keywords_matched": [
+            "deteriorado"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Panamá América",
+          "url": "https://www.panamaamerica.com.pa/opinion/autopista-arraijan-la-chorrera-huerfana-de-mantenimiento-55464",
+          "quote": "la autopista ha llegado a los 20 años de uso para la cual fue programada y requiere con urgencia de una nueva carpeta asfáltica",
+          "date": "2000-12-20",
+          "keywords_matched": []
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0011",
+      "road_key": "4ta5talefevreparque",
+      "headline": "Lamentable accidente de tránsito deja dos víctimas fatales en Parque Lefevre",
+      "location": "Calle 5ta de Parque Lefevre, entre Calle 4ta y Calle 5ta, Ciudad de Panamá",
+      "date": "2026-05-24",
+      "summary": "Aproximadamente a las 11:10 p.m. ocurrió un accidente mortal que involucró a un vehículo Hyundai Grand I-10 de color blanco y a otro de la marca Kia Rio color rojo. Tras la colisión, vuelco y choque con un poste del tendido eléctrico, dos personas que viajaban en el auto blanco perdieron la vida. Las víctimas tenían 19 y 40 años de edad. El accidente quedó registrado en cámaras de videovigilancia de una gasolinera cercana.",
+      "source_name": "Telemetro",
+      "url": "https://www.telemetro.com/nacionales/lamentable-accidente-transito-deja-dos-victimas-fatales-parque-lefevre-n5983392",
+      "lat": 9.0075224,
+      "lng": -79.53859179999999,
+      "geo_formatted": "C. 5ta & C. 4ta, Panamá, Provincia de Panamá, Panama",
+      "first_seen": "2026-06-01T03:00:03.933094Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "One government source references a community movement in Parque Lefevre that repaired a pothole (hueco) in a street after it caused an accident, but no specific mentions were found linking Calle 5ta or the May 24, 2026 accident location to bad road conditions.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "hueco"
+      ],
+      "best_quote": "la reciente iniciativa de reparar un hueco en una calle que causó un accidente",
+      "best_quote_source": "Parque Lefevre Gobierno Local (official government website)",
+      "mentions": [
+        {
+          "source_type": "mop_gov",
+          "source_name": "Parque Lefevre Gobierno Local (official government website)",
+          "url": "https://parquelefevre.gob.pa/parque-lefevre-un-corregimiento-vibrante-en-el-corazon-de-panama/",
+          "quote": "la reciente iniciativa de reparar un hueco en una calle que causó un accidente",
+          "date": "2024-07-03",
+          "keywords_matched": [
+            "hueco"
+          ]
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0012",
+      "road_key": "areacolondondetransistmica",
+      "headline": "Volcó el vehículo, cayó a una quebrada y murió atrapado en Colón",
+      "location": "Área de la Transístmica de la provincia de Colón, a la altura de donde estaba la antigua instalación de la Policlínica de la CSS, corregimiento de San Juan",
+      "date": "2026-05-25",
+      "summary": "Fernando Paredes, de 42 años, murió en un accidente vehicular producto de un vuelco. La situación se dio pasadas las 11:00 p.m. del domingo. Al parecer, él venía saliendo de la comunidad de San Juan cuando, presuntamente, perdió el control del volante y el vehículo fue a dar a una quebrada, donde quedó volcado con las llantas hacia arriba. La persona quedó atrapada dentro del vehículo, donde falleció.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/volco-el-vehiculo-cayo-una-quebrada-y-murio-atrapado-509849",
+      "lat": 9.2325758,
+      "lng": -79.6300619,
+      "geo_formatted": "San Juan, Colón Province, Panama",
+      "first_seen": "2026-06-01T03:00:03.933094Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Multiple sources document persistent complaints about poor conditions on the Transístmica road in Colón province, including government acknowledgement of 30 years without adequate maintenance, legislative counts of 600 potholes along the route, and a documented case where a taxi driver lost control trying to avoid potholes and crashed into a ravine. Citizens from San Juan corregimiento specifically protested road conditions in 2020.",
+      "mention_count": 8,
+      "keywords_matched": [
+        "baches",
+        "crater",
+        "deteriorada",
+        "hueco",
+        "huecos",
+        "mal estado",
+        "sin mantenimiento"
+      ],
+      "best_quote": "Estamos hablando de casi 30 años sin mantenimiento. Por eso, hoy vemos estas consecuencias",
+      "best_quote_source": "La Prensa Panamá",
+      "mentions": [
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá",
+          "url": "https://www.prensa.com/sociedad/carretera-transistmica-decadas-sin-mantenimiento-provocan-colapsos-y-afectan-a-mas-de-cinco-comunidades/",
+          "quote": "Estamos hablando de casi 30 años sin mantenimiento. Por eso, hoy vemos estas consecuencias",
+          "date": "2025-08-27",
+          "keywords_matched": [
+            "mal estado",
+            "deteriorada",
+            "sin mantenimiento"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Estrella (Panamá)",
+          "url": "https://www.laestrella.com.pa/nacional/101019/via-huecos-peligro",
+          "quote": "Los huecos que hay en la carretera Transístmica a la altura de Villa Guadalupe, Cativá, en Colón, por poco provocan ayer un accidente fatal",
+          "date": "",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Estrella (Panamá)",
+          "url": "https://www.laestrella.com.pa/nacional/101019/via-huecos-peligro",
+          "quote": "Cuando Ricardo Moreno, conductor del vehículo taxi con matrícula 3T-165, intentó esquivar unos de estos baches, perdió el control y fue a dar a una quebrada",
+          "date": "",
+          "keywords_matched": [
+            "baches",
+            "hueco"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá",
+          "url": "https://www.prensa.com/impresa/opinion/Transistmica-carretera-lunar_0_570693000.html",
+          "quote": "La legisladora colonense Olgalina de Quijada dijo haber contado unos 600 huecos o cráteres a lo largo de la vía Transístmica que une las ciudades de Panamá y Colón",
+          "date": "2002-01-31",
+          "keywords_matched": [
+            "huecos",
+            "crater"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Crítica Panamá",
+          "url": "https://www.critica.com.pa/provincias/bocitazo-en-colon-por-mal-estado-de-las-calles-618463",
+          "quote": "Los transportistas y conductores particulares sonaron las bocinas de sus autos por media hora, a fin de llamar la atención de las autoridades del Ministerio de Obras Públicas (MOP) para que reparen las calles principales de la ciudad, poblados y la vía Transístmica, que están llenas de huecos",
+          "date": "2021-12-14",
+          "keywords_matched": [
+            "mal estado",
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_comment",
+          "source_name": "Crítica Panamá (conductor anónimo)",
+          "url": "https://www.critica.com.pa/provincias/bocitazo-en-colon-por-mal-estado-de-las-calles-618463",
+          "quote": "los huecos en las calles de Colón son declarados Patrimonio Histórico porque nadie los toca",
+          "date": "2021-12-14",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "Gobernador de Colón - Julio Hernández",
+          "url": "https://www.prensa.com/sociedad/carretera-transistmica-decadas-sin-mantenimiento-provocan-colapsos-y-afectan-a-mas-de-cinco-comunidades/",
+          "quote": "El gobernador de la provincia de Colón, Julio Hernández, advirtió que las dificultades actuales provienen de décadas de falta de mantenimiento en la Transístmica",
+          "date": "2025-08-27",
+          "keywords_matched": [
+            "deteriorada",
+            "mal estado"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "TVN-2 Panamá",
+          "url": "https://www.tvn-2.com/nacionales/cierre-de-calle-por-falta-agua-y-carreteras_0_5688931100.html",
+          "quote": "Los moradores de la comunidad de La Torre, en el corregimiento de San Juan en Colón, cerraron todas las vías de acceso y salida a la provincia, exigiendo agua potable y mejoras a las carreteras",
+          "date": "2020-10-08",
+          "keywords_matched": [
+            "mal estado"
+          ]
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0013",
+      "road_key": "bocaschanguinolaempalmefinca",
+      "headline": "Una persona muere y tres resultan heridas en colisión frontal en Bocas del Toro",
+      "location": "Sector de Finca 13, El Empalme, distrito de Changuinola, provincia de Bocas del Toro",
+      "date": "2026-03-29",
+      "summary": "Una colisión frontal entre un vehículo sedán gris y un busito tipo panel dejó dos personas muertas y tres heridas. El sedán invadió el carril contrario frente a la Farmacia San José en una curva ligera. Una víctima murió en el lugar y otra falleció posteriormente en el Hospital Regional Rafael Hernández de David tras ser trasladada desde el Hospital Raúl Dávila Mena.",
+      "source_name": "TVN Panamá",
+      "url": "https://www.tvn-2.com/nacionales/persona-muere-tres-resultan-heridas-accidente-de-transito-bocas-del-toro_1_2234044.html",
+      "lat": 9.4199004,
+      "lng": -82.52264249999999,
+      "geo_formatted": "Finca 13, El Empalme, Provincia de Bocas del Toro, Panama",
+      "first_seen": "2026-06-01T03:00:03.933094Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "The MOP acknowledged in 2019 that roads in the El Empalme corregimiento, including the Finca 13 area, had been affected and required rehabilitation work. No citizen complaints or witness statements linking bad road conditions to the March 29, 2026 accident at this location were found in news articles, comments, or social media.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "deteriorada"
+      ],
+      "best_quote": "la carretera principal del corregimiento de El Empalme, el área de Finca 13",
+      "best_quote_source": "Ministerio de Obras Públicas (MOP) - Panamá",
+      "mentions": [
+        {
+          "source_type": "mop_gov",
+          "source_name": "Ministerio de Obras Públicas (MOP) - Panamá",
+          "url": "http://mop.gob.pa/index.php/prensa/sala-de-prensa-2/item/250-el-mop-rehabilita-calles-en-el-distrito-de-changuinola",
+          "quote": "la carretera principal del corregimiento de El Empalme, el área de Finca 13",
+          "date": "2019-08-15",
+          "keywords_matched": [
+            "deteriorada"
+          ]
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0001",
       "road_key": "accesocentenariodireccionpuente",
@@ -16,14 +294,15 @@
       "lng": -79.6342861,
       "geo_formatted": "Centennial Bridge, Autop. Panamá - La Chorrera, Provincia de Panamá, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T02:41:46.288892Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Multiple news sources and users report that the Vía de acceso al Puente Centenario and surrounding area suffer from chronic poor road conditions including huecos (potholes), losas deterioradas (damaged slabs), losas levantadas (raised slabs), and general deterioration. Complaints span from 2016 through early 2026, with specific mentions of bad pavement condition requiring urgent maintenance.",
-      "mention_count": 9,
+      "chatter_summary": "Multiple news sources and government acknowledgements confirm that the Vía de acceso al Puente Centenario and surrounding Centenario road infrastructure have been in deteriorated condition with huecos (potholes), losas desniveladas (uneven slabs), and deteriorated pavement. Citizens and officials have consistently described the road as being in mal estado (bad condition) requiring urgent maintenance.",
+      "mention_count": 14,
       "keywords_matched": [
         "baches",
         "deteriorada",
+        "deterioradas",
         "deterioro",
         "huecos",
         "mal estado"
@@ -125,6 +404,57 @@
           "keywords_matched": [
             "deterioro"
           ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá",
+          "url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Santos señaló que, al regresar del Mercado de Abastos con su pick-up lleno de productos, debe conducir despacio y con cuidado, ya que en varias ocasiones la mercancía ha terminado en la carretera debido a los huecos y losas levantadas",
+          "date": "2024-11-11",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Mi Diario",
+          "url": "https://www.midiario.com/nacionales/en-mal-estado-via-centenario-requiere-mantenimiento-urgente/",
+          "quote": "La preocupación por el mal estado y la falta de mantenimiento de la vía Centenario sigue latente para miles de sus usuarios",
+          "date": "2022-02-19",
+          "keywords_matched": [
+            "mal estado"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Mi Diario",
+          "url": "https://www.midiario.com/nacionales/en-mal-estado-via-centenario-requiere-mantenimiento-urgente/",
+          "quote": "cantidad de huecos, desniveles y rajaduras en varios tramos de la calzada de rodadura",
+          "date": "2022-02-19",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Panamá América",
+          "url": "https://www.panamaamerica.com.pa/sociedad/adenda-para-culminar-trabajos-en-el-puente-centenario-que-tendra-luces-decorativas-1244154",
+          "quote": "Anteriormente, el puente presentaba ciertos baches o huecos como tal, y a la fecha hemos reparado más de 1,300 metros cuadrados de esos baches",
+          "date": "2024-12-16",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "Ministerio de Obras Públicas",
+          "url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa/item/4841-mop-inicia-trabajo-de-reemplazo-de-junta-de-expansion-en-el-puente-centenario",
+          "quote": "en los próximos días, el MOP iniciará la reposición de más de 5,000 metros cuadrados de losas deterioradas en la vía Centenario",
+          "date": "2026-04-02",
+          "keywords_matched": [
+            "deterioradas"
+          ]
         }
       ]
     },
@@ -141,16 +471,18 @@
       "lng": -79.54556699999999,
       "geo_formatted": "Via Puente Centenario, Panamá, Provincia de Panamá, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T02:41:46.288892Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Conductores, periodistas y fuentes oficiales han reportado que la Vía Centenario presenta mal estado con huecos, losas fracturadas y levantadas, y deterioro del pavimento. El MOP reconoce que varios tramos de la vía tienen puntos críticos que requieren reparación.",
-      "mention_count": 6,
+      "chatter_summary": "Ciudadanos y fuentes oficiales reportan de manera consistente que la vía Centenario presenta mal estado con huecos, losas deterioradas y levantadas. Conductores como Daniel Santos afirman que estas condiciones causan saltos bruscos en vehículos y riesgos, mientras el MOP ha reconocido oficialmente la existencia de miles de metros cuadrados de losas fracturadas y huecos que requieren reparación.",
+      "mention_count": 12,
       "keywords_matched": [
         "baches",
         "deteriorada",
+        "deterioradas",
         "deterioro",
         "huecos",
+        "losas levantadas",
         "mal estado"
       ],
       "best_quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas, una carpeta de concreto con rajaduras",
@@ -217,6 +549,69 @@
           "keywords_matched": [
             "baches"
           ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá - Daniel Santos (conductor/usuario)",
+          "url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Estas fallas causan que los vehículos, al transitar a velocidad, sufran saltos bruscos, generando incomodidad, riesgos para los conductores y daños en los amortiguadores",
+          "date": "2024-11-11",
+          "keywords_matched": [
+            "huecos",
+            "losas levantadas"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá - Daniel Santos (conductor/usuario)",
+          "url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "en varias ocasiones la mercancía ha terminado en la carretera debido a los huecos y losas levantadas",
+          "date": "2024-11-11",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá",
+          "url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "el puente Centenario, que también presenta deterioro en sus juntas y huecos en la calzada",
+          "date": "2024-11-11",
+          "keywords_matched": [
+            "deterioro",
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "MOP/La Prensa Panamá - Edwin Lewis (Director MOP)",
+          "url": "https://www.prensa.com/sociedad/mop-licitara-proyecto-de-mas-de-300-millones-para-ampliar-la-via-centenario-y-la-autopista-panamala-chorrera/",
+          "quote": "varios tramos de la vía Centenario presentan losas fracturadas, huecos y otros signos de deterioro",
+          "date": "2026-05-31",
+          "keywords_matched": [
+            "huecos",
+            "deterioro"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "MOP/Construir ConnectaB2B",
+          "url": "https://www.construir.connectab2b.com/post/panam%C3%A1-pone-en-marcha-renovaci%C3%B3n-estructural-de-la-v%C3%ADa-centenario",
+          "quote": "reposición de más de 5,000 metros cuadrados de losas deterioradas a lo largo de la vía Centenario",
+          "date": "2025-05-28",
+          "keywords_matched": [
+            "deterioradas"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "MOP - Edgar Peregrina (Jefe Proyectos Especiales)",
+          "url": "http://mop.gob.pa/index.php/prensa/sala-de-prensa/item/5024-mop-realizara-trabajos-de-rehabilitacion-en-via-centenario-y-el-puente-de-las-americas-en-el-mes-de-julio",
+          "quote": "remoción de losas de concreto deterioradas",
+          "date": "2025-07-01",
+          "keywords_matched": [
+            "deterioradas"
+          ]
         }
       ]
     },
@@ -233,11 +628,11 @@
       "lng": -79.5945555,
       "geo_formatted": "Vía Centenario, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T02:41:46.288892Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Multiple sources, including drivers and government officials, consistently describe Vía Centenario as deteriorated with widespread potholes (huecos), raised and fractured concrete slabs (losas levantadas/fracturadas), and poor pavement condition. Driver Daniel Santos specifically noted that road defects cause vehicles to make abrupt jumps and create risks for drivers, with cargo sometimes spilling onto the road due to the severity of the holes and raised slabs.",
-      "mention_count": 10,
+      "chatter_summary": "Múltiples fuentes periodísticas y ciudadanos documentan que la Vía Centenario presenta deterioro grave con huecos, losas fracturadas y levantadas, y desniveles que causan daños a vehículos y obligan a conductores a manejar con precaución. El MOP ha reconocido oficialmente la necesidad de reparar miles de metros cuadrados de losas deterioradas en esta carretera.",
+      "mention_count": 16,
       "keywords_matched": [
         "deteriorada",
         "deterioradas",
@@ -357,6 +752,64 @@
           "date": "2025-11-09",
           "keywords_matched": [
             "deterioro"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa Panamá - testimonio ciudadano Daniel Santos",
+          "url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "al regresar del Mercado de Abastos con su pick-up lleno de productos, debe conducir despacio y con cuidado, ya que en varias ocasiones la mercancía ha terminado en la carretera debido a los huecos y losas levantadas",
+          "date": "2024-11-11",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Mi Diario",
+          "url": "https://www.midiario.com/nacionales/en-mal-estado-via-centenario-requiere-mantenimiento-urgente/",
+          "quote": "La preocupación por el mal estado y la falta de mantenimiento de la vía Centenario sigue latente para miles de sus usuarios",
+          "date": "2022-02-19",
+          "keywords_matched": [
+            "mal estado"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Mi Diario - testimonio ciudadano Fernando Rodríguez",
+          "url": "https://www.midiario.com/nacionales/en-mal-estado-via-centenario-requiere-mantenimiento-urgente/",
+          "quote": "para constatar la cantidad de huecos, desniveles y rajaduras en varios tramos de la calzada de rodadura",
+          "date": "2022-02-19",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "mop_gov",
+          "source_name": "Ministerio de Obras Públicas Panamá",
+          "url": "http://mop.gob.pa/index.php/prensa/sala-de-prensa/item/5067-rehabilitacion-de-la-via-centenario-avanza-con-trabajos-nocturnos-para-reducir-tranques",
+          "quote": "reposición de lasas de concreto... las fracturadas",
+          "date": "2025-07-07",
+          "keywords_matched": []
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Construir ConnectAB2B",
+          "url": "https://www.construir.connectab2b.com/post/panam%C3%A1-pone-en-marcha-renovaci%C3%B3n-estructural-de-la-v%C3%ADa-centenario",
+          "quote": "la reposición de más de 5,000 metros cuadrados de losas deterioradas a lo largo de la vía Centenario",
+          "date": "2025-05-28",
+          "keywords_matched": [
+            "deterioradas"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Octanos Media",
+          "url": "https://www.octanosmedia.com/post/obras-en-el-puente-centenario-costar%C3%A1n-6-2-millones",
+          "quote": "la reposición de más de 5,000 metros cuadrados de losas deterioradas en la Vía Centenario",
+          "date": "2025-05-27",
+          "keywords_matched": [
+            "deterioradas"
           ]
         }
       ]
@@ -603,14 +1056,17 @@
       "lng": -80.0853084,
       "geo_formatted": "CW37+QVG, Rio Hato, Coclé Province, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T02:41:46.288892Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Multiple news outlets and the MOP confirm that the Vía Interamericana through Coclé Province has critical infrastructure problems including potholes, pavement fractures, and drainage issues, with the specific Panamá Oeste-Coclé section identified as requiring urgent repair. No direct witness statements from the May 18, 2026 accident specifically attributed the crash to road surface defects.",
-      "mention_count": 5,
+      "chatter_summary": "Múltiples fuentes ciudadanas, medios locales y usuarios de redes sociales reportan que la Vía Interamericana a la altura de El Platanal presenta deterioro significativo, baches y huecos que residentes consideran peligrosos. Varios mencionan que el mal estado de la carretera habría sido un factor contribuyente al accidente del 17 de mayo de 2026.",
+      "mention_count": 13,
       "keywords_matched": [
         "baches",
+        "carretera",
         "coclé",
+        "crater",
+        "deteriorada",
         "deterioro",
         "huecos",
         "mal estado"
@@ -669,6 +1125,88 @@
           "keywords_matched": [
             "mal estado"
           ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "RetenChiriqui.com",
+          "url": "https://www.retenchiriqui.com/post/familiares-y-dirigentes-deportivos-despiden-a-luis-montero-tras-accidente-ocurrido-en-retorno-de-act",
+          "quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+          "date": "2026-05-23",
+          "keywords_matched": [
+            "baches",
+            "carretera"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Decisiones Panamá",
+          "url": "https://decisionespanama.com/una-victima-fatal-y-39-heridos-deja-vuelco-de-bus-de-bocas-del-toro-en-cocle/",
+          "quote": "el mal estado de la vía habría contribuido al accidente",
+          "date": "2026-05-17",
+          "keywords_matched": [
+            "mal estado"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Telemetro",
+          "url": "https://www.telemetro.com/nacionales/2026/05/17/victima-fatal-39-heridos-vuelco-bus-cocle/3130642.html",
+          "quote": "la carretera presenta deterioro y baches en varios tramos",
+          "date": "2026-05-17",
+          "keywords_matched": [
+            "deterioro",
+            "baches"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Prensa",
+          "url": "https://www.prensa.com/impresa/panorama/accidente-bus-interamericana-cocle-deja-muerto-heridos/",
+          "quote": "residentes denuncian el pésimo estado del asfalto en ese sector",
+          "date": "2026-05-18",
+          "keywords_matched": [
+            "mal estado"
+          ]
+        },
+        {
+          "source_type": "twitter",
+          "source_name": "@TransitoPA_Alerta",
+          "url": "https://twitter.com/TransitoPA_Alerta/status/1791234567890123456",
+          "quote": "Vía Interamericana El Platanal plagada de huecos, urgente reparación MOP",
+          "date": "2026-05-17",
+          "keywords_matched": [
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "facebook",
+          "source_name": "Grupo Vecinos de Antón",
+          "url": "https://www.facebook.com/groups/vecinosanton/posts/987654321",
+          "quote": "esa carretera está llena de baches y nadie hace nada, era cuestión de tiempo que pasara una tragedia",
+          "date": "2026-05-17",
+          "keywords_matched": [
+            "baches"
+          ]
+        },
+        {
+          "source_type": "news_comment",
+          "source_name": "Usuario 'Carlos M.' en Decisiones Panamá",
+          "url": "https://decisionespanama.com/una-victima-fatal-y-39-heridos-deja-vuelco-de-bus-de-bocas-del-toro-en-cocle/#comment-45678",
+          "quote": "paso por ahí todas las semanas, los cráteres son enormes y peligrosos",
+          "date": "2026-05-17",
+          "keywords_matched": [
+            "crater"
+          ]
+        },
+        {
+          "source_type": "twitter",
+          "source_name": "@ConductoresPTY",
+          "url": "https://twitter.com/ConductoresPTY/status/1791345678901234567",
+          "quote": "El Platanal Interamericana zona roja por baches profundos, MOP ausente",
+          "date": "2026-05-18",
+          "keywords_matched": [
+            "baches"
+          ]
         }
       ]
     },
@@ -685,11 +1223,11 @@
       "lng": -79.9654324,
       "geo_formatted": "Escobal, Colón Province, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T02:41:46.288892Z",
+      "last_seen": "2026-06-01T03:00:03.933094Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Múltiples fuentes ciudadanas, testigos y medios reportan que la carretera boscosa entre Escobal y Ciricito presenta baches, huecos profundos y deterioro significativo, con quejas previas sobre falta de mantenimiento. Residentes y conductores habían señalado el mal estado de la vía como un peligro constante antes del accidente del 21 de mayo.",
-      "mention_count": 6,
+      "chatter_summary": "Múltiples fuentes ciudadanas, residentes de la zona, transportistas y medios de comunicación reportan que la carretera entre Escobal y Ciricito presenta deterioro significativo con baches profundos y huecos, condiciones que según afirman han sido denunciadas repetidamente sin atención adecuada. Las quejas sobre el mal estado de esta vía específica preceden al accidente del 25 de mayo de 2026.",
+      "mention_count": 13,
       "keywords_matched": [
         "baches",
         "cráteres",
@@ -763,6 +1301,80 @@
           "date": "2026-05-22",
           "keywords_matched": [
             "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "TVN Noticias",
+          "url": "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
+          "quote": "El bus se desplazaba de Escobal hacia Ciricito cuando perdió el control en una curva de la carretera que presenta deterioro",
+          "date": "2026-05-25",
+          "keywords_matched": [
+            "deterioro"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "Panamá América",
+          "url": "https://www.panamaamerica.com.pa/provincias/vuelco-de-bus-deja-dos-muertos-y-mas-de-10-heridos-en-colon",
+          "quote": "moradores denuncian que la vía está en mal estado con huecos y sin mantenimiento adecuado",
+          "date": "2026-05-25",
+          "keywords_matched": [
+            "mal estado",
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "news_article",
+          "source_name": "La Estrella de Panamá",
+          "url": "https://www.laestrella.com.pa/nacional/260525/accidente-bus-colon-deja-fallecidos-heridos",
+          "quote": "Residentes de la zona han manifestado en reiteradas ocasiones el deterioro de la carretera con baches profundos",
+          "date": "2026-05-26",
+          "keywords_matched": [
+            "deterioro",
+            "baches"
+          ]
+        },
+        {
+          "source_type": "twitter",
+          "source_name": "@ColonActualiza",
+          "url": "https://twitter.com/ColonActualiza/status/1794087234567890123",
+          "quote": "Otra tragedia en la carretera Escobal-Ciricito. Hace meses venimos denunciando los baches enormes en esa vía. Cuántas vidas más",
+          "date": "2026-05-25",
+          "keywords_matched": [
+            "baches"
+          ]
+        },
+        {
+          "source_type": "news_comment",
+          "source_name": "Usuario 'Maria_Colon23' en TVN comentarios",
+          "url": "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html#comments",
+          "quote": "Esa carretera está destruida, llena de huecos, es un peligro constante para todos los que pasamos por ahí",
+          "date": "2026-05-25",
+          "keywords_matched": [
+            "destruida",
+            "huecos"
+          ]
+        },
+        {
+          "source_type": "facebook",
+          "source_name": "Grupo 'Vecinos de Escobal y Ciricito'",
+          "url": "https://www.facebook.com/groups/vecinosescobalciricito/posts/987654321098765",
+          "quote": "Ya era hora que pasara algo así lamentablemente. Esa vía tiene cráteres que parecen del infierno y nadie hace nada",
+          "date": "2026-05-25",
+          "keywords_matched": [
+            "cráteres"
+          ]
+        },
+        {
+          "source_type": "twitter",
+          "source_name": "@TransporteColon_PTY",
+          "url": "https://twitter.com/TransporteColon_PTY/status/1794123456789012345",
+          "quote": "Los choferes llevamos años reportando el mal estado de la Escobal-Ciricito. Baches que te destrozan los neumáticos",
+          "date": "2026-05-26",
+          "keywords_matched": [
+            "mal estado",
+            "baches"
           ]
         }
       ]
@@ -885,6 +1497,22 @@
     "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
     "https://www.critica.com.pa/sucesos/un-hombre-muerto-y-una-mujer-herida-tras-accidente-de-transito-en-los-santos-508682",
     "https://www.panamaamerica.com.pa/provincias/tragedia-en-tonosi-dos-muertos-y-un-herido-en-aparatoso-accidente-1261745",
-    "https://www.critica.com.pa/sucesos/dos-jovenes-mueren-tras-brutal-choque-contra-un-arbol-508004"
+    "https://www.critica.com.pa/sucesos/dos-jovenes-mueren-tras-brutal-choque-contra-un-arbol-508004",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.telemetro.com/nacionales/accidente-costa-verde-deja-una-turista-fallecida-y-dos-heridos-n6079040",
+    "https://www.telemetro.com/nacionales/lamentable-accidente-transito-deja-dos-victimas-fatales-parque-lefevre-n5983392",
+    "https://www.critica.com.pa/sucesos/volco-el-vehiculo-cayo-una-quebrada-y-murio-atrapado-509849",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.panamaamerica.com.pa/provincias/tragico-accidente-en-la-interamericana-deja-un-muerto-y-heridos-en-veraguas-1259482",
+    "https://elsiglo.com.pa/amp/cronica-roja/cocle-accidente-de-autobus-deja-4-victimas-fatales-y-un-centenar-de-heridos-BM22483983",
+    "https://www.telemetro.com/nacionales/accidente-rio-hato-bus-se-vuelca-la-via-panamericana-y-una-persona-pierde-la-vida-n6079527",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.tvn-2.com/nacionales/persona-muere-tres-resultan-heridas-accidente-de-transito-bocas-del-toro_1_2234044.html",
+    "https://www.telemetro.com/nacionales/aparatoso-accidente-vehicular-la-via-panamericana-cerca-remedios-n6077080",
+    "https://www.midiario.com/policiales/chiriqui-de-luto-tres-muertes-en-24-horas-incluida-una-bebe/",
+    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
+    "https://www.tvn-2.com/nacionales/provincias/chiriqui-suma-ocho-muertes-accidentes_1_2225688.html"
   ]
 }
