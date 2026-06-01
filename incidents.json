@@ -1,8 +1,129 @@
 {
-  "scan_time": "2026-06-01T03:55:33.306154",
-  "total": 13,
-  "counter": 13,
+  "scan_time": "2026-06-01T13:35:54.562100",
+  "total": 15,
+  "counter": 15,
   "incidents": [
+    {
+      "ptw_id": "PTW-0014",
+      "road_key": "cercainteramericanamercadoplatanal",
+      "severity": "MEDIUM",
+      "headline": "Bus termina volcado en El Platanal, reportan múltiples heridos, un muerto confirmado",
+      "location": "Vía Interamericana a la altura de El Platanal cerca del mercado de artesanías, Río Hato, Coclé",
+      "date": "2026-05-18",
+      "summary": "Un bus de la ruta Bocas del Toro-Panamá terminó volcado en la vía Interamericana. El accidente ocurrió bajo lluvia intensa cuando el bus dio varias vueltas y cayó en una cuneta. Dejó una persona fallecida (Luis Carlos Montero Chavarría, 61 años) y entre 40-49 heridos, muchos de ellos simpatizantes políticos que regresaban de un evento en la capital.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+      "lat": 8.4044378,
+      "lng": -80.0853084,
+      "geo_formatted": "CW37+QVG, Rio Hato, Coclé Province, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4044378,-80.0853084",
+      "first_seen": "2026-06-01T13:28:12.466729Z",
+      "last_seen": "2026-06-01T13:28:12.466729Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "A survivor of the accident stated that the road had many potholes and water pooling, causing the vehicle to bounce significantly. Road condition issues on the Interamericana in the Coclé area were mentioned as a potential contributing factor.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "baches"
+      ],
+      "best_quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+      "best_quote_source": "Sugar González (survivor quoted in Reten Chiriquí)",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "Mi Diario",
+          "post_url": "https://twitter.com/MiDiarioPanama/status/unknown",
+          "post_caption": "🟡🔴 La tarde de este domingo se encendieron las alarmas en la vía Interamericana, a la altura de El Platanal, en la provincia de Coclé, luego de que un bus terminara volcado cerca del mercado de artesanías. Extraoficialmente se habla de más de 40 heridos y hasta el momento solo se ha confirmado un muerto.",
+          "post_date": "2026-05-18"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Sugar González (survivor quoted in Reten Chiriquí)",
+          "comment_url": "https://www.retenchiriqui.com/post/familiares-y-dirigentes-deportivos-despiden-a-luis-montero-tras-accidente-ocurrido-en-retorno-de-act",
+          "post_url": "https://www.retenchiriqui.com/post/familiares-y-dirigentes-deportivos-despiden-a-luis-montero-tras-accidente-ocurrido-en-retorno-de-act",
+          "quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2026-05-18"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0015",
+      "road_key": "colonconjuansan",
+      "severity": "CRITICAL",
+      "headline": "Accidente en la autopista Panamá–Colón deja contenedor atravesado en la vía",
+      "location": "Autopista Panamá-Colón, a la altura del corregimiento de San Juan, con dirección hacia la ciudad de Colón",
+      "date": "2026-02-06",
+      "summary": "Una mula que transportaba un contenedor sufrió un percance durante condiciones de lluvia. El contenedor quedó atravesado en la calzada invadiendo la vía contraria. El accidente involucró además a un vehículo tipo sedán y a un camión cisterna.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
+      "lat": 9.2248092,
+      "lng": -79.6656473,
+      "geo_formatted": "Nuevo San Juan, San Juan, Colón Province, Panama",
+      "maps_link": "https://maps.google.com/?q=9.2248092,-79.6656473",
+      "first_seen": "2026-06-01T13:28:12.466729Z",
+      "last_seen": "2026-06-01T13:28:12.466729Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Citizens commenting on Mi Diario's Facebook post report that the Autopista Panamá-Colón has multiple potholes and is in poor condition, calling for repairs from authorities. Multiple commenters cite deteriorated road conditions as an ongoing safety concern on this route.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "baches",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "Esa vía está llena de baches y huecos, el MOP no hace nada",
+      "best_quote_source": "Mi Diario Panama",
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "Mi Diario",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "post_caption": "Accidente en la autopista Panamá–Colón deja contenedor atravesado en la vía",
+          "post_date": "2026-02-06"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "quote": "Esa vía está llena de baches y huecos, el MOP no hace nada",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ],
+          "date": "2026-02-06"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "quote": "La autopista está en mal estado desde hace meses, muchos accidentes por lo mismo",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-02-06"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/932583292245830",
+          "quote": "Esos baches son un peligro constante, cuándo van a reparar esa carretera",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2026-02-06"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0010",
       "road_key": "arraijanchorreracostaverde",
@@ -1573,6 +1694,22 @@
     "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
     "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
     "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
-    "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html"
+    "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.telemetro.com/nacionales/lamentable-accidente-transito-deja-dos-victimas-fatales-parque-lefevre-n5983392",
+    "https://www.midiario.com/policiales/mujer-israeli-murio-tras-brutal-choque-entre-un-microbus-turistico-y-un-diablo-rojo-en-la-autopista/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/volco-el-vehiculo-cayo-una-quebrada-y-murio-atrapado-509849",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/trasladan-ciudad-capital-2-de-los-heridos-tras-vuelco-en-cocle-509546",
+    "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/"
   ]
 }
