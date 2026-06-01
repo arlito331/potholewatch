@@ -1,8 +1,48 @@
 {
-  "scan_time": "2026-06-01T13:35:54.562100",
-  "total": 15,
-  "counter": 15,
+  "scan_time": "2026-06-01T20:18:42.524128",
+  "total": 16,
+  "counter": 16,
   "incidents": [
+    {
+      "ptw_id": "PTW-0016",
+      "road_key": "areagatunlagonegros",
+      "severity": "MEDIUM",
+      "headline": "Tragedia en Colón: dos muertos y más de 10 heridos tras vuelco de bus en vía boscosa",
+      "location": "Carretera del lago Gatún en área de Los Negros entre los corregimientos de Escobal y Ciricito, sector del lago, provincia de Colón",
+      "date": "2026-05-21",
+      "summary": "Un bus de la ruta Cuipo-Colón colisionó con una camioneta Tucson blanca en una curva peligrosa y terminó volcado entre herbazales. El accidente dejó dos personas fallecidas (Erick Guevara y otra víctima) y más de 10 heridos. Testigos señalaron que el bus circulaba a alta velocidad con la música a alto volumen.",
+      "source_name": "TVN-2 Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
+      "lat": 9.1206911,
+      "lng": -79.9927163,
+      "geo_formatted": "Los Negros, Provincia de Colón, Panama",
+      "maps_link": "https://maps.google.com/?q=9.1206911,-79.9927163",
+      "first_seen": "2026-06-01T20:11:01.951313Z",
+      "last_seen": "2026-06-01T20:11:01.951313Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "A 2021 news report documented a fatal motorcycle accident on the same Escobal-Cuipo road where the vehicle fell into a pothole and lost control, indicating prior documented road deterioration issues in this area.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "hueco"
+      ],
+      "best_quote": "Los primeros informes recabados señalan que Ríos se dirigía al sector de Escobal, cuando la moto que conducía cayó a un hueco, perdiendo el control",
+      "best_quote_source": "Panamá América",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá América",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/provincias/motorizado-de-52-anos-se-accidenta-y-pierde-la-vida-en-la-carretera-hacia-cuipo-colon",
+          "quote": "Los primeros informes recabados señalan que Ríos se dirigía al sector de Escobal, cuando la moto que conducía cayó a un hueco, perdiendo el control",
+          "keywords_matched": [
+            "hueco"
+          ],
+          "date": "2021-10-30"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0014",
       "road_key": "cercainteramericanamercadoplatanal",
@@ -1710,6 +1750,21 @@
     "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
     "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html",
     "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
-    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/"
+    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
+    "https://www.critica.com.pa/sucesos/auto-impacta-contra-un-arbol-en-israel-y-un-pasajero-pierde-la-vida-510248",
+    "https://www.critica.com.pa/nacional/vuelco-de-camion-con-cemento-forma-tranque-en-el-centenario-503192",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/trasladan-ciudad-capital-2-de-los-heridos-tras-vuelco-en-cocle-509546",
+    "https://www.midiario.com/policiales/los-santos-vehiculo-oficial-termina-en-tragedia-dos-muertos-y-presuntamente-un-representante-herido-en-tonosi/",
+    "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.tvn-2.com/nacionales/registra-colision-multiple-autopista-panama-colon-tres-articulados-sedan_1_2226370.html"
   ]
 }
