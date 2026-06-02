@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-06-01T20:18:42.524128",
+  "scan_time": "2026-06-02T02:49:09.016162",
   "total": 16,
   "counter": 16,
   "incidents": [
@@ -1123,11 +1123,11 @@
       "lng": -80.6621031,
       "geo_formatted": "Carr. Interamericana, El Roble, Provincia de Coclé, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-01T02:41:46.288892Z",
+      "last_seen": "2026-06-02T02:42:07.434007Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Multiple news sources and a survivor from a May 2026 bus accident in Coclé confirm the Vía Interamericana through Panamá Oeste and Coclé provinces, including the Aguadulce area, has persistent problems with potholes, deterioration, and fractured pavement. MOP acknowledged the poor conditions and planned a $4 million repair project for the La Chorrera-Penonomé stretch.",
-      "mention_count": 6,
+      "chatter_summary": "Citizens commenting on the Critica Facebook post reported that the Vía Interamericana in this sector has multiple potholes and is in deteriorated condition, describing it as dangerous.",
+      "mention_count": 2,
       "keywords_matched": [
         "baches",
         "cráter",
@@ -1202,7 +1202,42 @@
             "mal estado"
           ]
         }
-      ]
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "Critica",
+          "comment_url": "https://www.facebook.com/criticapa/posts/892618139578162",
+          "post_url": "https://www.facebook.com/criticapa/posts/892618139578162",
+          "quote": "Esa vía está llena de baches, es un peligro",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2026-05-28"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Critica",
+          "comment_url": "https://www.facebook.com/criticapa/posts/892618139578162",
+          "post_url": "https://www.facebook.com/criticapa/posts/892618139578162",
+          "quote": "La Interamericana en ese sector está deteriorada, huecos por todos lados",
+          "keywords_matched": [
+            "deteriorada",
+            "huecos"
+          ],
+          "date": "2026-05-28"
+        }
+      ],
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "Critica",
+          "post_url": "https://www.facebook.com/criticapa/posts/892618139578162",
+          "post_caption": "Un muerto tras violenta colisión y vuelco en Aguadulce",
+          "post_date": "2026-05-28"
+        }
+      ],
+      "severity": "HIGH"
     },
     {
       "ptw_id": "PTW-0006",
@@ -1765,6 +1800,19 @@
     "https://www.midiario.com/policiales/los-santos-vehiculo-oficial-termina-en-tragedia-dos-muertos-y-presuntamente-un-representante-herido-en-tonosi/",
     "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
     "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
-    "https://www.tvn-2.com/nacionales/registra-colision-multiple-autopista-panama-colon-tres-articulados-sedan_1_2226370.html"
+    "https://www.tvn-2.com/nacionales/registra-colision-multiple-autopista-panama-colon-tres-articulados-sedan_1_2226370.html",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.critica.com.pa/sucesos/bus-con-simpatizantes-de-martin-torrijos-se-vuelca-un-muerto-y-30-heridos-509495",
+    "https://www.telemetro.com/nacionales/accidente-rio-hato-bus-se-vuelca-la-via-panamericana-y-una-persona-pierde-la-vida-n6079527",
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
+    "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654"
   ]
 }
