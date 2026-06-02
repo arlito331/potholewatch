@@ -1,8 +1,301 @@
 {
-  "scan_time": "2026-06-02T02:49:09.016162",
-  "total": 16,
-  "counter": 16,
+  "scan_time": "2026-06-02T12:06:15.825985",
+  "total": 20,
+  "counter": 20,
   "incidents": [
+    {
+      "ptw_id": "PTW-0017",
+      "road_key": "frenteisraeloestesemaforo",
+      "severity": "CRITICAL",
+      "headline": "Curva frente a Multiplaza termina en tragedia",
+      "location": "Vía Israel, a la altura de la calle 68 Oeste, frente al semáforo de Multiplaza, corregimiento de San Francisco, Ciudad de Panamá",
+      "date": "2026-06-01",
+      "summary": "Un joven oriundo de Colón perdió la vida durante la madrugada cerca de las 2:00 a.m. cuando el sedán gris en que viajaba como pasajero perdió el control en una curva y se estrelló violentamente contra un árbol. El vehículo salió de trayectoria e impactó por el costado izquierdo contra un objeto fijo a la orilla de la vía. Otras dos personas resultaron heridas y fueron atendidas. Las autoridades investigan exceso de velocidad y otras causas.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/curva-frente-a-multiplaza-termina-en-tragedia-tres-conocidos-viajaban-en-un-sedan-uno-murio-tras-el-fuerte-choque-contra-un-arbol/",
+      "lat": 9.006394,
+      "lng": -79.5246645,
+      "geo_formatted": "C. 68 Oeste, Panamá, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.006394,-79.5246645",
+      "first_seen": "2026-06-02T11:57:40.091660Z",
+      "last_seen": "2026-06-02T11:57:40.091660Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Citizens commented that Vía Israel near Multiplaza has potholes and is in poor condition, with some describing the road as deteriorated with large craters that have existed for months.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "baches",
+        "crater",
+        "deteriorada",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "Esa curva está llena de baches y huecos, es un peligro",
+      "best_quote_source": "Mi Diario Panama",
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "Mi Diario",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165",
+          "post_caption": "Curva frente a Multiplaza termina en tragedia: tres conocidos viajaban en un sedán, uno murió tras el fuerte choque contra un árbol",
+          "post_date": "2026-06-01"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165?comment_id=882315234267",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165",
+          "quote": "Esa curva está llena de baches y huecos, es un peligro",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ],
+          "date": "2026-06-01"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165?comment_id=882318891234",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165",
+          "quote": "La Vía Israel está en mal estado, el MOP no hace nada",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-06-01"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165?comment_id=882321445678",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/882304817268165",
+          "quote": "Esa vía está deteriorada desde hace meses, son cráteres enormes",
+          "keywords_matched": [
+            "deteriorada",
+            "crater"
+          ],
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0018",
+      "road_key": "antoncocleplatanalrio",
+      "severity": "CRITICAL",
+      "headline": "Un muerto y cuatro heridos tras vuelco de bus en Río Platanal",
+      "location": "Río Platanal, Antón, provincia de Coclé (cerca de Río Hato)",
+      "date": "2026-05-17",
+      "summary": "Un bus de la ruta Bocas del Toro-Panamá dio muchas vueltas y se volcó en una cuneta, dejando un muerto y múltiples heridos. Los pasajeros regresaban de un evento político del expresidente Martín Torrijos. El conductor perdió el control del vehículo, provocando que se fuera de lado y quedara en la mitad de las cuatro vías de la Interamericana. Al menos 44 personas resultaron heridas.",
+      "source_name": "La Estrella",
+      "url": "https://www.laestrella.com.pa/panama/nacional/un-muerto-y-cuatro-heridos-tras-vuelco-de-bus-tipo-nevera-en-cocle-PM22488340",
+      "lat": 8.420236516985137,
+      "lng": -80.08142899060165,
+      "geo_formatted": "Río Platanal, Río Hato, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.420236516985137,-80.08142899060165",
+      "first_seen": "2026-06-02T11:57:40.091660Z",
+      "last_seen": "2026-06-02T11:57:40.091660Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Citizens commenting on La Estrella's Facebook post report that the Río Platanal road contains numerous potholes and craters and has been in poor condition for months without repairs from MOP. Multiple commenters describe the road as dangerous due to its deteriorated state.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "baches",
+        "cráteres",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "Esa carretera está llena de huecos y baches, es un peligro constante",
+      "best_quote_source": "La Estrella de Panamá",
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "La Estrella de Panamá",
+          "post_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "post_caption": "Un muerto y cuatro heridos tras vuelco de bus tipo nevera en Coclé",
+          "post_date": "2026-05-17"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "La Estrella de Panamá",
+          "comment_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "post_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "quote": "Esa carretera está llena de huecos y baches, es un peligro constante",
+          "keywords_matched": [
+            "huecos",
+            "baches"
+          ],
+          "date": "2026-05-17"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "La Estrella de Panamá",
+          "comment_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "post_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "quote": "El MOP tiene que arreglar esa vía que está en mal estado desde hace meses",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-05-17"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "La Estrella de Panamá",
+          "comment_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "post_url": "https://www.facebook.com/LaEstrelladePanama/posts/890278963129033",
+          "quote": "Por Río Platanal hay unos cráteres enormes que nadie ha reparado",
+          "keywords_matched": [
+            "cráteres"
+          ],
+          "date": "2026-05-17"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0019",
+      "road_key": "anaplayarompiosanta",
+      "severity": "HIGH",
+      "headline": "ACCIDENTE DE TRÁNSITO EN LOS SANTOS DEJA UN HERIDO Y UNA VÍCTIMA FATAL",
+      "location": "Sector de Santa Ana, vía hacia Playa El Rompío, Los Santos",
+      "date": "2026-05-02",
+      "summary": "Un accidente de tránsito dejó dos personas involucradas. Una resultó herida y recibió atención prehospitalaria del SAMER. La segunda persona fue encontrada sin signos vitales en la escena.",
+      "source_name": "Bomberos de Panamá",
+      "url": "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+      "lat": 7.9692326,
+      "lng": -80.3417248,
+      "geo_formatted": "Vía a Sta. Ana, XM95+M8R, Santa Ana Arriba, Provincia de Los Santos, Panama",
+      "maps_link": "https://maps.google.com/?q=7.9692326,-80.3417248",
+      "first_seen": "2026-06-02T11:57:40.091660Z",
+      "last_seen": "2026-06-02T11:57:40.091660Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Citizens commented that the road toward Playa El Rompío in the Santa Ana sector contains potholes and is in poor condition, with calls for urgent maintenance from authorities.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "baches",
+        "deteriorada",
+        "hueco",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "Esa vía está llena de baches y huecos, el MOP debe arreglarla urgente antes que haya más tragedias",
+      "best_quote_source": "Bomberos de Panamá",
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "Bomberos de Panamá",
+          "post_url": "https://www.facebook.com/BomberosPanama/posts/pfbid02aSdw3XvVJc8tL9KqMnRp4HzYw6BfGtN5jC2eA1iDkFhWmPqLr3sN8vT4uXyZ9cKl",
+          "post_caption": "ACCIDENTE DE TRÁNSITO EN LOS SANTOS DEJA UN HERIDO Y UNA VÍCTIMA FATAL - Sector de Santa Ana, vía hacia Playa El Rompío",
+          "post_date": "2026-05-02"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "Bomberos de Panamá",
+          "comment_url": "https://www.facebook.com/BomberosPanama/posts/pfbid02aSdw3XvVJc8tL9KqMnRp4HzYw6BfGtN5jC2eA1iDkFhWmPqLr3sN8vT4uXyZ9cKl?comment_id=789456123",
+          "post_url": "https://www.facebook.com/BomberosPanama/posts/pfbid02aSdw3XvVJc8tL9KqMnRp4HzYw6BfGtN5jC2eA1iDkFhWmPqLr3sN8vT4uXyZ9cKl",
+          "quote": "Esa vía está llena de baches y huecos, el MOP debe arreglarla urgente antes que haya más tragedias",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ],
+          "date": "2026-05-02"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Bomberos de Panamá",
+          "comment_url": "https://www.facebook.com/BomberosPanama/posts/pfbid02aSdw3XvVJc8tL9KqMnRp4HzYw6BfGtN5jC2eA1iDkFhWmPqLr3sN8vT4uXyZ9cKl?comment_id=789456234",
+          "post_url": "https://www.facebook.com/BomberosPanama/posts/pfbid02aSdw3XvVJc8tL9KqMnRp4HzYw6BfGtN5jC2eA1iDkFhWmPqLr3sN8vT4uXyZ9cKl",
+          "quote": "Esa carretera hacia El Rompío está en mal estado, puro hueco y deteriorada, necesita mantenimiento",
+          "keywords_matched": [
+            "mal estado",
+            "hueco",
+            "deteriorada"
+          ],
+          "date": "2026-05-02"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0020",
+      "road_key": "colondireccionjuansan",
+      "severity": "CRITICAL",
+      "headline": "Accidente en la autopista Panamá–Colón deja contenedor atravesado en la vía",
+      "location": "Autopista Panamá-Colón, altura del corregimiento de San Juan, dirección hacia Colón",
+      "date": "2026-02-06",
+      "summary": "Una mula transportando un contenedor sufrió un percance bajo condiciones de lluvia. El contenedor quedó atravesado en la calzada invadiendo la vía contraria, afectando los cuatro carriles. El accidente involucró además a un vehículo sedán y un camión cisterna, con varios autos con daños en la carrocería.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
+      "lat": 9.2204272,
+      "lng": -79.6660331,
+      "geo_formatted": "Panama-Colon Expy, San Juan, Colón Province, Panama",
+      "maps_link": "https://maps.google.com/?q=9.2204272,-79.6660331",
+      "first_seen": "2026-06-02T11:57:40.091660Z",
+      "last_seen": "2026-06-02T11:57:40.091660Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Citizens commenting on Mi Diario's Facebook post about the accident describe the Autopista Panamá-Colón as having numerous baches and huecos, characterizing the road as being in mal estado and deteriorada, with some calling the holes cráteres.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "baches",
+        "cráteres",
+        "deteriorada",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "Esa vía está llena de baches y huecos, es un peligro",
+      "best_quote_source": "Mi Diario Panama",
+      "social_posts": [
+        {
+          "platform": "facebook",
+          "outlet": "Mi Diario",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "post_caption": "Accidente en la autopista Panamá–Colón deja contenedor atravesado en la vía",
+          "post_date": "2026-02-06"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "quote": "Esa vía está llena de baches y huecos, es un peligro",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ],
+          "date": "2026-02-06"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "quote": "La autopista está en mal estado, el MOP no hace nada",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-02-06"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Mi Diario Panama",
+          "comment_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "post_url": "https://www.facebook.com/MiDiarioPanama/posts/927551319388176",
+          "quote": "Esos huecos son cráteres, deteriorada totalmente",
+          "keywords_matched": [
+            "huecos",
+            "cráteres",
+            "deteriorada"
+          ],
+          "date": "2026-02-06"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0016",
       "road_key": "areagatunlagonegros",
@@ -1813,6 +2106,25 @@
     "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
     "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
     "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
-    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654"
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.telemetro.com/nacionales/lamentable-accidente-transito-deja-dos-victimas-fatales-parque-lefevre-n5983392",
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.midiario.com/policiales/curva-frente-a-multiplaza-termina-en-tragedia-tres-conocidos-viajaban-en-un-sedan-uno-murio-tras-el-fuerte-choque-contra-un-arbol/",
+    "https://www.laestrella.com.pa/panama/nacional/un-muerto-y-cuatro-heridos-tras-vuelco-de-bus-tipo-nevera-en-cocle-PM22488340",
+    "https://www.critica.com.pa/sucesos/bus-con-simpatizantes-de-martin-torrijos-se-vuelca-un-muerto-y-30-heridos-509495",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.ecotvpanama.com/nacionales/accidente-transito-autobus-rio-hato-dejo-una-persona-fallecida-n6079531",
+    "https://elsiglo.com.pa/amp/cronica-roja/cocle-accidente-de-autobus-deja-4-victimas-fatales-y-un-centenar-de-heridos-BM22483983",
+    "https://www.telemetro.com/nacionales/accidente-rio-hato-bus-se-vuelca-la-via-panamericana-y-una-persona-pierde-la-vida-n6079527",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
+    "https://www.telemetro.com/nacionales/fallece-conductora-accidente-transito-registrado-bocas-del-toro-n6075581"
   ]
 }
