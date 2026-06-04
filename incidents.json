@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-06-03T19:49:05.424984",
+  "scan_time": "2026-06-04T02:50:48.412776",
   "total": 23,
   "counter": 23,
   "incidents": [
@@ -378,11 +378,11 @@
       "geo_formatted": "Vía a Sta. Ana, XM95+M8R, Santa Ana Arriba, Provincia de Los Santos, Panama",
       "maps_link": "https://maps.google.com/?q=7.9692326,-80.3417248",
       "first_seen": "2026-06-02T11:57:40.091660Z",
-      "last_seen": "2026-06-03T19:41:36.676125Z",
+      "last_seen": "2026-06-04T02:45:39.331075Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Citizens commenting on the Bomberos post describe the road to Santa Ana and Playa El Rompío as being in poor condition with multiple potholes and damage requiring urgent repair by authorities.",
-      "mention_count": 7,
+      "chatter_summary": "Citizens commented that the road to Playa El Rompío is in poor condition with multiple potholes and deterioration, calling for urgent repairs from the MOP. Multiple users described the highway as dangerous due to its state.",
+      "mention_count": 10,
       "keywords_matched": [
         "baches",
         "cráteres",
@@ -412,6 +412,13 @@
           "platform": "facebook",
           "outlet": "Benemérito Cuerpo de Bomberos de la República de Panamá",
           "post_url": "https://www.facebook.com/BomberosPanama/posts/pfbid02d8LVMZqJLQ9XHnKW3zYvPq5RnJTkDmWfGc4HbNxPwRyL6Kg8VtMjS2Qh9Xc3Ym1Zl",
+          "post_caption": "Accidente de tránsito en Los Santos deja un herido y una víctima fatal. Sector de Santa Ana, vía hacia Playa El Rompío",
+          "post_date": "2026-05-02"
+        },
+        {
+          "platform": "facebook",
+          "outlet": "Benemérito Cuerpo de Bomberos de la República de Panamá",
+          "post_url": "https://www.facebook.com/BomberosPA/posts/882303987263809",
           "post_caption": "Accidente de tránsito en Los Santos deja un herido y una víctima fatal. Sector de Santa Ana, vía hacia Playa El Rompío",
           "post_date": "2026-05-02"
         }
@@ -500,6 +507,40 @@
             "hueco"
           ],
           "date": "2026-05-02"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Benemérito Cuerpo de Bomberos de la República de Panamá",
+          "comment_url": "https://www.facebook.com/BomberosPA/posts/882303987263809?comment_id=882315420595999",
+          "post_url": "https://www.facebook.com/BomberosPA/posts/882303987263809",
+          "quote": "Esa carretera está llena de huecos, el MOP debe arreglar esa vía urgentemente",
+          "keywords_matched": [
+            "huecos"
+          ],
+          "date": "2026-05-02"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Benemérito Cuerpo de Bomberos de la República de Panamá",
+          "comment_url": "https://www.facebook.com/BomberosPA/posts/882303987263809?comment_id=882318753929099",
+          "post_url": "https://www.facebook.com/BomberosPA/posts/882303987263809",
+          "quote": "Las vías hacia las playas están en pésimo estado, baches por todos lados",
+          "keywords_matched": [
+            "baches",
+            "mal estado"
+          ],
+          "date": "2026-05-02"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Benemérito Cuerpo de Bomberos de la República de Panamá",
+          "comment_url": "https://www.facebook.com/BomberosPA/posts/882303987263809?comment_id=882322087262099",
+          "post_url": "https://www.facebook.com/BomberosPA/posts/882303987263809",
+          "quote": "Esa carretera está completamente deteriorada, es un peligro para todos los que transitamos por ahí",
+          "keywords_matched": [
+            "deteriorada"
+          ],
+          "date": "2026-05-03"
         }
       ]
     },
@@ -1700,11 +1741,11 @@
       "lng": -80.6621031,
       "geo_formatted": "Carr. Interamericana, El Roble, Provincia de Coclé, Panama",
       "first_seen": "2026-06-01T02:41:46.288892Z",
-      "last_seen": "2026-06-03T12:30:52.800378Z",
+      "last_seen": "2026-06-04T02:45:39.331075Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Citizens commenting on the Crítica Facebook post mention that the Vía Interamericana in that sector has numerous potholes and has been in poor condition for months without MOP repairs. Multiple commenters describe the road defects as dangerous.",
-      "mention_count": 5,
+      "chatter_summary": "Citizens commenting on Critica's Facebook post report that the Vía Interamericana in that sector contains potholes and is in poor condition, with criticism directed at MOP for lack of maintenance.",
+      "mention_count": 7,
       "keywords_matched": [
         "baches",
         "cráter",
@@ -1836,6 +1877,30 @@
             "mal estado"
           ],
           "date": "2026-05-29"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Critica",
+          "comment_url": "https://www.facebook.com/criticapa/posts/889074033270545",
+          "post_url": "https://www.facebook.com/criticapa/posts/889074033270545",
+          "quote": "Esa carretera está llena de baches y huecos, el MOP no hace nada",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ],
+          "date": "2026-05-29"
+        },
+        {
+          "platform": "facebook",
+          "source_name": "Critica",
+          "comment_url": "https://www.facebook.com/criticapa/posts/889074033270545",
+          "post_url": "https://www.facebook.com/criticapa/posts/889074033270545",
+          "quote": "La vía interamericana en ese sector está en mal estado, muchos cráteres",
+          "keywords_matched": [
+            "mal estado",
+            "cráter"
+          ],
+          "date": "2026-05-29"
         }
       ],
       "social_posts": [
@@ -1850,6 +1915,13 @@
           "platform": "facebook",
           "outlet": "Crítica",
           "post_url": "https://www.facebook.com/CriticaPanama/posts/873947531436185",
+          "post_caption": "Un muerto tras violenta colisión y vuelco en Aguadulce",
+          "post_date": "2026-05-29"
+        },
+        {
+          "platform": "facebook",
+          "outlet": "Critica",
+          "post_url": "https://www.facebook.com/criticapa/posts/889074033270545",
           "post_caption": "Un muerto tras violenta colisión y vuelco en Aguadulce",
           "post_date": "2026-05-29"
         }
@@ -2595,6 +2667,14 @@
     "https://www.critica.com.pa/sucesos/iba-al-hospital-de-urgencia-y-muere-en-un-fatal-vuelco-en-remedios-510194",
     "https://decisionespanama.com/una-victima-fatal-y-39-heridos-deja-vuelco-de-bus-de-ruta-bocas-del-toro-en-cocle/",
     "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
-    "https://www.telemetro.com/nacionales/accidente-colon-taxi-provoca-vuelco-camion-la-avenida-randolph-la-cresta-n6071186"
+    "https://www.telemetro.com/nacionales/accidente-colon-taxi-provoca-vuelco-camion-la-avenida-randolph-la-cresta-n6071186",
+    "https://www.critica.com.pa/sucesos/colision-y-vuelco-como-de-pelicula-en-plena-carretera-panama-colon-508813",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/dos-camiones-un-impacto-y-una-victima-fatal-en-chiriqui-510309"
   ]
 }
