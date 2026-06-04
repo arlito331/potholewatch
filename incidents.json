@@ -1,8 +1,71 @@
 {
-  "scan_time": "2026-06-04T19:58:30.963892",
-  "total": 6,
-  "counter": 6,
+  "scan_time": "2026-06-04T22:23:07.670070",
+  "total": 7,
+  "counter": 7,
   "incidents": [
+    {
+      "ptw_id": "PTW-0007",
+      "road_key": "centenariodireccion",
+      "severity": "HIGH",
+      "headline": "Dos accidentes en la Vía Centenario provocan fuerte tráfico hacia la ciudad",
+      "location": "Vía Centenario, dirección hacia ciudad de Panamá",
+      "date": "2026-04-24",
+      "summary": "La mañana del viernes se registraron dos accidentes de tránsito en la Vía Centenario con dirección hacia la ciudad capital. Los incidentes generaron una fuerte congestión vehicular afectando a cientos de conductores en horas pico.",
+      "source_name": "Telemetro",
+      "url": "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+      "lat": 9.0402395,
+      "lng": -79.5550517,
+      "geo_formatted": "Vía Centenario, Panamá, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0402395,-79.5550517",
+      "first_seen": "2026-06-04T22:12:58.865381Z",
+      "last_seen": "2026-06-04T22:12:58.865381Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Recent news reports document that sections of Vía Centenario have fractured concrete slabs, potholes, and visible deterioration requiring rehabilitation. No specific comments were found linking these road conditions directly to the April 24, 2026 accidents.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "deterioro",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "actualmente varios tramos de la vía Centenario presentan losas fracturadas, huecos y otros signos de deterioro",
+      "best_quote_source": "La Prensa Panamá",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "TReporta (Telemetro Reporta)",
+          "post_url": "https://x.com/TReporta/status/2047634889126678760",
+          "post_caption": "La mañana de este viernes se registraron dos accidentes de tránsito en la Vía Centenario con dirección hacía la ciudad capital, intensificando el tráfico.",
+          "post_date": "2026-04-24"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/mop-licitara-proyecto-de-mas-de-300-millones-para-ampliar-la-via-centenario-y-la-autopista-panamala-chorrera/",
+          "quote": "actualmente varios tramos de la vía Centenario presentan losas fracturadas, huecos y otros signos de deterioro",
+          "keywords_matched": [
+            "huecos",
+            "deterioro"
+          ],
+          "date": "2026-05-30"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/mop-licitara-proyecto-de-mas-de-300-millones-para-ampliar-la-via-centenario-y-la-autopista-panamala-chorrera/",
+          "quote": "El mal estado de la vía Centenario, huecos, losas hundidas y herbazales en los hombros",
+          "keywords_matched": [
+            "mal estado",
+            "huecos"
+          ],
+          "date": "2026-11-07"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0004",
       "road_key": "hatointeramericanaplatanalrio",
@@ -361,6 +424,23 @@
     "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
     "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
     "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
-    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu"
+    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.tvn-2.com/nacionales/provincias/accidentes-transito-panama-panama-oeste-policia-nacional_1_2239147.html",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.tvn-2.com/nacionales/tragedia-colon-muertos-heridos-vuelco-bus_1_2242045.html",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
+    "https://www.midiario.com/policiales/los-santos-vehiculo-oficial-termina-en-tragedia-dos-muertos-y-presuntamente-un-representante-herido-en-tonosi/",
+    "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html",
+    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu",
+    "https://www.critica.com.pa/sucesos/dos-camiones-un-impacto-y-una-victima-fatal-en-chiriqui-510309",
+    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/"
   ]
 }
