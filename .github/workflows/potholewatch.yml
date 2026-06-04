@@ -1,11 +1,11 @@
 name: PotholeWatch v3 Scan
 on:
   schedule:
-    - cron: '0 */8 * * *'   # every 8 hours (00:00, 08:00, 16:00 UTC)
-  workflow_dispatch:          # allow manual trigger
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write             # <<< REQUIRED so the job can commit incidents.json back
+  contents: write
 
 jobs:
   scan:
@@ -18,11 +18,12 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Run scan
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_ID:    ${{ secrets.GMAIL_CLIENT_ID }}
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
           GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          APIFY_API_TOKEN:    ${{ secrets.APIFY_API_TOKEN }}
         run: python potholewatch_v3.py
       - name: Commit inventory updates
         run: |
@@ -31,3 +32,6 @@ jobs:
           git add incidents.json
           git diff --staged --quiet || git commit -m "update inventory $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
+      - name: Purge jsDelivr cache
+        run: |
+          curl -s "https://purge.jsdelivr.net/gh/arlito331/potholewatch@main/incidents.json" || true
