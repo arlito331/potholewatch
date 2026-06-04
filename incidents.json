@@ -1,0 +1,209 @@
+{
+  "scan_time": "2026-06-04T17:55:29.413466",
+  "total": 3,
+  "counter": 3,
+  "incidents": [
+    {
+      "ptw_id": "PTW-0001",
+      "road_key": "cercainteramericanamercadoplatanal",
+      "severity": "MEDIUM",
+      "headline": "Bus termina volcado en El Platanal, reportan múltiples heridos, un muerto confirmado",
+      "location": "Vía Interamericana a la altura de El Platanal cerca del mercado de artesanías + Río Hato + corregimiento Río Hato, provincia de Coclé",
+      "date": "2026-05-18",
+      "summary": "Un autobús de la ruta Bocas del Toro-Panamá se volcó en medio de lluvia intensa, dando varias vueltas antes de quedar volcado en una cuneta. El bus transportaba simpatizantes del expresidente Martín Torrijos que regresaban de un evento político en la capital. El accidente dejó un muerto identificado como Luis Carlos Montero Chavarría de 61 años y entre 40-49 heridos, varios en estado crítico trasladados a hospitales en Penonomé, Antón y ciudad capital.",
+      "source_name": "Mi Diario Panamá",
+      "url": "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+      "lat": 8.4044378,
+      "lng": -80.0853084,
+      "geo_formatted": "CW37+QVG, Rio Hato, Coclé Province, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4044378,-80.0853084",
+      "first_seen": "2026-06-04T17:46:42.490053Z",
+      "last_seen": "2026-06-04T17:46:42.490053Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "One accident survivor, Sugar González, stated that water puddles and numerous potholes on the road caused the street to be very bumpy, suggesting road conditions may have influenced the accident. News reports primarily attributed the crash to rain and wet pavement rather than structural road defects.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "baches"
+      ],
+      "best_quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+      "best_quote_source": "Sugar González (survivor)",
+      "social_posts": [
+        {
+          "platform": "x",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/2056150924117135520",
+          "post_caption": "Una persona falleció y más de 30 resultaron heridas tras el vuelco de un bus de pasajeros en la Vía Panamericana, específicamente en Río Hato de Antón.",
+          "post_date": "2026-05-17"
+        },
+        {
+          "platform": "x",
+          "outlet": "Bomberos De Panamá",
+          "post_url": "",
+          "post_caption": "Desde la Estación Jerónimo Almillategui en Antón se atiende el vuelco de un bus en Platanal de Río Hato. 1 víctima fatal, 4 en atención prioritaria y varios lesionados. Vía cerrada. Use ruta alterna.",
+          "post_date": "2026-05-17"
+        },
+        {
+          "platform": "x",
+          "outlet": "Mi Diario Panamá",
+          "post_url": "",
+          "post_caption": "La tarde de este domingo se encendieron las alarmas en la vía Interamericana, a la altura de El Platanal, en la provincia de Coclé, luego de que un bus terminara volcado cerca del mercado de artesanías. Extraoficialmente se habla de más de 40 heridos y hasta el momento solo se ha confirmado un muerto.",
+          "post_date": "2026-05-18"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Sugar González (survivor)",
+          "comment_url": "",
+          "post_url": "https://www.retenchiriqui.com/post/familiares-y-dirigentes-deportivos-despiden-a-luis-montero-tras-accidente-ocurrido-en-retorno-de-act",
+          "quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2026-05-20"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0002",
+      "road_key": "areagatunlagozona",
+      "severity": "HIGH",
+      "headline": "Tragedia en Colón: 2 muertos y varios heridos tras colisión en lago Gatún",
+      "location": "Carretera en área del sector del lago Gatún en zona conocida como Los Negros, curva entre comunidades de Escobal y Cuipo + provincia de Colón",
+      "date": "2026-05-21",
+      "summary": "Un bus de la ruta Colón-Escobal-Cuipo colisionó con una camioneta blanca, el conductor perdió el control y el bus terminó volcado en herbazales tras dar varias vueltas. Dos personas murieron, incluyendo el joven Erick Guevara quien llegó sin signos vitales al centro de salud de Escobal, y varios resultaron heridos. El accidente ocurrió cerca de las 10:00 p.m. con el bus viajando a alta velocidad con música alta.",
+      "source_name": "Crítica Panamá",
+      "url": "https://www.critica.com.pa/sucesos/tragedia-en-colon-2-muertos-y-varios-heridos-tras-colision-en-lago-gatun-509677",
+      "lat": 9.1206911,
+      "lng": -79.9927163,
+      "geo_formatted": "Los Negros, Provincia de Colón, Panama",
+      "maps_link": "https://maps.google.com/?q=9.1206911,-79.9927163",
+      "first_seen": "2026-06-04T17:46:42.490053Z",
+      "last_seen": "2026-06-04T17:46:42.490053Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Historical records show concerns about road conditions on the Gatún-Escobal route, with a 2021 representative calling it a death trap and a 2021 motorcyclist fatality attributed to falling in a pothole. No citizen comments mentioning road conditions were found specifically for the May 21, 2026 bus-camioneta accident.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "hueco",
+        "muerte",
+        "trampa"
+      ],
+      "best_quote": "la carretera Gatún, Escobal es una trampa de muerte para los que la utilizamos diariamente",
+      "best_quote_source": "La Estrella - Representante Jaime Luna",
+      "social_posts": [
+        {
+          "platform": "x",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/2057420989600764090",
+          "post_caption": "Dos jóvenes fallecieron y alrededor de 10 personas resultaron heridas tras un aparatoso accidente de tránsito que se registró entre un bus y una camioneta en el sector de Cuipo, provincia de Colón.",
+          "post_date": "2026-05-22"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "La Estrella - Representante Jaime Luna",
+          "comment_url": "",
+          "post_url": "https://www.laestrella.com.pa/nacional/111222/via-peligro-escobal",
+          "quote": "la carretera Gatún, Escobal es una trampa de muerte para los que la utilizamos diariamente",
+          "keywords_matched": [
+            "trampa",
+            "muerte"
+          ],
+          "date": "2021-01-28"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá América - Jorge Ríos accidente",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/provincias/motorizado-de-52-anos-se-accidenta-y-pierde-la-vida-en-la-carretera-hacia-cuipo-colon",
+          "quote": "se dirigía al sector de Escobal, cuando la moto que conducía cayó a un hueco",
+          "keywords_matched": [
+            "hueco"
+          ],
+          "date": "2021-10-30"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0003",
+      "road_key": "chumajalproximosantos",
+      "severity": "CRITICAL",
+      "headline": "Conductor muere tras colisión y vuelco cerca de El Chumajal en Los Santos",
+      "location": "Próximo a la entrada de El Chumajal, provincia de Los Santos",
+      "date": "2026-05-01",
+      "summary": "Un violento accidente ocurrido a la 1:15 a.m. dejó un hombre fallecido y tres personas heridas. La víctima fatal fue identificada como Isidro Espino de 67 años, quien conducía un pickup y perdió el control del vehículo. El conductor primero colisionó contra un sedán en el carril izquierdo y luego se estrelló contra el desnivel de la vía, provocando un aparatoso vuelco.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+      "lat": 7.832936600000001,
+      "lng": -80.3061486,
+      "geo_formatted": "RMMV+5G, El Espinal, Los Santos Province, Panama",
+      "maps_link": "https://maps.google.com/?q=7.832936600000001,-80.3061486",
+      "first_seen": "2026-06-04T17:46:42.490053Z",
+      "last_seen": "2026-06-04T17:46:42.490053Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Multiple news sources report the vehicle crashed into a road desnivel (uneven surface/drop-off) near El Chumajal. Local residents have called for better road signaling and improved road conditions following a series of fatal accidents in Los Santos province.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "desnivel",
+        "señalización"
+      ],
+      "best_quote": "terminó estrellándose contra el desnivel de la vía, provocando un aparatoso vuelco",
+      "best_quote_source": "Critica Panama (article)",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Critica Panama (article)",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+          "quote": "terminó estrellándose contra el desnivel de la vía, provocando un aparatoso vuelco",
+          "keywords_matched": [
+            "desnivel"
+          ],
+          "date": "2026-05-01"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panama America",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/provincias/tragedia-vial-golpea-los-santos-con-cuatro-fallecidos-en-dos-semanas-1261316",
+          "quote": "terminó estrellándose contra el desnivel de la vía, provocando un violento vuelco",
+          "keywords_matched": [
+            "desnivel"
+          ],
+          "date": "2026-05-04"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Critica Panama (follow-up article)",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/cuatro-muertos-en-dos-semanas-en-los-santos-tras-racha-de-accidentes-viales-508726",
+          "quote": "moradores califican la situación como una racha trágica y piden mayor presencia policial, mejor señalización",
+          "keywords_matched": [
+            "señalización"
+          ],
+          "date": "2026-05-03"
+        }
+      ]
+    }
+  ],
+  "seen_urls": [
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/tragedia-en-colon-2-muertos-y-varios-heridos-tras-colision-en-lago-gatun-509677",
+    "https://www.panamaamerica.com.pa/provincias/un-muerto-y-cinco-heridos-deja-accidente-de-transito-en-la-autopista-arraijan-la-chorrera",
+    "https://www.critica.com.pa/sucesos/trasladan-ciudad-capital-2-de-los-heridos-tras-vuelco-en-cocle-509546",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu"
+  ]
+}
