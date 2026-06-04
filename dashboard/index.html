@@ -224,8 +224,14 @@ function buildComments(c){
     const src_name=m.source_name||'';
     const src=plat+(src_name?' · '+src_name:'')+(m.date?' · '+m.date:'');
     const q=(m.quote||'').replace(/</g,'&lt;');
-    const linkUrl=isValidUrl(m.comment_url)?m.comment_url:isValidUrl(m.post_url)?m.post_url:'';
-    const link=linkUrl?`<a href="${linkUrl}" target="_blank" class="comment-link">→ ver</a>`:'';
+    let linkUrl=isValidUrl(m.comment_url)?m.comment_url:isValidUrl(m.post_url)?m.post_url:'';
+    // For news comments, append #comments to jump to comment section
+    if(linkUrl && m.platform==='news_comment' && !linkUrl.includes('facebook') && !linkUrl.includes('instagram') && !linkUrl.includes('twitter') && !linkUrl.includes('#')){
+      linkUrl = linkUrl + '#comments';
+    }
+    const linkLabel = m.platform==='facebook'?'→ open post':'→ ver';
+    const link=linkUrl?`<a href="${linkUrl}" target="_blank" class="comment-link">${linkLabel}</a>`:''
+;
     const kw=(m.keywords_matched||[]).map(k=>`<span class="comment-kw">${k}</span>`).join('');
     html+=`<div class="comment">
       <div class="comment-src">${src}</div>
