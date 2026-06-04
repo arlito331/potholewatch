@@ -10,14 +10,30 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,sans-serif;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.2}}
+@keyframes radarSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 
-.header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #262626;background:#1A1A1A;}
+/* ── HEADER ── */
+.header{display:flex;align-items:center;gap:0;border-bottom:1px solid #262626;background:#0D0D0D;overflow:hidden;}
+
+/* Radar panel — left side of header */
+.radar-panel{
+  width:72px;min-width:72px;height:72px;
+  background:#0D0D0D;
+  display:flex;align-items:center;justify-content:center;
+  border-right:1px solid #1a1a1a;
+  position:relative;
+  flex-shrink:0;
+}
+#radar{display:block;border-radius:50%;}
+
+/* Header text + badge */
+.header-inner{display:flex;align-items:center;gap:10px;flex:1;padding:10px 12px;min-width:0;}
 .header-text{flex:1;min-width:0;}
-.header-eyebrow{font-size:9px;letter-spacing:3px;color:#D94F2B;font-weight:700;margin-bottom:3px;}
-.header-title{font-size:16px;font-weight:700;}
-.header-sub{font-size:10px;color:#555;margin-top:2px;}
-.scan-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:9px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
-.scan-info{font-size:9px;color:#444;line-height:1.6;margin-top:4px;text-align:right;}
+.header-eyebrow{font-size:8px;letter-spacing:3px;color:#D94F2B;font-weight:700;margin-bottom:2px;}
+.header-title{font-size:15px;font-weight:700;line-height:1.2;}
+.header-sub{font-size:9px;color:#444;margin-top:2px;}
+.scan-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:4px;background:rgba(217,79,43,0.12);border:1px solid #D94F2B;font-size:8px;font-weight:700;color:#D94F2B;letter-spacing:1px;white-space:nowrap;}
+.scan-info{font-size:8px;color:#444;line-height:1.6;margin-top:3px;text-align:right;}
 
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #262626;}
 .stat-box{padding:10px 12px;border-right:1px solid #262626;}
@@ -50,39 +66,43 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 
 .social-post{margin:8px 0;padding:10px;background:#111;border-radius:4px;border-left:3px solid #D94F2B;}
 .social-post-src{font-size:9px;letter-spacing:1px;color:#D94F2B;text-transform:uppercase;margin-bottom:4px;}
-.social-post-caption{font-size:11px;color:#888;margin-bottom:6px;}
-.social-post-link{display:inline-block;font-size:11px;font-weight:700;color:#D94F2B;text-decoration:none;padding:4px 10px;border:1px solid #D94F2B;border-radius:3px;}
-.social-post-link:hover{background:rgba(217,79,43,0.1);}
+.social-post-caption{font-size:11px;color:#888;margin-bottom:6px;line-height:1.4;}
+.open-post-btn{display:inline-block;font-size:11px;font-weight:700;color:#D94F2B;text-decoration:none;padding:4px 10px;border:1px solid #D94F2B;border-radius:3px;}
 
 .comment{margin:8px 0;padding-left:10px;border-left:2px solid #2a2a2a;}
 .comment-src{font-size:9px;letter-spacing:1px;color:#D94F2B;text-transform:uppercase;margin-bottom:2px;}
 .comment-quote{font-size:12px;line-height:1.5;color:#999;}
-.comment-link{color:#D94F2B;text-decoration:none;font-weight:700;font-size:11px;}
+.comment-link{color:#D94F2B;text-decoration:none;font-weight:700;font-size:11px;margin-left:4px;}
+.comment-kw{display:inline-block;background:rgba(217,79,43,0.12);color:#D94F2B;font-size:9px;padding:1px 6px;border-radius:8px;margin:1px;}
 
-.maps-btn{display:inline-block;font-size:11px;color:#D94F2B;text-decoration:none;padding:4px 10px;border:1px solid rgba(217,79,43,0.4);border-radius:3px;margin:6px 0;}
+.maps-btn{display:inline-block;font-size:11px;color:#D94F2B;text-decoration:none;padding:4px 10px;border:1px solid rgba(217,79,43,0.4);border-radius:3px;margin:6px 0 2px;}
 .read-btn{display:inline-block;background:#D94F2B;color:#fff;padding:9px 16px;border-radius:4px;font-size:11px;text-decoration:none;font-weight:700;letter-spacing:1px;margin-top:12px;}
-
 .sev-badge{font-size:9px;font-weight:700;letter-spacing:2px;padding:2px 8px;border-radius:3px;text-transform:uppercase;color:#fff;}
 
-.footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#1A1A1A;}
-.footer-text{font-size:9px;color:#2a2a2a;letter-spacing:1px;}
+.footer{padding:8px 16px;border-top:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:center;background:#0D0D0D;}
+.footer-text{font-size:9px;color:#222;letter-spacing:1px;}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <canvas id="radar" width="72" height="72" style="border-radius:50%;flex-shrink:0;"></canvas>
-  <div class="header-text">
-    <div class="header-eyebrow">POTHOLEWATCH · THE EVIDENCE ENGINE</div>
-    <div class="header-title">Road Incident Monitor</div>
-    <div class="header-sub">Panama · accident + citizen testimony + geolocation</div>
+  <!-- Radar panel — always visible in header -->
+  <div class="radar-panel">
+    <canvas id="radar" width="56" height="56"></canvas>
   </div>
-  <div style="flex-shrink:0;text-align:right;">
-    <div class="scan-badge">
-      <div id="scan-dot" style="width:6px;height:6px;border-radius:50%;background:#D94F2B;animation:pulse 1.2s infinite;"></div>
-      <span id="scan-status">LOADING</span>
+  <div class="header-inner">
+    <div class="header-text">
+      <div class="header-eyebrow">POTHOLEWATCH · THE EVIDENCE ENGINE</div>
+      <div class="header-title">Road Incident Monitor</div>
+      <div class="header-sub">Panama · accident + citizen testimony + geolocation</div>
     </div>
-    <div id="scan-time" class="scan-info">Fetching...</div>
+    <div style="flex-shrink:0;text-align:right;">
+      <div class="scan-badge">
+        <div id="scan-dot" style="width:6px;height:6px;border-radius:50%;background:#D94F2B;animation:pulse 1.2s infinite;"></div>
+        <span id="scan-status">LOADING</span>
+      </div>
+      <div id="scan-time" class="scan-info">Fetching...</div>
+    </div>
   </div>
 </div>
 
@@ -93,7 +113,7 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
   <div class="stat-box"><div class="stat-label">Medium</div><div id="stat-medium" class="stat-val" style="color:#F0A030;">—</div></div>
 </div>
 
-<div class="section-label">Case map — pin size = mention count</div>
+<div class="section-label">Case map — pin size = mention count · tap to open</div>
 <div id="ptw-map"></div>
 
 <div id="list-header" class="section-label" style="padding-top:9px;">Loading cases...</div>
@@ -101,17 +121,29 @@ body{background:#0D0D0D;color:#fff;font-family:-apple-system,Helvetica,Arial,san
 
 <div class="footer">
   <span class="footer-text">POWERFIX · REPAIR. REINVENTED.</span>
-  <span class="footer-text">PTW v5.2.0 · The Evidence Engine</span>
+  <span class="footer-text">PTW v5.3.0</span>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const SEV_COLOR={CRITICAL:'#FF3B3B',HIGH:'#D94F2B',MEDIUM:'#F0A030'};
 const SEV_CLASS={CRITICAL:'critical',HIGH:'high',MEDIUM:'medium'};
-const PLATFORM_LABEL={facebook:'Facebook',instagram:'Instagram',twitter:'X / Twitter',x:'X / Twitter',news_comment:'News comment'};
+const PLAT={facebook:'Facebook',instagram:'Instagram',twitter:'X / Twitter',x:'X / Twitter',news_comment:'News comment'};
 const RAW_URL='https://raw.githubusercontent.com/arlito331/potholewatch/main/incidents.json';
 
 let cases=[], selected=null, ptmap=null, markers={};
+
+function isValidUrl(u){
+  if(!u||typeof u!=='string') return false;
+  u=u.trim();
+  if(!u.startsWith('http')) return false;
+  if(u.includes(' ')||/[áéíóúüñÁÉÍÓÚÜÑ]/.test(u)) return false;
+  if(u.includes('facebook.com')&&u.includes('/posts/')){
+    const id=u.split('/posts/').pop().split('/')[0].split('?')[0];
+    if(!(/^\d+$/.test(id)||/^pfbid[A-Za-z0-9]{10,}$/.test(id))) return false;
+  }
+  return true;
+}
 
 function fmt(iso){
   if(!iso) return '';
@@ -127,10 +159,7 @@ function fmtTime(iso){
 function getSeverity(c){
   if(c.severity) return c.severity;
   const n=c.mention_count||0;
-  if(n>=3) return 'CRITICAL';
-  if(n>=2) return 'HIGH';
-  if(n>=1) return 'MEDIUM';
-  return 'MEDIUM';
+  if(n>=3) return 'CRITICAL'; if(n>=2) return 'HIGH'; return 'MEDIUM';
 }
 
 function buildList(data){
@@ -140,7 +169,7 @@ function buildList(data){
   arr.forEach((r,i)=>{ if(r) list.push({...r,_key:String(r.ptw_id||i)}); });
   const so={CRITICAL:0,HIGH:1,MEDIUM:2};
   list.sort((a,b)=>{
-    const sa=so[getSeverity(a)]??3, sb=so[getSeverity(b)]??3;
+    const sa=so[getSeverity(a)]??3,sb=so[getSeverity(b)]??3;
     if(sa!==sb) return sa-sb;
     return (b.mention_count||0)-(a.mention_count||0);
   });
@@ -149,14 +178,13 @@ function buildList(data){
 
 function renderStats(){
   document.getElementById('stat-total').textContent=cases.length;
-  document.getElementById('stat-critical').textContent=cases.filter(c=>getSeverity(c)==='CRITICAL').length;
-  document.getElementById('stat-high').textContent=cases.filter(c=>getSeverity(c)==='HIGH').length;
-  document.getElementById('stat-medium').textContent=cases.filter(c=>getSeverity(c)==='MEDIUM').length;
+  ['CRITICAL','HIGH','MEDIUM'].forEach(s=>{
+    document.getElementById('stat-'+s.toLowerCase()).textContent=cases.filter(c=>getSeverity(c)===s).length;
+  });
   document.getElementById('list-header').textContent=cases.length+' case'+(cases.length!==1?'s':'')+' with road-condition evidence';
 }
 
-function pinSize(n){ return Math.min(7+n*2,18); }
-
+function pinSize(n){return Math.min(7+n*2,18);}
 function makeIcon(n,sev,active){
   const color=SEV_COLOR[sev]||'#D94F2B';
   const r=pinSize(n)+(active?3:0);
@@ -169,19 +197,19 @@ function makeIcon(n,sev,active){
 }
 
 function buildSocialPosts(c){
-  const posts=c.social_posts||[];
+  const posts=(c.social_posts||[]).filter(p=>p.post_url||p.post_caption);
   if(!posts.length) return '';
   let html='<div class="detail-label">News outlet social posts — click to read comments</div>';
   posts.forEach(p=>{
-    const platform=PLATFORM_LABEL[p.platform]||p.platform||'Social';
+    const plat=PLAT[p.platform]||p.platform||'Social';
     const outlet=p.outlet||'';
-    const src=platform+(outlet?' · '+outlet:'')+(p.post_date?' · '+p.post_date:'');
-    const caption=p.post_caption?(p.post_caption.slice(0,120)+'...'):'';
-    const link=p.post_url?`<a href="${p.post_url}" target="_blank" class="social-post-link">→ Open ${platform} post</a>`:'';
+    const src=plat+(outlet?' · '+outlet:'')+(p.post_date?' · '+p.post_date:'');
+    const caption=(p.post_caption||'').slice(0,120);
+    const hasLink=isValidUrl(p.post_url);
     html+=`<div class="social-post">
       <div class="social-post-src">${src}</div>
       ${caption?`<div class="social-post-caption">${caption}</div>`:''}
-      ${link}
+      ${hasLink?`<a href="${p.post_url}" target="_blank" class="open-post-btn">→ Open ${plat} post</a>`:'<span style="font-size:10px;color:#555;">link not available</span>'}
     </div>`;
   });
   return html;
@@ -190,20 +218,19 @@ function buildSocialPosts(c){
 function buildComments(c){
   const comments=c.keyword_comments||[];
   if(!comments.length) return '';
-  let html=`<div class="detail-label">Citizen comments with road keywords (${comments.length})</div>`;
+  let html=`<div class="detail-label">Citizen comments — road keywords (${comments.length})</div>`;
   comments.forEach(m=>{
-    const platform=PLATFORM_LABEL[m.platform]||m.platform||'Source';
+    const plat=PLAT[m.platform]||m.platform||'Source';
     const src_name=m.source_name||'';
-    const src=platform+(src_name?' · '+src_name:'')+(m.date?' · '+m.date:'');
+    const src=plat+(src_name?' · '+src_name:'')+(m.date?' · '+m.date:'');
     const q=(m.quote||'').replace(/</g,'&lt;');
-    const link_url=m.comment_url||m.post_url||'';
-    const link=link_url?` <a href="${link_url}" target="_blank" class="comment-link">→ ver comentario</a>`:'';
-    const kw=(m.keywords_matched||[]);
-    const chips=kw.map(k=>`<span class="kw-chip">${k}</span>`).join('');
+    const linkUrl=isValidUrl(m.comment_url)?m.comment_url:isValidUrl(m.post_url)?m.post_url:'';
+    const link=linkUrl?`<a href="${linkUrl}" target="_blank" class="comment-link">→ ver</a>`:'';
+    const kw=(m.keywords_matched||[]).map(k=>`<span class="comment-kw">${k}</span>`).join('');
     html+=`<div class="comment">
       <div class="comment-src">${src}</div>
       <div class="comment-quote">"${q}"${link}</div>
-      ${chips?`<div style="margin-top:3px;">${chips}</div>`:''}
+      ${kw?`<div style="margin-top:3px;">${kw}</div>`:''}
     </div>`;
   });
   return html;
@@ -211,28 +238,21 @@ function buildComments(c){
 
 function buildDetail(c){
   let html='';
-  const img=c.primary_image_url||(c.article_image_urls&&c.article_image_urls[0]);
+  const img=(c.primary_image_url&&isValidUrl(c.primary_image_url))?c.primary_image_url:
+            ((c.article_image_urls||[]).find(u=>isValidUrl(u))||'');
   if(img) html+=`<img src="${img}" class="detail-img" onerror="this.style.display='none'"/>`;
   if(c.summary) html+=`<div class="detail-block">${c.summary}</div>`;
-
-  // Maps link
-  if(c.maps_link||( c.lat&&c.lng)){
-    const ml=c.maps_link||`https://maps.google.com/?q=${c.lat},${c.lng}`;
-    html+=`<a href="${ml}" target="_blank" class="maps-btn">📍 Open in Google Maps →</a>`;
-  }
-
+  const ml=c.maps_link||(c.lat&&c.lng?`https://maps.google.com/?q=${c.lat},${c.lng}`:'');
+  if(ml) html+=`<a href="${ml}" target="_blank" class="maps-btn">📍 Open in Google Maps →</a>`;
   if(c.chatter_summary){
     html+=`<div class="detail-label">What citizens are saying about this road</div>`;
     html+=`<div style="font-size:12px;color:#999;font-style:italic;line-height:1.6;margin-bottom:10px;">${c.chatter_summary}</div>`;
   }
-
   const kw=c.keywords_matched||[];
   if(kw.length) html+=`<div style="margin:8px 0;">`+kw.map(k=>`<span class="kw-chip">${k}</span>`).join('')+`</div>`;
-
   html+=buildSocialPosts(c);
   html+=buildComments(c);
-
-  if(c.url) html+=`<a href="${c.url}" target="_blank" class="read-btn">READ FULL ARTICLE →</a>`;
+  if(c.url&&isValidUrl(c.url)) html+=`<a href="${c.url}" target="_blank" class="read-btn">READ FULL ARTICLE →</a>`;
   return html;
 }
 
@@ -252,9 +272,10 @@ function renderList(){
     const date=c.date||fmt(c.scan_time)||'';
     const count=c.mention_count||0;
     const isSel=selected&&selected._key===c._key;
-    const thumb=c.primary_image_url||(c.article_image_urls&&c.article_image_urls[0])||'';
-    const hasSocialPosts=(c.social_posts||[]).length>0;
-    const ml=c.maps_link||(c.lat&&c.lng?`https://maps.google.com/?q=${c.lat},${c.lng}`:null);
+    const thumb=(c.primary_image_url&&isValidUrl(c.primary_image_url))?c.primary_image_url:
+                ((c.article_image_urls||[]).find(u=>isValidUrl(u))||'');
+    const hasSocial=(c.social_posts||[]).some(p=>isValidUrl(p.post_url));
+    const ml=c.maps_link||(c.lat&&c.lng?`https://maps.google.com/?q=${c.lat},${c.lng}`:'');
 
     return `<div class="irow ${sevClass}${isSel?' sel':''}" data-key="${c._key}">
       <div class="irow-summary" style="display:flex;gap:10px;align-items:flex-start;">
@@ -263,8 +284,8 @@ function renderList(){
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;flex-wrap:wrap;">
             <span class="sev-badge" style="background:${color};">${sev}</span>
             <span style="font-size:9px;color:#555;letter-spacing:1px;">${id}</span>
-            <span style="font-size:9px;font-weight:700;color:#fff;background:#333;border-radius:10px;padding:1px 8px;">${count} mention${count!==1?'s':''}</span>
-            ${hasSocialPosts?`<span style="font-size:9px;color:#D94F2B;border:1px solid rgba(217,79,43,0.4);border-radius:3px;padding:1px 5px;">📱 social</span>`:''}
+            <span style="font-size:9px;font-weight:700;color:#fff;background:#2a2a2a;border-radius:10px;padding:1px 8px;">${count} mention${count!==1?'s':''}</span>
+            ${hasSocial?`<span style="font-size:9px;color:#D94F2B;border:1px solid rgba(217,79,43,0.3);border-radius:3px;padding:1px 5px;">📱</span>`:''}
             <span style="font-size:9px;color:#444;margin-left:auto;">${date}</span>
           </div>
           <div style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:4px;">${title.length>80?title.slice(0,80)+'…':title}</div>
@@ -301,9 +322,10 @@ function initMap(){
     const sev=getSeverity(c);
     const color=SEV_COLOR[sev]||'#D94F2B';
     const count=c.mention_count||0;
+    const ml=c.maps_link||(c.lat&&c.lng?`https://maps.google.com/?q=${c.lat},${c.lng}`:'');
     const m=L.marker([c.lat,c.lng],{icon:makeIcon(count,sev,false)})
       .addTo(ptmap)
-      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${sev} · ${c.ptw_id} · ${count} mentions</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${(c.headline||'').slice(0,60)}</div><div style="font-size:10px;color:#777;">${c.location||''}</div>${c.maps_link?`<div style="margin-top:6px;"><a href="${c.maps_link}" target="_blank" style="color:#D94F2B;font-size:11px;">📍 Open in Maps →</a></div>`:''}`,{maxWidth:240});
+      .bindPopup(`<div style="font-size:10px;letter-spacing:2px;color:${color};font-weight:700;margin-bottom:4px;">${sev} · ${c.ptw_id} · ${count} mentions</div><div style="font-size:12px;font-weight:500;color:#fff;margin-bottom:3px;">${(c.headline||'').slice(0,60)}</div><div style="font-size:10px;color:#777;margin-bottom:6px;">${c.location||''}</div>${ml?`<a href="${ml}" target="_blank" style="color:#D94F2B;font-size:11px;">📍 Open in Maps →</a>`:''}`,{maxWidth:240});
     m.on('click',()=>selectInc(c._key));
     markers[c._key]=m;
     pts.push([c.lat,c.lng]);
@@ -313,41 +335,56 @@ function initMap(){
   }
 }
 
+// ── RADAR ── animated canvas in header
 function drawRadar(){
-  const c=document.getElementById('radar');
-  const ctx=c.getContext('2d');
-  const sz=72,cx=sz/2,cy=sz/2,rad=sz/2-3;
+  const canvas=document.getElementById('radar');
+  const ctx=canvas.getContext('2d');
+  const sz=56,cx=sz/2,cy=sz/2,rad=sz/2-2;
   let angle=0;
-  const blips=[{a:0.9,d:0.52},{a:2.3,d:0.68},{a:4.2,d:0.40},{a:5.1,d:0.58}];
+  const blips=[{a:0.9,d:0.52},{a:2.3,d:0.68},{a:4.1,d:0.40},{a:5.1,d:0.58}];
   function draw(){
     ctx.clearRect(0,0,sz,sz);
-    ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.fillStyle='#0f0f0f';ctx.fill();
+    // Background circle
+    ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);
+    ctx.fillStyle='#0a0a0a';ctx.fill();
     ctx.strokeStyle='#D94F2B';ctx.lineWidth=1.5;ctx.stroke();
-    [0.3,0.6,1].forEach(f=>{
+    // Rings
+    [0.33,0.66,1].forEach(f=>{
       ctx.beginPath();ctx.arc(cx,cy,rad*f,0,Math.PI*2);
-      ctx.strokeStyle='rgba(217,79,43,0.12)';ctx.lineWidth=0.5;ctx.stroke();
+      ctx.strokeStyle='rgba(217,79,43,0.15)';ctx.lineWidth=0.5;ctx.stroke();
     });
+    // Cross hairs
     ctx.strokeStyle='rgba(217,79,43,0.1)';ctx.lineWidth=0.5;
-    ctx.beginPath();ctx.moveTo(cx,cy-rad);ctx.lineTo(cx,cy+rad);ctx.moveTo(cx-rad,cy);ctx.lineTo(cx+rad,cy);ctx.stroke();
-    for(let i=0;i<55;i++){
-      const a=angle-Math.PI*0.65+(i/55)*Math.PI*0.65;
-      ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad-1,a,a+0.065);ctx.closePath();
-      ctx.fillStyle=`rgba(217,79,43,${(i/55)*0.28})`;ctx.fill();
+    ctx.beginPath();ctx.moveTo(cx,cy-rad);ctx.lineTo(cx,cy+rad);
+    ctx.moveTo(cx-rad,cy);ctx.lineTo(cx+rad,cy);ctx.stroke();
+    // Sweep
+    for(let i=0;i<50;i++){
+      const a=angle-Math.PI*0.6+(i/50)*Math.PI*0.6;
+      ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad-1,a,a+0.07);ctx.closePath();
+      ctx.fillStyle=`rgba(217,79,43,${(i/50)*0.3})`;ctx.fill();
     }
+    // Sweep line
     ctx.beginPath();ctx.moveTo(cx,cy);
     ctx.lineTo(cx+Math.cos(angle)*(rad-1),cy+Math.sin(angle)*(rad-1));
     ctx.strokeStyle='#D94F2B';ctx.lineWidth=1.5;ctx.stroke();
+    // Blips
     blips.forEach(b=>{
       const diff=((angle-b.a)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);
-      if(diff<Math.PI*0.7){
-        const al=1-diff/(Math.PI*0.7);
+      if(diff<Math.PI*0.65){
+        const al=1-diff/(Math.PI*0.65);
         const bx=cx+Math.cos(b.a)*rad*b.d,by=cy+Math.sin(b.a)*rad*b.d;
-        ctx.beginPath();ctx.arc(bx,by,3,0,Math.PI*2);ctx.fillStyle=`rgba(255,80,80,${al})`;ctx.fill();
-        if(al>0.4){ctx.beginPath();ctx.arc(bx,by,6,0,Math.PI*2);ctx.strokeStyle=`rgba(255,80,80,${(al-0.4)*0.6})`;ctx.lineWidth=0.8;ctx.stroke();}
+        ctx.beginPath();ctx.arc(bx,by,2.5,0,Math.PI*2);
+        ctx.fillStyle=`rgba(255,70,70,${al})`;ctx.fill();
+        if(al>0.4){
+          ctx.beginPath();ctx.arc(bx,by,5,0,Math.PI*2);
+          ctx.strokeStyle=`rgba(255,70,70,${(al-0.4)*0.5})`;ctx.lineWidth=0.8;ctx.stroke();
+        }
       }
     });
-    ctx.beginPath();ctx.arc(cx,cy,2.5,0,Math.PI*2);ctx.fillStyle='#D94F2B';ctx.fill();
-    angle+=0.02;requestAnimationFrame(draw);
+    // Center dot
+    ctx.beginPath();ctx.arc(cx,cy,2,0,Math.PI*2);ctx.fillStyle='#D94F2B';ctx.fill();
+    angle+=0.025;
+    requestAnimationFrame(draw);
   }
   draw();
 }
@@ -361,7 +398,7 @@ async function loadData(){
     const scanTime=data.scan_time||'';
     document.getElementById('scan-status').textContent='LIVE';
     document.getElementById('scan-time').innerHTML=
-      (scanTime?'Last scan: '+fmtTime(scanTime)+'<br/>':'')+
+      (scanTime?'Last: '+fmtTime(scanTime)+'<br/>':'')+
       cases.length+' case'+(cases.length!==1?'s':'')+' on file';
     renderStats();
     renderList();
@@ -379,7 +416,7 @@ drawRadar();
 loadData();
 
 document.getElementById('incident-list').addEventListener('click',function(e){
-  if(e.target.tagName==='A') return; // don't collapse on link clicks
+  if(e.target.tagName==='A') return;
   const row=e.target.closest('[data-key]');
   if(row) selectInc(row.dataset.key);
 });
