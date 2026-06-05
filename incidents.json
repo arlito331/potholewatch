@@ -1,8 +1,142 @@
 {
-  "scan_time": "2026-06-04T22:23:07.670070",
-  "total": 7,
-  "counter": 7,
+  "scan_time": "2026-06-05T02:41:00.746520",
+  "total": 9,
+  "counter": 9,
   "incidents": [
+    {
+      "ptw_id": "PTW-0008",
+      "road_key": "antoninteramericanaplatanalrio",
+      "severity": "MEDIUM",
+      "headline": "Bus con simpatizantes de Martín Torrijos se vuelca; un muerto y 30 heridos",
+      "location": "Vía Interamericana, sector Río Platanal, Antón, Río Hato, Coclé",
+      "date": "2026-05-17",
+      "summary": "El conductor del autobús perdió el control del vehículo que transportaba simpatizantes políticos, provocando que se volcara en la mitad de las cuatro vías de la Interamericana. Una víctima fatal quedó tendida en el pavimento y más de 30 personas resultaron heridas, al menos cuatro en estado crítico.",
+      "source_name": "Crítica",
+      "url": "https://www.critica.com.pa/sucesos/bus-con-simpatizantes-de-martin-torrijos-se-vuelca-un-muerto-y-30-heridos-509495",
+      "lat": 8.3875416,
+      "lng": -80.1101264,
+      "geo_formatted": "Carr. Interamericana, Río Hato, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.3875416,-80.1101264",
+      "first_seen": "2026-06-05T02:32:41.855189Z",
+      "last_seen": "2026-06-05T02:32:41.855189Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "One survivor, Sugar González, stated that water pockets and numerous potholes (baches) in the road may have contributed to the accident, describing the road surface as very bumpy.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "baches"
+      ],
+      "best_quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+      "best_quote_source": "RetenChiriqui",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "RetenChiriqui",
+          "comment_url": "",
+          "post_url": "https://www.retenchiriqui.com/post/familiares-y-dirigentes-deportivos-despiden-a-luis-montero-tras-accidente-ocurrido-en-retorno-de-act",
+          "quote": "Unas bolsas de agua, las calles saltan mucho, hay muchos baches en la carretera",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2026-05-20"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0009",
+      "road_key": "artesaniascercainteramericanamercado",
+      "severity": "CRITICAL",
+      "headline": "Bus termina volcado en El Platanal, reportan múltiples heridos, un muerto confirmado",
+      "location": "Vía Interamericana cerca del mercado de artesanías en El Platanal, corregimiento de Río Hato, distrito de Antón, provincia de Coclé",
+      "date": "2026-05-18",
+      "summary": "Un bus de la ruta Bocas del Toro-Panamá terminó volcado en la vía Interamericana durante la tarde lluviosa del domingo. El accidente dejó una persona fallecida (Luis Carlos Montero Chavarrías, 61 años) y entre 39-49 heridos, varios de gravedad. Los pasajeros regresaban de una actividad política del expresidente Martín Torrijos.",
+      "source_name": "Mi Diario Panamá",
+      "url": "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+      "lat": 8.3875416,
+      "lng": -80.1101264,
+      "geo_formatted": "Carr. Interamericana, Río Hato, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.3875416,-80.1101264",
+      "first_seen": "2026-06-05T02:32:41.855189Z",
+      "last_seen": "2026-06-05T02:32:41.855189Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "News reports consistently mention that rain was falling and the pavement was wet at the time of the May 17, 2026 bus accident in El Platanal. No citizen comments specifically mentioning potholes, craters, or deteriorated road conditions related to this accident were found in search results.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "llovía",
+        "lluvia",
+        "pavimento mojado"
+      ],
+      "best_quote": "El accidente ocurrió cuando la lluvia caía incesantemente, mojando el pavimento por donde una gran cantidad de automóviles circulaba",
+      "best_quote_source": "Infobae",
+      "social_posts": [
+        {
+          "platform": "x",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/2056150924117135520",
+          "post_caption": "Una persona falleció y más de 30 resultaron heridas tras el vuelco de un bus de pasajeros en la Vía Panamericana, específicamente en Río Hato de Antón.",
+          "post_date": "2026-05-17"
+        },
+        {
+          "platform": "x",
+          "outlet": "Bomberos De Panamá",
+          "post_url": "",
+          "post_caption": "Desde la Estación Jerónimo Almillategui en Antón se atiende el vuelco de un bus en Platanal de Río Hato. 1 víctima fatal, 4 en atención prioritaria y varios lesionados. Vía cerrada.",
+          "post_date": "2026-05-17"
+        },
+        {
+          "platform": "x",
+          "outlet": "Mi Diario Panamá",
+          "post_url": "",
+          "post_caption": "La tarde de este domingo se encendieron las alarmas en la vía Interamericana, a la altura de El Platanal, en la provincia de Coclé, luego de que un bus terminara volcado cerca del mercado de artesanías.",
+          "post_date": "2026-05-18"
+        },
+        {
+          "platform": "x",
+          "outlet": "La Prensa Panamá",
+          "post_url": "",
+          "post_caption": "Un operativo de atención y traslado de pacientes se mantiene activo luego del vuelco de un bus de pasajeros ocurrido este domingo en el sector de Platanal de Río Hato, distrito de Antón, Coclé.",
+          "post_date": "2026-05-18"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Infobae",
+          "comment_url": "",
+          "post_url": "",
+          "quote": "El accidente ocurrió cuando la lluvia caía incesantemente, mojando el pavimento por donde una gran cantidad de automóviles circulaba",
+          "keywords_matched": [
+            "lluvia",
+            "pavimento mojado"
+          ],
+          "date": "2026-05-18"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Mi Diario Panamá",
+          "comment_url": "",
+          "post_url": "https://www.midiario.com/policiales/torrijos-se-pronuncia-tras-accidente-que-dejo-un-muerto-en-el-platanal/",
+          "quote": "Hasta el momento, las autoridades no han informado las causas del accidente, que se reportó mientras llovía en el lugar",
+          "keywords_matched": [
+            "llovía"
+          ],
+          "date": "2026-05-18"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "EcoTV Panamá",
+          "comment_url": "",
+          "post_url": "https://www.ecotvpanama.com/nacionales/accidente-transito-autobus-rio-hato-dejo-una-persona-fallecida-n6079531",
+          "quote": "Al momento del accidente, llovía en el sector",
+          "keywords_matched": [
+            "llovía"
+          ],
+          "date": "2026-05-17"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0007",
       "road_key": "centenariodireccion",
@@ -441,6 +575,20 @@
     "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html",
     "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu",
     "https://www.critica.com.pa/sucesos/dos-camiones-un-impacto-y-una-victima-fatal-en-chiriqui-510309",
+    "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
+    "https://www.infobae.com/panama/2026/05/18/accidente-de-autobus-en-la-via-interamericana-en-panama-deja-un-muerto-y-49-heridos/",
+    "https://www.critica.com.pa/sucesos/bus-con-simpatizantes-de-martin-torrijos-se-vuelca-un-muerto-y-30-heridos-509495",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.midiario.com/policiales/lo-ultimo-bus-termina-volcado-en-el-platanal-reportan-multiples-heridos/",
+    "https://www.critica.com.pa/sucesos/un-muerto-tras-violenta-colision-y-vuelco-en-aguadulce-510126",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.tvn-2.com/nacionales/adulto-mayor-fallece-accidente-transito-chumacal-los-santos_1_2239062.html",
+    "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/murio-tras-una-semana-de-agonia-luego-del-brutal-choque-en-la-villa-509750",
+    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu",
     "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/"
   ]
 }
