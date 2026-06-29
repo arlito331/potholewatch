@@ -1,8 +1,84 @@
 {
-  "scan_time": "2026-06-29T18:03:21.336413",
-  "total": 9,
-  "counter": 9,
+  "scan_time": "2026-06-29T19:09:45.597460",
+  "total": 10,
+  "counter": 10,
   "incidents": [
+    {
+      "ptw_id": "PTW-0010",
+      "road_key": "antonchirucomunidadpanamericana",
+      "severity": "CRITICAL",
+      "headline": "Tragedia en la Panamericana: una persona muere tras vuelco de pick up en El Chirú de Antón",
+      "location": "Vía Panamericana a la altura de la comunidad de El Chirú, distrito de Antón, provincia de Coclé",
+      "date": "2026-06-24",
+      "summary": "Una persona perdió la vida cuando un vehículo tipo pick up que se desplazaba hacia la ciudad de Panamá perdió el control y terminó volcado a un costado de la vía. El conductor perdió el control del vehículo por razones que aún se investigan, provocando que se saliera de su trayectoria.",
+      "source_name": "Telemetro",
+      "url": "https://www.telemetro.com/nacionales/tragedia-la-panamericana-una-persona-muere-vuelco-pick-up-el-chiru-anton-n6083152",
+      "lat": 8.4014149,
+      "lng": -80.2706156,
+      "geo_formatted": "Carr. Panamericana, Antón, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4014149,-80.2706156",
+      "first_seen": "2026-06-29T19:00:28.160956Z",
+      "last_seen": "2026-06-29T19:00:28.160956Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "One news source reported that the vehicle collided with a manhole in the road median before overturning. MOP documents from 2025 acknowledged that El Chirú had two enormous potholes on the roadway that compromised driver safety and that the Panamericana showed advanced deterioration from long-term neglect.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "baches",
+        "descuidada",
+        "deterioro",
+        "manhole",
+        "seguridad vial"
+      ],
+      "best_quote": "El accidente se produjo al colisionar el conductor del vehículo tipo pick-up contra un manhole ubicado en la isleta que divide las cuatro vías de la carretera Panamericana para luego volcarse.",
+      "best_quote_source": "La Crítica Panamá",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "",
+          "post_caption": "Una persona perdió la vida producto de un accidente de tránsito registrado en la Vía Panamericana, a la altura de El Chirú de Antón. Al parecer el conductor de un auto pick up perdió el control del vehículo cuando viajaba con dirección hacia la ciudad de Panamá y se volcó.",
+          "post_date": "2026-06-24"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "La Crítica Panamá",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/mortal-vuelco-en-anton-conductor-fallece-y-acompanante-queda-grave-511552",
+          "quote": "El accidente se produjo al colisionar el conductor del vehículo tipo pick-up contra un manhole ubicado en la isleta que divide las cuatro vías de la carretera Panamericana para luego volcarse.",
+          "keywords_matched": [
+            "manhole"
+          ],
+          "date": "2026-06-24"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "MOP Panamá",
+          "comment_url": "",
+          "post_url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa-2/item/4448-reparaciones-a-la-carretera-panamericana-mejoran-la-circulacion-entre-san-carlos-y-anton",
+          "quote": "donde se existían dos enormes baches sobre la calzada de rodadura que comprometían la seguridad vial de los conductores",
+          "keywords_matched": [
+            "baches",
+            "seguridad vial"
+          ],
+          "date": "2025-06-05"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "MOP Panamá - Director Regional Coclé",
+          "comment_url": "",
+          "post_url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa-2/item/4448-reparaciones-a-la-carretera-panamericana-mejoran-la-circulacion-entre-san-carlos-y-anton",
+          "quote": "por mucho tiempo estuvo descuidada y mostraba ya un estado avanzado de deterioro",
+          "keywords_matched": [
+            "deterioro",
+            "descuidada"
+          ],
+          "date": "2025-06-05"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0008",
       "road_key": "antoninteramericanaplatanalrio",
@@ -140,7 +216,7 @@
     {
       "ptw_id": "PTW-0007",
       "road_key": "centenariodireccion",
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "headline": "Dos accidentes en la Vía Centenario provocan fuerte tráfico hacia la ciudad",
       "location": "Vía Centenario, dirección hacia ciudad de Panamá",
       "date": "2026-04-24",
@@ -152,11 +228,11 @@
       "geo_formatted": "Vía Centenario, Panamá, Provincia de Panamá, Panama",
       "maps_link": "https://maps.google.com/?q=9.0402395,-79.5550517",
       "first_seen": "2026-06-04T22:12:58.865381Z",
-      "last_seen": "2026-06-04T22:12:58.865381Z",
+      "last_seen": "2026-06-29T19:00:28.160956Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Recent news reports document that sections of Vía Centenario have fractured concrete slabs, potholes, and visible deterioration requiring rehabilitation. No specific comments were found linking these road conditions directly to the April 24, 2026 accidents.",
-      "mention_count": 2,
+      "chatter_summary": "Conductors on Vía Centenario frequently report infrastructure in poor condition with potholes, raised concrete slabs, cracks, and deteriorated surfaces that cause vehicle damage and safety concerns. The road carries over 25,000 vehicles daily through 21 kilometers requiring ongoing repairs.",
+      "mention_count": 3,
       "keywords_matched": [
         "deterioro",
         "huecos",
@@ -171,6 +247,13 @@
           "post_url": "https://x.com/TReporta/status/2047634889126678760",
           "post_caption": "La mañana de este viernes se registraron dos accidentes de tránsito en la Vía Centenario con dirección hacía la ciudad capital, intensificando el tráfico.",
           "post_date": "2026-04-24"
+        },
+        {
+          "platform": "x",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/2062854213730742737",
+          "post_caption": "La madrugada de este viernes se registró un accidente de tránsito en la Vía Centenario, en el que se vieron involucrados cuatro autos. El tráfico vehicular se mantiene congestionado con dirección hacia la ciudad de Panamá.",
+          "post_date": "2026-06-05"
         }
       ],
       "keyword_comments": [
@@ -197,6 +280,17 @@
             "huecos"
           ],
           "date": "2026-11-07"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Daniel Santos (conductor citado en La Prensa)",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "al regresar del Mercado de Abastos con su pick-up lleno de productos, debe conducir despacio y con cuidado, ya que en varias ocasiones la mercancía ha terminado en la carretera debido a los huecos y losas levantadas",
+          "keywords_matched": [
+            "huecos"
+          ],
+          "date": "2024-11-11"
         }
       ]
     },
@@ -600,6 +694,20 @@
     "https://www.bomberos.gob.pa/2026/05/02/accidente-de-transito-en-los-santos-deja-un-herido-y-una-victima-fatal/",
     "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
     "https://www.critica.com.pa/sucesos/dos-camiones-un-impacto-y-una-victima-fatal-en-chiriqui-510309",
-    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu"
+    "https://www.retenchiriqui.com/post/otra-tragedia-en-las-carreteras-de-chiriqu%C3%AD-conductor-pierde-la-vida-tras-colisi%C3%B3n-en-la-v%C3%ADa-a-boqu",
+    "https://www.critica.com.pa/nacional/vuelco-de-camion-con-cemento-forma-tranque-en-el-centenario-503192",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paraliza-la-interamericana-en-veraguas/",
+    "https://www.midiario.com/policiales/impactante-vuelco-deja-muerto-a-pasajero-de-35-anos-en-la-via-panamericana-a-la-altura-de-el-chiru-de-anton/",
+    "https://www.telemetro.com/nacionales/tragedia-la-panamericana-una-persona-muere-vuelco-pick-up-el-chiru-anton-n6083152",
+    "https://www.prensa.com/sociedad/accidente-en-vigui-camion-cisterna-explota-tras-volcadura-y-deja-un-muerto/",
+    "https://www.critica.com.pa/sucesos/muere-en-el-hospital-tras-accidente-de-transito-en-veraguas-511640",
+    "https://www.critica.com.pa/sucesos/tremendo-tanganazo-accidente-deja-4-heridos-en-veraguas-510944",
+    "https://www.critica.com.pa/sucesos/camiones-se-vuelcan-en-veraguas-y-panama-oeste-510737",
+    "https://www.midiario.com/policiales/choque-entre-motos-tine-de-luto-a-anton-y-deja-una-victima-fatal/",
+    "https://www.critica.com.pa/sucesos/emergencia-en-chiriqui-9-heridos-tras-fuerte-vuelco-en-bagala-511236",
+    "https://www.panamaamerica.com.pa/provincias/accidente-fatal-en-vigui-muere-conductor-de-camion-cisterna-cargado-de-combustible"
   ]
 }
