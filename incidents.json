@@ -1,8 +1,294 @@
 {
-  "scan_time": "2026-06-30T02:45:03.772115",
-  "total": 17,
-  "counter": 17,
+  "scan_time": "2026-06-30T11:03:25.250804",
+  "total": 19,
+  "counter": 19,
   "incidents": [
+    {
+      "ptw_id": "PTW-0018",
+      "road_key": "centenario",
+      "severity": "CRITICAL",
+      "headline": "Accidente en la Vía Centenario causa tráfico hacia Panamá",
+      "location": "Vía Centenario hacia Ciudad de Panamá",
+      "date": "2026-06-05",
+      "summary": "Un accidente de tránsito en la Vía Centenario involucró cuatro vehículos en la madrugada del viernes. La colisión ocurrió en horas de la madrugada y provocó congestión vehicular hacia la ciudad de Panamá.",
+      "source_name": "Telemetro",
+      "url": "https://www.telemetro.com/nacionales/accidente-la-via-centenario-causa-trafico-panama-n6081273",
+      "lat": 9.0402395,
+      "lng": -79.5550517,
+      "geo_formatted": "Vía Centenario, Panamá, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0402395,-79.5550517",
+      "first_seen": "2026-06-30T10:48:41.715575Z",
+      "last_seen": "2026-06-30T10:48:41.715575Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Conductors report the Vía Centenario has deteriorated road conditions including potholes, raised and cracked concrete slabs, causing vehicles to suffer sudden jolts and merchandise to fall from trucks. Multiple sources describe the road as being in poor condition with damaged infrastructure requiring maintenance.",
+      "mention_count": 7,
+      "keywords_matched": [
+        "deteriorada",
+        "deterioradas",
+        "deterioro",
+        "hueco",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "al regresar del Mercado de Abastos con su pick-up lleno de productos, debe conducir despacio y con cuidado, ya que en varias ocasiones la mercancía ha terminado en la carretera debido a los huecos y losas levantadas",
+      "best_quote_source": "La Prensa Panamá - Daniel Santos (conductor)",
+      "social_posts": [
+        {
+          "platform": "x",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/2062854213730742737",
+          "post_caption": "La madrugada de este viernes se registró un accidente de tránsito en la Vía Centenario, en el que se vieron involucrados cuatro autos. El tráfico vehicular se mantiene congestionado con dirección hacia la ciudad de Panamá.",
+          "post_date": "2026-06-05"
+        },
+        {
+          "platform": "facebook",
+          "outlet": "Tráfico Panamá",
+          "post_url": "",
+          "post_caption": "Vídeo Vía Centenario; cientos de conductores afectados por accidente de tránsito",
+          "post_date": ""
+        },
+        {
+          "platform": "x",
+          "outlet": "Tráfico Panamá",
+          "post_url": "https://x.com/traficocpanama/status/1920839450512285720",
+          "post_caption": "Accidente de tránsito en la vía Centenario en la provincia de Panamá cerca del río Pedro Miguel hacia Ciudad Capital. Tráfico afectado.",
+          "post_date": "2026-05-09"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaMRDsnjSwf/",
+          "post_caption": "Se cumple un mes de la fuga de 195 privados de libertad del centro penitenciario La Joyita, ocurrida durante un traslado hacia la provincia de Chiriquí, hecho que dejó un saldo de tres muertos y múlti",
+          "post_date": "2026-06-30"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaMOrk2DbKh/",
+          "post_caption": "La primera dama, Maricel Cohen de Mulino, informó que la primera fase de la asistencia estuvo enfocada en el envío de equipos de rescatistas para colaborar en las labores de búsqueda y rescate tras la",
+          "post_date": "2026-06-30"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaMSx-YAZ7B/",
+          "post_caption": "Las autoridades continúan la intensa búsqueda de los 13 privados de libertad que permanecen prófugos tras la fuga registrada en el centro penitenciario La Joyita. El Ministerio de Seguridad ha reitera",
+          "post_date": "2026-06-30"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaNPvHegvqA/",
+          "post_caption": "🚦 A esta hora, en #ChifeandoElTranque, Un tramo de la avenida Centenario permanece completamente a oscuras debido a la falta de funcionamiento de las luminarias, situación que ha generado preocupación",
+          "post_date": "2026-06-30"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaMc-tzjAcX/",
+          "post_caption": "Copa Airlines anunció este lunes que extenderá hasta el 15 de julio de 2026 la operación de sus vuelos especiales entre Ciudad de Panamá y Valencia, Venezuela, como una alternativa para los pasajeros ",
+          "post_date": "2026-06-30"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá - Daniel Santos (conductor)",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "al regresar del Mercado de Abastos con su pick-up lleno de productos, debe conducir despacio y con cuidado, ya que en varias ocasiones la mercancía ha terminado en la carretera debido a los huecos y losas levantadas",
+          "keywords_matched": [
+            "huecos"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá - General reporting",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas",
+          "keywords_matched": [
+            "mal estado",
+            "deteriorada",
+            "huecos"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá - General reporting",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "el puente Centenario, que también presenta deterioro en sus juntas y huecos en la calzada",
+          "keywords_matched": [
+            "deterioro",
+            "huecos"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá - Editorial",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/sociedad/mop-licitara-proyecto-de-mas-de-300-millones-para-ampliar-la-via-centenario-y-la-autopista-panamala-chorrera/",
+          "quote": "El mal estado de la vía Centenario, huecos, losas hundidas y herbazales en los hombros",
+          "keywords_matched": [
+            "mal estado",
+            "huecos"
+          ],
+          "date": "2026-05-24"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá - MOP Director",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/contenido-exclusivo/falta-recursos-obstaculo-enfrenta-mop_1_1017229.html",
+          "quote": "la Vía Centenario, que hace escasos dos años fue intervenida y ya presenta huecos y fisuras en las losas",
+          "keywords_matched": [
+            "huecos"
+          ],
+          "date": "2021-08-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Construir Connect - MOP announcement",
+          "comment_url": "",
+          "post_url": "https://www.construir.connectab2b.com/post/panam%C3%A1-pone-en-marcha-renovaci%C3%B3n-estructural-de-la-v%C3%ADa-centenario",
+          "quote": "reposición de más de 5,000 metros cuadrados de losas deterioradas a lo largo de la vía Centenario",
+          "keywords_matched": [
+            "deterioradas"
+          ],
+          "date": "2025-05-28"
+        },
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaLWwjQkr_s/",
+          "post_url": "https://www.instagram.com/p/DaLWwjQkr_s/",
+          "quote": "\"Hoy, en el 2026, proteger a Panamá significa evitar que ese hueco, esa mina abandonada, se convierta en un riesgo ambiental para la salud, para la gente y para el ambiente; evitar la minería ilegal y una quiebra económica con 36 millones de dólares en pleitos. Ese tiene que ser nuestro objetivo. Mi",
+          "keywords_matched": [
+            "hueco"
+          ],
+          "date": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0019",
+      "road_key": "almirantealmirantecaucheroloma",
+      "severity": "CRITICAL",
+      "headline": "Muere directora regional del Meduca en accidente de tránsito en Bocas del Toro",
+      "location": "Sector Loma La Fe, corregimiento de Cauchero, distrito de Almirante, vía Almirante-Chiriquí Grande, Bocas del Toro",
+      "date": "2026-06-07",
+      "summary": "Anaica Lescano, directora regional del Meduca, murió el sábado por la noche tras resultar gravemente herida en un accidente ocurrido aproximadamente a las 5:34 p.m. Un automóvil sedán con cuatro educadores fue impactado por un vehículo articulado pesado. El conductor del articulado abandonó la escena pero fue retenido posteriormente en Chiriquí Grande.",
+      "source_name": "El Siglo",
+      "url": "https://elsiglo.com.pa/cronica-roja/luto-en-bocas-muere-directora-regional-del-meduca-CE23058390",
+      "lat": 9.2979179,
+      "lng": -82.42110249999999,
+      "geo_formatted": "Almirante, Bocas del Toro Province, Panama",
+      "maps_link": "https://maps.google.com/?q=9.2979179,-82.42110249999999",
+      "first_seen": "2026-06-30T10:48:41.715575Z",
+      "last_seen": "2026-06-30T10:48:41.715575Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Citizens and transporters have repeatedly commented about poor road conditions on the Almirante-Chiriquí Grande route, mentioning potholes, deteriorated pavement, and dangerous curves. Media reports noted the road was wet from heavy rains at the time of this specific accident.",
+      "mention_count": 6,
+      "keywords_matched": [
+        "baches",
+        "deterioro",
+        "lluvia",
+        "mal estado",
+        "mojada",
+        "pésimo estado",
+        "riesgosa"
+      ],
+      "best_quote": "la carretera se encontraba mojada debido a las fuertes lluvias que afectan la región, habría contribuido al accidente",
+      "best_quote_source": "TVN Panamá",
+      "social_posts": [
+        {
+          "platform": "x",
+          "outlet": "Reten_Chiriqui",
+          "post_url": "https://x.com/RetenChiriqui/status/2063664844943859983",
+          "post_caption": "Luto en el sector educativo. La profesora Anaica Lescano, directora regional del Meduca en Bocas, falleció tras un accidente de tránsito ocurrido en Loma La Fe, Almirante. En el hecho también resultaron heridos 3 docentes que permanecen hospitalizados 🕊️ Paz a su memoria.",
+          "post_date": "2026-06-07"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/provincias/fallece-anaica-lescano-meduca-accidente-transito-loma-la-estrella-bocas-del-toro_1_2244712.html",
+          "quote": "la carretera se encontraba mojada debido a las fuertes lluvias que afectan la región, habría contribuido al accidente",
+          "keywords_matched": [
+            "mojada",
+            "lluvia"
+          ],
+          "date": "2026-06-07"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Mi Diario",
+          "comment_url": "",
+          "post_url": "https://www.midiario.com/policiales/muere-directora-regional-del-meduca-en-bocas-del-toro-tras-brutal-accidente/",
+          "quote": "Las primeras versiones apuntan a que la vía estaba mojada por las lluvias que afectaban la zona",
+          "keywords_matched": [
+            "mojada",
+            "lluvia"
+          ],
+          "date": "2026-06-07"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá América",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/provincias/peligro-latente-por-el-mal-estado-de-carretera-chiriqui-bocas-del-toro-858091",
+          "quote": "En la vía existen curvas bastante pronunciadas y baches que obligan, en ocasiones, a que los conductores maniobren",
+          "keywords_matched": [
+            "baches",
+            "mal estado"
+          ],
+          "date": "2013-01-16"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá América",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/provincias/carretera-desde-chiriqui-bocas-del-toro-es-peligrosa-953314",
+          "quote": "esta vía, sobre todo en el tramo chiricano, se ha vuelto riesgosa e intransitable por los baches y la falta de señalización",
+          "keywords_matched": [
+            "baches",
+            "riesgosa"
+          ],
+          "date": "2014-11-20"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá América",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/provincias/en-mal-estado-carretera-limitrofe-entre-las-provincias-de-chiriqui-y-bocas-del-toro",
+          "quote": "La carretera limítrofe entre las provincias de Chiriquí y Bocas del Toro se encuentra en pésimo estado",
+          "keywords_matched": [
+            "mal estado",
+            "pésimo estado"
+          ],
+          "date": "2025-01-10"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "MOP Bocas del Toro",
+          "comment_url": "",
+          "post_url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa-2/item/217-en-bocas-del-toro-realizamos-jornada-de-parcheo-para-mejorar-red-vial",
+          "quote": "el clima húmedo que impera en la región y el paso contante de vehículos pesados agrava el deterioro de la carpeta asfáltica",
+          "keywords_matched": [
+            "deterioro"
+          ],
+          "date": "2019-07-18"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0014",
       "road_key": "centenariocondireccion",
@@ -183,16 +469,17 @@
       "geo_formatted": "Carr. Panamericana, El Chirú, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.3890597,-80.2171435",
       "first_seen": "2026-06-30T02:30:15.789202Z",
-      "last_seen": "2026-06-30T02:30:15.789202Z",
+      "last_seen": "2026-06-30T10:48:41.715575Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "News reports indicate the vehicle collided with a manhole on the central median divider at El Chirú. MOP documents from 2025 confirm the Panamericana sector in El Chirú previously had two large potholes that compromised road safety.",
+      "chatter_summary": "News reports indicate the vehicle collided with a manhole on the road median before overturning. No social media comments specifically mentioning potholes or deteriorated road conditions for this accident were found in available search results.",
       "mention_count": 2,
       "keywords_matched": [
         "baches",
         "deterioro",
         "isleta",
-        "manhole"
+        "manhole",
+        "manhole infrastructure"
       ],
       "best_quote": "El accidente se produjo al colisionar el conductor del vehículo tipo pick-up contra un manhole ubicado en la isleta que divide las cuatro vías de la carretera Panamericana para luego volcarse.",
       "best_quote_source": "La Crítica",
@@ -549,10 +836,10 @@
       "geo_formatted": "Carr. Panamericana, Panama",
       "maps_link": "https://maps.google.com/?q=8.5089927,-80.3402793",
       "first_seen": "2026-06-29T21:17:28.156901Z",
-      "last_seen": "2026-06-30T02:30:15.789202Z",
+      "last_seen": "2026-06-30T10:48:41.715575Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "No social media posts or citizen comments were found mentioning road conditions such as potholes, deterioration, or poor road state in relation to this June 21, 2026 tanker explosion accident near the Viguí River bridge in Veraguas.",
+      "chatter_summary": "No social media posts or citizen comments mentioning road conditions (baches, huecos, or deterioration) were found for this accident. News coverage focused on the truck losing control on the descent, impacting barriers, and falling into a ravine, with investigations ongoing to determine causes.",
       "mention_count": 1,
       "keywords_matched": [
         "hueco"
@@ -646,11 +933,11 @@
       "geo_formatted": "Carr. Panamericana, Antón, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4014149,-80.2706156",
       "first_seen": "2026-06-29T19:00:28.160956Z",
-      "last_seen": "2026-06-30T02:30:15.789202Z",
+      "last_seen": "2026-06-30T10:48:41.715575Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "News outlet Critica reported the accident involved the vehicle colliding against a manhole on the median dividing the Panamericana highway before overturning. Historical MOP records indicate this El Chirú section previously had two enormous potholes on the roadway that compromised driver safety.",
-      "mention_count": 7,
+      "chatter_summary": "The pickup truck collided with a manhole on the median divider of the Panamericana highway before overturning. Previous government reports documented large potholes compromising road safety at the El Chirú bridge, and regional coverage describes the Panamericana through Coclé as critically deteriorated with potholes and fractures.",
+      "mention_count": 9,
       "keywords_matched": [
         "baches",
         "descuidada",
@@ -803,6 +1090,31 @@
             "seguridad vial"
           ],
           "date": "2025-06-05"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá en Minutos",
+          "comment_url": "",
+          "post_url": "https://www.panamaenminutos.com/nacionales/carretera-interamericana-travesia-entre-baches-y-huecos/",
+          "quote": "hay zonas críticas en gran parte del tramo que comprende las provincias de Panamá Oeste y Coclé, que tienen a más de un conductor al borde del hartazgo",
+          "keywords_matched": [
+            "baches",
+            "huecos",
+            "deterioro"
+          ],
+          "date": "2022-09-19"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/economia/comienza-busqueda-de-contratista-para-rehabilitar-200-kilometros-entre-la-chorrera-y-santiago/",
+          "quote": "Se trata de una carretera llena de baches, huecos y en algunos tramos fracturada por la falta de mantenimiento",
+          "keywords_matched": [
+            "baches",
+            "huecos"
+          ],
+          "date": "2023-06-07"
         }
       ]
     },
@@ -1465,6 +1777,10 @@
     "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
     "https://www.midiario.com/policiales/impactante-vuelco-deja-muerto-a-pasajero-de-35-anos-en-la-via-panamericana-a-la-altura-de-el-chiru-de-anton/",
     "https://www.critica.com.pa/sucesos/muere-en-el-hospital-tras-accidente-de-transito-en-veraguas-511640",
-    "https://www.telemetro.com/nacionales/camion-cisterna-combustible-explota-veraguas-conductor-fallece-quedar-atrapado-n6082852"
+    "https://www.telemetro.com/nacionales/camion-cisterna-combustible-explota-veraguas-conductor-fallece-quedar-atrapado-n6082852",
+    "https://www.telemetro.com/nacionales/accidente-la-via-centenario-causa-trafico-panama-n6081273",
+    "https://www.retenchiriqui.com/post/fatal-accidente-en-boquer%C3%B3n-aumenta-a-31-las-v%C3%ADctimas-por-tr%C3%A1nsito-en-chiriqu%C3%AD-durante-2026",
+    "https://elsiglo.com.pa/cronica-roja/luto-en-bocas-muere-directora-regional-del-meduca-CE23058390",
+    "https://www.octanosmedia.com/post/los-problemas-de-movilidad-de-bocas-del-toro"
   ]
 }
