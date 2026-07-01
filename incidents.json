@@ -1,8 +1,63 @@
 {
-  "scan_time": "2026-06-30T17:52:07.797704",
-  "total": 19,
-  "counter": 19,
+  "scan_time": "2026-07-01T02:44:50.751962",
+  "total": 20,
+  "counter": 20,
   "incidents": [
+    {
+      "ptw_id": "PTW-0020",
+      "road_key": "5talefevreparque",
+      "severity": "HIGH",
+      "headline": "Dos personas mueren en colisión y vuelco en Parque Lefevre",
+      "location": "Calle 5ta, corregimiento de Parque Lefevre, ciudad de Panamá",
+      "date": "2026-05-24",
+      "summary": "La noche del viernes 24 de mayo aproximadamente a las 11:10 p.m. dos vehículos tipo sedán, uno blanco y otro rojo, colisionaron en una intersección. El sedán blanco se volcó violentamente y se estrelló contra un poste de tendido eléctrico, dejando dos personas muertas.",
+      "source_name": "TVN",
+      "url": "https://www.tvn-2.com/temas/colision/",
+      "lat": 9.0092614,
+      "lng": -79.4906092,
+      "geo_formatted": "Calle 5ta, Panamá, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0092614,-79.4906092",
+      "first_seen": "2026-07-01T02:36:21.856776Z",
+      "last_seen": "2026-07-01T02:36:21.856776Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Community sources reference a large pothole near the 99 area of Parque Lefevre causing traffic problems, and a volunteer group mentions repairing a pothole that caused an accident in the neighborhood.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "accidente",
+        "bache",
+        "hueco"
+      ],
+      "best_quote": "movimiento 'Hagamos que las cosas Pasen', que realiza trabajos voluntarios para resolver problemas en la comunidad, como la reciente iniciativa de reparar un hueco en una calle que causó un accidente",
+      "best_quote_source": "Gobierno Local Parque Lefevre",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Gobierno Local Parque Lefevre",
+          "comment_url": "",
+          "post_url": "https://parquelefevre.gob.pa/parque-lefevre-un-corregimiento-vibrante-en-el-corazon-de-panama/",
+          "quote": "movimiento 'Hagamos que las cosas Pasen', que realiza trabajos voluntarios para resolver problemas en la comunidad, como la reciente iniciativa de reparar un hueco en una calle que causó un accidente",
+          "keywords_matched": [
+            "hueco",
+            "accidente"
+          ],
+          "date": "2024-07-03"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Destino Panamá - El Picadillo",
+          "comment_url": "",
+          "post_url": "https://destinopanama.com.pa/2025/09/el-picadillo-del-4-de-septiembre-de-2025/",
+          "quote": "existe un bache enorme en el tramo vial de la calle frente al 99 de Parque Lefevre, en el carril con dirección al centro de la ciudad. Los conductores tienen que cambiarse de paño para chifear el hueco",
+          "keywords_matched": [
+            "bache",
+            "hueco"
+          ],
+          "date": "2025-09-04"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0018",
       "road_key": "centenario",
@@ -401,12 +456,13 @@
       "geo_formatted": "Via Puente Centenario, Panamá, Provincia de Panamá, Panama",
       "maps_link": "https://maps.google.com/?q=9.0411855,-79.54556699999999",
       "first_seen": "2026-06-30T02:30:15.789202Z",
-      "last_seen": "2026-06-30T02:30:15.789202Z",
+      "last_seen": "2026-07-01T02:36:21.856776Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Conductors consistently describe Vía Centenario as deteriorated with potholes, uneven concrete slabs, and cracks that cause vehicles to suffer abrupt jumps and damage. The road conditions near Rod Carew stadium have been repeatedly cited as problematic for heavy vehicles navigating the area.",
-      "mention_count": 3,
+      "chatter_summary": "Citizens and drivers consistently report that the Vía Centenario near Rod Carew has deteriorated infrastructure with potholes, uneven concrete slabs, and a problematic steep slope that causes repeated truck accidents and mechanical failures.",
+      "mention_count": 7,
       "keywords_matched": [
+        "baches",
         "deteriorada",
         "deterioro",
         "huecos",
@@ -451,6 +507,51 @@
             "huecos"
           ],
           "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "con infraestructura vial deteriorada, llena de huecos, losas desniveladas, una carpeta de concreto con rajaduras",
+          "keywords_matched": [
+            "huecos",
+            "deteriorada"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Estrella de Panamá",
+          "comment_url": "",
+          "post_url": "https://www.laestrella.com.pa/panama/nacional/camino-santiago-EFLE484321",
+          "quote": "con una seguidilla de baches de cuidado –conté no menos de 50– hasta llegar al puente Centenario",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2023-01-13"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/contenido-exclusivo/invertido-causando-accidentes-rod-carew_1_1002887.html",
+          "quote": "el tema de la pendiente, que para efecto de los conductores de camiones cargados, representa un dolor de cabeza",
+          "keywords_matched": [
+            "deteriorada"
+          ],
+          "date": "2021-07-01"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Panamá América",
+          "comment_url": "",
+          "post_url": "https://www.panamaamerica.com.pa/nacion/loma-del-rod-carew-tiene-problemas-de-diseno-piden-estudio-al-mop-999223",
+          "quote": "La misma pendiente, en ambos sentidos, tiene un problema de vialidad",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2015-11-06"
         }
       ]
     },
@@ -1267,12 +1368,13 @@
       "geo_formatted": "Vía Centenario, Panamá, Provincia de Panamá, Panama",
       "maps_link": "https://maps.google.com/?q=9.0402395,-79.5550517",
       "first_seen": "2026-06-04T22:12:58.865381Z",
-      "last_seen": "2026-06-30T17:46:53.684958Z",
+      "last_seen": "2026-07-01T02:36:21.856776Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Conductors report that Vía Centenario presents significant deterioration with huecos, losas levantadas, and fractured pavement requiring cautious driving. Multiple reports document the poor road state affecting over 25,000 daily vehicles on this route.",
-      "mention_count": 4,
+      "chatter_summary": "Conductors report that Vía Centenario has deteriorated road conditions with potholes, raised concrete slabs, and cracks causing vehicles to suffer damage and requiring slow, careful driving. Multiple news articles and witness accounts describe the road as being in poor condition with infrastructure problems.",
+      "mention_count": 6,
       "keywords_matched": [
+        "baches",
         "deteriorada",
         "deterioro",
         "huecos",
@@ -1344,6 +1446,30 @@
             "deteriorada"
           ],
           "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá (General citizen complaint)",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas",
+          "keywords_matched": [
+            "huecos",
+            "deteriorada",
+            "mal estado"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Estrella de Panamá (conductor, anónimo)",
+          "comment_url": "",
+          "post_url": "https://www.laestrella.com.pa/panama/nacional/camino-santiago-EFLE484321",
+          "quote": "una seguidilla de baches de cuidado –conté no menos de 50– hasta llegar al puente Centenario",
+          "keywords_matched": [
+            "baches"
+          ],
+          "date": "2023-01-13"
         }
       ]
     },
@@ -1788,6 +1914,17 @@
     "https://www.panamaamerica.com.pa/provincias/accidente-fatal-en-vigui-muere-conductor-de-camion-cisterna-cargado-de-combustible",
     "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
     "https://www.critica.com.pa/sucesos/camion-se-incendia-y-cisterna-explota-en-vigui-511322",
+    "https://www.retenchiriqui.com/post/fatal-accidente-en-boquer%C3%B3n-aumenta-a-31-las-v%C3%ADctimas-por-tr%C3%A1nsito-en-chiriqu%C3%AD-durante-2026",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.tvn-2.com/temas/colision/",
+    "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paraliza-la-interamericana-en-veraguas/",
+    "https://www.telemetro.com/nacionales/tragedia-la-panamericana-una-persona-muere-vuelco-pick-up-el-chiru-anton-n6083152",
+    "https://www.telemetro.com/nacionales/tragedia-la-panamericana-una-persona-muere-vuelco-pick-up-el-chiru-anton-n6083152",
+    "https://www.midiario.com/policiales/impactante-vuelco-deja-muerto-a-pasajero-de-35-anos-en-la-via-panamericana-a-la-altura-de-el-chiru-de-anton/",
+    "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paralizo-la-interamericana-en-veraguas/",
+    "https://www.midiario.com/policiales/identifican-a-la-victima-del-tragico-accidente-de-cisterna-en-vigui-veraguas/",
     "https://www.retenchiriqui.com/post/fatal-accidente-en-boquer%C3%B3n-aumenta-a-31-las-v%C3%ADctimas-por-tr%C3%A1nsito-en-chiriqu%C3%AD-durante-2026"
   ]
 }
