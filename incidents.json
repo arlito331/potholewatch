@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-07-01T17:46:16.403769",
+  "scan_time": "2026-07-02T02:34:27.734812",
   "total": 20,
   "counter": 20,
   "incidents": [
@@ -1048,16 +1048,17 @@
       "geo_formatted": "Carr. Panamericana, Antón, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4014149,-80.2706156",
       "first_seen": "2026-06-29T19:00:28.160956Z",
-      "last_seen": "2026-06-30T17:46:53.684958Z",
+      "last_seen": "2026-07-02T02:26:05.017800Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "One news outlet reported that the pickup collided with a manhole in the median divider of the Panamericana before overturning. No social media posts or citizen comments about road conditions (potholes, deterioration) for this specific accident were found in search results.",
-      "mention_count": 9,
+      "chatter_summary": "The accident occurred when the pick-up collided with a manhole on the median dividing the Panamericana highway lanes. Historical MOP reports indicate that El Chirú previously had significant pothole problems on this road section.",
+      "mention_count": 10,
       "keywords_matched": [
         "baches",
         "descuidada",
         "deteriorada",
         "deterioro",
+        "enormes",
         "huecos",
         "manhole",
         "seguridad vial"
@@ -1230,6 +1231,18 @@
             "huecos"
           ],
           "date": "2023-06-07"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Ministerio de Obras Públicas (MOP)",
+          "comment_url": "",
+          "post_url": "http://www.mop.gob.pa/index.php/prensa/sala-de-prensa-2/item/4448-reparaciones-a-la-carretera-panamericana-mejoran-la-circulacion-entre-san-carlos-y-anton",
+          "quote": "incluye el mejoramiento del puente vehicular sobre el río Chico localizado dentro del corregimiento de El Chirú, distrito de Antón, donde se existían dos enormes baches",
+          "keywords_matched": [
+            "baches",
+            "enormes"
+          ],
+          "date": "2025-06-05"
         }
       ]
     },
@@ -1947,6 +1960,18 @@
     "https://www.midiario.com/policiales/impactante-vuelco-deja-muerto-a-pasajero-de-35-anos-en-la-via-panamericana-a-la-altura-de-el-chiru-de-anton/",
     "https://www.telemetro.com/nacionales/tragedia-la-panamericana-una-persona-muere-vuelco-pick-up-el-chiru-anton-n6083152",
     "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paraliza-la-interamericana-en-veraguas/",
-    "https://www.retenchiriqui.com/post/tragedia-en-la-panamericana-conductor-muere-tras-choque-y-explosi%C3%B3n-de-cisterna-cerca-de-vigu%C3%AD"
+    "https://www.retenchiriqui.com/post/tragedia-en-la-panamericana-conductor-muere-tras-choque-y-explosi%C3%B3n-de-cisterna-cerca-de-vigu%C3%AD",
+    "https://www.telemetro.com/nacionales/accidente-la-via-centenario-causa-trafico-panama-n6081273",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.telemetro.com/nacionales/accidente-panama-oeste-deja-un-muerto-y-un-herido-n6073717",
+    "https://www.prensa-latina.cu/2026/04/06/panama-accidente-provoca-incendio-bajo-el-puente-de-las-americas/",
+    "https://www.midiario.com/policiales/impactante-vuelco-deja-muerto-a-pasajero-de-35-anos-en-la-via-panamericana-a-la-altura-de-el-chiru-de-anton/",
+    "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paraliza-la-interamericana-en-veraguas/",
+    "https://www.diaadia.com.pa/el-pais/fatal-accidente-vehicular-en-anton-eleva-17-las-muertes-por-transito-en-cocle-790372",
+    "https://www.midiario.com/policiales/identifican-a-la-victima-del-tragico-accidente-de-cisterna-en-vigui-veraguas/",
+    "https://www.retenchiriqui.com/post/fatal-accidente-en-boquer%C3%B3n-aumenta-a-31-las-v%C3%ADctimas-por-tr%C3%A1nsito-en-chiriqu%C3%AD-durante-2026"
   ]
 }
