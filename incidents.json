@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-07-02T02:34:27.734812",
+  "scan_time": "2026-07-02T10:52:59.375216",
   "total": 20,
   "counter": 20,
   "incidents": [
@@ -584,10 +584,10 @@
       "geo_formatted": "Carr. Panamericana, El Chirú, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.3890597,-80.2171435",
       "first_seen": "2026-06-30T02:30:15.789202Z",
-      "last_seen": "2026-06-30T10:48:41.715575Z",
+      "last_seen": "2026-07-02T10:28:41.064601Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "News reports indicate the vehicle collided with a manhole on the road median before overturning. No social media comments specifically mentioning potholes or deteriorated road conditions for this accident were found in available search results.",
+      "chatter_summary": "News reports indicate the accident involved collision with a manhole infrastructure element on the Panamericana median divider before the vehicle overturned. No social media comments specifically mentioning baches, huecos, or general road deterioration were found for this incident.",
       "mention_count": 2,
       "keywords_matched": [
         "baches",
@@ -1972,6 +1972,19 @@
     "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paraliza-la-interamericana-en-veraguas/",
     "https://www.diaadia.com.pa/el-pais/fatal-accidente-vehicular-en-anton-eleva-17-las-muertes-por-transito-en-cocle-790372",
     "https://www.midiario.com/policiales/identifican-a-la-victima-del-tragico-accidente-de-cisterna-en-vigui-veraguas/",
+    "https://www.retenchiriqui.com/post/fatal-accidente-en-boquer%C3%B3n-aumenta-a-31-las-v%C3%ADctimas-por-tr%C3%A1nsito-en-chiriqu%C3%AD-durante-2026",
+    "https://www.telemetro.com/nacionales/accidente-la-via-centenario-causa-trafico-panama-n6081273",
+    "https://www.prensa.com/sociedad/siete-heridos-en-violento-choque-en-chepo-bomberos-rescatan-a-conductor-atrapado/",
+    "https://www.critica.com.pa/sucesos/accidente-letal-en-al-puente-centenario-motociclista-no-resistio-impacto-505257",
+    "https://www.prensa.com/judiciales/camion-se-vuelca-en-la-via-centenario-cerca-del-rod-carew-el-trafico-hacia-la-ciudad-de-panama-es-lento/",
+    "https://www.telemetro.com/nacionales/accidente-fatal-provoca-trafico-lento-via-centenario-cerca-merca-panama-n6079393",
+    "https://www.telemetro.com/nacionales/dos-accidentes-la-via-centenario-provocan-fuerte-trafico-la-ciudad-n6077116",
+    "https://www.telemetro.com/nacionales/tragedia-la-panamericana-una-persona-muere-vuelco-pick-up-el-chiru-anton-n6083152",
+    "https://www.critica.com.pa/sucesos/conductor-muere-tras-brutal-colision-y-vuelco-en-azuero-508654",
+    "https://www.critica.com.pa/sucesos/tremendo-tanganazo-accidente-deja-4-heridos-en-veraguas-510944",
+    "https://www.midiario.com/policiales/identifican-a-la-victima-del-tragico-accidente-de-cisterna-en-vigui-veraguas/",
+    "https://www.critica.com.pa/sucesos/sedan-se-vuelca-en-el-copecito-y-muere-el-conductor-510562",
+    "https://www.telemetro.com/nacionales/muere-conductor-hecho-transito-registrado-chiriqui-n6082570",
     "https://www.retenchiriqui.com/post/fatal-accidente-en-boquer%C3%B3n-aumenta-a-31-las-v%C3%ADctimas-por-tr%C3%A1nsito-en-chiriqu%C3%AD-durante-2026"
   ]
 }
