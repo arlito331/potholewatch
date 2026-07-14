@@ -1,8 +1,547 @@
 {
-  "scan_time": "2026-07-14T16:56:10.376841",
-  "total": 24,
-  "counter": 24,
+  "scan_time": "2026-07-14T17:33:20.602794",
+  "total": 30,
+  "counter": 30,
   "incidents": [
+    {
+      "ptw_id": "PTW-0025",
+      "road_key": "buenacolontransistmicavista",
+      "severity": "HIGH",
+      "headline": "Fatal desenlace en la madrugada: hombre de 50 años muere atropellado en la Transístmica",
+      "location": "Vía Transístmica sector de Buena Vista, provincia de Colón",
+      "date": "2026-07-08",
+      "summary": "Martin Alabarca Muñoz, de 50 años, murió atropellado aproximadamente a la 1:18 a.m. por un camión de reparto de color blanco mientras cruzaba la vía. Fue trasladado al Hospital Manuel Amador Guerrero donde confirmaron su fallecimiento. El cadáver quedó tendido en la orilla de la vía.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+      "lat": 9.2758288,
+      "lng": -79.699018,
+      "geo_formatted": "Carr Transístmica, Buena Vista, Provincia de Colón, Panama",
+      "maps_link": "https://maps.google.com/?q=9.2758288,-79.699018",
+      "first_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments mentioning road conditions (baches, huecos, deterioro) were found for the July 8, 2026 fatal pedestrian accident on Vía Transístmica in Buena Vista, Colón.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "hueco",
+        "huecos",
+        "rota"
+      ],
+      "best_quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxpEv7CpQV/",
+          "post_caption": "Guillermo Cortés del Movimiento Mundos de Jubilados y Pensionados señaló que el Banco Nacional de Panamá ha dado versiones contradictorias sobre el origen de los recursos destinados a los certificados",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_caption": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoya",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxV6Z5j2W5/",
+          "post_caption": "⁣\n🚦 A esta hora, en #ChifeandoElTranque, nos comparten reporte ciudadano de vehículos mal estacionados en la vía Transístmica en Plaza Ágora. ⁣\n⁣⁣\n👉🏻 Más detalles en nuestra bio o en www.tvn-2.com.⁣⁣⁣",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dav4pPij9AR/",
+          "post_caption": "El Sistema Nacional de Protección Civil, bajo el Ministerio de Gobierno, declaró Alerta Verde en 19 distritos del país debido a condiciones atmosféricas que favorecen lluvias de variada intensidad, ac",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daxyg20gPMN/",
+          "post_caption": "El director del Instituto de Mercadeo Agropecuario, Nilo Murillo, confirmó que este año las tradicionales Naviferias arrancarán en diciembre con una oferta ampliada de productos de la mesa navideña, m",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DawXjjXjThu/",
+          "post_caption": "El Ministerio Público ha recibido 7,707 denuncias por violencia doméstica en lo que va del año 2026, una cifra que refleja la persistencia de este delito en todo el país. Solo en mayo se contabilizaro",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavfzvPEYBN/",
+          "post_caption": "El subcentro de salud Don Bosco, ubicado en el distrito de San Miguelito, permanece cerrado tras el incendio registrado el pasado sábado que afectó sus instalaciones y, mientras continúan las investig",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavFJCngaYr/",
+          "post_caption": "💳El Ifarhu inició la implementación del nuevo sistema de pago del PASE-U mediante una tarjeta digital, un proceso que comenzó como plan piloto y que se extenderá de forma gradual al resto del país.⁣\n⁣",
+          "post_date": "2026-07-13"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DavfzvPEYBN/",
+          "post_url": "https://www.instagram.com/p/DavfzvPEYBN/",
+          "quote": "El subcentro de salud Don Bosco, ubicado en el distrito de San Miguelito, permanece cerrado tras el incendio registrado el pasado sábado que afectó sus instalaciones y, mientras continúan las investigaciones para determinar las causas del siniestro, residentes denuncian actos de vandalismo y el dete",
+          "keywords_matched": [
+            "hueco",
+            "huecos"
+          ],
+          "date": "2026-07-13"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0026",
+      "road_key": "avenidadebajodiazdomingo",
+      "severity": "MEDIUM",
+      "headline": "En menos de 24 horas: cinco vidas perdidas y tres heridos enlutan las carreteras panameñas",
+      "location": "Avenida Domingo Díaz debajo del puente de la estación del Metro de Pedregal, dirección a Panama City",
+      "date": "2026-07-11",
+      "summary": "Un accidente múltiple registrado el sábado 11 de julio en la avenida Domingo Díaz debajo del puente de la estación del Metro de Pedregal dejó una víctima fatal. El incidente provocó afectaciones al tránsito en dirección hacia la ciudad de Panamá. Este fue uno de cinco accidentes fatales ocurridos ese día en el país.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+      "lat": 9.0170892,
+      "lng": -79.5176401,
+      "geo_formatted": "2F8J+PXJ, Panama City, Panamá Province, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0170892,-79.5176401",
+      "first_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No citizen comments specifically linking road conditions such as potholes or deterioration to this July 11, 2026 accident were found in social media searches. Official news outlets reported the accident as a multiple collision where one vehicle crossed into oncoming traffic.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "hueco"
+      ],
+      "best_quote": "el hueco lleva entre 4 y 5 años sin solución definitiva, convirtiéndose en un problema crónico para quienes transitan por este corredor vial de alta circulación",
+      "best_quote_source": "TVN Panamá",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "",
+          "post_caption": "Una persona falleció en un accidente de tránsito registrado en la avenida Domingo Díaz, frente a la estación del Metro en Pedregal. La @policiadepanama recominda a los conductores tomar rutas alternas.",
+          "post_date": "2026-07-11"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Policía Nacional de Panamá",
+          "post_url": "",
+          "post_caption": "El teniente Isidro Díaz, de la DNOT, brinda detalles sobre un hecho de tránsito ocurrido en la avenida Domingo Díaz, frente a la estación Pedregal del Metro de Panamá, donde lamentablemente una persona perdió la vida. Recomendamos a los conductores tomar rutas alternas.",
+          "post_date": "2026-07-11"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Mi Diario Panamá",
+          "post_url": "",
+          "post_caption": "La mañana de este sábado 11 de julio quedó marcada por un fatal accidente de tránsito registrado en el corregimiento de Pedregal, donde una persona perdió la vida. Según los reportes preliminares, el hecho comenzó cuando el conductor de un vehículo presuntamente cruzó hacia el carril contrario.",
+          "post_date": "2026-07-11"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxV6Z5j2W5/",
+          "post_caption": "⁣\n🚦 A esta hora, en #ChifeandoElTranque, nos comparten reporte ciudadano de vehículos mal estacionados en la vía Transístmica en Plaza Ágora. ⁣\n⁣⁣\n👉🏻 Más detalles en nuestra bio o en www.tvn-2.com.⁣⁣⁣",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DawSY0Sj1f6/",
+          "post_caption": "Este lunes 13 de julio cerró el período de recepción y apertura de propuestas para la licitación pública del alumbrado navideño 2026 del distrito de Panamá, un proyecto cuyo precio de referencia ascie",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DawJPS_FgTf/",
+          "post_caption": "Este lunes 13 de julio inició operaciones la nueva sala de hemodiálisis del Instituto de los Trabajadores “Dr. Francisco Díaz Mérida”, ubicado en el antiguo edificio Renta 5, en Calidonia.⁣\n⁣\nLa moder",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavrJT2gZ-Y/",
+          "post_caption": "🔴#ÚltimaHora  El presidente de El Salvador, Nayib Bukele, fue designado por su partido como candidato para buscar un tercer mandato de seis años en las elecciones de febrero próximo, tras una polémica",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dav_hIhFDox/",
+          "post_caption": "Casi 800 bomberos y dos hidroaviones luchan este lunes contra las llamas en el emblemático bosque de Fontainebleau, a las puertas de París, para apagar un incendio que ya ha quemado casi mil hectáreas",
+          "post_date": "2026-07-13"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/temas/avenida-domingo-diaz/",
+          "quote": "el hueco lleva entre 4 y 5 años sin solución definitiva, convirtiéndose en un problema crónico para quienes transitan por este corredor vial de alta circulación",
+          "keywords_matched": [
+            "hueco"
+          ],
+          "date": ""
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0027",
+      "road_key": "chiarirodolfoseptiembre",
+      "severity": "MEDIUM",
+      "headline": "Tres muertes en carretera de Panamá Oeste y Coclé",
+      "location": "Vía Rodolfo F. Chiari sector 7 de Septiembre, Panamá",
+      "date": "2026-07-12",
+      "summary": "Juan Daniel Guerra Santos, de 26 años, murió a las 8:35 a.m. del sábado cuando perdió el control de su motocicleta Yamaha negra y chocó contra una valla metálica en la autopista de ocho carriles. Paramédicos del SUME 911 confirmaron que no tenía signos vitales al llegar.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+      "lat": 8.537981,
+      "lng": -80.782127,
+      "geo_formatted": "Panama",
+      "maps_link": "https://maps.google.com/?q=8.537981,-80.782127",
+      "first_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or public comments mentioning road conditions (potholes, deterioration, poor maintenance) were found for the July 12, 2026 accident on Vía Rodolfo F. Chiari sector 7 de Septiembre that killed three people.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "hueco",
+        "huecos"
+      ],
+      "best_quote": "El subcentro de salud Don Bosco, ubicado en el distrito de San Miguelito, permanece cerrado tras el incendio registrado el pasado sábado que afectó sus instalaciones y, mientras continúan las investigaciones para determinar las causas del siniestro, residentes denuncian actos de vandalismo y el dete",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dav4pPij9AR/",
+          "post_caption": "El Sistema Nacional de Protección Civil, bajo el Ministerio de Gobierno, declaró Alerta Verde en 19 distritos del país debido a condiciones atmosféricas que favorecen lluvias de variada intensidad, ac",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavfzvPEYBN/",
+          "post_caption": "El subcentro de salud Don Bosco, ubicado en el distrito de San Miguelito, permanece cerrado tras el incendio registrado el pasado sábado que afectó sus instalaciones y, mientras continúan las investig",
+          "post_date": "2026-07-13"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DavfzvPEYBN/",
+          "post_url": "https://www.instagram.com/p/DavfzvPEYBN/",
+          "quote": "El subcentro de salud Don Bosco, ubicado en el distrito de San Miguelito, permanece cerrado tras el incendio registrado el pasado sábado que afectó sus instalaciones y, mientras continúan las investigaciones para determinar las causas del siniestro, residentes denuncian actos de vandalismo y el dete",
+          "keywords_matched": [
+            "hueco",
+            "huecos"
+          ],
+          "date": "2026-07-13"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0028",
+      "road_key": "llanomarinpanamericanapenonome",
+      "severity": "MEDIUM",
+      "headline": "Tres muertes en carretera de Panamá Oeste y Coclé",
+      "location": "Vía Panamericana + Llano Marín + Penonomé, Coclé",
+      "date": "2026-07-12",
+      "summary": "Magarito Guevara Tenorio, de 65 años, falleció alrededor de las 4:00 a.m. a consecuencia de las lesiones sufridas al colisionar y volcarse el Toyota Four Runner en el que viajaba, en la vía Panamericana a la altura de Llano Marín, distrito de Penonomé. Una mujer que viajaba en el auto resultó con heridas de consideración y el accidente también involucró un vehículo tipo panel.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+      "lat": 8.4901837,
+      "lng": -80.330317,
+      "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
+      "first_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Drivers using the Llano Marín section of the Pan-American Highway at night have warned on social media about poor lighting and signage in areas where road expansion work is underway. This location is identified as a frequent accident zone in Penonomé, Coclé province.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "deteriorada",
+        "escasa iluminación",
+        "iluminación",
+        "señalización"
+      ],
+      "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
+      "best_quote_source": "Crítica / Día a Día",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxqgdolOEs/",
+          "post_caption": "La directora de la Fundación Audubon Panamá, Rosabel Miró, alertó sobre la llegada de aves marinas procedentes de Sudamérica a las costas panameñas, un fenómeno que atribuye al impacto del El Niño, qu",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DawNO4iFohP/",
+          "post_caption": "El subsecretario adjunto de la División de Financiamiento de Amenazas y Sanciones de la Oficina de Asuntos Económicos del Departamento de Estado, Samuel Parker, se encuentra en Panamá para sostener en",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DawJPS_FgTf/",
+          "post_caption": "Este lunes 13 de julio inició operaciones la nueva sala de hemodiálisis del Instituto de los Trabajadores “Dr. Francisco Díaz Mérida”, ubicado en el antiguo edificio Renta 5, en Calidonia.⁣\n⁣\nLa moder",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dav9NXNjzSW/",
+          "post_caption": "El presidente de la República, José Raúl Mulino, recibió en el Palacio de las Garzas a una delegación de la Asociación de Navieros de Japón, encabezada por Hitoshi Nagasawa, con el objetivo de fortale",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavpL1pFD15/",
+          "post_caption": "Un hombre de 37 años murió y varias personas resultaron heridas durante una serie de accidentes de tránsito registrados el pasado fin de semana en la Vía Panamericana, a la altura de Villa Carmen, en ",
+          "post_date": "2026-07-13"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Crítica / Día a Día",
+          "comment_url": "",
+          "post_url": "",
+          "quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
+          "keywords_matched": [
+            "escasa iluminación",
+            "señalización"
+          ],
+          "date": "2026-07-12"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0029",
+      "road_key": "canasprincipalsantostonosi",
+      "severity": "MEDIUM",
+      "headline": "En menos de 24 horas: cinco vidas perdidas y tres heridos enlutan las carreteras panameñas",
+      "location": "Vía principal de Las Cañas, Tonosí, Los Santos",
+      "date": "2026-07-11",
+      "summary": "A las 10:00 de la mañana, Sergio Alejandro H. J., de 28 años, murió luego de ser atropellado mientras se desplazaba en bicicleta. El conductor involucrado abandonó el lugar del accidente.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+      "lat": 7.4456084,
+      "lng": -80.264191,
+      "geo_formatted": "Cañas, Los Santos Province, Panama",
+      "maps_link": "https://maps.google.com/?q=7.4456084,-80.264191",
+      "first_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments mentioning road conditions (baches, huecos, deterioro) were found for the July 11, 2026 accident on Vía principal de Las Cañas, Tonosí, Los Santos.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "rota"
+      ],
+      "best_quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dax17-sFnxj/",
+          "post_caption": "El tribunal de Badajoz (Extremadura) condenó a David Sánchez, hermano menor del presidente del Gobierno de España, a nueve años de inhabilitación para ejercer cargos públicos por un delito de prevaric",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daxyg20gPMN/",
+          "post_caption": "El director del Instituto de Mercadeo Agropecuario, Nilo Murillo, confirmó que este año las tradicionales Naviferias arrancarán en diciembre con una oferta ampliada de productos de la mesa navideña, m",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_caption": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoya",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxYxNMDlH1/",
+          "post_caption": "Desde el aire, El Chorrillo parece un rompecabezas en construcción: 27 calles intervenidas, vecinos esquivando zanjas y comerciantes enfrentando pérdidas. Aunque el MOP reporta un avance del 85 %, aún",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dav1MxAjeHQ/",
+          "post_caption": "La Policía Nacional advirtió este lunes sobre el incremento de los intentos de apropiación de cuentas de WhatsApp por parte de ciberdelincuentes que, tras obtener el acceso, utilizan la identidad de l",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavuL6Vj-Im/",
+          "post_caption": "Nueve fallas operativas, entre ellas deficiencias en el cumplimiento de metas y compromisos ambientales, fueron identificadas en el informe de auditoría sobre la mina de cobre en Donoso, así lo dio a ",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavxwlFj7At/",
+          "post_caption": "El presidente de la República, José Raúl Mulino, viajará este martes a México atendiendo una invitación oficial de la presidenta mexicana, Claudia Sheinbaum. Ambos sostendrán este miércoles una reunió",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DawE4Opgk5t/",
+          "post_caption": "Alrededor de 130 adolescentes decidieron darle un giro a sus vidas tras desertar del sistema educativo y regresar a las aulas de clases por medio del Centro de Formación y Desarrollo de Adolescentes (",
+          "post_date": "2026-07-13"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0030",
+      "road_key": "almirantechiriquigranderio",
+      "severity": "MEDIUM",
+      "headline": "Tres muertos en accidentes en el Corredor Norte, Bocas del Toro y Colón",
+      "location": "Vía Almirante hacia Chiriquí Grande, a la altura del río Uyama, Bocas del Toro",
+      "date": "2026-07-09",
+      "summary": "Argelis Yajaira Stone Street García, de 22 años, murió el 8 de julio alrededor de las 5:30 p.m. tras ser atropellada por un camión cuando cruzaba la vía. La joven fue trasladada de emergencia al hospital de Almirante donde fue declarada sin signos vitales.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+      "lat": 9.127039872884605,
+      "lng": -82.31125034268263,
+      "geo_formatted": "Río Uyama, Provincia de Bocas del Toro, Panama",
+      "maps_link": "https://maps.google.com/?q=9.127039872884605,-82.31125034268263",
+      "first_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments were found that specifically mention road conditions (baches, huecos, deterioro) in relation to the July 9, 2026 fatal accident at río Uyama on the Almirante-Chiriquí Grande road, though general reports about infrastructure problems on Bocas del Toro roads exist.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "rota"
+      ],
+      "best_quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daxyg20gPMN/",
+          "post_caption": "El director del Instituto de Mercadeo Agropecuario, Nilo Murillo, confirmó que este año las tradicionales Naviferias arrancarán en diciembre con una oferta ampliada de productos de la mesa navideña, m",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxvJOJFpnr/",
+          "post_caption": "Mediante la Operación Escudo Protector, unidades del Servicio Nacional Aeronaval, en coordinación con la Fiscalía de Drogas de Colón y Guna Yala del Ministerio Público, realizaron un operativo en el n",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxqgdolOEs/",
+          "post_caption": "La directora de la Fundación Audubon Panamá, Rosabel Miró, alertó sobre la llegada de aves marinas procedentes de Sudamérica a las costas panameñas, un fenómeno que atribuye al impacto del El Niño, qu",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dav_hIhFDox/",
+          "post_caption": "Casi 800 bomberos y dos hidroaviones luchan este lunes contra las llamas en el emblemático bosque de Fontainebleau, a las puertas de París, para apagar un incendio que ya ha quemado casi mil hectáreas",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavZvpuFl_V/",
+          "post_caption": "El Metro de Panamá anunció cierres temporales en el puente vehicular y la rotonda de Panamá Pacífico debido a los trabajos de construcción de la Línea 3 del Metro. Las restricciones comenzarán este lu",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_caption": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoya",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DavwDaxgcjO/",
+          "post_caption": "Un total de 14 personas fueron condenadas a penas de entre 64 y 80 meses de prisión tras acogerse a un acuerdo de pena por el delito de tráfico y distribución de sustancias ilícitas, luego de ser apre",
+          "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dawa95-lNTv/",
+          "post_caption": "Un grupo de docentes y administrativos de la Universidad Autónoma de Chiriquí (Unachi) se manifestó este lunes frente a la rectoría para exigir una explicación por los retrasos en el pago de sus quinc",
+          "post_date": "2026-07-14"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-14"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0021",
       "road_key": "carewcentenarioestadiorod",
@@ -132,17 +671,20 @@
       "geo_formatted": "Villa Carmen, Panamá Oeste Province, Panama",
       "maps_link": "https://maps.google.com/?q=8.8033778,-79.86783679999999",
       "first_seen": "2026-07-14T16:28:39.489351Z",
-      "last_seen": "2026-07-14T16:28:39.489351Z",
+      "last_seen": "2026-07-14T17:03:29.033742Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers who travel this route at night have warned through social networks about poor lighting and signage in the Villa Carmen stretch where road expansion work is being carried out. The accidents raised questions about road safety in this construction zone.",
+      "chatter_summary": "No social media posts or citizen comments were found mentioning road conditions such as potholes, deterioration, or poor pavement quality related to this accident. The available reporting focuses on safety concerns regarding the construction zone where the Corredor de las Playas expansion project is underway.",
       "mention_count": 5,
       "keywords_matched": [
+        "construcción",
         "deteriorada",
         "escasa iluminación",
         "hueco",
         "iluminación",
+        "mal estado",
         "señalización",
+        "sin señalización",
         "tramo",
         "tramo en construcción"
       ],
@@ -2338,6 +2880,20 @@
     "https://www.critica.com.pa/sucesos/misterio-en-tonosi-hombre-de-28-anos-aparece-muerto-en-la-carretera-512703",
     "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
     "https://www.midiario.com/policiales/la-carretera-cobra-otra-vida-joven-de-22-anos-muere-tras-fatal-accidente-de-transito-en-bocas-del-toro/",
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.critica.com.pa/sucesos/violenta-colision-en-centenario-cobra-la-vida-dos-pasajeros-de-un-sedan-512626",
+    "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.telemetro.com/nacionales/fuerte-tranque-la-via-centenario-caida-un-arbol-dos-autos-cerca-del-rod-carew-n6084728",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.critica.com.pa/sucesos/la-interamericana-se-tino-de-sangre-hombre-muere-atropellado-en-vigui-512788",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
     "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514"
   ]
 }
