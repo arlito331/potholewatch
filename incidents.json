@@ -1,8 +1,206 @@
 {
-  "scan_time": "2026-07-14T17:33:20.602794",
-  "total": 30,
-  "counter": 30,
+  "scan_time": "2026-07-15T01:33:59.049466",
+  "total": 32,
+  "counter": 32,
   "incidents": [
+    {
+      "ptw_id": "PTW-0031",
+      "road_key": "buenatransistmicavista",
+      "severity": "HIGH",
+      "headline": "Fatal desenlace en la madrugada: hombre de 50 años muere atropellado en la Transístmica",
+      "location": "Vía Transístmica sector de Buena Vista, Panamá",
+      "date": "2026-07-08",
+      "summary": "Un hombre de 50 años identificado como Martin M. murió atropellado en la madrugada del 8 de julio aproximadamente a la 1:18 a.m. en el sector de Buena Vista en la vía Transístmica. Fue atropellado por un camión de reparto de color blanco y trasladado al Hospital Manuel Amador Guerrero donde falleció.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+      "lat": 9.0094061,
+      "lng": -79.5185156,
+      "geo_formatted": "Transístmica, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0094061,-79.5185156",
+      "first_seen": "2026-07-15T01:25:19.790656Z",
+      "last_seen": "2026-07-15T01:25:19.790656Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments mentioning road conditions (baches, huecos, deterioro) were found specifically related to the July 8, 2026 fatal accident in Buena Vista sector of Vía Transístmica. General infrastructure concerns about Vía Transístmica have been documented by authorities including decades without adequate maintenance.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "rota"
+      ],
+      "best_quote": "España aumentó su ventaja en la semifinal del Mundial 2026 tras una jugada protagonizada por Lamine Yamal, quien fue derribado dentro del área por Lucas Digne, provocando un penal a favor de la selección española.\n\nAl minuto 22, Mikel Oyarzabal asumió la responsabilidad desde los once pasos y defini",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DayNCCTj6pV/",
+          "post_caption": "La adquisición de viviendas en Panamá atraviesa una fuerte desaceleración. La Asociación Panameña de Corredores y Promotores de Bienes Raíces (Acobir) informó que las aprobaciones hipotecarias durante",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DayXpDCv05M/",
+          "post_caption": "¡España vuelve a golpear en la semifinal del Mundial 2026! Al minuto 58, Pedro Porro culminó una gran jugada colectiva para marcar el 2-0 frente a Francia, desatando la celebración de la afición españ",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaySv7ev5bZ/",
+          "post_caption": "España aumentó su ventaja en la semifinal del Mundial 2026 tras una jugada protagonizada por Lamine Yamal, quien fue derribado dentro del área por Lucas Digne, provocando un penal a favor de la selecc",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DayilDxklEF/",
+          "post_caption": "La Defensoría del Pueblo sostuvo un acercamiento interinstitucional con autoridades del Instituto de Acueductos y Alcantarillados Nacionales (Idaan) para dar seguimiento a las principales quejas ciuda",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daxyg20gPMN/",
+          "post_caption": "El director del Instituto de Mercadeo Agropecuario, Nilo Murillo, confirmó que este año las tradicionales Naviferias arrancarán en diciembre con una oferta ampliada de productos de la mesa navideña, m",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxV6Z5j2W5/",
+          "post_caption": "⁣\n🚦 A esta hora, en #ChifeandoElTranque, nos comparten reporte ciudadano de vehículos mal estacionados en la vía Transístmica en Plaza Ágora. ⁣\n⁣⁣\n👉🏻 Más detalles en nuestra bio o en www.tvn-2.com.⁣⁣⁣",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxpEv7CpQV/",
+          "post_caption": "Guillermo Cortés del Movimiento Mundos de Jubilados y Pensionados señaló que el Banco Nacional de Panamá ha dado versiones contradictorias sobre el origen de los recursos destinados a los certificados",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxqgdolOEs/",
+          "post_caption": "La directora de la Fundación Audubon Panamá, Rosabel Miró, alertó sobre la llegada de aves marinas procedentes de Sudamérica a las costas panameñas, un fenómeno que atribuye al impacto del El Niño, qu",
+          "post_date": "2026-07-14"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaySv7ev5bZ/",
+          "post_url": "https://www.instagram.com/p/DaySv7ev5bZ/",
+          "quote": "España aumentó su ventaja en la semifinal del Mundial 2026 tras una jugada protagonizada por Lamine Yamal, quien fue derribado dentro del área por Lucas Digne, provocando un penal a favor de la selección española.\n\nAl minuto 22, Mikel Oyarzabal asumió la responsabilidad desde los once pasos y defini",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0032",
+      "road_key": "carmencercapanamericanavilla",
+      "severity": "MEDIUM",
+      "headline": "Accidente fatal y otros dos choques en tramo en construcción en Capira",
+      "location": "Vía Panamericana a la altura de Villa Carmen + cerca de supermercado + Capira, Panamá Oeste",
+      "date": "2026-07-14",
+      "summary": "Un hombre de 37 años falleció la noche del sábado 11 de julio alrededor de las 9:00 p.m. tras perder el control de su vehículo e impactar contra una barrera de concreto tipo jersey ubicada a un costado de la carretera en el tramo en construcción del proyecto Corredor de las Playas. Además de este accidente fatal, en el mismo sector también se registraron otros dos accidentes en los que estuvieron involucrados un vehículo tipo pickup y un camión.",
+      "source_name": "TVN Panamá",
+      "url": "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html",
+      "lat": 8.7462931,
+      "lng": -79.8813618,
+      "geo_formatted": "Carr. Panamericana, Capira, Provincia de Panamá Oeste, Panama",
+      "maps_link": "https://maps.google.com/?q=8.7462931,-79.8813618",
+      "first_seen": "2026-07-15T01:25:19.790656Z",
+      "last_seen": "2026-07-15T01:25:19.790656Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "",
+      "mention_count": 1,
+      "keywords_matched": [
+        "rota"
+      ],
+      "best_quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Day3LsslMGc/",
+          "post_caption": "Los productores de arroz de la provincia de Coclé solicitaron al Gobierno Nacional que declare un estado de emergencia ante los efectos del fenómeno de El Niño, que ya está afectando gravemente la pro",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DayXpDCv05M/",
+          "post_caption": "¡España vuelve a golpear en la semifinal del Mundial 2026! Al minuto 58, Pedro Porro culminó una gran jugada colectiva para marcar el 2-0 frente a Francia, desatando la celebración de la afición españ",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DayilDxklEF/",
+          "post_caption": "La Defensoría del Pueblo sostuvo un acercamiento interinstitucional con autoridades del Instituto de Acueductos y Alcantarillados Nacionales (Idaan) para dar seguimiento a las principales quejas ciuda",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dax3rbujKah/",
+          "post_caption": "Cada año, cerca de 4 millones de personas en el mundo mueren por enfermedades respiratorias crónicas y, detrás de cada diagnóstico, hay pacientes y familias que necesitan información y apoyo.⁣\n⁣\nHoy c",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_caption": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoya",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/DayDqjNEbJv/",
+          "post_caption": "El Instituto para la Formación y Aprovechamiento de Recursos Humanos  inició este martes la entrega de la tarjeta PASE-U en la provincia de Herrera, beneficiando a cerca de 19,000 estudiantes con beca",
+          "post_date": "2026-07-14"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Dax17-sFnxj/",
+          "post_caption": "El tribunal de Badajoz (Extremadura) condenó a David Sánchez, hermano menor del presidente del Gobierno de España, a nueve años de inhabilitación para ejercer cargos públicos por un delito de prevaric",
+          "post_date": "2026-07-14"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "post_url": "https://www.instagram.com/p/DaxilvCD_IC/",
+          "quote": "El Instituto de Mercadeo Agropecuario  respondió a los señalamientos de supuesta competencia desleal hacia los supermercados, asegurando que sus ferias y tiendas permanentes están diseñadas para apoyar a las familias con limitaciones económicas y no para competir con el comercio privado.⁣\n⁣\nEl direc",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-14"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0025",
       "road_key": "buenacolontransistmicavista",
@@ -363,7 +561,7 @@
       "geo_formatted": "Cañas, Los Santos Province, Panama",
       "maps_link": "https://maps.google.com/?q=7.4456084,-80.264191",
       "first_seen": "2026-07-14T17:03:29.033742Z",
-      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-15T01:25:19.790656Z",
       "article_image_urls": [],
       "primary_image_url": null,
       "chatter_summary": "No social media posts or citizen comments mentioning road conditions (baches, huecos, deterioro) were found for the July 11, 2026 accident on Vía principal de Las Cañas, Tonosí, Los Santos.",
@@ -2894,6 +3092,12 @@
     "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
     "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
     "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
-    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514"
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.critica.com.pa/sucesos/violenta-colision-en-centenario-cobra-la-vida-dos-pasajeros-de-un-sedan-512626",
+    "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+    "https://www.telemetro.com/nacionales/fuerte-tranque-la-via-centenario-caida-un-arbol-dos-autos-cerca-del-rod-carew-n6084728",
+    "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html"
   ]
 }
