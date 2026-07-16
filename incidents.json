@@ -1,8 +1,77 @@
 {
-  "scan_time": "2026-07-16T10:26:32.984287",
-  "total": 38,
-  "counter": 38,
+  "scan_time": "2026-07-16T17:21:56.347694",
+  "total": 39,
+  "counter": 39,
   "incidents": [
+    {
+      "ptw_id": "PTW-0039",
+      "road_key": "llanomarinpanamericanarecta",
+      "severity": "MEDIUM",
+      "headline": "En menos de 24 horas: cinco vidas perdidas y tres heridos enlutan las carreteras panameñas",
+      "location": "Carretera Panamericana recta de Llano Marín (Penonomé, Coclé); Avenida Domingo Díaz debajo del puente estación Metro Pedregal; Autopista 8 carriles sector 7 de Septiembre; vía principal Las Cañas (Tonosí)",
+      "date": "2026-07-11",
+      "summary": "El sábado 11 de julio, cinco personas murieron en distintos accidentes: Margarito G.T. de 65 años en colisión en Llano Marín a las 4am; una víctima fatal en accidente múltiple en Domingo Díaz; Juan Daniel G.S. de 26 años en moto chocó contra valla en autopista a las 8:35am; Sergio Alejandro H.J. de 28 años atropellado en bicicleta en Las Cañas a las 10am (conductor se dio a la fuga). Además otro accidente reportado en Centenario ese día.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+      "lat": 8.4901837,
+      "lng": -80.330317,
+      "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
+      "first_seen": "2026-07-16T17:03:27.747545Z",
+      "last_seen": "2026-07-16T17:03:27.747545Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "While the recta de Llano Marín is identified as a frequent accident location in Coclé, no specific social media comments linking potholes or road deterioration to the July 11, 2026 accident were found in search results.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "señalización"
+      ],
+      "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización",
+      "best_quote_source": "Critica Panama",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da2fOSGlBcv/",
+          "post_caption": "🚦 A esta hora, en #ChifeandoElTranque, se registra tráfico fluido en el tramo marino en la Cinta Costera 3.⁣\n⁣\n👉🏻Más detalles en nuestra bio o en www.tvn-2.com⁣⁣⁣⁣\n⁣⁣⁣⁣⁣⁣\n#TVNTraficoC",
+          "post_date": "2026-07-16"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da2pfkMDeWz/",
+          "post_caption": "Antes de retirarnos, repetimos las imágenes del punto donde una cuneta obstruida por la acumulación de basura provocó el colapso del terreno y la caída de un bus en San Miguelito.⁣\n⁣\nLa Autoridad de A",
+          "post_date": "2026-07-16"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da0yM5ZFA-f/",
+          "post_caption": "La Secretaría Nacional de Ciencia, Tecnología e Innovación (Senacyt) entregó 167 becas a estudiantes panameños seleccionados por sus méritos académicos, quienes cursarán estudios de pregrado, maestría",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da0jU4bATzx/",
+          "post_caption": "Sinaproc, en conjunto con el Ministerio de Obras Públicas, inspeccionó dos hundimientos registrados en uno de los paños de la carretera que conduce a la comunidad de Ballena, en el distrito de Chiriqu",
+          "post_date": "2026-07-15"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Critica Panama",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+          "quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización",
+          "keywords_matched": [
+            "señalización"
+          ],
+          "date": "2026-07-12"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0035",
       "road_key": "chiarioestepanamericanarodolfo",
@@ -18,19 +87,42 @@
       "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
       "first_seen": "2026-07-16T09:57:25.384599Z",
-      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T17:03:27.747545Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers who travel on the Panamericana road at Villa del Carmen in Capira have previously warned on social media about poor lighting and insufficient signage in the section where road expansion work is being carried out.",
+      "chatter_summary": "Drivers had previously warned on social media about poor lighting and inadequate signage in the Villa del Carmen construction zone on the Panamericana where one fatal accident occurred. The recta de Llano Marín in Penonomé is identified as a frequent accident location.",
       "mention_count": 2,
       "keywords_matched": [
         "deteriorada",
         "escasa iluminación",
-        "señalización"
+        "señalización",
+        "sin señalización"
       ],
       "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
       "best_quote_source": "Critica.com.pa",
-      "social_posts": [],
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da2fOSGlBcv/",
+          "post_caption": "🚦 A esta hora, en #ChifeandoElTranque, se registra tráfico fluido en el tramo marino en la Cinta Costera 3.⁣\n⁣\n👉🏻Más detalles en nuestra bio o en www.tvn-2.com⁣⁣⁣⁣\n⁣⁣⁣⁣⁣⁣\n#TVNTraficoC",
+          "post_date": "2026-07-16"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da2cUqxAtlX/",
+          "post_caption": "🚦 A esta hora, en #ChifeandoElTranque, se reporta tráfico lento en la Vía Centenario debido a un accidente registrado más temprano, aunque la circulación no se encuentra detenida.⁣\n⁣\nEn el acceso haci",
+          "post_date": "2026-07-16"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daz3apWkmnw/",
+          "post_caption": "A esta hora, en #ChifeandoElTranque, se reporta un atropello en la Vía Domingo Díaz, cerca de la estación del Metro de San Miguelito, en dirección hacia Villa Lucre.⁣\n⁣\n🚑 Personal del SUME atiende a l",
+          "post_date": "2026-07-15"
+        }
+      ],
       "keyword_comments": [
         {
           "platform": "news_comment",
@@ -75,11 +167,11 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T09:57:25.384599Z",
-      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T17:03:27.747545Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses reported the July 15, 2026 accident occurred in a section where repairs were being conducted. Historical reports document that Vía Centenario near Rod Carew has ongoing issues with potholes, deteriorated losas, and damaged pavement requiring maintenance work.",
-      "mention_count": 3,
+      "chatter_summary": "Witnesses stated the accident occurred in seconds in a section where repairs were being conducted. The Vía Centenario has documented issues with deteriorated losas, huecos, and ongoing rehabilitation work according to broader news coverage, though specific citizen comments linking road conditions to this July 15 accident were not found in search results.",
+      "mention_count": 4,
       "keywords_matched": [
         "deteriorada",
         "deterioro",
@@ -138,6 +230,13 @@
           "post_url": "https://www.instagram.com/p/Da0NGoGDRY_/",
           "post_caption": "Desde las 9:00 a.m. de este martes, el Ministerio de Obras Públicas iniciará trabajos de reparación en el puente Arraijancito, ubicado entrando a la Vía Centenario, después del Centro de Alto Rendimie",
           "post_date": "2026-07-15"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/[NUMERIC_ID]",
+          "post_caption": "Una colisión múltiple ocurrió la mañana de este miércoles en la Vía Centenario, frente al Estadio Rod Carew. En el lugar se registró un intenso tráfico vehicular tanto en dirección hacia el interior, como hacia la ciudad de Panamá.",
+          "post_date": "2026-07-15"
         }
       ],
       "keyword_comments": [
@@ -176,6 +275,17 @@
             "deterioro"
           ],
           "date": "2026-05-30"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+          "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones.",
+          "keywords_matched": [
+            "reparaciones"
+          ],
+          "date": "2026-07-15"
         }
       ]
     },
@@ -330,10 +440,10 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T01:45:50.715364Z",
-      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T17:03:27.747545Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were being conducted. General reports from November 2024 describe Vía Centenario as deteriorated with huecos and raised concrete slabs, though no direct citizen comments linked these specific road conditions to the July 15 accident.",
+      "chatter_summary": "Witnesses mentioned that the accident occurred in a section where repairs were being conducted. While no direct comments about potholes or deterioration in relation to this specific accident were found, general reporting confirms Vía Centenario has documented issues with fractured slabs, potholes, and deteriorated road conditions that require ongoing maintenance work.",
       "mention_count": 7,
       "keywords_matched": [
         "deteriorada",
@@ -1549,10 +1659,10 @@
       "geo_formatted": "Villa Carmen, Panamá Oeste Province, Panama",
       "maps_link": "https://maps.google.com/?q=8.8033778,-79.86783679999999",
       "first_seen": "2026-07-14T16:28:39.489351Z",
-      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T17:03:27.747545Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers had previously warned on social media about poor lighting and inadequate signalization in this construction zone on the Panamericana at Villa Carmen. The accidents raised questions about road safety in the area where Corredor de las Playas expansion works are being conducted.",
+      "chatter_summary": "Drivers who travel through the Villa Carmen construction area at night have warned on social media about poor lighting and inadequate signage on this section of road where construction work is underway. Authorities announced they will reinforce signage following the fatal accident.",
       "mention_count": 5,
       "keywords_matched": [
         "construcción",
@@ -1582,6 +1692,13 @@
           "post_url": "https://www.instagram.com/p/DavnjQ2G-ba/",
           "post_caption": "Lo que comenzó como un pequeño hundimiento en la calle 27 de Villa Fortuna, en el corregimiento Arnulfo Arias, distrito de San Miguelito, se ha convertido en un enorme socavón que mantiene preocupados",
           "post_date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daz3apWkmnw/",
+          "post_caption": "A esta hora, en #ChifeandoElTranque, se reporta un atropello en la Vía Domingo Díaz, cerca de la estación del Metro de San Miguelito, en dirección hacia Villa Lucre.⁣\n⁣\n🚑 Personal del SUME atiende a l",
+          "post_date": "2026-07-15"
         }
       ],
       "keyword_comments": [
@@ -3806,6 +3923,16 @@
     "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes",
     "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
     "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
-    "https://www.midiario.com/policiales/la-carretera-cobra-otra-vida-joven-de-22-anos-muere-tras-fatal-accidente-de-transito-en-bocas-del-toro/"
+    "https://www.midiario.com/policiales/la-carretera-cobra-otra-vida-joven-de-22-anos-muere-tras-fatal-accidente-de-transito-en-bocas-del-toro/",
+    "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+    "https://www.critica.com.pa/sucesos/violenta-colision-en-centenario-cobra-la-vida-dos-pasajeros-de-un-sedan-512626",
+    "https://www.midiario.com/policiales/ultima-hora-accidente-fatal-en-la-via-centenario-deja-un-muerto-y-provoca-un-enorme-tranque-hacia-panama/",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.critica.com.pa/sucesos/la-interamericana-se-tino-de-sangre-hombre-muere-atropellado-en-vigui-512788",
+    "https://www.midiario.com/policiales/lo-ultimo-explosion-de-cisterna-paraliza-la-interamericana-en-veraguas/",
+    "https://www.midiario.com/policiales/impactante-vuelco-deja-muerto-a-pasajero-de-35-anos-en-la-via-panamericana-a-la-altura-de-el-chiru-de-anton/",
+    "https://decisionespanama.com/bomberos-atienden-accidente-fatal-en-chiriqui-y-controlan-emergencia-con-camion-de-gas-en-cocle/",
+    "https://www.retenchiriqui.com/post/pasajeros-revelan-posible-causa-del-vuelco-de-bus-en-cocl%C3%A9-que-dej%C3%B3-un-muerto-y-m%C3%A1s-de-40-heridos",
+    "https://decisionespanama.com/una-victima-fatal-y-39-heridos-deja-vuelco-de-bus-de-bocas-del-toro-en-cocle/"
   ]
 }
