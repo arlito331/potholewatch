@@ -1,8 +1,320 @@
 {
-  "scan_time": "2026-07-16T02:20:12.487775",
-  "total": 34,
-  "counter": 34,
+  "scan_time": "2026-07-16T10:26:32.984287",
+  "total": 38,
+  "counter": 38,
   "incidents": [
+    {
+      "ptw_id": "PTW-0035",
+      "road_key": "chiarioestepanamericanarodolfo",
+      "severity": "HIGH",
+      "headline": "Tres muertes en carretera de Panamá Oeste y Coclé",
+      "location": "Vía Rodolfo F. Chiari, Panamá Oeste / Vía Panamericana Villa del Carmen Capira / Llano Marín Penonomé Coclé",
+      "date": "2026-07-12",
+      "summary": "Tres personas murieron el sábado 12 de julio en accidentes separados. Juan Daniel Guerra Santos, 26 años, falleció a las 8:35 a.m. al colisionar su moto contra una valla metálica en vía Rodolfo F. Chiari. Un hombre sin identificar murió al chocar contra un jersey de concreto en Villa del Carmen, Capira. Magarito Guevara Tenorio, 65 años, falleció a las 4:00 a.m. al volcarse su Toyota Four Runner en Llano Marín, Penonomé.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+      "lat": 8.4901837,
+      "lng": -80.330317,
+      "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
+      "first_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Drivers who travel on the Panamericana road at Villa del Carmen in Capira have previously warned on social media about poor lighting and insufficient signage in the section where road expansion work is being carried out.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "deteriorada",
+        "escasa iluminación",
+        "señalización"
+      ],
+      "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
+      "best_quote_source": "Critica.com.pa",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Critica.com.pa",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+          "quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
+          "keywords_matched": [
+            "escasa iluminación",
+            "señalización",
+            "deteriorada"
+          ],
+          "date": "2026-07-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "DiaaDia.com.pa",
+          "comment_url": "",
+          "post_url": "https://www.diaadia.com.pa/el-pais/fin-de-semana-mortal-tres-fallecidos-en-accidentes-de-transito-en-panama-oeste-y-cocle",
+          "quote": "Con anterioridad, los conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero",
+          "keywords_matched": [
+            "escasa iluminación",
+            "señalización",
+            "deteriorada"
+          ],
+          "date": "2026-07-12"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0036",
+      "road_key": "centenarioestadioproximorod",
+      "severity": "CRITICAL",
+      "headline": "Caos en Vía Centenario por colisión múltiple",
+      "location": "Vía Centenario próximo al Estadio Rod Carew, dirección Panamá Oeste, Panamá",
+      "date": "2026-07-15",
+      "summary": "Una colisión múltiple y vuelco ocurrió la mañana del miércoles 15 de julio en la vía Centenario. Involucró dos camiones y dos camionetas, con 5 lesionados pero sin fallecidos. El camión volquete cargado de tierra terminó volcado en la isleta central y la tierra cayó sobre el carril contrario afectando el tránsito en ambos sentidos.",
+      "source_name": "Critica",
+      "url": "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
+      "lat": 9.0274631,
+      "lng": -79.5945555,
+      "geo_formatted": "Vía Centenario, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
+      "first_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Witnesses reported the July 15, 2026 accident occurred in a section where repairs were being conducted. Historical reports document that Vía Centenario near Rod Carew has ongoing issues with potholes, deteriorated losas, and damaged pavement requiring maintenance work.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "deteriorada",
+        "deterioro",
+        "huecos",
+        "mal estado",
+        "reparaciones"
+      ],
+      "best_quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones",
+      "best_quote_source": "TVN Panamá - Witness testimony",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/[ID_NOT_AVAILABLE]",
+          "post_caption": "Una colisión múltiple ocurrió la mañana de este miércoles en la Vía Centenario, frente al Estadio Rod Carew. En el lugar se registró un intenso tráfico vehicular tanto en dirección hacia el interior, como hacia la ciudad de Panamá.",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "La Prensa Panamá",
+          "post_url": "https://x.com/prensacom/status/[ID_NOT_AVAILABLE]",
+          "post_caption": "Tras el accidente registrado alrededor de las 9:45 a.m. en la vía Centenario, frente al estadio Rod Carew, se mantiene un fuerte congestionamiento vehicular en ambas direcciones mientras las autoridades realizan los levantamientos e investigaciones correspondientes.",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Destino Panamá",
+          "post_url": "https://x.com/destinopanama_/status/[ID_NOT_AVAILABLE]",
+          "post_caption": "Accidente de tránsito en la vía Centenario, frente al estadio nacional Rod Carew, con dirección a Panamá Oeste. Vía @TraficoCPanama",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da05KTLkRvy/",
+          "post_caption": "El presidente de la República, José Raúl Mulino, se reunió este miércoles con la presidenta de México, Claudia Sheinbaum, en un encuentro en el que ambos mandatarios tienen previsto fortalecer la rela",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da0bKmijCE0/",
+          "post_caption": "🔴#ÚltimaHora Un accidente de tránsito se registró la mañana de este miércoles en la Vía Centenario, cerca del Estadio Rod Carew, hacia Panamá Oeste donde dos articulados colisionaron de manera violent",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da0m21uAhLk/",
+          "post_caption": "Una caja fuerte salió volando y cayó sobre el techo de un auto durante una colisión múltiple registrada la mañana de este miércoles en la Vía Centenario, a la altura del Estadio Rod Carew.⁣\n⁣\nEl condu",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da0NGoGDRY_/",
+          "post_caption": "Desde las 9:00 a.m. de este martes, el Ministerio de Obras Públicas iniciará trabajos de reparación en el puente Arraijancito, ubicado entrando a la Vía Centenario, después del Centro de Alto Rendimie",
+          "post_date": "2026-07-15"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá - Witness testimony",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+          "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones",
+          "keywords_matched": [
+            "reparaciones"
+          ],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa - Historical road condition reporting",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas",
+          "keywords_matched": [
+            "huecos",
+            "deteriorada",
+            "mal estado"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa - MOP official statement",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/mop-licitara-proyecto-de-mas-de-300-millones-para-ampliar-la-via-centenario-y-la-autopista-panamala-chorrera/",
+          "quote": "actualmente varios tramos de la vía Centenario presentan losas fracturadas, huecos y otros signos de deterioro",
+          "keywords_matched": [
+            "huecos",
+            "deterioro"
+          ],
+          "date": "2026-05-30"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0037",
+      "road_key": "llanomarinpanamericanaproximo",
+      "severity": "MEDIUM",
+      "headline": "Tres muertes en carretera de Panamá Oeste y Coclé",
+      "location": "Vía Panamericana, Llano Marín, próximo al Jardín Edilma y entrada de barriada Paseo del Río, distrito de Penonomé, provincia de Coclé",
+      "date": "2026-07-12",
+      "summary": "Magarito Guevara Tenorio, de 65 años, falleció alrededor de las 4:00 a.m. cuando colisionó y se volcó el Toyota Four Runner en el que viajaba en la vía Panamericana en Llano Marín. En el accidente también estuvo involucrado un vehículo tipo panel Suzuki. Una mujer que viajaba en el auto resultó con heridas de consideración.",
+      "source_name": "Crítica",
+      "url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+      "lat": 8.483896399999999,
+      "lng": -80.3272891,
+      "geo_formatted": "Paseo Del Rio, Pan-American Highway, Llano Marín, Coclé Province, Panama",
+      "maps_link": "https://maps.google.com/?q=8.483896399999999,-80.3272891",
+      "first_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments mentioning road condition issues (potholes, deterioration) were found for this specific accident at Llano Marín. The only related reference notes drivers previously warning on social media about poor lighting and signage on a different section in Capira where construction work is ongoing.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "deteriorada",
+        "señalización"
+      ],
+      "best_quote": "Con anterioridad, los conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero en donde se efectúan trabajos de ampliación de la calzada",
+      "best_quote_source": "Crítica Panamá / Día a Día",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "Crítica Panamá / Día a Día",
+          "comment_url": "",
+          "post_url": "https://www.diaadia.com.pa/el-pais/fin-de-semana-mortal-tres-fallecidos-en-accidentes-de-transito-en-panama-oeste-y-cocle",
+          "quote": "Con anterioridad, los conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero en donde se efectúan trabajos de ampliación de la calzada",
+          "keywords_matched": [
+            "señalización",
+            "deteriorada"
+          ],
+          "date": "2026-07-12"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0038",
+      "road_key": "chiaripanamericanarodolfovilla",
+      "severity": "CRITICAL",
+      "headline": "Tres muertes en carretera de Panamá Oeste y Coclé",
+      "location": "Vía Rodolfo F. Chiari; Vía Panamericana a la altura de Villa del Carmen en Capira; Vía Panamericana a la altura de Llano Marín, Penonomé, Coclé",
+      "date": "2026-07-12",
+      "summary": "Tres personas perdieron la vida en accidentes de tránsito el sábado 11 de julio. Juan Daniel Guerra Santos, de 26 años, murió al colisionar su moto contra una valla metálica. Un hombre sin identificar falleció al colisionar contra un jersey de concreto en Capira. Magarito Guevara Tenorio, de 65 años, murió tras colisionar y volcarse en Llano Marín, Coclé.",
+      "source_name": "La Crítica",
+      "url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+      "lat": 8.4873037,
+      "lng": -80.3296664,
+      "geo_formatted": "Llano Marín, Coclé Province, Panama",
+      "maps_link": "https://maps.google.com/?q=8.4873037,-80.3296664",
+      "first_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Drivers have warned on social media about poor lighting and inadequate signage in the Villa del Carmen construction zone where the fatal accident occurred. Residents have raised concerns about concrete jersey barriers, lane changes, and lack of illumination in the Corredor de las Playas construction area.",
+      "mention_count": 4,
+      "keywords_matched": [
+        "deteriorada",
+        "mal estado",
+        "señalización"
+      ],
+      "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
+      "best_quote_source": "La Crítica Panamá",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da0m21uAhLk/",
+          "post_caption": "Una caja fuerte salió volando y cayó sobre el techo de un auto durante una colisión múltiple registrada la mañana de este miércoles en la Vía Centenario, a la altura del Estadio Rod Carew.⁣\n⁣\nEl condu",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Daz3apWkmnw/",
+          "post_caption": "A esta hora, en #ChifeandoElTranque, se reporta un atropello en la Vía Domingo Díaz, cerca de la estación del Metro de San Miguelito, en dirección hacia Villa Lucre.⁣\n⁣\n🚑 Personal del SUME atiende a l",
+          "post_date": "2026-07-15"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "La Crítica Panamá",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+          "quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
+          "keywords_matched": [
+            "señalización",
+            "deteriorada"
+          ],
+          "date": "2026-07-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Día a Día Panamá",
+          "comment_url": "",
+          "post_url": "https://www.diaadia.com.pa/el-pais/fin-de-semana-mortal-tres-fallecidos-en-accidentes-de-transito-en-panama-oeste-y-cocle",
+          "quote": "los conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero en donde se efectúan trabajos de ampliación",
+          "keywords_matched": [
+            "señalización",
+            "deteriorada"
+          ],
+          "date": "2026-07-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Entremes Panamá Oeste",
+          "comment_url": "",
+          "post_url": "https://www.entremespanamaoeste.com/comunidades/peligro-inminente-tres-accidentes-en-un-fin-de-semana-en-tramo-en-construccion-del-corredor-de-playas/",
+          "quote": "Entre las principales inquietudes se encuentran la ubicación de los separadores de concreto tipo jersey, los constantes cambios en la circulación vehicular, la reducción de carriles y la falta de iluminación",
+          "keywords_matched": [
+            "mal estado",
+            "deteriorada"
+          ],
+          "date": "2026-07-14"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html",
+          "quote": "Tomaremos las medidas correspondientes con la empresa y el Ministerio de Obras Públicas para poder poner una señalización de manera correcta",
+          "keywords_matched": [
+            "señalización",
+            "deteriorada"
+          ],
+          "date": "2026-07-13"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0033",
       "road_key": "centenarioestadiofrenterod",
@@ -18,11 +330,11 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T01:45:50.715364Z",
-      "last_seen": "2026-07-16T01:45:50.715364Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses reported the accident occurred in seconds on a section of Vía Centenario where repairs were being conducted. No direct citizen comments mentioning potholes, craters, or deteriorated pavement were found in social media or news coverage of this specific July 15, 2026 accident.",
-      "mention_count": 6,
+      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were being conducted. General reports from November 2024 describe Vía Centenario as deteriorated with huecos and raised concrete slabs, though no direct citizen comments linked these specific road conditions to the July 15 accident.",
+      "mention_count": 7,
       "keywords_matched": [
         "deteriorada",
         "deterioro",
@@ -161,6 +473,17 @@
           "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones.",
           "keywords_matched": [
             "reparaciones"
+          ],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Crítica Panamá",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
+          "quote": "Todo pasó muy rápido, había una fila de carros, me imagino por una reparación en la vía",
+          "keywords_matched": [
+            "reparación"
           ],
           "date": "2026-07-15"
         }
@@ -441,7 +764,7 @@
     {
       "ptw_id": "PTW-0025",
       "road_key": "buenacolontransistmicavista",
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "headline": "Fatal desenlace en la madrugada: hombre de 50 años muere atropellado en la Transístmica",
       "location": "Vía Transístmica sector de Buena Vista, provincia de Colón",
       "date": "2026-07-08",
@@ -453,11 +776,11 @@
       "geo_formatted": "Carr Transístmica, Buena Vista, Provincia de Colón, Panama",
       "maps_link": "https://maps.google.com/?q=9.2758288,-79.699018",
       "first_seen": "2026-07-14T17:03:29.033742Z",
-      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "No social media posts or citizen comments mentioning road conditions (baches, huecos, deterioro) were found for the July 8, 2026 fatal pedestrian accident on Vía Transístmica in Buena Vista, Colón.",
-      "mention_count": 2,
+      "chatter_summary": "No social media posts or citizen comments were found mentioning road conditions such as potholes, deterioration, or poor pavement state in relation to this specific July 8, 2026 fatal accident on Vía Transístmica in Buena Vista, Colón.",
+      "mention_count": 3,
       "keywords_matched": [
         "hueco",
         "huecos",
@@ -546,6 +869,17 @@
             "huecos"
           ],
           "date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/Da1ESOrgc8E/",
+          "post_url": "https://www.instagram.com/p/Da1ESOrgc8E/",
+          "quote": "🔴#ÚltimaHora Argentina protagonizó una remontada de infarto y venció 2-1 a Inglaterra para avanzar a la final del Mundial 2026, donde se enfrentará a España.⁣\n⁣\nLa semifinal comenzó con un partido cerrado, intenso y muy físico. Durante los primeros 45 minutos, ambos equipos disputaron cada balón y g",
+          "keywords_matched": [
+            "rota"
+          ],
+          "date": "2026-07-15"
         }
       ]
     },
@@ -706,7 +1040,7 @@
     {
       "ptw_id": "PTW-0028",
       "road_key": "llanomarinpanamericanapenonome",
-      "severity": "MEDIUM",
+      "severity": "CRITICAL",
       "headline": "Tres muertes en carretera de Panamá Oeste y Coclé",
       "location": "Vía Panamericana + Llano Marín + Penonomé, Coclé",
       "date": "2026-07-12",
@@ -718,16 +1052,18 @@
       "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
       "first_seen": "2026-07-14T17:03:29.033742Z",
-      "last_seen": "2026-07-14T17:03:29.033742Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers using the Llano Marín section of the Pan-American Highway at night have warned on social media about poor lighting and signage in areas where road expansion work is underway. This location is identified as a frequent accident zone in Penonomé, Coclé province.",
-      "mention_count": 1,
+      "chatter_summary": "News outlets reported that drivers have previously warned on social media about poor lighting and inadequate signage on the Vía Panamericana in construction zones near Capira and throughout Panamá Oeste and Coclé. No specific social media posts with road deterioration keywords were found for the July 12 Llano Marín accident.",
+      "mention_count": 4,
       "keywords_matched": [
         "deteriorada",
         "escasa iluminación",
         "iluminación",
-        "señalización"
+        "mal estado",
+        "señalización",
+        "sin señalización"
       ],
       "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización en el tramo donde se efectúan trabajos de ampliación de la calzada",
       "best_quote_source": "Crítica / Día a Día",
@@ -780,6 +1116,41 @@
             "señalización"
           ],
           "date": "2026-07-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Día a Día",
+          "comment_url": "",
+          "post_url": "https://www.diaadia.com.pa/el-pais/fin-de-semana-mortal-tres-fallecidos-en-accidentes-de-transito-en-panama-oeste-y-cocle",
+          "quote": "conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero",
+          "keywords_matched": [
+            "mal estado",
+            "sin señalización"
+          ],
+          "date": "2026-07-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Crítica",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+          "quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización",
+          "keywords_matched": [
+            "sin señalización"
+          ],
+          "date": "2026-07-12"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN Panamá",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html",
+          "quote": "los conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero",
+          "keywords_matched": [
+            "sin señalización",
+            "mal estado"
+          ],
+          "date": "2026-07-13"
         }
       ]
     },
@@ -1178,10 +1549,10 @@
       "geo_formatted": "Villa Carmen, Panamá Oeste Province, Panama",
       "maps_link": "https://maps.google.com/?q=8.8033778,-79.86783679999999",
       "first_seen": "2026-07-14T16:28:39.489351Z",
-      "last_seen": "2026-07-16T01:45:50.715364Z",
+      "last_seen": "2026-07-16T09:57:25.384599Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers who regularly use the Vía Panamericana construction zone in Villa Carmen, Capira have warned via social media about poor lighting and inadequate signage on this road section where expansion work is underway.",
+      "chatter_summary": "Drivers had previously warned on social media about poor lighting and inadequate signalization in this construction zone on the Panamericana at Villa Carmen. The accidents raised questions about road safety in the area where Corredor de las Playas expansion works are being conducted.",
       "mention_count": 5,
       "keywords_matched": [
         "construcción",
@@ -3421,6 +3792,20 @@
     "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
     "https://www.retenchiriqui.com/post/joven-de-22-a%C3%B1os-fallece-tras-ser-atropellada-por-un-veh%C3%ADculo-articulado-en-la-v%C3%ADa-almirante-chiriqu",
     "https://www.midiario.com/policiales/accidente-en-la-autopista-panamacolon-deja-contenedor-atravesado-en-la-via/",
-    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514"
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.critica.com.pa/sucesos/violenta-colision-en-centenario-cobra-la-vida-dos-pasajeros-de-un-sedan-512626",
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
+    "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://elsiglo.com.pa/cronica-roja/cocle-autobus-con-40-turistas-se-estrella-contra-arboles-y-deja-37-heridos-ML23932619",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
+    "https://www.critica.com.pa/sucesos/misterio-en-tonosi-hombre-de-28-anos-aparece-muerto-en-la-carretera-512703",
+    "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.midiario.com/policiales/la-carretera-cobra-otra-vida-joven-de-22-anos-muere-tras-fatal-accidente-de-transito-en-bocas-del-toro/"
   ]
 }
