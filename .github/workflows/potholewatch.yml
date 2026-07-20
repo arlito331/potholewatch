@@ -1,7 +1,8 @@
 name: PotholeWatch v3 Scan
 on:
   schedule:
-    - cron: '0 */8 * * *'
+    # Wednesdays 5:00 PM Panama time (UTC-5) = 22:00 UTC Wednesday
+    - cron: '0 22 * * 3'
   workflow_dispatch:
 
 permissions:

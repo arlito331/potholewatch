@@ -78,6 +78,35 @@ ROAD_KEYWORDS = [
     "carretera dañada", "peligrosa", "mala condición",
 ]
 
+# Relevance gate: a candidate article must read like a road/traffic incident,
+# and must not read like general news (politics, war, sports, crime, showbiz).
+INCIDENT_KEYWORDS = ROAD_KEYWORDS + [
+    "accidente", "choque", "colisión", "colision", "vuelco", "volcado",
+    "volcadura", "atropello", "atropellado", "atropellada", "derrape",
+    "pierde el control", "perdió el control", "perdio el control",
+    "salida de vía", "salida de via", "aparatoso", "tránsito", "transito",
+    "vial", "carretera", "autopista", "corredor",
+]
+OFFTOPIC_KEYWORDS = [
+    "elección", "eleccion", "electoral", "candidato", "campaña política",
+    "campana politica", "diputado", "asamblea nacional",
+    "guerra", "misil", "tropas", "bombardeo", "ataque militar",
+    "fútbol", "futbol", "béisbol", "beisbol", "selección nacional",
+    "seleccion nacional", "concierto", "farándula", "farandula",
+    "homicidio", "pandilla", "narcotráfico", "narcotrafico", "balacera",
+]
+
+def is_relevant_incident(inc):
+    """True only for articles that look like real road/traffic incidents."""
+    text = " ".join([
+        inc.get("title", ""), inc.get("summary", ""), inc.get("location_text", ""),
+    ]).lower()
+    if not any(k in text for k in INCIDENT_KEYWORDS):
+        return False
+    if any(k in text for k in OFFTOPIC_KEYWORDS):
+        return False
+    return True
+
 # Brand
 BG      = "#0D0D0D"
 CARD_BG = "#1A1A1A"
@@ -473,7 +502,14 @@ For each UNIQUE road accident found, output ONE JSON object per line (JSONL):
   "summary":"what happened in 2-3 sentences",
   "article_image_urls":["direct image URLs from the article if any"]}}
 
-- Real road accidents only
+STRICT RELEVANCE RULES:
+- ONLY real road/traffic incidents: crashes, overturns, run-offs, vehicles
+  damaged by potholes or bad pavement, road-condition emergencies.
+- EXCLUDE everything else, even if it mentions a road in passing: politics,
+  elections, wars, international news, sports, entertainment, crime stories
+  (shootings, robberies), weather stories with no specific road incident.
+- If a result is not clearly a road/traffic incident in {territory['name']},
+  DO NOT output it. Fewer, relevant results beat more, irrelevant ones.
 - JSONL only."""
     raw = claude_call(prompt, tools=[WEB_SEARCH_TOOL], max_tokens=4000)
     return extract_jsonl(raw)
@@ -715,6 +751,15 @@ def main():
         except Exception as e:
             print(f"  search failed: {e}"); continue
         print(f"  Found {len(incidents)} candidate incidents")
+
+        relevant = [i for i in incidents if is_relevant_incident(i)]
+        dropped = len(incidents) - len(relevant)
+        if dropped:
+            for i in incidents:
+                if not is_relevant_incident(i):
+                    print(f"  ✗ off-topic, dropped: {i.get('title','')[:70]}")
+            print(f"  Relevance gate: kept {len(relevant)}, dropped {dropped}")
+        incidents = relevant
 
         for inc in incidents:
             loc = inc.get("location_text","")
