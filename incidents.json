@@ -1,8 +1,72 @@
 {
-  "scan_time": "2026-07-20T02:33:31.516791",
-  "total": 43,
-  "counter": 43,
+  "scan_time": "2026-07-20T11:01:50.651960",
+  "total": 44,
+  "counter": 44,
   "incidents": [
+    {
+      "ptw_id": "PTW-0044",
+      "road_key": "puenteriosobrevigui",
+      "severity": "CRITICAL",
+      "headline": "Peatón muere atropellado en el puente sobre el río Viguí; aumentan a 34 las víctimas por accidentes de tránsito en Chiriquí",
+      "location": "puente sobre el río Viguí en Tolé, Chiriquí",
+      "date": "2026-07-14",
+      "summary": "Un peatón sin identificación fue atropellado fatalmente por un camión mientras se desplazaba sobre el puente del río Viguí en Tolé. El accidente ocurrió en condiciones de poca iluminación. Conductores expresaron preocupación por la falta de luminarias en el puente, que dificulta la visibilidad especialmente durante lluvias nocturnas.",
+      "source_name": "RetenChiriqui",
+      "url": "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes",
+      "lat": 8.382157091132493,
+      "lng": -81.53767242681789,
+      "geo_formatted": "Río Viguí, Panama",
+      "maps_link": "https://maps.google.com/?q=8.382157091132493,-81.53767242681789",
+      "first_seen": "2026-07-20T10:41:26.239817Z",
+      "last_seen": "2026-07-20T10:41:26.239817Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Drivers who regularly use the bridge over the río Viguí in Tolé expressed concerns about the lack of lighting on the bridge, noting that the absence of luminaires combined with frequent rains and darkness at night considerably reduces visibility and increases accident risk.",
+      "mention_count": 3,
+      "keywords_matched": [
+        "falta de iluminación",
+        "oscuridad"
+      ],
+      "best_quote": "conductores que utilizan regularmente esta carretera manifestaron su preocupación por la falta de iluminación en el puente sobre el río Viguí",
+      "best_quote_source": "RetenChiriqui",
+      "social_posts": [],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "RetenChiriqui",
+          "comment_url": "",
+          "post_url": "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes",
+          "quote": "conductores que utilizan regularmente esta carretera manifestaron su preocupación por la falta de iluminación en el puente sobre el río Viguí",
+          "keywords_matched": [
+            "falta de iluminación",
+            "oscuridad"
+          ],
+          "date": "2026-07-14"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "RetenChiriqui",
+          "comment_url": "",
+          "post_url": "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes",
+          "quote": "la ausencia de luminarias, sumada a las lluvias frecuentes y la oscuridad durante la noche, dificulta considerablemente la visibilidad y aumenta el riesgo de accidentes",
+          "keywords_matched": [
+            "oscuridad"
+          ],
+          "date": "2026-07-14"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Mi Diario",
+          "comment_url": "",
+          "post_url": "https://www.midiario.com/policiales/noche-oscura-en-tole-camion-atropella-a-peaton-bajo-presunta-fuerte-lluvia/",
+          "quote": "el puente presuntamente carece de luminarias y señalaron que con las lluvias constantes, convierte al sector en un punto especialmente riesgoso durante la noche",
+          "keywords_matched": [
+            "oscuridad"
+          ],
+          "date": "2026-07-14"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0041",
       "road_key": "centenarionortepuentesobre",
@@ -471,10 +535,10 @@
       "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
       "first_seen": "2026-07-16T09:57:25.384599Z",
-      "last_seen": "2026-07-20T00:30:24.646403Z",
+      "last_seen": "2026-07-20T10:41:26.239817Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers have warned on social media about poor lighting and inadequate signage on the Panamericana highway at Villa del Carmen in Capira where road widening construction work is underway. No specific social media posts mentioning potholes or road surface deterioration for these July 12, 2026 accidents were found in available search results.",
+      "chatter_summary": "Drivers who travel the Vía Panamericana at Villa del Carmen in Capira at night have previously warned through social networks about poor lighting and inadequate signaling in the stretch where road widening work is being carried out.",
       "mention_count": 3,
       "keywords_matched": [
         "deteriorada",
@@ -564,11 +628,11 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T09:57:25.384599Z",
-      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-20T10:41:26.239817Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses mentioned that the accident occurred in a section where road repairs were being conducted, causing a long line of vehicles. Background reports from November 2024 documented that Vía Centenario has deteriorated infrastructure with potholes, uneven concrete slabs, and cracks throughout the 21-kilometer stretch.",
-      "mention_count": 6,
+      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were being conducted, with one driver noting a long line of cars possibly due to roadwork. No specific mentions of potholes or deteriorated road conditions were found in public comments about this accident.",
+      "mention_count": 7,
       "keywords_matched": [
         "deteriorada",
         "deterioro",
@@ -703,6 +767,17 @@
           "post_url": "https://www.prensa.com/sociedad/colision-multiple-de-seis-vehiculos-paraliza-el-transito-en-la-via-centenario-hacia-panama-oeste/",
           "quote": "Una vez bajamos por el Rod Carew, nos percatamos de que había una larga fila de autos",
           "keywords_matched": [],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Critica Panamá",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
+          "quote": "había una fila de carros, me imagino por una reparación en la vía",
+          "keywords_matched": [
+            "reparación"
+          ],
           "date": "2026-07-15"
         }
       ]
@@ -858,10 +933,10 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T01:45:50.715364Z",
-      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-20T10:41:26.239817Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were underway. No public comments specifically mentioned potholes or deteriorated road conditions related to this accident.",
+      "chatter_summary": "Witnesses mentioned the accident occurred in a section where repairs were being conducted. No specific comments about potholes, deterioration, or poor road conditions were found in social media or news coverage of this July 15, 2026 accident.",
       "mention_count": 7,
       "keywords_matched": [
         "deteriorada",
@@ -1580,11 +1655,11 @@
       "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
       "first_seen": "2026-07-14T17:03:29.033742Z",
-      "last_seen": "2026-07-16T09:57:25.384599Z",
+      "last_seen": "2026-07-20T10:41:26.239817Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "News outlets reported that drivers have previously warned on social media about poor lighting and inadequate signage on the Vía Panamericana in construction zones near Capira and throughout Panamá Oeste and Coclé. No specific social media posts with road deterioration keywords were found for the July 12 Llano Marín accident.",
-      "mention_count": 4,
+      "chatter_summary": "No social media comments specifically mentioning road conditions (baches, huecos, deterioro) were found for these July 11, 2026 accidents, though general reporting about Panama's road condition problems exists in other contexts.",
+      "mention_count": 5,
       "keywords_matched": [
         "deteriorada",
         "escasa iluminación",
@@ -1630,6 +1705,27 @@
           "post_url": "https://www.instagram.com/p/DavpL1pFD15/",
           "post_caption": "Un hombre de 37 años murió y varias personas resultaron heridas durante una serie de accidentes de tránsito registrados el pasado fin de semana en la Vía Panamericana, a la altura de Villa Carmen, en ",
           "post_date": "2026-07-13"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "",
+          "post_caption": "Una persona falleció en un accidente de tránsito registrado en la avenida Domingo Díaz, frente a la estación del Metro en Pedregal",
+          "post_date": "2026-07-11"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_w39hknNA/",
+          "post_caption": "El Instituto de Acueductos y Alcantarillados Nacionales (IDAAN) en Coclé reveló que la intensa sequía y los bajos niveles de los ríos han provocado un impacto crítico en los pozos profundos de la regi",
+          "post_date": "2026-07-20"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_2B-eimJd/",
+          "post_caption": "Cientos de devotos llegaron este domingo a la ciudad de Las Tablas para participar en la procesión de Santa Librada y rendirle homenaje, en una celebración marcada por la fe, la gratitud y el fortalec",
+          "post_date": "2026-07-20"
         }
       ],
       "keyword_comments": [
@@ -1679,6 +1775,17 @@
             "mal estado"
           ],
           "date": "2026-07-13"
+        },
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "quote": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣\n⁣\nEl país de África oriental tiene un conocido historial de inseguridad vial, con frecuentes accide",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-07-18"
         }
       ]
     },
@@ -2077,10 +2184,10 @@
       "geo_formatted": "Villa Carmen, Panamá Oeste Province, Panama",
       "maps_link": "https://maps.google.com/?q=8.8033778,-79.86783679999999",
       "first_seen": "2026-07-14T16:28:39.489351Z",
-      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-20T10:41:26.239817Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers who travel this road at night have warned on social media about poor lighting and inadequate signage in the construction zone where road widening work is being carried out.",
+      "chatter_summary": "Drivers who travel this road at night have warned through social media about poor lighting and inadequate signage in the construction zone where roadway expansion work is being conducted.",
       "mention_count": 5,
       "keywords_matched": [
         "construcción",
@@ -4375,6 +4482,16 @@
     "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
     "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html",
     "https://www.retenchiriqui.com/post/joven-de-22-a%C3%B1os-fallece-tras-ser-atropellada-por-un-veh%C3%ADculo-articulado-en-la-v%C3%ADa-almirante-chiriqu",
-    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710"
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.critica.com.pa/sucesos/violenta-colision-en-centenario-cobra-la-vida-dos-pasajeros-de-un-sedan-512626",
+    "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+    "https://www.critica.com.pa/sucesos/peaton-muere-atropellado-en-la-transistmica-la-altura-de-la-cabima-507766",
+    "https://www.critica.com.pa/sucesos/la-interamericana-se-tino-de-sangre-hombre-muere-atropellado-en-vigui-512788",
+    "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://elsiglo.com.pa/cronica-roja/cocle-autobus-con-40-turistas-se-estrella-contra-arboles-y-deja-37-heridos-ML23932619",
+    "https://www.telemetro.com/nacionales/bus-mas-30-turistas-costarricenses-sufre-accidente-nata-cocle-n6084529",
+    "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes"
   ]
 }
