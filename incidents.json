@@ -1,8 +1,256 @@
 {
-  "scan_time": "2026-07-20T00:45:46.273302",
-  "total": 40,
-  "counter": 40,
+  "scan_time": "2026-07-20T02:33:31.516791",
+  "total": 43,
+  "counter": 43,
   "incidents": [
+    {
+      "ptw_id": "PTW-0041",
+      "road_key": "centenarionortepuentesobre",
+      "severity": "HIGH",
+      "headline": "Violento choque en Vía Centenario deja dos muertos y colapsa el tráfico",
+      "location": "Vía Centenario sobre puente del Corredor Norte Carlos Iván Zúñiga, Ciudad de Panamá",
+      "date": "2026-07-12",
+      "summary": "Dos personas murieron tras un violento choque en la vía Centenario. El impacto fue tan fuerte que la parte trasera de un sedán gris quedó completamente destruida. El accidente ocurrió sobre el puente del Corredor Norte, causando colapso del tráfico.",
+      "source_name": "TVN-2",
+      "url": "https://www.tvn-2.com/nacionales/violento-choque-via-centenario-deja-dos-muertos-y-colapsa-el-trafico_1_2250492.html",
+      "lat": 9.0409847,
+      "lng": -79.562372,
+      "geo_formatted": "2CRQ+93R, Vía Centenario, Panamá, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0409847,-79.562372",
+      "first_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media comments specifically linking road conditions to the July 12 accident were found. A November 2024 news article documented general complaints from drivers about the Vía Centenario having potholes, uneven concrete slabs, and deteriorated infrastructure throughout the corridor.",
+      "mention_count": 2,
+      "keywords_matched": [
+        "deteriorada",
+        "huecos",
+        "mal estado"
+      ],
+      "best_quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas, una carpeta de concreto con rajaduras",
+      "best_quote_source": "La Prensa Panamá - Daniel Santos (usuario)",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "Mi Diario Panamá",
+          "post_url": "",
+          "post_caption": "Lo que parecía un recorrido normal terminó en tragedia la tarde de este viernes, cuando una fuerte colisión en la vía Centenario dejó a un hombre sin vida y provocó un caos vehicular hacia la ciudad de Panamá. El accidente ocurrió sobre el puente del Corredor Norte Carlos Iván Zúñiga",
+          "post_date": "2026-07-11"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "La Prensa Panamá",
+          "post_url": "",
+          "post_caption": "Tras el accidente registrado alrededor de las 9:45 a.m. en la vía Centenario, frente al estadio Rod Carew, se mantiene un fuerte congestionamiento vehicular en ambas direcciones mientras las autoridades realizan los levantamientos e investigaciones correspondientes",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_tdTxlDK1/",
+          "post_caption": "El ministro de Obras Públicas, José Luis Andrade, aseguró que mediante proyectos de emergencia se podrían estar realizando los trabajos de mejoramiento y adecuación de los puntos críticos que resultar",
+          "post_date": "2026-07-20"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da-sN6Akt07/",
+          "post_caption": "El Sistema Nacional de Protección Civil (Sinaproc) declaró un aviso de prevención por lluvias, tormentas eléctricas y ráfagas de viento, vigente desde hoy hasta las 11:45 p.m. del martes 21 de julio d",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da-lVFTmu5k/",
+          "post_caption": "Estados Unidos lanzó durante la noche del sábado al domingo una nueva serie de bombardeos contra Irán, al asegurar que busca \"castigar\" la muerte de dos militares estadounidenses en Jordania, informó ",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da-g2DBAHY9/",
+          "post_caption": "Las condiciones climáticas para hoy presentan escenarios variados en ambas vertientes. En la vertiente del Caribe, se mantienen cielos nublados con lluvias intermitentes en la mañana sobre Bocas del T",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da-57kFIIO3/",
+          "post_caption": "La Asociación Panameña de Ejecutivos de Empresa (Apede) presentó una propuesta de desarrollo nacional en la que identifica una serie de pilares que, a su juicio, son fundamentales para construir un Pa",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da-zEAhE3_v/",
+          "post_caption": "El polémico influencer Andrew Tate y su hermano Tristan fueron arrestados el sábado en Miami, informó el Servicio de Alguaciles de Estados Unidos a la AFP. Las autoridades del Reino Unido buscan la ex",
+          "post_date": "2026-07-19"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá - Daniel Santos (usuario)",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas, una carpeta de concreto con rajaduras",
+          "keywords_matched": [
+            "huecos",
+            "deteriorada",
+            "mal estado"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN-2 - Testigos",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+          "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones",
+          "keywords_matched": [],
+          "date": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0042",
+      "road_key": "llanomultiplespanamericanaubicaciones",
+      "severity": "MEDIUM",
+      "headline": "En menos de 24 horas: cinco vidas perdidas y tres heridos enlutan las carreteras panameñas",
+      "location": "Múltiples ubicaciones: Carretera Panamericana Llano Marín, Avenida Domingo Díaz bajo puente Metro Pedregal, Autopista ocho carriles sector 7 de Septiembre, Las Cañas Tonosí",
+      "date": "2026-07-11",
+      "summary": "Cinco personas murieron el sábado 11 de julio en distintos accidentes. Primera tragedia a las 4:00 am en Llano Marín con colisión entre Toyota 4Runner y panel Suzuki dejando un muerto de 65 años. Segunda muerte en accidente múltiple en Domingo Díaz bajo puente de Pedregal. Tercera muerte a las 8:35 am cuando motociclista de 26 años chocó contra valla metálica en autopista. Cuarta muerte por atropello con fuga en Las Cañas donde ciclista de 28 años fue atropellado.",
+      "source_name": "Mi Diario",
+      "url": "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+      "lat": 7.4074677,
+      "lng": -80.4402483,
+      "geo_formatted": "Tonosí, Los Santos Province, Panama",
+      "maps_link": "https://maps.google.com/?q=7.4074677,-80.4402483",
+      "first_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments were found mentioning road conditions (baches, huecos, or deterioration) in relation to the five fatal accidents that occurred on July 11, 2026, across multiple locations in Panama.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "mal estado"
+      ],
+      "best_quote": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣\n⁣\nEl país de África oriental tiene un conocido historial de inseguridad vial, con frecuentes accide",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_tdTxlDK1/",
+          "post_caption": "El ministro de Obras Públicas, José Luis Andrade, aseguró que mediante proyectos de emergencia se podrían estar realizando los trabajos de mejoramiento y adecuación de los puntos críticos que resultar",
+          "post_date": "2026-07-20"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_caption": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣",
+          "post_date": "2026-07-18"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "quote": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣\n⁣\nEl país de África oriental tiene un conocido historial de inseguridad vial, con frecuentes accide",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-07-18"
+        }
+      ]
+    },
+    {
+      "ptw_id": "PTW-0043",
+      "road_key": "almirantechiriquigrandekilometro",
+      "severity": "MEDIUM",
+      "headline": "Joven de 22 años fallece tras ser atropellada por un vehículo articulado en la vía Almirante–Chiriquí Grande",
+      "location": "Kilómetro 41 carretera Almirante–Chiriquí Grande, sector Río Uyama, Bocas del Toro",
+      "date": "2026-07-08",
+      "summary": "Argelis Stonestreeth, de 22 años, murió tras ser atropellada por un vehículo articulado. Fue trasladada al Hospital de Almirante donde falleció debido a la gravedad de las lesiones. Con este caso, Bocas del Toro suma 10 víctimas fatales por accidentes de tránsito en 2026.",
+      "source_name": "Retenchiriqui",
+      "url": "https://www.retenchiriqui.com/post/joven-de-22-a%C3%B1os-fallece-tras-ser-atropellada-por-un-veh%C3%ADculo-articulado-en-la-v%C3%ADa-almirante-chiriqu",
+      "lat": 9.127039872884605,
+      "lng": -82.31125034268263,
+      "geo_formatted": "Río Uyama, Provincia de Bocas del Toro, Panama",
+      "maps_link": "https://maps.google.com/?q=9.127039872884605,-82.31125034268263",
+      "first_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "No social media posts or citizen comments were found discussing road conditions such as potholes, deterioration, or poor pavement related to this accident. Available news coverage focused on the incident itself without mentioning infrastructure issues.",
+      "mention_count": 1,
+      "keywords_matched": [
+        "mal estado"
+      ],
+      "best_quote": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣\n⁣\nEl país de África oriental tiene un conocido historial de inseguridad vial, con frecuentes accide",
+      "best_quote_source": "@tvnnoticias",
+      "social_posts": [
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_tdTxlDK1/",
+          "post_caption": "El ministro de Obras Públicas, José Luis Andrade, aseguró que mediante proyectos de emergencia se podrían estar realizando los trabajos de mejoramiento y adecuación de los puntos críticos que resultar",
+          "post_date": "2026-07-20"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_a9BMj7fX/",
+          "post_caption": "¡ESPAÑA ES CAMPEONA DEL MUNDO! La Roja derrotó 1-0 a Argentina en el Estadio de Nueva Jersey y conquistó su segunda Copa del Mundo, 16 años después de aquella histórica consagración en Sudáfrica 2010.",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da-ow6emooG/",
+          "post_caption": "Un sismo de magnitud 5,1 que se registró el sábado en una región andina de Perú dejó cinco personas fallecidas y 21 heridos, informó este domingo el Instituto Nacional de Defensa Civil (Indeci).⁣\n⁣\n\"L",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvmaxdeporte",
+          "post_url": "https://www.instagram.com/p/Da-x09WxA9j/",
+          "post_caption": "¡DE ARGENTINA A NUEVA YORK A PEDAL! 🚴‍♂️🇦🇷✨\nNuestra compañera Naty González se encontró a las afueras del MetLife Stadium con una de esas historias que solo el fútbol y la Copa del Mundo pueden regala",
+          "post_date": "2026-07-19"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_caption": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣",
+          "post_date": "2026-07-18"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da9Hp9BgJW2/",
+          "post_caption": "El párroco Carlos Rivera, de la Iglesia Santa Librada, brindó detalles sobre las actividades religiosas planificadas para este año 2026. ⁣\nEl equipo de ornamentación y los fieles devotos ya trabajan e",
+          "post_date": "2026-07-19"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "quote": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣\n⁣\nEl país de África oriental tiene un conocido historial de inseguridad vial, con frecuentes accide",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-07-18"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0040",
       "road_key": "cercallanomarinpanamericana",
@@ -116,7 +364,7 @@
     {
       "ptw_id": "PTW-0039",
       "road_key": "llanomarinpanamericanarecta",
-      "severity": "MEDIUM",
+      "severity": "HIGH",
       "headline": "En menos de 24 horas: cinco vidas perdidas y tres heridos enlutan las carreteras panameñas",
       "location": "Carretera Panamericana recta de Llano Marín (Penonomé, Coclé); Avenida Domingo Díaz debajo del puente estación Metro Pedregal; Autopista 8 carriles sector 7 de Septiembre; vía principal Las Cañas (Tonosí)",
       "date": "2026-07-11",
@@ -128,12 +376,13 @@
       "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
       "first_seen": "2026-07-16T17:03:27.747545Z",
-      "last_seen": "2026-07-16T17:03:27.747545Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "While the recta de Llano Marín is identified as a frequent accident location in Coclé, no specific social media comments linking potholes or road deterioration to the July 11, 2026 accident were found in search results.",
-      "mention_count": 1,
+      "chatter_summary": "No social media posts or citizen comments were found mentioning road conditions (baches, huecos, deterioro) related to the July 11, 2026 accidents in Panama that left five people dead across multiple locations including Llano Marín, Coclé.",
+      "mention_count": 2,
       "keywords_matched": [
+        "mal estado",
         "señalización"
       ],
       "best_quote": "Conductores que transitan por esta vía en horas de la noche han advertido en redes sociales la escasa iluminación y señalización",
@@ -166,6 +415,20 @@
           "post_url": "https://www.instagram.com/p/Da0jU4bATzx/",
           "post_caption": "Sinaproc, en conjunto con el Ministerio de Obras Públicas, inspeccionó dos hundimientos registrados en uno de los paños de la carretera que conduce a la comunidad de Ballena, en el distrito de Chiriqu",
           "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_tdTxlDK1/",
+          "post_caption": "El ministro de Obras Públicas, José Luis Andrade, aseguró que mediante proyectos de emergencia se podrían estar realizando los trabajos de mejoramiento y adecuación de los puntos críticos que resultar",
+          "post_date": "2026-07-20"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_caption": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣",
+          "post_date": "2026-07-18"
         }
       ],
       "keyword_comments": [
@@ -179,6 +442,17 @@
             "señalización"
           ],
           "date": "2026-07-12"
+        },
+        {
+          "platform": "instagram",
+          "source_name": "@tvnnoticias",
+          "comment_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "post_url": "https://www.instagram.com/p/Da83d7tAYKS/",
+          "quote": "El número de muertos por el accidente de un autobús escolar en Uganda aumentó a 23 niños y un adulto, y todas las excursiones escolares fueron suspendidas, informó la policía el viernes por la noche.⁣\n⁣\nEl país de África oriental tiene un conocido historial de inseguridad vial, con frecuentes accide",
+          "keywords_matched": [
+            "mal estado"
+          ],
+          "date": "2026-07-18"
         }
       ]
     },
@@ -290,17 +564,18 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T09:57:25.384599Z",
-      "last_seen": "2026-07-20T00:30:24.646403Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were being carried out. No public social media comments were found specifically linking road conditions like potholes or deterioration to this particular accident, though Vía Centenario is widely documented as having significant infrastructure problems.",
-      "mention_count": 4,
+      "chatter_summary": "Witnesses mentioned that the accident occurred in a section where road repairs were being conducted, causing a long line of vehicles. Background reports from November 2024 documented that Vía Centenario has deteriorated infrastructure with potholes, uneven concrete slabs, and cracks throughout the 21-kilometer stretch.",
+      "mention_count": 6,
       "keywords_matched": [
         "deteriorada",
         "deterioro",
         "huecos",
         "mal estado",
-        "reparaciones"
+        "reparaciones",
+        "reparación"
       ],
       "best_quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones",
       "best_quote_source": "TVN Panamá - Witness testimony",
@@ -408,6 +683,26 @@
           "keywords_matched": [
             "reparaciones"
           ],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Crítica Panamá - Conductor afectado",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
+          "quote": "Todo pasó muy rápido, había una fila de carros, me imagino por una reparación en la vía",
+          "keywords_matched": [
+            "reparación"
+          ],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá - Alex Gómez, conductor afectado",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/colision-multiple-de-seis-vehiculos-paraliza-el-transito-en-la-via-centenario-hacia-panama-oeste/",
+          "quote": "Una vez bajamos por el Rod Carew, nos percatamos de que había una larga fila de autos",
+          "keywords_matched": [],
           "date": "2026-07-15"
         }
       ]
@@ -563,10 +858,10 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T01:45:50.715364Z",
-      "last_seen": "2026-07-20T00:30:24.646403Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "One witness account mentioned the accident occurred in a section where repairs were being conducted on Vía Centenario. No direct citizen social media comments specifically mentioning potholes or road deterioration in connection with this accident were found.",
+      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were underway. No public comments specifically mentioned potholes or deteriorated road conditions related to this accident.",
       "mention_count": 7,
       "keywords_matched": [
         "deteriorada",
@@ -1782,10 +2077,10 @@
       "geo_formatted": "Villa Carmen, Panamá Oeste Province, Panama",
       "maps_link": "https://maps.google.com/?q=8.8033778,-79.86783679999999",
       "first_seen": "2026-07-14T16:28:39.489351Z",
-      "last_seen": "2026-07-16T17:03:27.747545Z",
+      "last_seen": "2026-07-20T02:03:46.877720Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Drivers who travel through the Villa Carmen construction area at night have warned on social media about poor lighting and inadequate signage on this section of road where construction work is underway. Authorities announced they will reinforce signage following the fatal accident.",
+      "chatter_summary": "Drivers who travel this road at night have warned on social media about poor lighting and inadequate signage in the construction zone where road widening work is being carried out.",
       "mention_count": 5,
       "keywords_matched": [
         "construcción",
@@ -1822,6 +2117,13 @@
           "post_url": "https://www.instagram.com/p/Daz3apWkmnw/",
           "post_caption": "A esta hora, en #ChifeandoElTranque, se reporta un atropello en la Vía Domingo Díaz, cerca de la estación del Metro de San Miguelito, en dirección hacia Villa Lucre.⁣\n⁣\n🚑 Personal del SUME atiende a l",
           "post_date": "2026-07-15"
+        },
+        {
+          "platform": "instagram",
+          "outlet": "tvnnoticias",
+          "post_url": "https://www.instagram.com/p/Da_3xKYjUWp/",
+          "post_caption": "Cientos de galones de agua potable con olor a cloro se desperdician diariamente a pocos metros de la Vía Panamericana y cerca de lo que será la futura Estación del Metro en Loma Cobá. Los residentes a",
+          "post_date": "2026-07-20"
         }
       ],
       "keyword_comments": [
@@ -4063,6 +4365,16 @@
     "https://www.tvn-2.com/nacionales/fallecido-lesionados-colision-penonome_1_2250608.html",
     "https://www.critica.com.pa/sucesos/misterio-en-tonosi-hombre-de-28-anos-aparece-muerto-en-la-carretera-512703",
     "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
-    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514"
+    "https://www.critica.com.pa/sucesos/tres-muertos-en-accidentes-en-el-corredor-norte-bocas-del-toro-y-colon-512514",
+    "https://www.tvn-2.com/nacionales/violento-choque-via-centenario-deja-dos-muertos-y-colapsa-el-trafico_1_2250492.html",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.midiario.com/policiales/video-cerro-viento-en-caos-atropello-mortal-paraliza-la-via-domingo-diaz/",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.critica.com.pa/sucesos/misterio-en-tonosi-hombre-de-28-anos-aparece-muerto-en-la-carretera-512703",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.tvn-2.com/nacionales/muere-hombre-chocar-construccion-panamericana-villa-carmen-capira_1_2250847.html",
+    "https://www.retenchiriqui.com/post/joven-de-22-a%C3%B1os-fallece-tras-ser-atropellada-por-un-veh%C3%ADculo-articulado-en-la-v%C3%ADa-almirante-chiriqu",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710"
   ]
 }
