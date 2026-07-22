@@ -1,8 +1,118 @@
 {
-  "scan_time": "2026-07-20T11:01:50.651960",
-  "total": 44,
-  "counter": 44,
+  "scan_time": "2026-07-22T23:15:43.359927",
+  "total": 45,
+  "counter": 45,
   "incidents": [
+    {
+      "ptw_id": "PTW-0045",
+      "road_key": "antescentenarioestadiopuente",
+      "severity": "CRITICAL",
+      "headline": "Vía Centenario: Accidente de tránsito frente al estadio Rod Carew entre dos articulados y una camioneta",
+      "location": "Vía Centenario, puente antes del estadio Rod Carew, dirección hacia avenida Ricardo J. Alfaro, Ciudad de Panamá",
+      "date": "2026-07-15",
+      "summary": "Un fuerte accidente de tránsito involucró a seis vehículos, entre ellos dos articulados, un camión, una camioneta y un auto sedán. Los dos articulados terminaron volcados sobre la vía, uno atravesó a los carriles con dirección a Panamá Oeste, manteniendo afectada la circulación vehicular en ambos sentidos. El camión transportaba tierra cuya carga quedó esparcida sobre la calzada.",
+      "source_name": "TVN-2",
+      "url": "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+      "lat": 9.0411855,
+      "lng": -79.54556699999999,
+      "geo_formatted": "Via Puente Centenario, Panamá, Provincia de Panamá, Panama",
+      "maps_link": "https://maps.google.com/?q=9.0411855,-79.54556699999999",
+      "first_seen": "2026-07-22T23:09:54.490177Z",
+      "last_seen": "2026-07-22T23:09:54.490177Z",
+      "article_image_urls": [],
+      "primary_image_url": null,
+      "chatter_summary": "Multiple news sources and a witness statement mention that the accident occurred in a section of Vía Centenario where road repairs were underway. Broader reporting on the roadway describes chronic problems including potholes, deteriorated pavement, uneven concrete slabs, and poor road conditions that affect drivers daily.",
+      "mention_count": 4,
+      "keywords_matched": [
+        "condiciones de la vía",
+        "deteriorada",
+        "deterioro",
+        "huecos",
+        "mal estado",
+        "reparaciones"
+      ],
+      "best_quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones.",
+      "best_quote_source": "TVN-2 (article witness quote)",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "outlet": "Destino Panamá",
+          "post_url": "",
+          "post_caption": "⚠️ Accidente de tránsito en la vía Centenario, frente al estadio nacional Rod Carew, con dirección a Panamá Oeste. Vía @TraficoCPanama",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "La Prensa Panamá",
+          "post_url": "",
+          "post_caption": "Tras el accidente registrado alrededor de las 9:45 a.m. en la vía Centenario, frente al estadio Rod Carew, se mantiene un fuerte congestionamiento vehicular en ambas direcciones mientras las autoridades realizan los levantamientos e investigaciones correspondientes",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "",
+          "post_caption": "Una colisión múltiple ocurrió la mañana de este miércoles en la Vía Centenario, frente al Estadio Rod Carew. En el lugar se registró un intenso tráfico vehicular tanto en dirección hacia el interior, como hacia la ciudad de Panamá. En este momento se ha habilitado un paño en…",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "twitter",
+          "outlet": "Telemetro Reporta",
+          "post_url": "",
+          "post_caption": "@OficialMiBus informa que debido a un accidente vehicular registrado a la altura del Estadio Rod Carew, las rutas que transitan por este sector mantienen demoras en su operación, y los tiempos de espera podrían verse afectados.",
+          "post_date": "2026-07-15"
+        }
+      ],
+      "keyword_comments": [
+        {
+          "platform": "news_comment",
+          "source_name": "TVN-2 (article witness quote)",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+          "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones.",
+          "keywords_matched": [
+            "reparaciones"
+          ],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá (general road conditions article)",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Los conductores que transitan a diario por la vía Centenario viven la odisea de manejar por una carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas",
+          "keywords_matched": [
+            "huecos",
+            "deteriorada",
+            "mal estado"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá (road conditions article)",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "Otro aspecto de esta importante vía de comunicación entre Panamá Oeste y la ciudad capital es el puente Centenario, que también presenta deterioro en sus juntas y huecos en la calzada.",
+          "keywords_matched": [
+            "huecos",
+            "deterioro"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN-2 (accidents article - authority quote)",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/accidentes-via-centenario-generan-preocupacion_1_2251968.html",
+          "quote": "Generalmente, estos accidentes se desarrollan por dos principios: uno, el exceso de velocidad, y el otro, desatender las señales y no estar atento a las condiciones de la vía.",
+          "keywords_matched": [
+            "condiciones de la vía"
+          ],
+          "date": "2026-07-20"
+        }
+      ]
+    },
     {
       "ptw_id": "PTW-0044",
       "road_key": "puenteriosobrevigui",
@@ -70,7 +180,7 @@
     {
       "ptw_id": "PTW-0041",
       "road_key": "centenarionortepuentesobre",
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "headline": "Violento choque en Vía Centenario deja dos muertos y colapsa el tráfico",
       "location": "Vía Centenario sobre puente del Corredor Norte Carlos Iván Zúñiga, Ciudad de Panamá",
       "date": "2026-07-12",
@@ -82,13 +192,14 @@
       "geo_formatted": "2CRQ+93R, Vía Centenario, Panamá, Provincia de Panamá, Panama",
       "maps_link": "https://maps.google.com/?q=9.0409847,-79.562372",
       "first_seen": "2026-07-20T02:03:46.877720Z",
-      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-22T23:09:54.490177Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "No social media comments specifically linking road conditions to the July 12 accident were found. A November 2024 news article documented general complaints from drivers about the Vía Centenario having potholes, uneven concrete slabs, and deteriorated infrastructure throughout the corridor.",
-      "mention_count": 2,
+      "chatter_summary": "Citizens and media consistently describe Vía Centenario as deteriorated with potholes, cracked concrete slabs, and damaged pavement requiring urgent repair. No specific comments were found linking road conditions to the July 5, 2026 fatal accident.",
+      "mention_count": 5,
       "keywords_matched": [
         "deteriorada",
+        "deterioro",
         "huecos",
         "mal estado"
       ],
@@ -174,6 +285,43 @@
           "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones",
           "keywords_matched": [],
           "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/mop-licitara-proyecto-de-mas-de-300-millones-para-ampliar-la-via-centenario-y-la-autopista-panamala-chorrera/",
+          "quote": "actualmente varios tramos de la vía Centenario presentan losas fracturadas, huecos y otros signos de deterioro",
+          "keywords_matched": [
+            "huecos",
+            "deterioro"
+          ],
+          "date": "2026-05-30"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "La Prensa Panamá",
+          "comment_url": "",
+          "post_url": "https://www.prensa.com/sociedad/huecos-y-losas-levantadas-en-la-via-centenario-una-odisea-diaria-para-los-conductores/",
+          "quote": "carretera en mal estado, con infraestructura vial deteriorada, llena de huecos, losas desniveladas",
+          "keywords_matched": [
+            "mal estado",
+            "deteriorada",
+            "huecos"
+          ],
+          "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Octanos Media",
+          "comment_url": "",
+          "post_url": "https://www.octanosmedia.com/post/seguridad-vial-puntos-cr%C3%ADticos-en-las-carreteras-de-panam%C3%A1",
+          "quote": "persisten denuncias ciudadanas sobre huecos, deterioro del pavimento y falta de pasos peatonales seguros",
+          "keywords_matched": [
+            "huecos",
+            "deterioro"
+          ],
+          "date": "2026-05-07"
         }
       ]
     },
@@ -428,7 +576,7 @@
     {
       "ptw_id": "PTW-0039",
       "road_key": "llanomarinpanamericanarecta",
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "headline": "En menos de 24 horas: cinco vidas perdidas y tres heridos enlutan las carreteras panameñas",
       "location": "Carretera Panamericana recta de Llano Marín (Penonomé, Coclé); Avenida Domingo Díaz debajo del puente estación Metro Pedregal; Autopista 8 carriles sector 7 de Septiembre; vía principal Las Cañas (Tonosí)",
       "date": "2026-07-11",
@@ -440,11 +588,11 @@
       "geo_formatted": "Carr. Panamericana, Llano Marin, Provincia de Coclé, Panama",
       "maps_link": "https://maps.google.com/?q=8.4901837,-80.330317",
       "first_seen": "2026-07-16T17:03:27.747545Z",
-      "last_seen": "2026-07-20T02:03:46.877720Z",
+      "last_seen": "2026-07-22T23:09:54.490177Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "No social media posts or citizen comments were found mentioning road conditions (baches, huecos, deterioro) related to the July 11, 2026 accidents in Panama that left five people dead across multiple locations including Llano Marín, Coclé.",
-      "mention_count": 2,
+      "chatter_summary": "Drivers have previously warned on social media about poor lighting and signage on this stretch of highway where road widening work is being conducted. The recta de Llano Marín is identified as a location where traffic accidents frequently occur.",
+      "mention_count": 3,
       "keywords_matched": [
         "mal estado",
         "señalización"
@@ -517,6 +665,17 @@
             "mal estado"
           ],
           "date": "2026-07-18"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Día a Día",
+          "comment_url": "",
+          "post_url": "https://www.diaadia.com.pa/el-pais/fin-de-semana-mortal-tres-fallecidos-en-accidentes-de-transito-en-panama-oeste-y-cocle",
+          "quote": "Con anterioridad, los conductores que transitan por esta vía en horas de la noche han advertido a través de redes sociales la escasa iluminación y señalización en este tramo carretero en donde se efectúan trabajos de ampliación de la calzada",
+          "keywords_matched": [
+            "señalización"
+          ],
+          "date": "2026-07-13"
         }
       ]
     },
@@ -628,11 +787,11 @@
       "geo_formatted": "Vía Centenario, Panama",
       "maps_link": "https://maps.google.com/?q=9.0274631,-79.5945555",
       "first_seen": "2026-07-16T09:57:25.384599Z",
-      "last_seen": "2026-07-20T10:41:26.239817Z",
+      "last_seen": "2026-07-22T23:09:54.490177Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses mentioned the accident occurred in a section where road repairs were being conducted, with one driver noting a long line of cars possibly due to roadwork. No specific mentions of potholes or deteriorated road conditions were found in public comments about this accident.",
-      "mention_count": 7,
+      "chatter_summary": "Witnesses mentioned there was a line of vehicles likely due to repairs being conducted on the road where the accident occurred. Multiple sources documented ongoing deterioration of the Via Centenario with huecos and damaged losas, though no comments directly attributed this specific accident to those conditions.",
+      "mention_count": 8,
       "keywords_matched": [
         "deteriorada",
         "deterioro",
@@ -775,6 +934,17 @@
           "comment_url": "",
           "post_url": "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
           "quote": "había una fila de carros, me imagino por una reparación en la vía",
+          "keywords_matched": [
+            "reparación"
+          ],
+          "date": "2026-07-15"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "Crítica conductor witness",
+          "comment_url": "",
+          "post_url": "https://www.critica.com.pa/sucesos/caos-en-centenario-por-colision-multiple-512898",
+          "quote": "Todo pasó muy rápido, había una fila de carros, me imagino por una reparación en la vía, cuando de pronto sintieron un fuerte golpe por detrás",
           "keywords_matched": [
             "reparación"
           ],
@@ -1998,10 +2168,10 @@
       "geo_formatted": "Via Puente Centenario, Panamá, Provincia de Panamá, Panama",
       "maps_link": "https://maps.google.com/?q=9.0411855,-79.54556699999999",
       "first_seen": "2026-07-14T16:28:39.489351Z",
-      "last_seen": "2026-07-16T01:45:50.715364Z",
+      "last_seen": "2026-07-22T23:09:54.490177Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "Witnesses reported the accident occurred in a section where repairs were being conducted. Prior reports from November 2024 and May 2026 documented that the Vía Centenario has deteriorated conditions with potholes, cracked concrete slabs, and poor pavement requiring drivers to navigate carefully.",
+      "chatter_summary": "Witnesses reported the accident occurred in a section where repairs were being conducted. The Vía Centenario has documented issues with deterioration, potholes, and uneven concrete slabs according to reporting from before the accident.",
       "mention_count": 4,
       "keywords_matched": [
         "deteriorada",
@@ -2060,6 +2230,13 @@
           "outlet": "tvnnoticias",
           "post_url": "https://www.instagram.com/p/Da0NGoGDRY_/",
           "post_caption": "Desde las 9:00 a.m. de este martes, el Ministerio de Obras Públicas iniciará trabajos de reparación en el puente Arraijancito, ubicado entrando a la Vía Centenario, después del Centro de Alto Rendimie",
+          "post_date": "2026-07-15"
+        },
+        {
+          "platform": "x",
+          "outlet": "Telemetro Reporta",
+          "post_url": "https://x.com/TReporta/status/",
+          "post_caption": "Una colisión múltiple ocurrió la mañana de este miércoles en la Vía Centenario, frente al Estadio Rod Carew. En el lugar se registró un intenso tráfico vehicular tanto en dirección hacia el interior, como hacia la ciudad de Panamá.",
           "post_date": "2026-07-15"
         }
       ],
@@ -2475,11 +2652,11 @@
       "geo_formatted": "Vía Centenario, Panamá, Provincia de Panamá, Panama",
       "maps_link": "https://maps.google.com/?q=9.0402395,-79.5550517",
       "first_seen": "2026-06-30T10:48:41.715575Z",
-      "last_seen": "2026-07-01T11:16:59.045663Z",
+      "last_seen": "2026-07-22T23:09:54.490177Z",
       "article_image_urls": [],
       "primary_image_url": null,
-      "chatter_summary": "General reporting on Vía Centenario describes the road as having potholes, raised concrete slabs, cracks, and overgrown vegetation affecting driver visibility and vehicle safety. No specific citizen comments linking road conditions to the June 5, 2026 accident were found in accessible social media sources.",
-      "mention_count": 8,
+      "chatter_summary": "Conductors frequently complain about the Vía Centenario being in poor condition with potholes, uneven slabs, and deteriorated pavement. Authorities cite speeding and inattention to road conditions as primary accident causes.",
+      "mention_count": 10,
       "keywords_matched": [
         "deteriorada",
         "deterioradas",
@@ -2643,6 +2820,24 @@
             "deteriorada"
           ],
           "date": "2024-11-11"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN-2 Panamá (Teniente Raymundo Sandoval)",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/accidentes-via-centenario-generan-preocupacion_1_2251968.html",
+          "quote": "Generalmente, estos accidentes se desarrollan por dos principios: uno, el exceso de velocidad, y el otro, desatender las señales y no estar atento a las condiciones de la vía",
+          "keywords_matched": [],
+          "date": "2026-07-20"
+        },
+        {
+          "platform": "news_comment",
+          "source_name": "TVN-2 Panamá (witness account)",
+          "comment_url": "",
+          "post_url": "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+          "quote": "Testigos relataron que todo ocurrió en cuestión de segundos, en un tramo donde se están realizando reparaciones",
+          "keywords_matched": [],
+          "date": "2026-07-15"
         }
       ]
     },
@@ -4492,6 +4687,11 @@
     "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
     "https://elsiglo.com.pa/cronica-roja/cocle-autobus-con-40-turistas-se-estrella-contra-arboles-y-deja-37-heridos-ML23932619",
     "https://www.telemetro.com/nacionales/bus-mas-30-turistas-costarricenses-sufre-accidente-nata-cocle-n6084529",
-    "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes"
+    "https://www.retenchiriqui.com/post/peat%C3%B3n-muere-atropellado-en-el-puente-sobre-el-r%C3%ADo-vigu%C3%AD-aumentan-a-34-las-v%C3%ADctimas-por-accidentes",
+    "https://www.tvn-2.com/nacionales/cuidado-via-centenario-accidente-transito-rodcarew_1_2251170.html",
+    "https://www.midiario.com/policiales/fatal-desenlace-en-la-madrugada-hombre-de-50-anos-muere-atropellado-en-la-transistmica/",
+    "https://www.critica.com.pa/sucesos/tres-muertes-en-carretera-de-panama-oeste-y-cocle-512710",
+    "https://www.midiario.com/policiales/en-menos-de-24-horas-cinco-vidas-perdidas-y-tres-heridos-enlutan-las-carreteras-panamenas/",
+    "https://www.critica.com.pa/sucesos/fallece-adolescente-tras-vuelco-en-moto-de-cuatro-ruedas-en-los-santos-513272"
   ]
 }
