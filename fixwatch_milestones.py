@@ -55,18 +55,25 @@ def get_data_key():
     with the master password (FIXWATCH_MASTER_PASSWORD) — the same login the app
     does. The password is the only secret you set; nothing is stored in a file."""
     if os.environ.get("FIXWATCH_DATA_KEY"):
-        return base64.b64decode(os.environ["FIXWATCH_DATA_KEY"])
-    pw = os.environ["FIXWATCH_MASTER_PASSWORD"]
+        return base64.b64decode(os.environ["FIXWATCH_DATA_KEY"].strip())
+    raw_pw = os.environ.get("FIXWATCH_MASTER_PASSWORD", "")
+    pw = raw_pw.strip()   # the app trims the login too; a pasted secret often has a stray newline
     cfg = json.loads(fetch(FIXWATCH_RAW + KEYS_PATH))
     salt, it = base64.b64decode(cfg["kdf"]["salt"]), cfg["kdf"]["iter"]
-    kek = hashlib.pbkdf2_hmac("sha256", pw.encode(), salt, it)  # 32-byte KEK
-    for e in cfg["entries"]:
-        try:
-            payload = AESGCM(kek).decrypt(base64.b64decode(e["iv"]), base64.b64decode(e["ct"]), None)
-            return base64.b64decode(json.loads(payload)["k"])
-        except Exception:
-            continue
-    raise SystemExit("FIXWATCH_MASTER_PASSWORD did not match any FixWatch account.")
+    # try the password as-typed and trimmed (covers both cases safely)
+    for candidate in dict.fromkeys([pw, raw_pw]):
+        kek = hashlib.pbkdf2_hmac("sha256", candidate.encode(), salt, it)  # 32-byte KEK
+        for e in cfg["entries"]:
+            try:
+                payload = AESGCM(kek).decrypt(base64.b64decode(e["iv"]), base64.b64decode(e["ct"]), None)
+                return base64.b64decode(json.loads(payload)["k"])
+            except Exception:
+                continue
+    raise SystemExit(
+        "FIXWATCH_MASTER_PASSWORD did not match any FixWatch account "
+        f"(got {len(pw)} characters after trimming; "
+        f"{'the value had extra spaces/newlines' if pw != raw_pw else 'no surrounding whitespace'}). "
+        "Set it to any real FixWatch login password, with no quotes.")
 
 def load_fixes():
     local = os.environ.get("FIXWATCH_LOCAL")
