@@ -1,0 +1,37 @@
+name: FixWatch Milestones
+
+on:
+  schedule:
+    # Daily at 13:00 UTC = 8:00 AM Panama time (UTC-5)
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  milestones:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements-fixwatch.txt
+      - name: Send milestone emails
+        env:
+          # New secret: base64 AES-256 key that decrypts FixWatch data
+          # (contents of KEYS/fixwatch-master-key.txt).
+          FIXWATCH_DATA_KEY:   ${{ secrets.FIXWATCH_DATA_KEY }}
+          # Reused from the existing PotholeWatch Gmail setup (ashourilevy@gmail.com).
+          GMAIL_CLIENT_ID:     ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+        run: python fixwatch_milestones.py
+      - name: Commit milestone state
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add fixwatch_milestones_sent.json
+          git diff --staged --quiet || git commit -m "fixwatch milestones state $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
