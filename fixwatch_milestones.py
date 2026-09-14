@@ -152,7 +152,35 @@ def send_email(subject, html, images):
     service.users().messages().send(userId="me", body={"raw": raw}).execute()
 
 # ------------------------------------------------------------------ main
+def test_send():
+    """One-off proof-of-pipeline: email the most recently fixed pothole with its
+    latest photo, labelled TEST, without touching the milestone state."""
+    today = datetime.date.today()
+    fixes = [f for f in load_fixes() if f.get("fix_date")]
+    if not fixes:
+        print("No fixed potholes to test with."); return
+    f = max(fixes, key=lambda x: x.get("fix_date", ""))
+    days = (today - datetime.date.fromisoformat(f["fix_date"])).days
+    hit = {"fix": f, "milestone": days}
+    images = {}
+    lp = last_photo(f)
+    if lp and lp["path"]:
+        hit["photo_date"] = lp["date"]
+        try:
+            hit["cid"] = "ph0"
+            images["ph0"] = aes_decrypt(fetch(FIXWATCH_RAW + lp["path"] + ".enc"))
+        except Exception as e:
+            print(f"  test photo fetch failed: {e}"); hit.pop("cid", None)
+    subject, html = build_email([hit])
+    subject = "FixWatch · TEST · " + subject
+    print(f"TEST email -> {', '.join(RECIPIENTS)} · {title(f)} · {len(images)} photo(s)")
+    send_email(subject, html, images)
+    print("Test email sent.")
+
+
 def main():
+    if os.environ.get("TEST_EMAIL"):
+        test_send(); return
     today = datetime.date.today()
     fixes = load_fixes()
     state, existed = load_state()

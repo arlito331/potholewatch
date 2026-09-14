@@ -5,6 +5,11 @@ on:
     # Daily at 13:00 UTC = 8:00 AM Panama time (UTC-5)
     - cron: '0 13 * * *'
   workflow_dispatch:
+    inputs:
+      test_email:
+        description: "Send a one-off TEST email (most recent repair + its photo). Does not change milestone state."
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -20,6 +25,9 @@ jobs:
       - run: pip install -r requirements-fixwatch.txt
       - name: Send milestone emails
         env:
+          # When the workflow is run manually with test_email checked, send one
+          # proof email instead of the normal milestone sweep.
+          TEST_EMAIL:          ${{ inputs.test_email && '1' || '' }}
           # New secret: base64 AES-256 key that decrypts FixWatch data
           # (contents of KEYS/fixwatch-master-key.txt).
           FIXWATCH_DATA_KEY:   ${{ secrets.FIXWATCH_DATA_KEY }}
@@ -32,6 +40,5 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add fixwatch_milestones_sent.json
-          git diff --staged --quiet || git commit -m "fixwatch milestones state $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push
+          [ -f fixwatch_milestones_sent.json ] && git add fixwatch_milestones_sent.json || true
+          git diff --staged --quiet || { git commit -m "fixwatch milestones state $(date -u +%Y-%m-%dT%H:%M:%SZ)"; git push; }
