@@ -28,9 +28,10 @@ jobs:
           # When the workflow is run manually with test_email checked, send one
           # proof email instead of the normal milestone sweep.
           TEST_EMAIL:          ${{ inputs.test_email && '1' || '' }}
-          # New secret: base64 AES-256 key that decrypts FixWatch data
-          # (contents of KEYS/fixwatch-master-key.txt).
-          FIXWATCH_DATA_KEY:   ${{ secrets.FIXWATCH_DATA_KEY }}
+          # The only new secret you add: your FixWatch master password (the one
+          # you log into the app with). The job unwraps the data key from
+          # data/keys.json with it, exactly like the app does at login.
+          FIXWATCH_MASTER_PASSWORD: ${{ secrets.FIXWATCH_MASTER_PASSWORD }}
           # Reused from the existing PotholeWatch Gmail setup (ashourilevy@gmail.com).
           GMAIL_CLIENT_ID:     ${{ secrets.GMAIL_CLIENT_ID }}
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}

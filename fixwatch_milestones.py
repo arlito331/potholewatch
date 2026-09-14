@@ -19,7 +19,7 @@ Local dry run (no email, no Gmail creds needed), against a local data file:
     FIXWATCH_DATA_KEY=<b64key> DRY_RUN=1 \
     FIXWATCH_LOCAL=/path/to/fixes.enc python fixwatch_milestones.py
 """
-import os, json, base64, datetime, urllib.request
+import os, json, base64, datetime, hashlib, urllib.request
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -28,13 +28,14 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 # ------------------------------------------------------------------ config
 FIXWATCH_RAW = "https://raw.githubusercontent.com/arlito331/fixwatch/main/"
 FIXES_PATH   = "data/fixes.enc"
+KEYS_PATH    = "data/keys.json"
 MILESTONES   = [7, 15, 30, 45, 90, 180, 365]
 RECIPIENTS   = ["joel@powerfixinc.com", "1@powerfixinc.com"]
 STATE_FILE   = "fixwatch_milestones_sent.json"
 GRACE_DAYS   = 2   # still catch a milestone if a daily run was missed by a day or two
 
 DRY_RUN = bool(os.environ.get("DRY_RUN"))
-DATA_KEY = base64.b64decode(os.environ["FIXWATCH_DATA_KEY"])
+DATA_KEY = None  # set in main() — the base64 AES-256 key that decrypts FixWatch data
 
 # brand palette (matches the PotholeWatch email look)
 BG, CARD_BG, TEXT, MUTED, ACCENT, GOOD = "#0D0D0D", "#161616", "#F5F5F5", "#8A8A8A", "#E8442A", "#46C97E"
@@ -47,6 +48,25 @@ def fetch(url):
 
 def aes_decrypt(blob):
     return AESGCM(DATA_KEY).decrypt(blob[:12], blob[12:], None)
+
+def get_data_key():
+    """The AES key that decrypts FixWatch data. Either supplied directly
+    (FIXWATCH_DATA_KEY, used for local tests) or unwrapped from data/keys.json
+    with the master password (FIXWATCH_MASTER_PASSWORD) — the same login the app
+    does. The password is the only secret you set; nothing is stored in a file."""
+    if os.environ.get("FIXWATCH_DATA_KEY"):
+        return base64.b64decode(os.environ["FIXWATCH_DATA_KEY"])
+    pw = os.environ["FIXWATCH_MASTER_PASSWORD"]
+    cfg = json.loads(fetch(FIXWATCH_RAW + KEYS_PATH))
+    salt, it = base64.b64decode(cfg["kdf"]["salt"]), cfg["kdf"]["iter"]
+    kek = hashlib.pbkdf2_hmac("sha256", pw.encode(), salt, it)  # 32-byte KEK
+    for e in cfg["entries"]:
+        try:
+            payload = AESGCM(kek).decrypt(base64.b64decode(e["iv"]), base64.b64decode(e["ct"]), None)
+            return base64.b64decode(json.loads(payload)["k"])
+        except Exception:
+            continue
+    raise SystemExit("FIXWATCH_MASTER_PASSWORD did not match any FixWatch account.")
 
 def load_fixes():
     local = os.environ.get("FIXWATCH_LOCAL")
@@ -155,6 +175,9 @@ def send_email(subject, html, images):
 def test_send():
     """One-off proof-of-pipeline: email the most recently fixed pothole with its
     latest photo, labelled TEST, without touching the milestone state."""
+    global DATA_KEY
+    if DATA_KEY is None:
+        DATA_KEY = get_data_key()
     today = datetime.date.today()
     fixes = [f for f in load_fixes() if f.get("fix_date")]
     if not fixes:
@@ -179,8 +202,10 @@ def test_send():
 
 
 def main():
+    global DATA_KEY
     if os.environ.get("TEST_EMAIL"):
         test_send(); return
+    DATA_KEY = get_data_key()
     today = datetime.date.today()
     fixes = load_fixes()
     state, existed = load_state()
