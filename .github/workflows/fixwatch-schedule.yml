@@ -1,0 +1,35 @@
+name: FixWatch Schedule (Yeison)
+
+on:
+  schedule:
+    # Mon–Fri at 12:00 UTC = 7:00 AM Panama. The script sends the daily route,
+    # and additionally the whole-week plan on Mondays.
+    - cron: '0 12 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Force a mode for a manual run: weekly, daily, or blank for auto"
+        type: choice
+        default: ''
+        options: ['', 'weekly', 'daily']
+
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements-fixwatch.txt
+      - name: Send Yeison's route email
+        env:
+          MODE:                     ${{ inputs.mode }}
+          # Yeison's inbox — the schedule no-ops if this secret is not set.
+          YEISON_EMAIL:             ${{ secrets.YEISON_EMAIL }}
+          # Same secrets the milestone job uses.
+          FIXWATCH_MASTER_PASSWORD: ${{ secrets.FIXWATCH_MASTER_PASSWORD }}
+          GMAIL_CLIENT_ID:          ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET:      ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN:      ${{ secrets.GMAIL_REFRESH_TOKEN }}
+        run: python fixwatch_schedule.py

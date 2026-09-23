@@ -37,6 +37,12 @@ GRACE_DAYS   = 2   # still catch a milestone if a daily run was missed by a day 
 DRY_RUN = bool(os.environ.get("DRY_RUN"))
 DATA_KEY = None  # set in main() — the base64 AES-256 key that decrypts FixWatch data
 
+# The app shows "days since repair" in the operator's local time (Panama, UTC-5,
+# no DST). GitHub Actions runs in UTC, so compute "today" in Panama time too —
+# otherwise the email and the app can disagree by a day near midnight.
+def panama_today():
+    return (datetime.datetime.utcnow() - datetime.timedelta(hours=5)).date()
+
 # brand palette (matches the PotholeWatch email look)
 BG, CARD_BG, TEXT, MUTED, ACCENT, GOOD = "#0D0D0D", "#161616", "#F5F5F5", "#8A8A8A", "#E8442A", "#46C97E"
 
@@ -146,7 +152,7 @@ def build_email(hits):
   <div style="margin-bottom:22px;padding:22px;background:{CARD_BG};border-radius:10px;border-top:4px solid {ACCENT};">
     <div style="font-size:11px;letter-spacing:4px;color:{ACCENT};font-weight:700;">FIXWATCH · REPAIR MILESTONES</div>
     <h1 style="margin:10px 0 4px;font-size:24px;color:{TEXT};font-weight:700;">{n} repair{'s' if n != 1 else ''} hit a milestone today</h1>
-    <div style="color:{MUTED};font-size:12px;">Automatic follow-up · {datetime.date.today().strftime('%b %d, %Y')}</div>
+    <div style="color:{MUTED};font-size:12px;">Automatic follow-up · {panama_today().strftime('%b %d, %Y')}</div>
   </div>
   {''.join(cards)}
   <div style="text-align:center;font-size:11px;color:{MUTED};padding:20px 0;border-top:1px solid #262626;margin-top:6px;">
@@ -185,7 +191,7 @@ def test_send():
     global DATA_KEY
     if DATA_KEY is None:
         DATA_KEY = get_data_key()
-    today = datetime.date.today()
+    today = panama_today()
     fixes = [f for f in load_fixes() if f.get("fix_date")]
     if not fixes:
         print("No fixed potholes to test with."); return
@@ -213,7 +219,7 @@ def main():
     if os.environ.get("TEST_EMAIL"):
         test_send(); return
     DATA_KEY = get_data_key()
-    today = datetime.date.today()
+    today = panama_today()
     fixes = load_fixes()
     state, existed = load_state()
     print(f"=== FixWatch milestones @ {today} · {len(fixes)} potholes · "
