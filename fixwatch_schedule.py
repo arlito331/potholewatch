@@ -73,8 +73,16 @@ def title(f):
 def place(f):
     return ", ".join(x for x in (f.get("city"), f.get("country")) if x)
 
+# Spanish date names (the runner has no es locale, so spell them out).
+_DIAS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+_DIAS_ABR = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
+_MESES_ABR = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
+
 def fmt(d):
-    return d.strftime("%a %b %d")
+    return f"{_DIAS_ABR[d.weekday()]} {d.day:02d} {_MESES_ABR[d.month-1]}"
+
+def dia_nombre(d):
+    return _DIAS[d.weekday()].capitalize()
 
 # ------------------------------------------------------------------ scheduling
 def visit_date_for(milestone_date):
@@ -129,8 +137,8 @@ def stop_rows(ordered):
         <div style="flex:1;">
           <div style="color:{TEXT};font-weight:700;font-size:15px;">{title(f)}</div>
           <div style="color:{MUTED};font-size:12px;">{place(f)}</div>
-          <div style="color:{GOOD};font-size:12px;margin-top:2px;">Photograph for the <b>Day {m}</b> check · milestone {fmt(md)}</div>
-          <div style="font-size:12px;margin-top:3px;"><a href="https://www.google.com/maps/search/?api=1&query={f['lat']},{f['lng']}" style="color:{ACCENT};">open pin</a></div>
+          <div style="color:{GOOD};font-size:12px;margin-top:2px;">Fotografiar para el chequeo del <b>Día {m}</b> · hito {fmt(md)}</div>
+          <div style="font-size:12px;margin-top:3px;"><a href="https://www.google.com/maps/search/?api=1&query={f['lat']},{f['lng']}" style="color:{ACCENT};">abrir ubicación</a></div>
         </div>
       </div>""")
     return "".join(rows)
@@ -141,10 +149,10 @@ def day_block(day, ordered):
     return f"""
   <div style="margin-bottom:20px;padding:18px;background:{CARD_BG};border-radius:10px;border-left:4px solid {ACCENT};">
     <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-size:16px;color:{TEXT};font-weight:800;">{day.strftime('%A')} · {fmt(day)}</div>
-      <div style="font-size:12px;color:{MUTED};">{len(ordered)} stop{'s' if len(ordered)!=1 else ''}</div>
+      <div style="font-size:16px;color:{TEXT};font-weight:800;">{dia_nombre(day)} · {fmt(day)}</div>
+      <div style="font-size:12px;color:{MUTED};">{len(ordered)} parada{'s' if len(ordered)!=1 else ''}</div>
     </div>
-    <div style="margin:6px 0 10px;"><a href="{maps_link(ordered)}" style="display:inline-block;background:{ACCENT};color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 14px;border-radius:8px;">▶ Open driving route</a></div>
+    <div style="margin:6px 0 10px;"><a href="{maps_link(ordered)}" style="display:inline-block;background:{ACCENT};color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:8px 14px;border-radius:8px;">▶ Abrir ruta en Maps</a></div>
     {stop_rows(ordered)}
   </div>"""
 
@@ -152,14 +160,14 @@ def shell(heading, sub, body):
     return f"""<!DOCTYPE html><html><body style="font-family:-apple-system,Helvetica,Arial,sans-serif;background:{BG};padding:24px;color:{TEXT};margin:0;">
 <div style="max-width:640px;margin:auto;">
   <div style="margin-bottom:22px;padding:22px;background:{CARD_BG};border-radius:10px;border-top:4px solid {ACCENT};">
-    <div style="font-size:11px;letter-spacing:4px;color:{ACCENT};font-weight:700;">FIXWATCH · MONITORING ROUTE</div>
+    <div style="font-size:11px;letter-spacing:4px;color:{ACCENT};font-weight:700;">FIXWATCH · RUTA DE MONITOREO</div>
     <h1 style="margin:10px 0 4px;font-size:23px;color:{TEXT};font-weight:700;">{heading}</h1>
     <div style="color:{MUTED};font-size:12px;">{sub}</div>
   </div>
   {body}
   <div style="text-align:center;font-size:11px;color:{MUTED};padding:20px 0;border-top:1px solid #262626;margin-top:6px;">
     <div style="font-size:10px;letter-spacing:3px;color:{ACCENT};font-weight:700;margin-bottom:6px;">POWERFIX · REPAIR. REINVENTED.</div>
-    Take updated photos at each stop and upload them in the FixWatch app.
+    Toma fotos actualizadas en cada parada y súbelas en la app FixWatch.
   </div>
 </div></body></html>"""
 
@@ -196,10 +204,10 @@ def do_daily(fixes, today):
     if not ordered:
         print(f"daily {today}: nothing to photograph."); return
     body = day_block(today, ordered)
-    subject = f"FixWatch · Today's route — {len(ordered)} pothole{'s' if len(ordered)!=1 else ''} to photograph"
+    subject = f"FixWatch · Ruta de hoy — {len(ordered)} bache{'s' if len(ordered)!=1 else ''} para fotografiar"
     print(f"daily {today}: {len(ordered)} stops")
     if DRY: print(subject); return
-    send_html(subject, shell("Today's monitoring route", f"{fmt(today)} · Panama", body))
+    send_html(subject, shell("Ruta de monitoreo de hoy", f"{fmt(today)} · Panamá", body))
 
 def do_weekly(fixes, monday):
     days = [monday + datetime.timedelta(days=i) for i in range(5)]   # Mon..Fri
@@ -208,13 +216,13 @@ def do_weekly(fixes, monday):
         ordered = collect(fixes, d)
         total += len(ordered)
         blocks.append(day_block(d, ordered) or
-                      f'<div style="padding:10px 4px;color:{MUTED};font-size:13px;">{d.strftime("%A")} · {fmt(d)} — no stops</div>')
+                      f'<div style="padding:10px 4px;color:{MUTED};font-size:13px;">{dia_nombre(d)} · {fmt(d)} — sin paradas</div>')
     if not total:
         print(f"weekly {monday}: nothing this week."); return
-    subject = f"FixWatch · This week's route — {total} pothole visit{'s' if total!=1 else ''} (Mon–Fri)"
+    subject = f"FixWatch · Ruta de esta semana — {total} visita{'s' if total!=1 else ''} (Lun–Vie)"
     print(f"weekly {monday}: {total} stops across the week")
     if DRY: print(subject); return
-    send_html(subject, shell("This week's monitoring plan", f"Week of {fmt(monday)} · Panama", "".join(blocks)))
+    send_html(subject, shell("Plan de monitoreo de esta semana", f"Semana del {fmt(monday)} · Panamá", "".join(blocks)))
 
 def main():
     global DATA_KEY
