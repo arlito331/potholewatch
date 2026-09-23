@@ -28,6 +28,7 @@ MILESTONES   = [7, 15, 30, 45, 90, 180, 365]
 LEAD_DAYS    = 3            # photograph ~2-3 days before the milestone (weekends shift earlier)
 COUNTRY      = "panama"     # Yeison's territory (matched accent/case-insensitively)
 YEISON_EMAIL = os.environ.get("YEISON_EMAIL", "").strip() or "yeinerguti2014@gmail.com"
+CC = ["joel@powerfixinc.com", "1@powerfixinc.com"]   # always copied on Yeison's route emails
 BG, CARD_BG, TEXT, MUTED, ACCENT, GOOD = "#0D0D0D", "#161616", "#F5F5F5", "#8A8A8A", "#E8442A", "#46C97E"
 DATA_KEY = None
 
@@ -174,6 +175,8 @@ def send_html(subject, html):
     msg["Subject"] = subject
     msg["From"] = "FixWatch <ashourilevy@gmail.com>"
     msg["To"] = YEISON_EMAIL
+    if CC:
+        msg["Cc"] = ", ".join(CC)
     msg.attach(MIMEText(html, "html"))
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
     service.users().messages().send(userId="me", body={"raw": raw}).execute()
